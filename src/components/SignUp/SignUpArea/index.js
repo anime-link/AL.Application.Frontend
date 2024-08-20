@@ -2,13 +2,16 @@ import React from "react";
 import "./styles.css";
 import { CamposCadastro } from "./SignUpLabels";
 import { BotaoCadastro } from "./SignUpButton";
-import { RiCloseCircleFill } from "react-icons/ri";
+import { RiArrowLeftCircleFill, RiCloseCircleFill } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 export function AreaCadastro() {
     return(
         <div className="cadastro-area">
             <div className="cadastro-icone-fechar-area">
-                <RiCloseCircleFill className="cadastro-icone-fechar" alt="Fechar" />
+                <Link to={""}>
+                    <RiArrowLeftCircleFill className="cadastro-icone-fechar" alt="Fechar" />
+                </Link>
             </div> 
             <h1 className="cadastro-area-titulo">Cadastro</h1>
             <CamposCadastro title={"Nome completo"} placeholder={"Seu nome"} type={"text"} />
