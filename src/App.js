@@ -1,10 +1,15 @@
 import './App.css';
 import Cadastro from './pages/SignUp';
+import { Routes, BrowserRouter, Route } from 'react-router-dom';
 
 function App() {
   return (
     <div>
-      <Cadastro />
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Cadastro />} path='/cadastro' />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
