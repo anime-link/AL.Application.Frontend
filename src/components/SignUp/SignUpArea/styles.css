@@ -1,0 +1,46 @@
+.cadastro-area {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    width: 760px;
+    height: 661px;
+    border-radius: 30px;
+    margin-top: 30px;
+    margin-left: 42px;
+
+    background-color: var(--daisy-bush);
+}
+
+.cadastro-area-titulo {
+    border-bottom: solid 3px;
+    margin-bottom: 50px;
+
+    color: var(--white);
+    font: var(--header-48);
+}
+
+.cadastro-icone-fechar-area {
+    position: absolute;
+    top: 37px;
+    left: 46px;
+}
+
+.cadastro-icone-fechar {
+    cursor: pointer;
+    font-size: 40px;
+
+    transition: 0.5s ease-in-out;
+}
+
+.cadastro-icone-fechar:hover {
+    color: var(--bright-sun);
+    font-size: 45px;
+}
+
+.cadastro-icone-fechar:active {
+    color: var(--bright-sun);
+    opacity: 50%;
+}

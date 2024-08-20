@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url("../../assets/SignUp/signup-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.cadastro-pagina {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+}
