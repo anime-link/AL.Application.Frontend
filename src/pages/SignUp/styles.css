@@ -10,4 +10,5 @@
     background: url("../../assets/Images/SignUp/signup-background.png");
     background-size: cover;
     background-repeat: no-repeat;
+    background-clip: border-box;
 }
