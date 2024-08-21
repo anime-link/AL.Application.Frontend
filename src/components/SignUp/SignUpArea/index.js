@@ -2,14 +2,14 @@ import React from "react";
 import "./styles.css";
 import { CamposCadastro } from "./SignUpLabels";
 import { BotaoCadastro } from "./SignUpButton";
-import { RiArrowLeftCircleFill, RiCloseCircleFill } from "react-icons/ri";
+import { RiArrowLeftCircleFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
 export function AreaCadastro() {
     return(
         <div className="cadastro-area">
             <div className="cadastro-icone-fechar-area">
-                <Link to={""}>
+                <Link className="cadastro-icone-link" to={"/"}>
                     <RiArrowLeftCircleFill className="cadastro-icone-fechar" alt="Fechar" />
                 </Link>
             </div> 

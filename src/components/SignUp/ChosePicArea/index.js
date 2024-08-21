@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./styles.css";
-import profilePic from "../../../assets/SignUp/profile-pic-choosen.png"
+import profilePic from "../../../assets/Images/SignUp/profile-pic-choosen.png";
 import { AreaEscolhaImagem } from "./ChoosePic";
 
 export function AreaImagemPerfil() {
