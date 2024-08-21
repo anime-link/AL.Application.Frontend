@@ -1,5 +1,4 @@
-@import url("https://fonts.google.com/specimen/Kanit");
-@import url("https://fonts.google.com/specimen/Contrail+One");
+@import url('https://fonts.googleapis.com/css2?family=Contrail+One&family=Kanit&display=swap');
 
 :root {
   /* Cores */
@@ -18,7 +17,7 @@
   --gradient-yellow: linear-gradient(#FBDD88, #EDB922);
 
   /* Tamanho de fontes */
-  --app-title: bold 140px 'Contrail One', sans-serif;
+  --app-title: normal 140px 'Contrail One', sans-serif;
   --header-64: bold 64px 'Kanit', sans-serif;
   --header-48: bold 48px 'Kanit', sans-serif;
   --header-40: bold 40px 'Kanit', sans-serif;
