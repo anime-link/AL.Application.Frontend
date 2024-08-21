@@ -23,7 +23,7 @@
 }
 
 .cadastro-botao:hover {
-    border: solid 3px var(--bright-sun);
+    transform: scale(1.1);
 }
 
 .cadastro-botao:active {

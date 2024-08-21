@@ -2,10 +2,13 @@ import React from "react";
 import "./styles.css";
 import logo from "../../assets/logo-animelink.svg";
 import BotoesHome from "./HomeButtons";
+import { RiGroup2Fill, RiGroupFill, RiHeart3Fill } from "react-icons/ri";
+import img1 from "../../assets/Images/Home/intro-illustration-1.png";
+import img2 from "../../assets/Images/Home/intro-illustration-2.png";
 
 export default function HomeArea() {
     return (
-        <div>
+        <div className="home-page">
             <header className="home-header">
                 <img className="home-header-logo" src={logo} alt="AnimeLink" />
                 <div className="home-header-text">
@@ -14,9 +17,46 @@ export default function HomeArea() {
                     <BotoesHome />
                 </div>
             </header>
-            <main>
-                
+            <main className="home-body">
+                <h1 className="home-body-welcome">Bem vindo, otaku!</h1>
+                <div className="home-intro-1">
+                    <div className="home-intro-1-1">
+                        <img src={img1} alt="Intro Img 1" />
+                    </div>
+                    <div className="home-intro-1-2">
+                        <h1 className="home-intro-1-text">ENTRE EM COMUNIDADES E INTERAJA COM PESSOAS DO MESMO GOSTO QUE VOCê</h1>
+                        <RiGroupFill className="home-intro-1-icon" alt="Grupo Icon" />  
+                    </div>
+                </div>
+                <div className="home-intro-2">
+                    <div className="home-intro-2-2">
+                        <h1 className="home-intro-2-text">BUSQUE ONDE VOCÊ PODE ASSISTIR SEU ANIME FAVORITO</h1>
+                        <RiHeart3Fill className="home-intro-2-icon" alt="Grupo Icon" />  
+                    </div>
+                    <div className="home-intro-2-1">
+                        <img src={img2} alt="Intro Img 2" />
+                    </div>
+                </div>
             </main>
+            <footer className="home-footer">
+                <div className="home-footer-elementos">
+                    <div className="home-footer-integrantes-icon">
+                        <RiGroup2Fill className="home-footer-icon" />
+                        <h1 className="home-footer-integrantes">Integrantes</h1>
+                    </div>
+                    <div className="home-footer-nomes">
+                        <ul>
+                            <li>Carlos André</li>
+                            <li>Felipe Ferreira</li>
+                            <li>João Vitor</li>
+                            <li>Nathan Rodrigues</li>
+                            <li>Pablo Cândido</li>
+                            <li>William Patricio</li>
+                            <li>Wilson Benacchio</li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
         </div>
     );
 }
