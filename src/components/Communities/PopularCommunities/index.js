@@ -4,7 +4,7 @@ import "./styles.css";
 export default function ComunidadesPopular() {
     return (
         <div>
-            
+            popular
         </div>
     );
 }
