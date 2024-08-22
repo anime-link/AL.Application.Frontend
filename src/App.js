@@ -2,7 +2,7 @@ import './App.css';
 import Cadastro from './pages/SignUp';
 import Home from './pages/Home'
 import { Routes, BrowserRouter, Route } from 'react-router-dom';
-import Comunidades from './components/Communities';
+import Comunidades from './pages/Communities';
 
 function App() {
   return (

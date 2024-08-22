@@ -24,6 +24,17 @@
     cursor: pointer;
 
     width: 57px;
+
+    transition: 0.5s ease-in-out;
+}
+
+.header-logo:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+.header-logo:active {
+    opacity: 50%;
 }
 
 .header-paginas {
@@ -52,5 +63,7 @@
 }
 
 .header-usuario {
+    cursor: pointer;
+
     width: 57px;
 }

@@ -1,0 +1,36 @@
+.pesquisa-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+
+    width: 600px;
+    height: 66px;
+
+    border-radius: 20px;
+
+    background: var(--gradient-purple-blue);
+}
+
+.pesquisa-icon {
+    position: absolute;
+    left: 15px;
+
+    font-size: 42px;
+}
+
+.pesquisa-barra {
+    text-align: center;
+    background: none;
+    border: none;
+    width: 300px;
+    height: 33px;
+    
+    font: var(--text-16);
+    color: var(--white);
+}
+
+.pesquisa-barra::placeholder {
+    color: var(--chetwode-blue);
+}
