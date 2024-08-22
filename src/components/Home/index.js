@@ -2,9 +2,10 @@ import React from "react";
 import "./styles.css";
 import logo from "../../assets/logo-animelink.svg";
 import BotoesHome from "./HomeButtons";
-import { RiGroup2Fill, RiGroupFill, RiHeart3Fill } from "react-icons/ri";
+import { RiGroupFill, RiHeart3Fill } from "react-icons/ri";
 import img1 from "../../assets/Images/Home/intro-illustration-1.png";
 import img2 from "../../assets/Images/Home/intro-illustration-2.png";
+import Footer from "../Footer";
 
 export default function HomeArea() {
     return (
@@ -38,25 +39,7 @@ export default function HomeArea() {
                     </div>
                 </div>
             </main>
-            <footer className="home-footer">
-                <div className="home-footer-elementos">
-                    <div className="home-footer-integrantes-icon">
-                        <RiGroup2Fill className="home-footer-icon" />
-                        <h1 className="home-footer-integrantes">Integrantes</h1>
-                    </div>
-                    <div className="home-footer-nomes">
-                        <ul>
-                            <li>Carlos André</li>
-                            <li>Felipe Ferreira</li>
-                            <li>João Vitor</li>
-                            <li>Nathan Rodrigues</li>
-                            <li>Pablo Cândido</li>
-                            <li>William Patricio</li>
-                            <li>Wilson Benacchio</li>
-                        </ul>
-                    </div>
-                </div>
-            </footer>
+            <Footer />
         </div>
     );
 }

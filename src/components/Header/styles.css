@@ -1,0 +1,56 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: fixed;
+
+    width: 100%;
+
+    background: var(--gradient-black);
+}
+
+.header-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    padding: 20px 52px;
+    gap: 280px;
+}
+
+.header-logo {
+    cursor: pointer;
+
+    width: 57px;
+}
+
+.header-paginas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    gap: 124px;
+}
+
+.header-pagina {
+    color: var(--white);
+    font: var(--text-20);
+
+    transition: 0.5s ease-in-out;
+}
+
+.header-pagina.active {
+    color: var(--bright-sun);
+    font: var(--text-20);
+}
+
+.header-pagina:hover {
+    color: var(--bright-sun);
+}
+
+.header-usuario {
+    width: 57px;
+}
