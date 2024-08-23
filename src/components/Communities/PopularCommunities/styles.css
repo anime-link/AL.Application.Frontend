@@ -16,5 +16,6 @@
 .comunidade-popular-titulo {
     margin-top: 13px;
 
+    font: var(--header-40);
     color: var(--white);
 }
