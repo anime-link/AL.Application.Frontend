@@ -19,7 +19,6 @@ import spy from "../../../../assets/Images/ProfilePics/spy-family-pic.png";
 import tokyo from "../../../../assets/Images/ProfilePics/tokyo-revengers-pic.png";
 
 export function AreaEscolhaImagem({ setImgSelecionada }) {
-
     // Array das imagens de perfil
     const profilePics = [
         blueLock,
