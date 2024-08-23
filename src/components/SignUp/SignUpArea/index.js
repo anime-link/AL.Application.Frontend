@@ -10,7 +10,7 @@ export function AreaCadastro() {
         <div className="cadastro-area">
             <div className="cadastro-icone-fechar-area">
                 <Link className="cadastro-icone-link" to={"/"}>
-                    <RiArrowLeftCircleFill className="cadastro-icone-fechar" alt="Fechar" />
+                    <RiArrowLeftCircleFill className="cadastro-icone-fechar" alt="Fechar"/>
                 </Link>
             </div> 
             <h1 className="cadastro-area-titulo">Cadastro</h1>
