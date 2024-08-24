@@ -33,12 +33,14 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .comunidade-slide-img {
+    image-rendering: optimizeQuality;
+
     width: 500px;
     height: 232px;
-    image-rendering: optimizeQuality;
 }
 
 .comunidade-slide-nome {
@@ -62,6 +64,13 @@
     font-size: 80px;
 
     color: var(--bright-sun);
+
+    transition: 0.5s ease-in-out;
+}
+
+.comunidade-slider-antes:hover,
+.comunidade-slider-depois:hover {
+    transform: scale(1.2);
 }
 
 .comunidade-slider-antes {

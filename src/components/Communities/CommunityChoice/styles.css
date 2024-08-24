@@ -21,6 +21,7 @@
 .comunidade-escolha-slider-area {
     display: flex;
     align-items: center;
+    overflow: hidden;
 
     margin-top: 43px;
     padding-bottom: 65px;
@@ -34,6 +35,13 @@
     font-size: 80px;
 
     color: var(--bright-sun);
+
+    transition: 0.5s ease-in-out;
+}
+
+.comunidade-escolha-antes:hover, 
+.comunidade-escolha-depois:hover {
+    transform: scale(1.2);
 }
 
 .comunidade-escolha-antes {
@@ -47,10 +55,17 @@
 .comunidade-escolha-slider {
     display: flex;
 
+    min-width: 900px;
+    max-width: 900px;
+
     gap: 18px;
+
+    transition: transform 0.5s ease;
 }
 
 .comunidade-escolha-img {
+    cursor: pointer;
+
     width: 220px;
     height: 114px;
 }
