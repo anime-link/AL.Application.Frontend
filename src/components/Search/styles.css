@@ -7,7 +7,7 @@
 
     width: 600px;
     height: 66px;
-    margin-top: 96px;
+    margin-top: 150px;
     border-radius: 20px;
 
     background: var(--gradient-purple-blue);
@@ -24,6 +24,7 @@
     text-align: center;
     background: none;
     border: none;
+
     width: 300px;
     height: 33px;
     
@@ -33,4 +34,16 @@
 
 .pesquisa-barra::placeholder {
     color: var(--chetwode-blue);
+}
+
+.pesquisa-limpar {
+    position: absolute;
+    cursor: pointer;
+
+    right: 150px;
+    font-size: 25px;
+}
+
+.pesquisa-barra::-webkit-search-cancel-button {
+    display: none;
 }

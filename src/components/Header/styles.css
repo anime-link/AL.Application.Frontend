@@ -5,6 +5,7 @@
     flex-direction: row;
     position: fixed;
 
+    z-index: 2;
     width: 100%;
 
     background: var(--gradient-black);
