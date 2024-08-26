@@ -1,0 +1,37 @@
+.login-campos {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 10px;
+}
+
+.login-label {
+    margin-bottom: 5px;
+
+    color: var(--white);
+    font: var(--text-20);
+}
+
+.login-input {
+    width: 256px;
+    height: 47px;
+    border-radius: 20px;
+    padding-left: 20px;
+
+    border: none;
+
+    background-color: var(--white);
+    font: var(--text-16);
+
+    transition: 0.5s ease-in-out;
+}
+
+.login-input::placeholder {
+    margin-top: 5px;
+    
+    font: var(--text-16);
+    color: var(--fog);
+}
+
