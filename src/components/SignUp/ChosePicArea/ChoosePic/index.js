@@ -78,10 +78,16 @@ export function AreaEscolhaImagem({ setImgSelecionada }) {
     return (
         <div className="imagem-escolha-area">
             <RiArrowLeftSLine className="imagem-escolha-antes" alt="Esquerda" onClick={() => mudarImagem(-1)} />
-            <div className="imagem-escolha-slider">
-                {imgsMostradas().map((img, i) => {
-                    return <img className="imagem-escolha-img" key={i} src={img} alt="Imagem de perfil" width={66} onClick={() => imgSelecionada(img)} /> 
-                })}
+            <div 
+                className="imagem-escolha-slider"
+            >
+                {imgsMostradas().map((img, i) => (
+                    <img 
+                    className="imagem-escolha-img"
+                    key={i} src={img} 
+                    alt="Imagem de perfil" 
+                    onClick={() => imgSelecionada(img)} /> 
+                ))}
             </div>
             <RiArrowRightSLine className="imagem-escolha-depois" alt="Direita" onClick={() => mudarImagem(1)} />
         </div>
