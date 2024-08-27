@@ -1,0 +1,40 @@
+.chat-caixa-mensagem {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+
+    width: 600px;
+    height: 53px;
+    margin-top: 506px;
+    gap: 351px;
+    border-radius: 20px;
+    padding: 20px;
+
+    background: var(--gradient-blue);
+}
+
+.chat-mensagem {
+    width: 500px;
+    padding: 10px;
+
+    outline: none;
+
+    font: var(--text-16);
+    color: var(--white);
+}
+
+.chat-mensagem::placeholder {
+    font: var(--text-16);
+    color: var(--chetwode-blue);
+}
+
+.chat-mensagem-icon {
+    position: absolute;
+    cursor: pointer;
+
+    top: 7px;
+    right: 20px;
+
+    font-size: 40px;
+}
