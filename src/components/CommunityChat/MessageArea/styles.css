@@ -25,3 +25,12 @@
 
     background: var(--gradient-black);
 }
+
+.chat-mensagem-logo {
+    position: absolute;
+
+    width: 110px;
+    top: 241px;
+    left: 431px;
+    z-index: 0.5;
+}
