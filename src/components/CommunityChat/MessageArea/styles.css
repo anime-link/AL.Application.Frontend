@@ -1,0 +1,27 @@
+.chat-mensagem-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 89.8vh;
+
+    background: url("../../../assets/Images/Communities/community1.png");
+    background-size: cover;
+    background-blend-mode: soft-light;
+    filter: brightness(0.7);
+    
+    background-color: var(--deep-koamaru);
+}
+
+.chat-mensagem-caixa {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    width: 972px;
+    height: 593px;
+    border-radius: 20px;
+
+    background: var(--gradient-black);
+}

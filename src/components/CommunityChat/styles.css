@@ -1,0 +1,59 @@
+.comunidade-chat {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.chat-canais-conversa-area {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.chat-canais-area {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    height: 89.8vh;
+    padding: 70px 93px;
+    border-right: solid 1px var(--bright-sun);
+
+    background-color: var(--night-rider);
+}
+
+.chat-canais-titulo {
+    margin-bottom: 66px;
+
+    font: var(--header-48);
+    color: var(--white);
+}
+
+.chat-canais-texto-area {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.chat-canais-texto {
+    cursor: pointer;
+
+    font: var(--text-20);
+    color: var(--fog);
+}
+
+.chat-canais-texto.active {
+    color: var(--bright-sun);
+    border-bottom: solid 2px var(--bright-sun);
+}
+
+.chat-conversa-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-conversa-area {
+    padding-top: 506px;
+}

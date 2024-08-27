@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import { Routes, BrowserRouter, Route } from 'react-router-dom';
 import Login from './pages/Login';
 import Comunidades from './pages/Communities';
+import ComunidadeChat from './pages/CommunityChat';
 
 
 function App() {
@@ -13,11 +14,9 @@ function App() {
         <Routes>
           <Route element={<Home />} path='/' />
           <Route element={<Cadastro />} path='/cadastro' />
-        
           <Route element={<Login />} path='/login' />
-            
-          <Route element={<Comunidades />} path='/comunidades' />
-            
+          <Route element={<Comunidades />} path='/comunidades' />  
+          <Route element={<ComunidadeChat />} path='/chat' />  
         </Routes>
       </BrowserRouter>
     </body>
