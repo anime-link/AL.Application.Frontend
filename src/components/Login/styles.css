@@ -15,7 +15,7 @@
     margin-bottom: 50px;
 
     color: var(--white);
-    font: var(--header-48);
+    font: var(--header-48); 
 }
 
 .login-icone-voltar {
@@ -44,9 +44,18 @@
 }
 
 h2{
+    padding-top: 40px;
+
     color: var(--bright-sun);
     font-size: 32px;
 
+}
+
+.contPassword{
+    color: var(--bright-sun);
+    margin-right:120px;
+    padding-bottom: 30px;
+    
 }
 
 
