@@ -12,7 +12,7 @@ export default function LoginArea(){
         <div className="login-area">
             <div className="login-icone-voltar">
                 <Link className="login-icone-link" to={"/"}>
-                    <RiArrowLeftCircleFill className= "login-icone-fechar" alt= "Fechar" />
+                    <RiArrowLeftCircleFill className= "login-icone-fechar" alt= "Fechar"/>
                 </Link>
             </div>
             <h1 className="login-area-titulo">Login</h1>

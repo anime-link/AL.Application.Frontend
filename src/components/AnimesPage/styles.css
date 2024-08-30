@@ -1,0 +1,18 @@
+.animes-area {
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    background-color: var(--deep-koamaru);
+}
+
+.animes-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
