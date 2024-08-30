@@ -1,0 +1,106 @@
+.animes-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    margin-top: 18px;
+    margin-bottom: 46px;
+}
+
+.animes-slider-area {
+    display: flex;
+    margin-bottom: 65px;
+
+    transition: 1.5s ease-in-out;
+    transform: translateX(calc(-100% * var(--index-atual, 0)));
+}
+
+.animes-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 100%;
+    height: 100%;
+}
+
+.animes-slide-nome-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.animes-slide-img {
+    image-rendering: optimizeQuality;
+
+    width: 500px;
+    height: 232px;
+}
+
+.animes-slide-nome {
+    text-align: center;
+    
+    width: 100%;
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+    color: var(--white);
+    font: var(--text-16);
+    background: var(--gradient-purple-blue);
+}
+
+.animes-slider-antes,
+.animes-slider-depois {
+    position: absolute;
+    cursor: pointer;
+
+    z-index: 1;
+    font-size: 80px;
+
+    color: var(--bright-sun);
+
+    transition: 0.5s ease-in-out;
+}
+
+.animes-slider-antes:hover,
+.animes-slider-depois:hover {
+    transform: scale(1.2);
+}
+
+.animes-slider-antes {
+    right: 720px;
+}
+
+.animes-slider-depois {
+    left: 720px;
+}
+
+.animes-slider-indicador {
+    display: flex;
+    position: absolute;
+
+    gap: 39px;
+    bottom: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+.animes-slider-indica {
+    cursor: pointer;
+    
+    width: 73px;
+    height: 5px;
+
+    background-color: var(--white);
+}
+
+.animes-slider-indica.active {
+    background-color: var(--bright-sun);
+}

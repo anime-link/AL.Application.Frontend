@@ -14,11 +14,11 @@ export function AreaCadastro() {
                 </Link>
             </div> 
             <h1 className="cadastro-area-titulo">Cadastro</h1>
-            <CamposCadastro title={"Nome completo"} placeholder={"Seu nome"} type={"text"} />
+            <CamposCadastro title={"Nome completo"} placeholder={"Seu nome"} type={"text"}/>
             <CamposCadastro title={"Data de nascimento"} type={"date"} />
-            <CamposCadastro title={"Usuário"} placeholder={"Usuário"} type={"text"} />
+            <CamposCadastro title={"Usuário"} placeholder={"Usuário"} type={"text"}/>
             <CamposCadastro title={"Senha"} placeholder={"Senha"} type={"password"} />
-            <BotaoCadastro />
+            <BotaoCadastro/>
         </div>
     );
 }
