@@ -1,22 +1,19 @@
 .comunidade-slider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     position: relative;
-    overflow: hidden;
 
     width: 100%;
     margin-top: 18px;
     margin-bottom: 46px;
 }
 
+.comunidade-slider .swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
 .comunidade-slider-area {
     display: flex;
     margin-bottom: 65px;
-
-    transition: 1.5s ease-in-out;
-    transform: translateX(calc(-100% * var(--index-atual, 0)));
 }
 
 .comunidade-slide {
@@ -24,8 +21,8 @@
     justify-content: center;
     align-items: center;
 
-    min-width: 100%;
-    height: 100%;
+    width: 100%;
+    margin-bottom: 60px;
 }
 
 .comunidade-slide-nome-img {
@@ -37,8 +34,6 @@
 }
 
 .comunidade-slide-img {
-    image-rendering: optimizeQuality;
-
     width: 500px;
     height: 232px;
 }
@@ -62,6 +57,7 @@
 
     z-index: 1;
     font-size: 80px;
+    top: 80px;
 
     color: var(--bright-sun);
 
@@ -81,26 +77,14 @@
     left: 720px;
 }
 
-.comunidade-slider-indicador {
-    display: flex;
-    position: absolute;
-
-    gap: 39px;
-    bottom: 0;
-    left: 50%;
-
-    transform: translateX(-50%);
-}
-
-.comunidade-slider-indica {
-    cursor: pointer;
-    
-    width: 73px;
-    height: 5px;
+.comunidade-slider .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
 
     background-color: var(--white);
 }
 
-.comunidade-slider-indica.active {
+.comunidade-slider .swiper-pagination-bullet-active {
     background-color: var(--bright-sun);
 }

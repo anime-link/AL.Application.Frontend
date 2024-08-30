@@ -77,7 +77,7 @@ export function AreaEscolhaImagem({ setImgSelecionada }) {
 
     return (
         <div className="imagem-escolha-area">
-            <RiArrowLeftSLine className="imagem-escolha-antes" alt="Esquerda" onClick={() => mudarImagem(-1)} />
+            <RiArrowLeftSLine className="imagem-escolha-antes" onClick={() => mudarImagem(-1)} />
             <div 
                 className="imagem-escolha-slider"
             >
@@ -89,7 +89,7 @@ export function AreaEscolhaImagem({ setImgSelecionada }) {
                     onClick={() => imgSelecionada(img)} /> 
                 ))}
             </div>
-            <RiArrowRightSLine className="imagem-escolha-depois" alt="Direita" onClick={() => mudarImagem(1)} />
+            <RiArrowRightSLine className="imagem-escolha-depois" onClick={() => mudarImagem(1)} />
         </div>
     );
 }

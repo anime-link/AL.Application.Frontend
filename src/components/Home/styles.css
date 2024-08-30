@@ -76,7 +76,7 @@
 
     margin-top: 85px;
 
-    font: var(--header-64);
+    font: var(--header-48);
     color: var(--white);
 
     transition: 0.5s ease-in-out;
@@ -96,6 +96,7 @@
     width: 1206px;
     gap: 70px;
     margin-top: 125px;
+    padding-bottom: 162px;
 
     border-bottom: solid 5px var(--bright-sun);
 }
