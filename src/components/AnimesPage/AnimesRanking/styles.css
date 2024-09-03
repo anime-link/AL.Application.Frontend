@@ -1,0 +1,13 @@
+.ranking-area{
+    width: 569px;
+    height: 426px;
+    background: var(--gradient-black);
+    padding-top: 200px;
+    /* background-color: pink; */
+}
+
+.ranking-titulo, .ranking-box{
+    color: var(--fog);
+    /* color: red */
+    gap: 100px;
+}
