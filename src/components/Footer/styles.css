@@ -1,8 +1,6 @@
 .footer {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
 
     width: 100%;
     margin-top: 150px;
@@ -12,53 +10,38 @@
 
 .footer-elementos {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: row;
-
-    padding: 30px 402px;
-    gap: 83px;
+    gap: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.footer-integrantes-icon {
+.footer-logo {
+    width: 80px;
+}
+
+.footer-divisor {
+    width: 1px;
+    height: 72px;
+    background-color: var(--bright-sun);
+}
+
+.footer-grupo {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: end;
     flex-direction: row;
-
-    padding-right: 41px;
-    gap: 30px;
-
-    border-right: solid 3px var(--white);
+    gap: 15px;
 }
 
 .footer-icon {
-    font-size: 110px;
-    padding: 5px;
-    border-radius: 50%;
-
     background-color: var(--fog);
+    padding: 2px;
+    border-radius: 50%;
+    font-size: 45px;
 }
 
-.footer-integrantes {
-    font: var(--header-40);
-    color: var(--white);
-}
-
-.footer-nomes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.footer-nomes ul {
-    display: flex;
-    flex-direction: column;
-
-    gap: 5px;
-
-    list-style: none;
-    
+.footer-texto {
+    font: var(--text-24);
     color: var(--white);
 }

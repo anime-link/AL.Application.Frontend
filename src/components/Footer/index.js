@@ -1,25 +1,17 @@
 import React from "react";
 import "./styles.css";
 import { RiGroup2Fill } from "react-icons/ri";
+import logo from "../../assets/logo-animelink.svg";
 
 export default function Footer() {
     return (
         <footer className="footer">
             <div className="footer-elementos">
-                <div className="footer-integrantes-icon">
+                <img className="footer-logo" src={logo} />
+                <hr className="footer-divisor" />
+                <div className="footer-grupo">
                     <RiGroup2Fill className="footer-icon" />
-                    <h1 className="footer-integrantes">Integrantes</h1>
-                </div>
-                <div className="footer-nomes">
-                    <ul>
-                        <li>Carlos André</li>
-                        <li>Felipe Ferreira</li>
-                        <li>João Vitor</li>
-                        <li>Nathan Rodrigues</li>
-                        <li>Pablo Cândido</li>
-                        <li>William Patricio</li>
-                        <li>Wilson Benacchio</li>
-                    </ul>
+                    <p className="footer-texto">The Illuminated</p>
                 </div>
             </div>
         </footer>
