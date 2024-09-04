@@ -1,12 +1,9 @@
 .home-botoes-area {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
 
-    margin-top: 125px;
-    margin-bottom: 63px;
-    gap: 34px;
+    margin-top: 29px;
+    margin-bottom: 167px;
+    gap: 31px;
 }
 
 .home-login-botao {
@@ -15,9 +12,9 @@
 
     width: 186px;
     height: 80px;
-    border-radius: 20px;
+    border-radius: 10px;
 
-    background: var(--gradient-purple-blue);
+    background: var(--deep-koamaru);
     color: var(--white);
     font: var(--text-32);
 
@@ -30,7 +27,7 @@
 
     width: 186px;
     height: 80px;
-    border-radius: 20px;
+    border-radius: 10px;
 
     background: var(--gradient-yellow);
     color: var(--white);
@@ -42,4 +39,5 @@
 
 .home-login-botao:hover, .home-cadastro-botao:hover {
     transform: scale(1.1);
+    filter: brightness(1.1);
 }
