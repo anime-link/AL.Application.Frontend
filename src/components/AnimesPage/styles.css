@@ -7,7 +7,7 @@
     padding: 0;
     width: 100%;
 
-    background-color: var(--deep-koamaru);
+   
 }
 
 .animes-body {
@@ -15,4 +15,21 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.ranking-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 92px;
+}
+
+.list1{
+    background: var(--gradient-black);
+    border-radius: 50px;
+}
+
+.list2{
+    background: var(--gradient-black);
+    border-radius: 50px;
 }

@@ -1,13 +1,35 @@
 .ranking-area{
-    width: 569px;
-    height: 426px;
-    background: var(--gradient-black);
-    padding-top: 200px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    
     /* background-color: pink; */
 }
 
-.ranking-titulo, .ranking-box{
-    color: var(--fog);
-    /* color: red */
-    gap: 100px;
+.ranking-box{
+    width: 569px;
+    height: 226px;
+   
+}
+
+.ranking-titulo{
+    color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+
+}
+
+
+.ranking-cont{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    color: aliceblue;
 }
