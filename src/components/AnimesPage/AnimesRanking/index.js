@@ -1,6 +1,6 @@
 import React from 'react';
 import "./styles.css";
-import { RiAwardFill } from "react-icons/ri";
+import { RiTrophyFill } from "react-icons/ri";
 
 export default function AnimesRanking({ rankingList }) {
     return (
@@ -11,7 +11,7 @@ export default function AnimesRanking({ rankingList }) {
                     <div key={index} className="ranking-cont">
                         <span className="ranking-number">{item.number}</span>
                         <span className="ranking-anime">{item.anime}</span>
-                        <RiAwardFill />
+                        <RiTrophyFill />
                     </div>
                 ))}
             </div>

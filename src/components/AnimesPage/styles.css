@@ -7,7 +7,7 @@
     padding: 0;
     width: 100%;
 
-   
+    background-color: var(--daisy-bush)
 }
 
 .animes-body {
@@ -22,6 +22,11 @@
     justify-content: space-around;
     align-items: center;
     gap: 92px;
+    margin-top: 157px;
+
+    /* border-bottom: solid var(--bright-sun)  3px;
+    margin-top: 100px;
+    margin-bottom: 100px; */
 }
 
 .list1{
@@ -32,4 +37,14 @@
 .list2{
     background: var(--gradient-black);
     border-radius: 50px;
+}
+
+.ranking-divisao{
+    width: 90%;
+    height: 2px;
+    background-color: var(--bright-sun);
+    padding-top: 5px;
+    margin-top: 65px;
+    margin-bottom: 65px;
+    
 }

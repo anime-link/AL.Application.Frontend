@@ -5,17 +5,16 @@
     display: flex;
     justify-content: space-around;
     
-    /* background-color: pink; */
 }
 
 .ranking-box{
     width: 569px;
     height: 226px;
-   
+    
 }
 
 .ranking-titulo{
-    color: blueviolet;
+    color: var(--fog);
     display: flex;
     justify-content: center;
     align-items: center;
