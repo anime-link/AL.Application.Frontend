@@ -1,13 +1,44 @@
 .cadastro-pagina {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    gap: 99px;
 
     width: 100%;
     height: 100vh;
-
-    background: url("../../assets/Images/SignUp/signup-background.png");
+    
+    background: url("../../assets/Images/SignUp/sign-up-background.png"), var(--gradient-black);
     background-size: cover;
     background-repeat: no-repeat;
     background-clip: border-box;
+    background-blend-mode: multiply;
+}
+
+.cadastro-texto {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    width: 490px;
+}
+
+.cadastro-texto p {
+    color: var(--white);
+}
+
+.cadastro-texto-titulo {
+    font: var(--header-64);
+}
+
+.cadastro-sub-icon {
+    display: flex;
+    align-items: center;
+}
+
+.cadastro-texto-sub {
+    font: var(--text-32);
+}
+
+.cadastro-texto-icon {
+    font-size: 70px;
+    color: var(--bright-sun);
 }

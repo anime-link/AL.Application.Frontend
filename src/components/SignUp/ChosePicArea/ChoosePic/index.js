@@ -38,58 +38,11 @@ export function AreaEscolhaImagem({ setImgSelecionada }) {
         tokyo
     ];
 
-    // useState para os index das imagens
-    const [index, setIndex] = useState(0);
-
-    // Quantidade de imagens que vão aparecer no slider
-    const imgsPorSlider = 3;
-
-    // Função para passar o slider
-    const mudarImagem = (direcao) => {
-        setIndex((prevIndex) => {
-            let newIndex = prevIndex + direcao * imgsPorSlider;
-            
-            if (newIndex < 0) {
-                newIndex = profilePics.length - imgsPorSlider;     
-            } else if (newIndex >= profilePics.length) {
-                newIndex = 0;
-            }
-
-            return newIndex;
-        });
-    }
-
-    // Função de quantas imagens vão aparecer no slider
-    const imgsMostradas = () => {
-        let img = [];
-
-        for (let i = 0; i < imgsPorSlider; i++) {
-            img.push(profilePics[(index + i) % profilePics.length]);
-            
-        }
-
-        return img;
-    }
-
-    const imgSelecionada = (img) => {
-        setImgSelecionada(img);
-    }
-
     return (
         <div className="imagem-escolha-area">
-            <RiArrowLeftSLine className="imagem-escolha-antes" onClick={() => mudarImagem(-1)} />
-            <div 
-                className="imagem-escolha-slider"
-            >
-                {imgsMostradas().map((img, i) => (
-                    <img 
-                    className="imagem-escolha-img"
-                    key={i} src={img} 
-                    alt="Imagem de perfil" 
-                    onClick={() => imgSelecionada(img)} /> 
-                ))}
-            </div>
-            <RiArrowRightSLine className="imagem-escolha-depois" onClick={() => mudarImagem(1)} />
+            <RiArrowLeftSLine className="imagem-escolha-antes" />
+    
+            <RiArrowRightSLine className="imagem-escolha-depois" />
         </div>
     );
 }
