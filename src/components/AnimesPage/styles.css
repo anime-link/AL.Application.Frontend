@@ -45,6 +45,11 @@
     background-color: var(--bright-sun);
     padding-top: 5px;
     margin-top: 65px;
-    margin-bottom: 65px;
-    
+    margin-bottom: 65px;   
+}
+
+li{
+    display: flex;
+    justify-content: space-around;
+    gap: 156px;
 }
