@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 import { AreaCadastro } from "../../components/SignUp/SignUpArea";
 import { RiStarFill } from "react-icons/ri";
 
 export default function Cadastro() {
+    // Estado do sidebar estar visível ou não
+    const [isSideBarVisible, setIsSideBarVisible] = useState(false);
+
+    // Função que ativa a área lateral
+    const ativarSideBar = (status) => {
+        setIsSideBarVisible(status);
+    }
+
     return(
-        <div className="cadastro-pagina">
-            <div className="cadastro-texto">
+        <div className={`cadastro-pagina ${isSideBarVisible ? "lateral-ativo" : ""}`}>
+            <div className={`cadastro-texto ${isSideBarVisible ? "lateral-ativo" : ""}`}>
                 <p className="cadastro-texto-titulo">Cadastre-se no AnimeLink</p>
                 <div className="cadastro-sub-icon">
                     <RiStarFill className="cadastro-texto-icon" />
@@ -16,7 +24,7 @@ export default function Cadastro() {
                     </div>
                 </div>
             </div>
-            <AreaCadastro />
+            <AreaCadastro areaLateral={ativarSideBar} />
         </div>
     );
 }

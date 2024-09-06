@@ -6,6 +6,8 @@
     width: 404px;
     height: 402px;
 
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     background-color: var(--deep-koamaru);
 }
 
