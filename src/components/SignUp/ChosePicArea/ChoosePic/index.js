@@ -26,6 +26,7 @@ export function AreaEscolhaImagem({ img, setImgSelecionada }) {
                     prevEl: '.imagem-escolha-antes',
                     nextEl: '.imagem-escolha-depois',
                 }}
+                loop={true}
                 modules={[Navigation, EffectCoverflow]}
             >
                 {img.map((pics, i) => (
