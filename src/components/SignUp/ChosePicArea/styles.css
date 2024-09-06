@@ -1,28 +1,47 @@
 .imagem-perfil-area {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    width: 404px;
+    height: 402px;
+
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: var(--deep-koamaru);
+}
+
+.imagem-perfil-escolher {
+    display: flex;
     flex-direction: column;
     align-items: center;
-
-    margin-right: 35px;
 }
 
-.imagem-perfil-titulo {
-    margin-bottom: 32px;
-
-    color: var(--white);
-    font: var(--header-40);
-}
-
-.imagem-perfil-preview {
-    width: 240px;
-    height: 240px;
+.imagem-perfil {
+    width: 160px;
+    height: 160px;
+    border: solid 2px var(--night-rider);
     border-radius: 50%;
 
-    transition: opacity 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
     opacity: 1;
 }
 
-.imagem-perfil-animacao {
+.imagem-perfil.fade-out {
     opacity: 0;
+}
+
+.imagem-perfil.fade-in {
+    opacity: 1;
+}
+
+.imagem-perfil-botao {
+    cursor: pointer;
+    margin-top: 23px;
+    padding: 3px 30px;
+
+    border-radius: 5px;
+    font: var(--text-16);
+    color: var(--white);
+    background: var(--gradient-yellow);
 }
