@@ -34,8 +34,15 @@
 .imagem-escolha-slider-img {
     cursor: pointer;
     width: 75px;
+    height: 75px;
     border: solid 1px var(--night-rider);
     border-radius: 50%;
+
+    transition: 0.5s ease-in-out;
+}
+
+.imagem-escolha-slider-img:hover {
+    border: solid 1px var(--bright-sun);
 }
 
 .imagem-escolha-slider .swiper-pagination-bullet {
@@ -46,21 +53,27 @@
     display: none;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
+.imagem-escolha-antes,
+.imagem-escolha-depois {
     position: absolute;
     cursor: pointer;
     top: 18px;
 
-    z-index: 1;
     font-size: 45px;
-    color: black;
+    z-index: 1;
+    transition: 0.5s ease-in-out;
 }
 
-.swiper-button-prev {
+.imagem-escolha-antes:hover,
+.imagem-escolha-depois:hover {
+    transform: scale(1.15);
+    color: var(--bright-sun);
+}
+
+.imagem-escolha-antes {
     left: -3px;
 }
 
-.swiper-button-next {
+.imagem-escolha-depois {
     right: -3px;
 }

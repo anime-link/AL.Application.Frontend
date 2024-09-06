@@ -12,33 +12,37 @@ export function AreaEscolhaImagem({ img, setImgSelecionada }) {
             <div className="imagem-escolha-slider">
             <Swiper 
                 effect="coverflow"
-                grabCursor={false}
+                grabCursor={true}
                 centeredSlides={true}
                 slidesPerView={3}
                 coverflowEffect={{
-                    rotate: 50,
+                    rotate: 45,
                     stretch: 10,
                     depth: 100,
                     modifier: 1,
                     slideShadows: false
                 }}
-                navigation={true}
+                navigation={{
+                    prevEl: '.imagem-escolha-antes',
+                    nextEl: '.imagem-escolha-depois',
+                }}
                 modules={[Navigation, EffectCoverflow]}
             >
                 {img.map((pics, i) => (
                     <SwiperSlide key={i}>
                         <div className="imagem-escolha-img-area">
-                            <img className="imagem-escolha-slider-img" src={pics} alt={`Imagem de perfil ${i}`} />
+                            <img 
+                                className="imagem-escolha-slider-img" 
+                                src={pics} 
+                                alt={`Imagem de perfil ${i}`}
+                                onClick={() => setImgSelecionada(pics)} 
+                            />
                         </div>
                     </SwiperSlide>
                 ))}
             </Swiper>
-            <div className="swiper-button-prev">
-                <RiArrowLeftSLine className="imagem-escolha-icon" />
-            </div>
-            <div className="swiper-button-next">
-                <RiArrowRightSLine className="imagem-escolha-icon" />
-            </div>
+                <RiArrowLeftSLine className="imagem-escolha-antes" />
+                <RiArrowRightSLine className="imagem-escolha-depois" />
             </div>
         </div>
     );

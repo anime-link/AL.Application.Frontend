@@ -19,8 +19,20 @@
 
 .imagem-perfil {
     width: 160px;
+    height: 160px;
     border: solid 2px var(--night-rider);
     border-radius: 50%;
+
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.imagem-perfil.fade-out {
+    opacity: 0;
+}
+
+.imagem-perfil.fade-in {
+    opacity: 1;
 }
 
 .imagem-perfil-botao {
