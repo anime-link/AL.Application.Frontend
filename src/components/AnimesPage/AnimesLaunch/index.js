@@ -1,10 +1,11 @@
 import "./styles.css";
 import { register } from 'swiper/element/bundle';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import animes1 from "../../../assets/Images/Animes/animes1.png";
-import animes2 from "../../../assets/Images/Animes/animes2.png";
-import animes3 from "../../../assets/Images/Animes/animes3.png";
-import animes4 from "../../../assets/Images/Animes/animes4.png";
+import image77 from "../../../assets/Images/AnimeLaunch/image 77.png";
+import image76 from "../../../assets/Images/AnimeLaunch/image 76.png";
+import image80 from "../../../assets/Images/AnimeLaunch/image 80.png";
+import image75 from "../../../assets/Images/AnimeLaunch/image 75.png";
+import image81 from "../../../assets/Images/AnimeLaunch/image 81.png";
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -15,10 +16,11 @@ register();
 
 export default function AnimesesLancamentos({ animes }) {
     const imgAnimes = [
-        animes1,
-        animes2,
-        animes3,
-        animes4
+        image77,
+        image76,
+        image80,
+        image75,
+        image81
     ];
 
     return (
@@ -26,9 +28,11 @@ export default function AnimesesLancamentos({ animes }) {
             <h2 className="titulo-lancamentos">Lançamentos</h2>
 
             <Swiper
-                slidesPerView={1} // Corrigido aqui
+                slidesPerView={3} // Corrigido aqui
                 pagination={{ clickable: true }}
                 navigation
+                spaceBetween={-400}
+                loop={true}
             >
                 {imgAnimes.map((item, index) => (
                     <SwiperSlide key={index}>

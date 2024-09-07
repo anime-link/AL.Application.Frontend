@@ -8,6 +8,7 @@ const AnimeCards = ({ nome, imgAnime }) => {
       className="anime-card"
       style={{ backgroundImage: `url(${imgAnime})` }}
     >
+
       <div className="anime-content">
         <h2 className="anime-title">{nome}</h2>
       </div>

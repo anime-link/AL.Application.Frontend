@@ -11,7 +11,7 @@ export default function AnimesRanking({ rankingList }) {
                     <div key={index} className="ranking-cont">
                         <span className="ranking-number">{item.number}</span>
                         <span className="ranking-anime">{item.anime}</span>
-                        <RiTrophyFill />
+                        <RiTrophyFill  className="icon-blue" size={30}/>
                     </div>
                 ))}
             </div>

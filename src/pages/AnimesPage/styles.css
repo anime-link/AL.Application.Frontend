@@ -7,4 +7,6 @@
     height: 100vh;
     
     background-color: var(--daisy-bush);
+
+    overflow-x: hidden;
 }
