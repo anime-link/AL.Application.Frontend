@@ -77,3 +77,22 @@
 .imagem-escolha-depois {
     right: -3px;
 }
+
+@media (max-width: 426px) {
+    .imagem-escolha-area {
+        width: 150px;
+        height: 50px;
+        margin-top: 10px;
+    }
+
+    .imagem-escolha-slider-img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .imagem-escolha-antes,
+    .imagem-escolha-depois {
+        top: 3px;
+        font-size: 30px;
+    }
+}

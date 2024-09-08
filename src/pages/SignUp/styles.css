@@ -88,3 +88,41 @@
     font-size: 70px;
     color: var(--bright-sun);
 }
+
+@media (max-width: 426px) {
+    .cadastro-pagina {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        gap: 10px;
+        padding-top: 50px;
+        padding-bottom: 100px;
+        
+        background-size: cover;
+    }
+
+    .cadastro-texto {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 340px;
+    }
+
+    .cadastro-texto-titulo {
+        font: var(--header-32);
+    }
+
+    .cadastro-sub-icon {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+    }
+
+    .cadastro-texto-sub {
+        font: var(--text-16);
+    }
+
+    .cadastro-texto-icon {
+        font-size: 30px;
+    }
+}
