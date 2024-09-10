@@ -1,0 +1,30 @@
+.adm-anime{
+    position: relative;
+
+    width: 1199px;
+    height: 550px;
+    margin-top: 18px;
+    margin-bottom: 46px;
+    margin-left: 37px;
+    margin-right: 37px;
+    padding-bottom: 60px;
+    background-color: black;
+    padding-bottom: 90px;
+    border-radius: 20px;
+}
+
+.adm-card{
+    position: relative;
+    width: 420px;
+    height: 420px;
+    margin: 100px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer; 
+}
+
+h1{
+    color: aliceblue;
+}
