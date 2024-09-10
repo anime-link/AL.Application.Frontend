@@ -1,6 +1,7 @@
 .footer {
     display: flex;
     justify-content: center;
+    text-align: center;
 
     width: 100%;
     margin-top: 150px;
@@ -44,4 +45,36 @@
 .footer-texto {
     font: var(--text-24);
     color: var(--white);
+}
+
+@media (max-width: 768px) and (min-width: 425px) {
+    .footer {
+        margin-top: 80px;
+    }
+
+    .footer-elementos {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        gap: 30px;
+    }
+
+    .footer-logo {
+        width: 40px;
+    }
+
+    .footer-divisor {
+        height: 40px;
+    }
+
+    .footer-grupo {
+        gap: 10px;
+    }
+
+    .footer-icon {
+        font-size: 30px;
+    }
+
+    .footer-texto {
+        font: var(--text-15);
+    } 
 }

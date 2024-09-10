@@ -45,3 +45,24 @@
     color: var(--white);
     background: var(--gradient-yellow);
 }
+
+@media (max-width: 426px) {
+    .imagem-perfil-area {
+        width: 210px;
+        height: 288px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0;
+    }
+
+    .imagem-perfil {
+        margin-top: 0;
+        width: 80px;
+        height: 80px;
+    }
+
+    .imagem-perfil-botao  {
+        padding: 3px 20px;
+        font: var(--text-15);
+    }
+}

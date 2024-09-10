@@ -36,3 +36,14 @@
 .cadastro-input:focus {
     border: solid 2px var(--bright-sun);
 }
+
+@media (max-width: 426px) {
+    .cadastro-input {
+        width: 230px;
+        height: 40px;
+    }
+
+    .cadastro-input::placeholder {
+        font: var(--text-15);
+    }
+}

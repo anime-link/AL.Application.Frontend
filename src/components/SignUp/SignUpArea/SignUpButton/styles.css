@@ -29,3 +29,19 @@
 .cadastro-botao:active {
     opacity: 70%;
 }
+
+.cadastro-botao-area {
+    margin-top: 50px;
+}
+
+@media (max-width: 426px) {
+    .cadastro-botao-area {
+        margin-top: 50px;
+    }
+
+    .cadastro-botao {
+        width: 100px;
+        height: 40px;
+        font: var(--text-16);
+    }
+}

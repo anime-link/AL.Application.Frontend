@@ -3,26 +3,25 @@
     justify-content: center;
     align-items: center;
 
-    margin-top: 60px;
-    margin-bottom: 20px;
+    margin-top: 49px;
 }
 
 .avancar-botao {
-    width: 170px;
-    height: 54px;
-    border-radius: 20px;
-
+    width: 150px;
+    height: 45px;
+    
     cursor: pointer;
-    border: none;
+    border-radius: 10px;
 
-    background: var(--gradient-blue);
+    background: var(--gradient-yellow);
     color: var(--white);
-    font: var(--text-24);
+    font: var(--text-20);
 
     transition: 0.5s ease-in-out;
 }
 
 .avancar-botao:hover {
+    filter: brightness(1.1);
     transform: scale(1.1);
 }
 
