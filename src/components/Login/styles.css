@@ -94,3 +94,41 @@
     margin-top: 37px;
     background-color: var(--chetwode-blue);
 }
+
+@media (max-width: 426px) {
+    .login-area {
+        width: 295px;
+        height: 480px;
+    }
+
+    .login-area-titulo {
+        margin-top: 15px;
+        font: var(--header-32);
+    }
+
+    .login-icone-fechar {
+        font-size: 30px;
+    }
+
+    .login-input-area {
+        margin-top: 50px;
+        gap: 20px;
+    }
+
+    .login-esquecer-senha {
+        margin-top: 13px;
+    }
+
+    .login-pergunta {
+        margin-top: 10px;
+        font: var(--text-15);
+    }
+
+    .login-cadastro {
+        font: var(--text-24);
+    }
+
+    .login-divisor {
+        display: none;
+    }
+}

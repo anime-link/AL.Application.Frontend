@@ -46,3 +46,40 @@
     font-size: 70px;
     color: var(--bright-sun);
 }
+
+@media (max-width: 426px) {
+    .login-page {
+        display: flex;
+        flex-direction: column-reverse;
+        height: 100%;
+        padding-top: 50px;
+        padding-bottom: 100px;
+
+        background-size: cover;
+    } 
+    
+    .login-texto {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .login-texto-titulo {
+        font: var(--header-32);
+    }
+
+    .login-sub {
+        font: var(--text-16);
+    }
+
+    .login-sub-icon {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .login-texto-icon {
+        font-size: 30px;
+    }
+}

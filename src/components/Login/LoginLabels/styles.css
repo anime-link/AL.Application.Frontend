@@ -34,3 +34,13 @@
     color: var(--bright-sun);
 }
 
+@media (max-width: 426px) {
+    .login-input {
+        width: 230px;
+        height: 40px;
+    }
+
+    .login-input::placeholder {
+        font: var(--text-15);
+    }
+}
