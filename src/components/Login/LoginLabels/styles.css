@@ -3,35 +3,34 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-
-    margin-top: 10px;
-}
-
-.login-label {
-    margin-bottom: 5px;
-
-    color: var(--white);
-    font: var(--text-20);
 }
 
 .login-input {
     width: 299px;
-    height: 53px;
-    border-radius: 20px;
+    height: 45px;
+    border-radius: 10px;
     padding-left: 20px;
 
-    border: none;
-
+    outline: none;
+    border: solid 2px var(--night-rider);
     background-color: var(--white);
     font: var(--text-16);
 
     transition: 0.5s ease-in-out;
 }
 
+.login-input:focus {
+    border-color: var(--bright-sun);
+}
+
 .login-input::placeholder {
-    margin-top: 5px;
-    
     font: var(--text-16);
     color: var(--fog);
+
+    transition: 0.5s ease-in-out;
+}
+
+.login-input:focus::placeholder {
+    color: var(--bright-sun);
 }
 

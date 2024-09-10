@@ -374,7 +374,7 @@
     .home-apresentacao-1-texto,
     .home-apresentacao-2-texto,
     .home-apresentacao-3-texto {
-        width: 70%;
+        width: 75%;
         font: var(--text-15);
     }
 
@@ -385,126 +385,6 @@
     .home-apresentacao-2-texto {
         width: 230px;
         margin-left: 20px;
-    }
-
-    .home-apresentacao-3-texto {
-        display: flex;
-        justify-content: center;
-    }
-
-    .home-apresentacao-3-redes {
-        gap: 32px;
-    }
-
-    .home-apresentacao-3-git,
-    .home-apresentacao-3-link,
-    .home-apresentacao-3-inst,
-    .home-apresentacao-3-mail {
-        padding: 7px;
-        font-size: 45px;
-    }
-}
-
-@media (max-width: 768px) and (min-width: 430px) {
-    .home-header-logo {
-        width: 500px;
-        left: 350px;
-        z-index: 0;
-    }
-
-    .home-header-titulo-1,
-    .home-header-titulo-2 {
-        font: var(--app-section);
-    }
-
-    .home-header-titulo-2 {
-        margin-top: -50px;
-        margin-left: 130px;
-    }
-
-    .home-header-text {
-        display: flex;
-        justify-content: center;
-        margin-top: 80px;
-        margin-left: 40px;
-        z-index: 1;
-    }
-
-    .home-header-intro {
-        font: var(--text-16);
-        width: 80%;
-    }
-
-    .home-body-boasvindas {
-        margin-top: 80px;
-        gap: 10px;
-    }
-
-    .home-body-welcome {
-        font: var(--header-32);
-    }
-
-    .home-body-boasvindas-icon {
-        font-size: 40px;
-    }
-
-    .home-apresentacao {
-        margin-top: 70px;
-    }
-
-    .home-apresentacao-1,
-    .home-apresentacao-2{
-        display: flex;
-        flex-direction: row;
-        padding-top: 50px;
-        padding-bottom: 30px;
-        gap: 30px;
-    }
-
-    .home-apresentacao-3 {
-        display: flex;
-        padding-top: 50px;
-        padding-bottom: 30px;
-    }
-
-    .home-apresentacao-1-ilustracao {
-        display: flex;
-        justify-content: center;
-    }
-    
-    .home-apresentacao-1-img,
-    .home-apresentacao-2-img {
-        width: 160px;
-    }
-
-    .home-apresentacao-1-icon,
-    .home-apresentacao-2-icon,
-    .home-apresentacao-3-icon {
-        font-size: 80px;
-        padding: 15px;
-    }
-
-    .home-apresentacao-1-icon {
-        margin-left: -60px;
-    }
-
-    .home-apresentacao-2-icon {
-        margin-right: -40px;
-    }
-
-    .home-apresentacao-1-texto,
-    .home-apresentacao-2-texto,
-    .home-apresentacao-3-texto {
-        width: 80%;
-        font: var(--text-15);
-    }
-
-    .home-apresentacao-1-texto {
-        width: 300px;
-    }
-
-    .home-apresentacao-2-texto {
-        width: 280px;
     }
 
     .home-apresentacao-3-texto {
