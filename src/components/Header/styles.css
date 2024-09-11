@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    position: fixed;
+    position: relative;
 
     z-index: 2;
     width: 100%;
@@ -17,25 +17,35 @@
     align-items: center;
     flex-direction: row;
 
-    padding: 20px 52px;
-    gap: 280px;
+    padding: 14px 52px;
+}
+
+.header-logo-area {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 195px;
+    gap: 8px;
+
+    transition: 0.5s ease-in-out;
+}
+
+.header-logo-area:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
 }
 
 .header-logo {
-    cursor: pointer;
-
     width: 57px;
 
     transition: 0.5s ease-in-out;
 }
 
-.header-logo:hover {
-    transform: scale(1.1);
-    filter: brightness(1.1);
-}
-
-.header-logo:active {
-    opacity: 50%;
+.header-logo-texto {
+    font: var(--app-text);
+    background: var(--gradient-purple-blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .header-paginas {
@@ -44,27 +54,38 @@
     align-items: center;
     flex-direction: row;
 
-    gap: 124px;
+    gap: 162px;
 }
 
 .header-pagina {
     color: var(--white);
-    font: var(--text-20);
+    font: var(--text-16);
+    background: linear-gradient(var(--bright-sun), var(--bright-sun)) bottom / 0% 2px no-repeat;
 
     transition: 0.5s ease-in-out;
 }
 
 .header-pagina.active {
     color: var(--bright-sun);
-    font: var(--text-20);
+    background-size: 100% 2px;
 }
 
 .header-pagina:hover {
     color: var(--bright-sun);
+    background-size: 100% 2px;
 }
 
 .header-usuario {
     cursor: pointer;
-
     width: 57px;
+    margin-left: 304px;
+
+    border: solid 2px var(--night-rider);
+    border-radius: 50%;
+
+    transition: 0.5s ease-in-out;
+}
+
+.header-usuario:hover {
+    border-color: var(--bright-sun);
 }

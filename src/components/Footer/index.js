@@ -7,7 +7,7 @@ export default function Footer() {
     return (
         <footer className="footer">
             <div className="footer-elementos">
-                <img className="footer-logo" src={logo} />
+                <img className="footer-logo" src={logo} alt="AnimeLink Logo" />
                 <hr className="footer-divisor" />
                 <div className="footer-grupo">
                     <RiGroup2Fill className="footer-icon" />

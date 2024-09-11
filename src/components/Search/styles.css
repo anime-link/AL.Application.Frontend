@@ -8,9 +8,10 @@
     width: 600px;
     height: 66px;
     margin-top: 150px;
-    border-radius: 20px;
+    border-radius: 10px;
 
-    background: var(--gradient-purple-blue);
+    background-color: var(--deep-koamaru);
+    border: solid 1px var(--night-rider);
 }
 
 .pesquisa-icon {
@@ -22,8 +23,6 @@
 
 .pesquisa-barra {
     text-align: center;
-    background: none;
-    border: none;
     outline: none;
 
     width: 300px;
@@ -41,8 +40,8 @@
     position: absolute;
     cursor: pointer;
 
-    right: 100px;
-    font-size: 25px;
+    right: 60px;
+    font-size: 30px;
 }
 
 .pesquisa-barra::-webkit-search-cancel-button {

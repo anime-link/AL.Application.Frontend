@@ -1,0 +1,15 @@
+.comunidade-topicos-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    background: 
+        url("../../../assets/Images/Communities/community-background-2.png"),
+        var(--gradient-black);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+    background-blend-mode: soft-light;      
+}

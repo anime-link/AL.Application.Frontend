@@ -8,7 +8,10 @@ export default function Header() {
     return (
         <header className="header">
             <div className="header-area">
-                <img className="header-logo" src={logo} alt="AnimeLink" />
+                <div className="header-logo-area">
+                    <img className="header-logo" src={logo} alt="AnimeLink" />
+                    <p className="header-logo-texto">AnimeLink</p>
+                </div>
                 <div className="header-paginas">
                     <NavLink to={"/comunidades"} className={({ isActive }) => isActive ? "header-pagina active" : "header-pagina"}>
                         Comunidades
