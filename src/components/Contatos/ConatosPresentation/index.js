@@ -7,8 +7,8 @@ export default function ContatosBemVindo() {
     return (
         <div className="bemVindos-area">
             <div className="boasVindas-titulo">
-                <h3>Bem Vindo a</h3>
-                <h3>pagína de contatos</h3>
+                <p>Bem Vindo a</p>
+                <p>pagína de contatos</p>
             </div>
 
             <div className="boasVindas-cont">

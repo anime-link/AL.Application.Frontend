@@ -1,30 +1,54 @@
-.adm-anime{
-    position: relative;
 
-    width: 1199px;
-    height: 550px;
-    margin-top: 18px;
-    margin-bottom: 46px;
-    margin-left: 37px;
-    margin-right: 37px;
-    padding-bottom: 60px;
-    background-color: black;
-    padding-bottom: 90px;
-    border-radius: 20px;
-}
 
 .adm-card{
     position: relative;
-    width: 420px;
-    height: 420px;
+    width: 1292px;
+    height: 550px;
     margin: 100px;
+    
     overflow: hidden;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    
     cursor: pointer; 
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-clip: border-box;
+    background-blend-mode: multiply;
+    background: var(--deep-koamaru);
 }
 
-h1{
+p{
     color: aliceblue;
+    font-size: 70px;
+    font: var(--app-section);
 }
+
+.imgAdm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 130px;
+    margin-top: 135px;
+    width: 280px;
+    height: 280px;
+    margin-right: 187px;
+    margin-bottom: 137px;
+    margin-top: 137px;
+
+}
+
+.admPerfil{
+    margin-right: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
