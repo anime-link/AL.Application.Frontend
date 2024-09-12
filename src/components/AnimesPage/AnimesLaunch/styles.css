@@ -15,12 +15,70 @@
     text-align: center;
     margin: 24px 0;
     color: var(--fog);
-
 }
 
 .slide-item{
     width: 100px;
     height: 132px;
     margin-left: 400px;
+    margin-bottom: 10px;
     object-fit: cover;
+    cursor: pointer;
 }
+
+.swiper-slide {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 300px; /* Ajuste a altura conforme necessário */
+}
+
+
+
+
+
+
+.area-lancamentos .swiper-pagination-bullet {
+    display: none;
+}
+
+/* src/styles.css */
+
+/* Estilizar o botão de navegação para o próximo slide */
+.swiper-button-next {
+    color: var(); /* Altere a cor do ícone do botão */
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo do botão */
+     /* Deixe o botão redondo */
+    width: 40px; /* Largura do botão */
+    height: 40px; /* Altura do botão */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilizar o botão de navegação para o slide anterior */
+.swiper-button-prev {
+    color: var(--bright-sun); /* Altere a cor do ícone do botão */
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo do botão */
+    border-radius: 50%; /* Deixe o botão redondo */
+    width: 40px; /* Largura do botão */
+    height: 40px; /* Altura do botão */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Opcional: Estilizar o botão de navegação ao passar o mouse */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo ao passar o mouse */
+}
+
+/* Opcional: Ajustar o ícone do botão se necessário */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 20px; /* Tamanho do ícone */
+    color: var(--bright-sun); /* Cor do ícone */
+}
+
+

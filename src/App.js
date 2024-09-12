@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import Comunidades from './pages/Communities';
 import Animes from './pages/AnimesPage'
 import ComunidadeChat from './pages/CommunityChat';
+import Contatos from "./pages/Contatos";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route element={<Animes/>} path='/animes' />
           <Route element={<Comunidades />} path='/comunidades' />  
           <Route element={<ComunidadeChat />} path='/chat' />  
+          <Route element={ <Contatos/>} path='/contatos'/>
         </Routes>
       </BrowserRouter>
     </body>

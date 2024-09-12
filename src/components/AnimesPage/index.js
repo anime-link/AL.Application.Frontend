@@ -6,8 +6,13 @@ import Pesquisa from "../Search";
 import AnimesesLancamentos from './AnimesLaunch';
 import AnimesRanking from './AnimesRanking';
 import AnimeCards from './AnimesCards';
-import img1 from '../../assets/Images/Animes/animes1.png';
-import img2 from '../../assets/Images/Animes/animes2.png';
+import acao from '../../assets/Images/AnimesCard/acao.png';
+import romance from '../../assets/Images/AnimesCard/romance.png';
+import terror from '../../assets/Images/AnimesCard/terror.png';
+import comedia from '../../assets/Images/AnimesCard/comedia.png';
+import misterio from '../../assets/Images/AnimesCard/misterio.png';
+import esporte from '../../assets/Images/AnimesCard/esporte.png';
+import Footer from "../Footer";
 
 export default function AnimesArea() {
     // Lista de animes e seus números de ranking
@@ -45,20 +50,21 @@ export default function AnimesArea() {
                 <>
                 <ul>
                     <li>
-                    <AnimeCards nome="Ação" imgAnime={img1} />
-                    <AnimeCards nome="Terror" imgAnime={img2} />
+                    <AnimeCards nome="Ação" imgAnime={acao} />
+                    <AnimeCards nome="Terror" imgAnime={terror} />
                     </li>
                     <li>
-                    <AnimeCards nome="Comédia" imgAnime={img1} />
-                    <AnimeCards nome="Romance" imgAnime={img2} />
+                    <AnimeCards nome="Comédia" imgAnime={comedia} />
+                    <AnimeCards nome="Romance" imgAnime={romance} />
                     </li>
                     <li>
-                    <AnimeCards nome="Esporte" imgAnime={img1} />
-                    <AnimeCards nome="Mistério" imgAnime={img2} />
+                    <AnimeCards nome="Esporte" imgAnime={esporte} />
+                    <AnimeCards nome="Mistério" imgAnime={misterio} />
                     </li>
                 </ul>
                 </> 
             </main>
+            <Footer/>
         </div>
     );
 }

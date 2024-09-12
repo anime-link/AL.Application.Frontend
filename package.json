@@ -16,13 +16,15 @@
     "react-router-dom": "^6.26.1",
     "react-scripts": "5.0.1",
     "swiper": "^11.1.12",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yearn": "^2.3.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "lighthouse": "lighthouse http://localhost:3000 --output html --output-path ./anime-link-report.html"
     "lighthouse": "lighthouse http://localhost:3000 --output html --output-path ./animelink-report.html"
   },
   "eslintConfig": {
