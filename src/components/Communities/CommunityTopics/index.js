@@ -5,7 +5,7 @@ import community3 from "../../../assets/Images/Communities/community3.png";
 import community4 from "../../../assets/Images/Communities/community4.png";
 import community5 from "../../../assets/Images/Communities/community5.png";
 import community6 from "../../../assets/Images/Communities/community6.png";
-import { RiAddLine, RiFireFill, RiStarFill } from "react-icons/ri";
+import { RiAddLine, RiStarFill } from "react-icons/ri";
 import ComunidadeSlider from "../CommunitySlider";
 
 export default function ComunidadeTopicos() {
@@ -24,6 +24,7 @@ export default function ComunidadeTopicos() {
     return (
         <div className="comunidade-topicos-area">
             <h1 className="comunidade-topicos-titulo">Tópicos</h1>
+            <hr className="comunidade-topicos-divisor" />
             <div className="comunidade-topicos-pop">
                 <div className="comunidade-topicos-pop-p">
                     <p className="comunidade-topicos-pop-titulo">Mais populares</p>
@@ -31,19 +32,33 @@ export default function ComunidadeTopicos() {
                 </div>
                 <ComunidadeSlider images={comunidadesPopular} />
             </div>
+            <hr className="comunidade-topicos-divisor" />
             <div className="comunidade-topicos-novo">
+                <ComunidadeSlider images={comunidadesNovo} />
                 <div className="comunidade-topicos-novo-p">
                     <p className="comunidade-topicos-novo-titulo">Novas comunidades</p>
                     <RiAddLine className="comunidade-topicos-novo-icon" />
                 </div>
-                <ComunidadeSlider images={comunidadesNovo} />
             </div>
+            <hr className="comunidade-topicos-divisor" />
             <div className="comunidade-topicos-alta">
-                <div className="comunidade-topicos-alta-p">
-                    <p className="comunidade-topicos-alta-titulo">Em alta</p>
-                    <RiFireFill className="comunidade-topicos-alta-icon" />
+                <p className="comunidade-topicos-alta-titulo">Em alta</p>
+                <div className="comunidade-topicos-alta-com">
+                    <div className="comunidade-topicos-alta-exp">
+                        <img className="comunidade-topicos-alta-img" src={community1} alt="Comunidade" />
+                        <p className="comunidade-topicos-alta-membros">x membros</p>
+                    </div>
+                    <div className="comunidade-topicos-alta-exp">
+                        <img className="comunidade-topicos-alta-img" src={community4} alt="Comunidade" />
+                        <p className="comunidade-topicos-alta-membros">x membros</p>
+                    </div>
+                    <div className="comunidade-topicos-alta-exp">
+                        <img className="comunidade-topicos-alta-img" src={community2} alt="Comunidade" />
+                        <p className="comunidade-topicos-alta-membros">x membros</p>
+                    </div>
                 </div>
             </div>
+            <hr className="comunidade-topicos-divisor" />
         </div>
     );
 }

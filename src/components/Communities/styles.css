@@ -63,3 +63,23 @@
     font-size: 75px;
     color: var(--bright-sun);
 }
+
+.comunidade-search {
+    display: flex;
+    justify-content: center;
+    margin-top: 112px;
+}
+
+.comunidades-opcoes-fundo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 193px;
+
+    background-image: url("../../assets/Images/Communities/community-background-3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+    background-blend-mode: soft-light;
+    background-color: var(--deep-koamaru);
+}

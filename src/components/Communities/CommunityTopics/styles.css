@@ -4,12 +4,114 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
+    padding-top: 100px;
 
-    background: 
+    background:
         url("../../../assets/Images/Communities/community-background-2.png"),
         var(--gradient-black);
     background-repeat: no-repeat;
     background-size: cover;
     background-clip: border-box;
-    background-blend-mode: soft-light;      
+    background-blend-mode: soft-light;
+}
+
+.comunidade-topicos-titulo {
+    font: var(--header-48);
+    color: var(--white);
+}
+
+.comunidade-topicos-pop,
+.comunidade-topicos-novo,
+.comunidade-topicos-alta {
+    margin-top: 142px;
+    text-align: center;
+}
+
+.comunidade-topicos-pop,
+.comunidade-topicos-novo {
+    display: flex;
+    align-items: center;
+}
+
+.comunidade-topicos-alta {
+    display: flex;
+    flex-direction: column;
+}
+
+.comunidade-topicos-pop-p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    color: var(--bright-sun);
+}
+
+.comunidade-topicos-novo-p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    color: var(--chetwode-blue);
+}
+
+.comunidade-topicos-alta-p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+.comunidade-topicos-pop-titulo,
+.comunidade-topicos-novo-titulo,
+.comunidade-topicos-alta-titulo {
+    font: var(--app-section);
+}
+
+.comunidade-topicos-pop-icon,
+.comunidade-topicos-novo-icon {
+    font-size: 180px;
+}
+
+.comunidade-topicos-alta-titulo {
+    background: var(--gradient-yellow);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.comunidade-topicos-alta-com {
+    display: flex;
+    gap: 58px;
+    margin-top: 97px;
+}
+
+.comunidade-topicos-alta-exp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+}
+
+.comunidade-topicos-alta-img {
+    cursor: pointer;
+    width: 350px;
+    height: 182px;
+    border: solid 1px var(--night-rider);
+}
+
+.comunidade-topicos-alta-membros {
+    font: var(--text-20);
+    background: var(--gradient-yellow);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.comunidade-topicos-divisor {
+    width: 100%;
+    height: 2px;
+    margin-top: 111px;
+    background-color: var(--bright-sun);
 }
