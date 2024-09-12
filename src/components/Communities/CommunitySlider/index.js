@@ -1,42 +1,47 @@
-import React, { useEffect, useState } from "react";
 import "./styles.css";
 import "swiper/swiper-bundle.css";
-import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
+import "swiper/css/effect-coverflow";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import SwiperCore from "swiper";
+import { Navigation, EffectCoverflow, Autoplay, Pagination } from "swiper/modules";
 
-// Instalação de módulos
-SwiperCore.use([Navigation, Pagination, Autoplay]);
-
-export default function ComunidadeSlider({ images, interval = 6500 }) {
+export default function ComunidadeSlider ({ images }) {
     return (
-        <div className="comunidade-slider">
+        <div className="comunidade-slider-area">
             <Swiper
-                spaceBetween={30}
-                slidesPerView={1}
-                navigation={{
-                    prevEl: '.comunidade-slider-antes',
-                    nextEl: '.comunidade-slider-depois'
+                modules={[Navigation, EffectCoverflow, Autoplay, Pagination]}
+                effect="coverflow"
+                grabCursor={true}
+                centeredSlides={true}
+                slidesPerView={3}
+                coverflowEffect={{
+                    rotate: 50,
+                    stretch: 100,
+                    depth: 300,
+                    modifier: 1,
+                    slideShadows: true, 
                 }}
                 pagination={{ clickable: true }}
-                autoplay={{ delay: interval }}
+                autoplay={{
+                    delay: 5000,
+                    disableOnInteraction: false,
+                }}
+                loop={true}
             >
                 {images.map((img, i) => (
                     <SwiperSlide key={i}>
-                        <div
-                            className="comunidade-slide"
-                        >
-                            <div className="comunidade-slide-nome-img">
-                                <img className="comunidade-slide-img" src={img} alt={`Comunidade ${i}`} />
-                                <h2 className="comunidade-slide-nome">Anime</h2>
+                        <div className="comunidade-slide">
+                            <div className="comunidade-img-nome">
+                                <img 
+                                    className="comunidade-slide-img" 
+                                    src={img} 
+                                    alt={`Anime ${i}`} 
+                                />
+                                <p className="comunidade-slide-nome">Comunidade</p>
                             </div>
                         </div>
                     </SwiperSlide>
                 ))}
             </Swiper>
-            <RiArrowLeftSLine className="comunidade-slider-antes" />
-            <RiArrowRightSLine className="comunidade-slider-depois" />
-        </div>   
+        </div>
     );
 }

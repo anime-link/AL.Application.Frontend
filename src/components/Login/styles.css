@@ -3,33 +3,33 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    width: 462px;
-    height: 682px;
-    border-radius: 37px;
-    background-color: var(--daisy-bush);
-    position: absolute;
+    position: relative;
+    width: 465px;
+    height: 670px;
+
+    border-radius: 20px;
+    background-color: rgba(86, 66, 167, 0.8);
 }
 
 .login-area-titulo {
-    border-bottom: solid 3px;
-    margin-top: 35px;
-    margin-bottom: 50px;
+    margin-top: 28px;
 
     color: var(--white);
-    font: var(--header-48); 
+    font: var(--header-40);
+    text-shadow: 0 4px 0 #333333; 
 }
 
 .login-icone-voltar {
-    position: relative;
-    top: 40px;
-    right: 175px;
+    position: absolute;
+    top: 28px;
+    left: 28px;
 }
 
 .login-icone-fechar {
     cursor: pointer;
     font-size: 40px;
     
-    color: var(--night-rider);
+    color: black;
 
     transition: 0.5s ease-in-out;
 }
@@ -44,22 +44,91 @@
     opacity: 50%;
 }
 
-h2{
-    padding-top: 10px;
+.login-input-area {
+    display: flex;
+    flex-direction: column;
+    margin-top: 94px;
+    gap: 40px;
+}
 
+.login-esquecer-senha {
+    cursor: pointer;
+    margin-top: 31px;
+
+    font: var(--text-15);
     color: var(--bright-sun);
-    font-size: 32px;
+
+    transition: 0.5s ease-in-out;
 }
 
-p{
-    padding-top: 20px;
-    color: var(--fog);
+.login-esquecer-senha:hover {
+    transform: scale(1.1);
 }
 
-.contPassword{
+.login-pergunta {
+    margin-top: 29px;
+    font: var(--text-16);
+    color: var(--white);
+}
+
+.login-cadastro-link {
+    text-decoration: none;
     color: var(--bright-sun);
-    margin-right:120px;
-    padding: 10px;
 }
 
+.login-cadastro {
+    font: var(--header-32);
+    background: linear-gradient(var(--bright-sun), var(--bright-sun)) bottom / 0% 2px no-repeat;
 
+    transition: 0.5s ease-in-out;
+}
+
+.login-cadastro:hover {
+    filter: brightness(1.1);
+    background-size: 100% 2px;
+}
+
+.login-divisor {
+    width: 388px;
+    height: 2px;
+    margin-top: 37px;
+    background-color: var(--chetwode-blue);
+}
+
+@media (max-width: 426px) {
+    .login-area {
+        width: 295px;
+        height: 480px;
+    }
+
+    .login-area-titulo {
+        margin-top: 15px;
+        font: var(--header-32);
+    }
+
+    .login-icone-fechar {
+        font-size: 30px;
+    }
+
+    .login-input-area {
+        margin-top: 50px;
+        gap: 20px;
+    }
+
+    .login-esquecer-senha {
+        margin-top: 13px;
+    }
+
+    .login-pergunta {
+        margin-top: 10px;
+        font: var(--text-15);
+    }
+
+    .login-cadastro {
+        font: var(--text-24);
+    }
+
+    .login-divisor {
+        display: none;
+    }
+}

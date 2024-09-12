@@ -9,14 +9,15 @@ export function CampoCheck() {
     };
 
     return(
-        <div className="checklist">
-          <label>
+        <div className="login-checklist">
+          <label className="login-check">
             <input
               type="checkbox"
               checked={isChecked}
               onChange={handleCheckboxChange}
             />
-            Lembrar usuário e senha
+            <span className="login-checkbox"></span>
+            <span>Manter conectado</span>
           </label>
         </div>
     );

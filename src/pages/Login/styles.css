@@ -1,14 +1,85 @@
 .login-page {
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
-
-    width: 100vw;
+    width: 100%;
     height: 100vh;
+    gap: 135px;
 
-    background: url("../../assets/Images/SignUp/signup-background.png");
+    background: 
+        url("../../assets/Images/Login/login-background.png"), 
+        var(--gradient-black);
     background-size: cover;
     background-repeat: no-repeat;
     background-clip: border-box;
+    background-blend-mode: multiply;
+}
+
+.login-texto {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    width: 409px;
+}
+
+.login-texto-titulo,
+.login-sub {
+    color: var(--white);
+}
+
+.login-texto-titulo {
+    font: var(--header-64);
+}
+
+.login-sub {
+    font: var(--text-32);
+}
+
+.login-sub-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 59px;
+}
+
+.login-texto-icon {
+    font-size: 70px;
+    color: var(--bright-sun);
+}
+
+@media (max-width: 426px) {
+    .login-page {
+        display: flex;
+        flex-direction: column-reverse;
+        height: 100%;
+        padding-top: 50px;
+        padding-bottom: 100px;
+
+        background-size: cover;
+    } 
+    
+    .login-texto {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .login-texto-titulo {
+        font: var(--header-32);
+    }
+
+    .login-sub {
+        font: var(--text-16);
+    }
+
+    .login-sub-icon {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .login-texto-icon {
+        font-size: 30px;
+    }
 }

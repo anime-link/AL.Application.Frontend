@@ -4,8 +4,7 @@ import { RiArrowLeftCircleFill } from "react-icons/ri";
 import { CamposLogin } from "./LoginLabels";
 import { BotaoAvancar} from "./LoginButton";
 import { CampoCheck } from './LoginCheck';
-import { Link} from "react-router-dom";
-
+import { Link } from "react-router-dom";
 
 export default function LoginArea(){
     return(
@@ -16,13 +15,18 @@ export default function LoginArea(){
                 </Link>
             </div>
             <h1 className="login-area-titulo">Login</h1>
-            <CamposLogin title={"Usuário"} placeholder={"Usuário"} type={"text"} />
-            <CamposLogin title={"Senha"} placeholder={"Senha"} type={"password"} />
-            <p className="contPassword">Esqueci minha senha</p>
-            <CampoCheck/>
-            <p>Não tem conta?</p>
-            <h2>Cadastre-se</h2>
-            <BotaoAvancar/>
+            <div className='login-input-area'>
+                <CamposLogin placeholder={"Usuário"} type={"text"} />
+                <CamposLogin placeholder={"Senha"} type={"password"} />
+            </div>
+            <p className="login-esquecer-senha">Esqueci minha senha</p>
+            <CampoCheck />
+            <BotaoAvancar />
+            <hr className="login-divisor" />
+            <p className="login-pergunta">Não tem conta?</p>
+            <Link className="login-cadastro-link" to={"/cadastro"}>
+                <p className="login-cadastro">Cadastre-se</p>
+            </Link>
         </div>
     );
 }

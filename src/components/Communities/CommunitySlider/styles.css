@@ -1,90 +1,54 @@
-.comunidade-slider {
+.comunidade-slider-area {
     position: relative;
-
-    width: 100%;
-    margin-top: 18px;
-    margin-bottom: 46px;
+    width: 750px;
 }
 
-.comunidade-slider .swiper-container {
+.comunidade-slider-area .swiper-container {
     width: 100%;
     height: 100%;
 }
 
-.comunidade-slider-area {
+.comunidade-img-nome {
     display: flex;
-    margin-bottom: 65px;
-}
-
-.comunidade-slide {
-    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
     width: 100%;
-    margin-bottom: 60px;
-}
-
-.comunidade-slide-nome-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    cursor: pointer;
+    box-shadow: 5px 20px 10px rgba(0, 0, 0, 0.5) !important;
 }
 
 .comunidade-slide-img {
-    width: 500px;
-    height: 232px;
+    cursor: pointer;
+    width: 650px;
+    height: 303px;
+
+    border: solid 2px var(--bright-sun);
 }
 
 .comunidade-slide-nome {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 650px;
+    padding: 9px 288px;
     
-    width: 100%;
-    padding-top: 7px;
-    padding-bottom: 7px;
-
+    background-color: var(--night-rider);
+    font: var(--text-24);
     color: var(--white);
-    font: var(--text-16);
-    background: var(--gradient-purple-blue);
 }
 
-.comunidade-slider-antes,
-.comunidade-slider-depois {
-    position: absolute;
-    cursor: pointer;
-
-    z-index: 1;
-    font-size: 80px;
-    top: 80px;
-
-    color: var(--bright-sun);
-
-    transition: 0.5s ease-in-out;
+.comunidade-img-nome .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
 }
 
-.comunidade-slider-antes:hover,
-.comunidade-slider-depois:hover {
-    transform: scale(1.2);
-}
+.comunidade-img-nome .swiper-pagination-bullet {
+    width: 50px;
+    height: 50px;
+    margin: 0 20px;
 
-.comunidade-slider-antes {
-    right: 720px;
-}
-
-.comunidade-slider-depois {
-    left: 720px;
-}
-
-.comunidade-slider .swiper-pagination-bullet {
-    width: 20px;
-    height: 20px;
+    border: solid 1px var(--bright-sun);
     border-radius: 50%;
-
-    background-color: var(--white);
-}
-
-.comunidade-slider .swiper-pagination-bullet-active {
-    background-color: var(--bright-sun);
 }
