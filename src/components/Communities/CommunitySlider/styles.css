@@ -1,6 +1,6 @@
 .comunidade-slider-area {
     position: relative;
-    width: 750px;
+    width: 650px;
 }
 
 .comunidade-slider-area .swiper-container {
@@ -15,7 +15,6 @@
     align-items: center;
 
     width: 100%;
-    box-shadow: 5px 20px 10px rgba(0, 0, 0, 0.5) !important;
 }
 
 .comunidade-slide-img {
@@ -37,18 +36,22 @@
     color: var(--white);
 }
 
-.comunidade-img-nome .swiper-pagination {
+.comunidade-slider-area .swiper-pagination {
+    position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding-top: 40px;
+    margin-top: 41px;
+    gap: 80px;
 }
 
-.comunidade-img-nome .swiper-pagination-bullet {
+.comunidade-slider-area .swiper-pagination-bullet {  
     width: 50px;
     height: 50px;
-    margin: 0 20px;
+    background-color: var(--fog);
 
-    border: solid 1px var(--bright-sun);
-    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+}
+
+.comunidade-slider-area .swiper-pagination-bullet-active {
+    background-color: var(--bright-sun);
 }

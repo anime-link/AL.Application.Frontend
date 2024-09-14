@@ -31,6 +31,7 @@
 .comunidade-topicos-novo {
     display: flex;
     align-items: center;
+    gap: 130px;
 }
 
 .comunidade-topicos-alta {
@@ -67,6 +68,16 @@
 .comunidade-topicos-novo-titulo,
 .comunidade-topicos-alta-titulo {
     font: var(--app-section);
+}
+
+.comunidade-topicos-pop-titulo {
+    color: var(--bright-sun);
+    text-shadow: 0px 10px 4px rgba(0, 0, 0, 0.8);
+}
+
+.comunidade-topicos-novo-titulo {
+    color: var(--chetwode-blue);
+    text-shadow: 0px 10px 4px rgba(0, 0, 0, 0.8);
 }
 
 .comunidade-topicos-pop-icon,
