@@ -20,13 +20,7 @@
 .comunidade-opcoes-img-area {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-}
-
-.comunidade-opcoes-img img {
-    width: 270px;
-    height: 141px;
-    object-fit: cover;
+    gap: 75px 30px;
 }
 
 .pagination {

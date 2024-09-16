@@ -19,10 +19,10 @@ export default function ComunidadeOpcoes({ comunidades }) {
     return (
         <div className="comunidade-opcoes-area">
             <h1 className="comunidade-opcoes-titulo">Todas as comunidades</h1>
-            <div className=".comunidade-opcoes-img-area">
+            <div className="comunidade-opcoes-img-area">
                 {comunidadesPagina.map((img, i) => (
                     <div className="comunidade-opcoes-img" key={i}>
-                        <img src={img} alt={`Comunidade ${i}`} />
+                        <img src={img} width={270} height={300} alt={`Comunidade ${i}`} />
                     </div>
                 ))}
             </div>
