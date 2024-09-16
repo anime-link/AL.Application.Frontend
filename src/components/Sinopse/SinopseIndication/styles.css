@@ -1,0 +1,31 @@
+.link-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(43, 27, 47);
+    width: 1060px;
+    height: 153px;
+
+    color: #ffff;
+    border-radius: 30px;
+    margin-top: 125px;
+    margin-left: 120px;
+    gap: 226px;
+}
+
+p{
+    font-size: 100%;
+    gap: 4px;
+}
+
+.icon-play{
+    font-size: 100%;
+}
+
+.imgApp{
+    width: 56px;
+    height: 56px;
+}
+
+

@@ -8,7 +8,6 @@ export default function ContatosAdms({ ImgAdm, name, Icons, imgAnime }) {
             >
                 <img className="imgAdm" src={ImgAdm} alt="imgAdm" />
                 <div className="admPerfil">
-                
                     <p> {name}</p>
                     <a>{Icons}</a>
                 </div>

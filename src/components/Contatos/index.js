@@ -3,6 +3,7 @@ import "./styles.css";
 import Header from '../Header';
 import ContatosBemVindo from './ConatosPresentation';
 import ContatosAdms from './ContatosAdm';
+import Footer from '../Footer';
 
 import perfilCarlos from '../../assets/Images/Contatos/perfilCarlos.png';
 import perfilFelipe from '../../assets/Images/Contatos/perfilFelipe.png';
@@ -43,6 +44,7 @@ export default function ContatosAdm() {
                 <ContatosAdms imgAnime={backgroundWilson} ImgAdm={perfilWilson} name={"Wilson Benacchio" } Icons={<RiGithubFill  className="icon-blue"/>} />
                 </div>
             </main>
+            <Footer/>
         </div>
     );
 }

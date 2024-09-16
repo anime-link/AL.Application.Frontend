@@ -1,0 +1,59 @@
+.space-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 109px;
+}
+
+
+.sinopse-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 1191px;
+    height: 546px;
+
+    background-color: black;
+    color: #ffff;
+    border-radius: 30px;
+}
+
+.container-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.anime-attribute p{
+    font-size: 100%;
+    padding-left: 5px;
+    padding-right: 20px;
+    margin-right: 59px;
+    display: flex;
+    flex-direction: column;
+
+  gap: 90px;
+}
+
+.text-plot{
+    font-size: 90%;
+    justify-content: center;
+
+    margin: 200px 200px;
+    padding-left: 10px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.imgSin{
+    width: 250px;
+    height: 349px;
+    margin-left: 75px;
+    margin-right: 58px;
+    object-fit: cover;
+    border: 2px;
+    border-radius: 8px; /* Adiciona bordas arredondadas */
+}
+
