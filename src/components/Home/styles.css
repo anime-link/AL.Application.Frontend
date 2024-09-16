@@ -280,6 +280,10 @@
     background-color: var(--bright-sun);
 }
 
+.home-footer-area {
+    margin-top: 164px;
+}
+
 @media (max-width: 426px) {
     .home-header-logo {
         width: 450px;

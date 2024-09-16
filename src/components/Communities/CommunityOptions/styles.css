@@ -3,8 +3,6 @@
     flex-direction: column;
     align-items: center;
     margin-top: 114px;
-    margin-left: 133px;
-    margin-right: 133px;
     padding: 40px 93px;
 
     border-radius: 15px;
@@ -20,13 +18,11 @@
 .comunidade-opcoes-img-area {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
+    gap: 76px 50px;
 }
 
-.comunidade-opcoes-img img {
-    width: 270px;
-    height: 141px;
-    object-fit: cover;
+.comunidade-opcoes-img {
+    cursor: pointer;
 }
 
 .pagination {

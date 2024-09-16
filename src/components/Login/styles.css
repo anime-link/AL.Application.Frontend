@@ -86,6 +86,7 @@
 .login-cadastro:hover {
     filter: brightness(1.1);
     background-size: 100% 2px;
+    color: var(--bright-sun);
 }
 
 .login-divisor {

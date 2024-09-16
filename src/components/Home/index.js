@@ -58,7 +58,9 @@ export default function HomeArea() {
                     </div>
                 </div>
             </div>
-            <Footer />
+            <div className="home-footer-area">
+                <Footer />
+            </div>
         </div>
     );
 }

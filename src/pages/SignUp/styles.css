@@ -80,7 +80,7 @@
     align-items: center;
 }
 
-.cadastro-texto-sub {
+.cadastro-texto-sub p {
     font: var(--text-32);
 }
 
