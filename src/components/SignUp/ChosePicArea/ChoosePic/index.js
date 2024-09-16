@@ -5,8 +5,10 @@ import "swiper/css/effect-coverflow";
 import { RiArrowRightSLine, RiArrowLeftSLine } from "react-icons/ri";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, EffectCoverflow } from "swiper/modules";
+import { profilePics } from '../../../../assets/Images/ProfilePics/profilePics'
 
-export function AreaEscolhaImagem({ img, setImgSelecionada }) {
+export function AreaEscolhaImagem({ setImgSelecionada }) {
+
     return (
         <div className="imagem-escolha-area">
             <div className="imagem-escolha-slider">
@@ -29,7 +31,7 @@ export function AreaEscolhaImagem({ img, setImgSelecionada }) {
                     loop={true}
                     modules={[Navigation, EffectCoverflow]}
                 >
-                    {img.map((pics, i) => (
+                    {profilePics.map((pics, i) => (
                         <SwiperSlide key={i}>
                             <div className="imagem-escolha-img-area">
                                 <img
