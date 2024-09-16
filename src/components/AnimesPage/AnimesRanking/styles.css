@@ -1,0 +1,38 @@
+.ranking-area{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.ranking-box{
+    width: 469px;
+    height: 326px;
+    
+}
+
+.ranking-titulo{
+    color: var(--fog);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 10px;
+
+}
+
+
+.ranking-cont{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    gap: 80px;
+    color: aliceblue;
+}
+
+.icon-blue{
+    color: var(--bright-sun);
+}

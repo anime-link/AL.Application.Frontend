@@ -1,0 +1,59 @@
+.login-checklist {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.login-check {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 10px;
+
+    font: var(--text-15);
+    color: var(--white);
+    user-select: none;
+}
+
+.login-check input[type="checkbox"] {
+    display: none;
+}
+
+.login-check .login-checkbox {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+
+    background-color: none;
+    border: solid 3px var(--bright-sun);
+    border-radius: 5px;
+
+    transition: 0.5s;
+}
+
+.login-check input:checked + .login-checkbox {
+    background-color: var(--chetwode-blue);
+}
+
+.login-check .login-checkbox::after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.login-check input:checked + .login-checkbox::after {
+    display: block;
+}
+
+.login-check .login-checkbox::after {
+    top: 3px;
+    left: 8px;
+    width: 3px;
+    height: 10px;
+    border: solid var(--white);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}

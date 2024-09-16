@@ -1,11 +1,9 @@
 .home-botoes-area {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
 
-    margin-top: 118px;
-    gap: 34px;
+    margin-top: 29px;
+    margin-bottom: 167px;
+    gap: 31px;
 }
 
 .home-login-botao {
@@ -13,12 +11,14 @@
     cursor: pointer;
 
     width: 186px;
-    height: 94px;
-    border-radius: 20px;
+    height: 80px;
+    border-radius: 10px;
 
-    background: var(--gradient-purple-blue);
+    background: var(--deep-koamaru);
     color: var(--white);
     font: var(--text-32);
+
+    transition: 0.5s ease-in-out;
 }
 
 .home-cadastro-botao {
@@ -26,10 +26,48 @@
     cursor: pointer;
 
     width: 186px;
-    height: 94px;
-    border-radius: 20px;
+    height: 80px;
+    border-radius: 10px;
 
     background: var(--gradient-yellow);
     color: var(--white);
     font: var(--text-32);
+    
+    transition: 0.5s ease-in-out;
+}
+
+
+.home-login-botao:hover, .home-cadastro-botao:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+@media (max-width: 426px) {
+    .home-botoes-area {
+        gap: 25px;
+        margin-bottom: 90px;
+    }
+
+    .home-login-botao,
+    .home-cadastro-botao {
+        width: 95px;
+        height: 40px;
+
+        font: var(--text-16);
+    }
+}
+
+@media (max-width: 768px) and (min-width: 430px) {
+    .home-botoes-area {
+        gap: 30px;
+        margin-bottom: 90px;
+    }
+
+    .home-login-botao,
+    .home-cadastro-botao {
+        width: 100px;
+        height: 50px;
+
+        font: var(--text-20);
+    }
 }

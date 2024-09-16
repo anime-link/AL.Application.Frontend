@@ -1,0 +1,52 @@
+.animes-area {
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    background-color: var(--daisy-bush)
+}
+
+.animes-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ranking-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 92px;
+    margin-top: 157px;
+}
+
+.list1{
+    background: var(--gradient-black);
+    border-radius: 50px;
+}
+
+.list2{
+    background: var(--gradient-black);
+    border-radius: 50px;
+}
+
+.ranking-divisao{
+    width: 90%;
+    height: 2px;
+    background-color: var(--bright-sun);
+    padding-top: 5px;
+    margin-top: 65px;
+    margin-bottom: 65px;   
+}
+
+li{
+    display: flex;
+    justify-content: space-around;
+    gap: 156px;
+    background-blend-mode: soft-light;
+}

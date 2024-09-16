@@ -1,14 +1,128 @@
 .cadastro-pagina {
     display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
+    justify-content: center;
     align-items: center;
+    gap: 99px;
 
-    width: 100vw;
+    width: 100%;
     height: 100vh;
+    overflow: hidden;
+}
 
-    background: url("../../assets/Images/SignUp/signup-background.png");
+.cadastro-pagina::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: url("../../assets/Images/SignUp/sign-up-background.png"), var(--gradient-black);
     background-size: cover;
     background-repeat: no-repeat;
     background-clip: border-box;
+    background-blend-mode: multiply;
+
+    transition: 0.8s ease;
+    z-index: -1; 
+    opacity: 1; 
+}
+
+.cadastro-pagina.lateral-ativo::before {
+    opacity: 0; /* Esconde o background original quando a sidebar está ativa */
+}
+
+.cadastro-pagina::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: url("../../assets/Images/SignUp/choose-profile-background.png"), var(--gradient-black);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-blend-mode: multiply;
+
+    transition: 0.8s ease;
+    z-index: -2; 
+    opacity: 0; 
+}
+
+.cadastro-pagina.lateral-ativo::after {
+    opacity: 1;
+}
+
+.cadastro-texto {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    width: 490px;
+    transition: 0.8s ease;
+}
+
+.cadastro-texto p {
+    color: var(--white);
+}
+
+.cadastro-texto.lateral-ativo {
+    opacity: 0;
+}
+
+.cadastro-texto-titulo {
+    font: var(--header-64);
+}
+
+.cadastro-sub-icon {
+    display: flex;
+    align-items: center;
+}
+
+.cadastro-texto-sub p {
+    font: var(--text-32);
+}
+
+.cadastro-texto-icon {
+    font-size: 70px;
+    color: var(--bright-sun);
+}
+
+@media (max-width: 426px) {
+    .cadastro-pagina {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        gap: 10px;
+        padding-top: 50px;
+        padding-bottom: 100px;
+        
+        background-size: cover;
+    }
+
+    .cadastro-texto {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 340px;
+    }
+
+    .cadastro-texto-titulo {
+        font: var(--header-32);
+    }
+
+    .cadastro-sub-icon {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+    }
+
+    .cadastro-texto-sub {
+        font: var(--text-16);
+    }
+
+    .cadastro-texto-icon {
+        font-size: 30px;
+    }
 }

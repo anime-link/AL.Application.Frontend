@@ -1,42 +1,410 @@
+.home-page {
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+
+    width: 100%;
+    overflow-x: hidden;
+
+    background-color: var(--deep-koamaru);
+}
+
 .home-header {
     display: flex;
-    justify-content: center;
     flex-direction: row;
     align-items: center;
-
-    width: 100vw;
-    height: 100vh;
-    gap: 50px;
+    position: relative;
 
     background: url("../../assets/Images/Home/home-background.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-clip: border-box;
     background-blend-mode: multiply;
+    box-shadow: inset 750px 0px 100px rgba(12, 12, 12, 0.8);
 
     background-color: var(--deep-koamaru);
 }
 
 .home-header-logo {
-    width: 420px;
+    position: absolute;
+    left: 848px;
+    opacity: 0.6;
+    image-rendering: optimizeQuality;
+    width: 848px;
+
+    transition: 0.5s ease-in-out;
+}
+
+.home-header-logo:hover {
+    opacity: 1;
 }
 
 .home-header-text {
     display: flex;
     flex-direction: column;
+
+    margin-top: 150px;
+    margin-left: 107px;
+}
+
+.home-header-titulo-1,
+.home-header-titulo-2 {
+    font: var(--app-title);
+}
+
+.home-header-titulo-1 {
+    color: var(--white);
+
+    text-shadow: 5px 3px 0px var(--bright-sun);
+}
+
+.home-header-titulo-2 {
+    margin-top: -75px;
+    margin-left: 255px;
+
+    color: var(--bright-sun);
+    text-shadow: 5px 3px 0px var(--chetwode-blue);
+}
+
+.home-header-intro {
+    margin-top: 10px;
+
+    font: var(--text-24);
+    color: var(--bright-sun);
+}
+
+.home-body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    background-color: var(--deep-koamaru);
+}
+
+.home-body-boasvindas {
+    display: flex;
+    align-items: center;
+
+    margin-top: 142px;
+    gap: 25px;
+    transition: 0.5s ease-in-out;
+}
+
+.home-body-welcome {
+    font: var(--header-48);
+    color: var(--white);
+}
+
+.home-body-boasvindas-icon {
+    font-size: 80px;
+}
+
+.home-body-boasvindas:hover {
+    transform: scale(1.1);
+    color: var(--bright-sun);
+}
+
+.home-apresentacao {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-top: 162px;
+}
+
+.home-apresentacao-1,
+.home-apresentacao-2,
+.home-apresentacao-3 {
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.home-header-titulo {
-    font: var(--app-title);
-    color: var(--white);
-    border-bottom: solid 10px;
+.home-apresentacao-1,
+.home-apresentacao-2 {
+    display: flex;
+    flex-direction: row;
 }
 
-.home-header-intro {
-    margin-top: 50px;
+.home-apresentacao-1 {
+    display: flex;
+    padding-top: 110px;
+    padding-bottom: 90px;
+    gap: 131px;
 
-    font: var(--text-32);
-    color: var(--bright-sun);
+    background-image: url("../../assets/Images/Home/background-1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    background-color: var(--night-rider);
+}
+
+.home-apresentacao-2 {
+    display: flex;
+    padding-top: 152px;
+    padding-bottom: 123px;
+    gap: 223px;
+
+    background-image: url("../../assets/Images/Home/background-2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    background-color: var(--night-rider);
+}
+
+.home-apresentacao-3 {
+    display: flex;
+    flex-direction: column;
+    padding-top: 152px;
+    padding-bottom: 152px;
+    gap: 15px;
+    
+    background-image: url("../../assets/Images/Home/background-3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    background-color: var(--night-rider);
+}
+
+.home-apresentacao-1-texto,
+.home-apresentacao-2-texto,
+.home-apresentacao-3-texto {
+    text-align: left;
+
+    font: var(--header-40);
+    color: var(--white);
+}
+
+.home-apresentacao-1-img,
+.home-apresentacao-2-img {
+    width: 420px;
+}
+
+.home-apresentacao-1-texto {
+    width: 490px;
+}
+
+.home-apresentacao-2-texto {
+    width: 397px;
+}
+
+.home-apresentacao-1-ilustracao,
+.home-apresentacao-2-ilustracao {
+    display: flex;
+    align-items: center;
+
+    transition: 0.5s ease-in-out;
+}
+
+.home-apresentacao-1-ilustracao:active,
+.home-apresentacao-2-ilustracao:active,
+.home-apresentacao-3-ilustracao:active {
+    opacity: 0.1;
+}
+
+.home-apresentacao-3-ilustracao {
+    display: flex;
+    align-items: center;
+    gap: 33px;
+
+    transition: 0.5s ease-in-out;
+}
+
+.home-apresentacao-3-redes {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.home-apresentacao-3-git,
+.home-apresentacao-3-link,
+.home-apresentacao-3-inst,
+.home-apresentacao-3-mail {
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 90px;
+}
+
+.home-apresentacao-3-git {
+    background-color: var(--bright-sun);
+}
+
+.home-apresentacao-3-link {
+    background-color: var(--deep-koamaru);
+}
+
+.home-apresentacao-3-inst {
+    background-color: var(--daisy-bush);
+}
+
+.home-apresentacao-3-mail {
+    background-color: var(--chetwode-blue);
+}
+
+.home-apresentacao-1-icon,
+.home-apresentacao-2-icon,
+.home-apresentacao-3-icon {
+    padding: 22px;
+
+    background-color: var(--fog);
+    font-size: 176px;
+    border-radius: 50%;
+}
+
+.home-apresentacao-1-icon {
+    margin-left: -150px;
+
+    box-shadow: -20px 10px 15px rgba(12, 12, 12, 0.8);
+}
+
+.home-apresentacao-2-icon {
+    z-index: 1;
+
+    margin-right: -154px;
+    box-shadow: 20px 10px 15px rgba(12, 12, 12, 0.8);
+}
+
+.home-apresentacao-3-icon {
+    box-shadow: 0px 10px 15px rgba(12, 12, 12, 0.8);
+}
+
+.home-apresentacao-divisao {
+    width: 100%;
+    height: 2px;
+    background-color: var(--bright-sun);
+}
+
+.home-footer-area {
+    margin-top: 164px;
+}
+
+@media (max-width: 426px) {
+    .home-header-logo {
+        width: 450px;
+        left: 170px;
+        z-index: 0;
+    }
+
+    .home-header-titulo-1,
+    .home-header-titulo-2 {
+        font: var(--app-section);
+    }
+
+    .home-header-titulo-2 {
+        margin-top: -50px;
+        margin-left: 130px;
+    }
+
+    .home-header-text {
+        display: flex;
+        justify-content: center;
+        margin-top: 80px;
+        margin-left: 40px;
+        z-index: 1;
+    }
+
+    .home-header-intro {
+        font: var(--text-15);
+        width: 80%;
+    }
+
+    .home-body-boasvindas {
+        margin-top: 80px;
+        gap: 10px;
+    }
+
+    .home-body-welcome {
+        font: var(--text-20);
+    }
+
+    .home-body-boasvindas-icon {
+        font-size: 30px;
+    }
+
+    .home-apresentacao {
+        margin-top: 70px;
+    }
+
+    .home-apresentacao-1,
+    .home-apresentacao-2 {
+        display: flex;
+        flex-direction: row;
+        padding-top: 50px;
+        padding-bottom: 30px;
+        gap: 30px;
+    }
+
+    .home-apresentacao-3 {
+        display: flex;
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+
+    .home-apresentacao-1-ilustracao {
+        display: flex;
+        justify-content: center;
+    }
+
+    .home-apresentacao-2-ilustracao {
+        margin-right: 20px;
+    }
+    
+    .home-apresentacao-1-img,
+    .home-apresentacao-2-img {
+        width: 160px;
+    }
+
+    .home-apresentacao-1-icon,
+    .home-apresentacao-2-icon,
+    .home-apresentacao-3-icon {
+        font-size: 70px;
+        padding: 15px;
+    }
+
+    .home-apresentacao-1-icon {
+        margin-left: -60px;
+    }
+
+    .home-apresentacao-2-icon {
+        margin-right: -40px;
+    }
+
+    .home-apresentacao-1-texto,
+    .home-apresentacao-2-texto,
+    .home-apresentacao-3-texto {
+        width: 75%;
+        font: var(--text-15);
+    }
+
+    .home-apresentacao-1-texto {
+        width: 250px;
+    }
+
+    .home-apresentacao-2-texto {
+        width: 230px;
+        margin-left: 20px;
+    }
+
+    .home-apresentacao-3-texto {
+        display: flex;
+        justify-content: center;
+    }
+
+    .home-apresentacao-3-redes {
+        gap: 32px;
+    }
+
+    .home-apresentacao-3-git,
+    .home-apresentacao-3-link,
+    .home-apresentacao-3-inst,
+    .home-apresentacao-3-mail {
+        padding: 7px;
+        font-size: 45px;
+    }
 }

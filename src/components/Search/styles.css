@@ -1,0 +1,48 @@
+.pesquisa-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+
+    width: 600px;
+    height: 66px;
+    border-radius: 10px;
+
+    background-color: var(--deep-koamaru);
+    border: solid 1px var(--night-rider);
+}
+
+.pesquisa-icon {
+    position: absolute;
+    left: 15px;
+
+    font-size: 42px;
+}
+
+.pesquisa-barra {
+    text-align: center;
+    outline: none;
+
+    width: 300px;
+    height: 33px;
+    
+    font: var(--text-16);
+    color: var(--white);
+}
+
+.pesquisa-barra::placeholder {
+    color: var(--chetwode-blue);
+}
+
+.pesquisa-limpar {
+    position: absolute;
+    cursor: pointer;
+
+    right: 60px;
+    font-size: 30px;
+}
+
+.pesquisa-barra::-webkit-search-cancel-button {
+    display: none;
+}

@@ -1,0 +1,126 @@
+.comunidade-topicos-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 100px;
+
+    background:
+        url("../../../assets/Images/Communities/community-background-2.png"),
+        var(--gradient-black);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-clip: border-box;
+    background-blend-mode: soft-light;
+}
+
+.comunidade-topicos-titulo {
+    font: var(--header-48);
+    color: var(--white);
+}
+
+.comunidade-topicos-pop,
+.comunidade-topicos-novo,
+.comunidade-topicos-alta {
+    margin-top: 142px;
+}
+
+.comunidade-topicos-pop,
+.comunidade-topicos-novo {
+    display: flex;
+    align-items: center;
+    gap: 130px;
+}
+
+.comunidade-topicos-alta {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.comunidade-topicos-pop-p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    color: var(--bright-sun);
+}
+
+.comunidade-topicos-novo-p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    color: var(--chetwode-blue);
+}
+
+.comunidade-topicos-pop-titulo,
+.comunidade-topicos-novo-titulo,
+.comunidade-topicos-alta-titulo {
+    font: var(--app-section);
+}
+
+.comunidade-topicos-pop-titulo {
+    width: 286px;
+
+    color: var(--bright-sun);
+    text-shadow: 0px 10px 4px rgba(0, 0, 0, 0.8);
+}
+
+.comunidade-topicos-novo-titulo {
+    width: 286px;
+
+    color: var(--chetwode-blue);
+    text-shadow: 0px 10px 4px rgba(0, 0, 0, 0.8);
+}
+
+.comunidade-topicos-pop-icon,
+.comunidade-topicos-novo-icon {
+    font-size: 180px;
+}
+
+.comunidade-topicos-alta-titulo {
+    background: var(--gradient-yellow);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.comunidade-topicos-alta-com {
+    display: flex;
+    gap: 58px;
+    margin-top: 97px;
+}
+
+.comunidade-topicos-alta-exp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+}
+
+.comunidade-topicos-alta-img {
+    cursor: pointer;
+    width: 350px;
+    height: 182px;
+    border: solid 1px var(--night-rider);
+}
+
+.comunidade-topicos-alta-membros {
+    font: var(--text-20);
+    background: var(--gradient-yellow);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.comunidade-topicos-divisor {
+    width: 100%;
+    height: 2px;
+    margin-top: 111px;
+    background-color: var(--bright-sun);
+}

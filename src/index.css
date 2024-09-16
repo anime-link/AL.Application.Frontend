@@ -18,6 +18,9 @@
 
   /* Tamanho de fontes */
   --app-title: normal 140px 'Contrail One', sans-serif;
+  --app-section: normal 70px 'Contrail One', sans-serif;
+  --commu-title: normal 48px 'Contrail One', sans-serif;
+  --app-text: normal 24px 'Contrail One', sans-serif;
   --header-64: bold 64px 'Kanit', sans-serif;
   --header-48: bold 48px 'Kanit', sans-serif;
   --header-40: bold 40px 'Kanit', sans-serif;

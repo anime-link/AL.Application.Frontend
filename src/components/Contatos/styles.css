@@ -1,0 +1,30 @@
+.contatos-area{
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    background-color: var(--daisy-bush);
+}
+.contatos-body{
+    padding-top: 80px;
+}
+
+.icon-blue{
+    font-size: 5px;
+    color: var(--bright-sun);
+}
+
+.spaceAdm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icon-blue{
+    font-size: 110px;
+}

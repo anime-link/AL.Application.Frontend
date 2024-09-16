@@ -1,0 +1,73 @@
+.comunidade-opcoes-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 114px;
+    padding: 40px 93px;
+
+    border-radius: 15px;
+    background: linear-gradient(rgba(51, 51 ,51, 0.8), rgba(0, 0, 0, 0.8));
+}
+
+.comunidade-opcoes-titulo {
+    font: var(--header-40);
+    color: var(--white);
+    margin-bottom: 115px;
+}
+
+.comunidade-opcoes-img-area {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 76px 50px;
+}
+
+.comunidade-opcoes-img {
+    cursor: pointer;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-top: 86px;
+    padding: 0;
+}
+
+.pagina-item {
+    margin: 0 20px;
+}
+
+.pagina-link {
+    cursor: pointer;
+    padding: 11px 29px;
+    border-radius: 50%;
+
+    font: var(--text-32);
+    color: var(--white);
+    background-color: var(--deep-koamaru);
+
+    transition: 0.5s ease-in-out;
+}
+
+.pagina-link:hover {
+    background-color: var(--chetwode-blue);
+}
+
+.active .pagina-link {
+    background-color: var(--chetwode-blue);
+}
+
+.comunidade-opcoes-antes,
+.comunidade-opcoes-depois {
+    cursor: pointer;
+    font-size: 70px;
+    color: var(--deep-koamaru);
+
+    transition: 0.5s ease-in-out;
+}
+
+.comunidade-opcoes-antes:hover,
+.comunidade-opcoes-depois:hover {
+    color: var(--chetwode-blue);
+    transform: scale(1.1);
+}
