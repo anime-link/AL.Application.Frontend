@@ -71,10 +71,11 @@
 }
 
 .comunidades-opcoes-fundo {
-    display: flex;
-    flex-direction: column;
     width: 100%;
+    flex-direction: column;
     padding-bottom: 193px;
+    padding-left: 134px;
+    padding-right: 134px;
 
     background-image: url("../../assets/Images/Communities/community-background-3.png");
     background-repeat: no-repeat;
