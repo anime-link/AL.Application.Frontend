@@ -21,6 +21,10 @@
     gap: 76px 50px;
 }
 
+.comunidade-opcoes-img {
+    cursor: pointer;
+}
+
 .pagination {
     display: flex;
     align-items: center;

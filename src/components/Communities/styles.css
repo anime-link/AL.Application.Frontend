@@ -79,8 +79,8 @@
 
     background-image: url("../../assets/Images/Communities/community-background-3.png");
     background-repeat: no-repeat;
+    background-position: bottom;
     background-size: cover;
-    background-clip: border-box;
     background-blend-mode: soft-light;
     background-color: var(--deep-koamaru);
 }
