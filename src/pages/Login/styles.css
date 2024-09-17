@@ -7,7 +7,7 @@
     gap: 135px;
 
     background: 
-        url("../../assets/Images/Login/login-background.png"), 
+        url("../../assets/Images/Login/login-background.webp"), 
         var(--gradient-black);
     background-size: cover;
     background-repeat: no-repeat;

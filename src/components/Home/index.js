@@ -3,8 +3,8 @@ import "./styles.css";
 import logo from "../../assets/logo-animelink.svg";
 import BotoesHome from "./HomeButtons";
 import { RiArrowDownFill, RiGithubFill, RiGroupFill, RiHeart3Fill, RiInstagramFill, RiLinkedinFill, RiMailFill, RiQuestionMark } from "react-icons/ri";
-import img1 from "../../assets/Images/Home/intro-illustration-1.png";
-import img2 from "../../assets/Images/Home/intro-illustration-2.png";
+import img1 from "../../assets/Images/Home/intro-illustration-1.webp";
+import img2 from "../../assets/Images/Home/intro-illustration-2.webp";
 import Footer from "../Footer";
 
 export default function HomeArea() {

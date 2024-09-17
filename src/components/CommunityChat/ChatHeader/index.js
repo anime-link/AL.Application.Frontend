@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.css";
-import user from "../../../assets/Images/SignUp/profile-pic-choosen.png";
+import user from "../../../assets/Images/SignUp/profile-pic-choosen.webp";
 import { RiArrowLeftCircleFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 

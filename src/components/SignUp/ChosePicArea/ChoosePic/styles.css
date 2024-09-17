@@ -33,8 +33,6 @@
 
 .imagem-escolha-slider-img {
     cursor: pointer;
-    width: 75px;
-    height: 75px;
     border: solid 1px var(--night-rider);
     border-radius: 50%;
 

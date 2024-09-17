@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.css";
 import logo from "../../assets/logo-animelink.svg";
-import user from "../../assets/Images/SignUp/profile-pic-choosen.png";
+import user from "../../assets/Images/SignUp/profile-pic-choosen.webp";
 import { NavLink } from "react-router-dom";
 
 export default function Header() {

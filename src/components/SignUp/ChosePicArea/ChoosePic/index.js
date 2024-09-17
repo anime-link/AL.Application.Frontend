@@ -37,6 +37,8 @@ export function AreaEscolhaImagem({ setImgSelecionada }) {
                                 <img
                                     className="imagem-escolha-slider-img"
                                     src={pics}
+                                    width={75}
+                                    height={75}
                                     alt={`Imagem de perfil ${i}`}
                                     onClick={() => setImgSelecionada(pics)}
                                 />

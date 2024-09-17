@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./styles.css";
-import imgPadrao from "../../../assets/Images/SignUp/profile-pic-choosen.png";
+import imgPadrao from "../../../assets/Images/SignUp/profile-pic-choosen.webp";
 import { AreaEscolhaImagem } from "./ChoosePic";
 
 export function AreaImagemPerfil() {

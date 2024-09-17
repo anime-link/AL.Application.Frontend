@@ -10,7 +10,7 @@ import Contatos from "./pages/Contatos";
 
 function App() {
   return (
-    <body>
+    <div>
       <BrowserRouter>
         <Routes>
           <Route element={<Home />} path='/' />
@@ -23,7 +23,7 @@ function App() {
           <Route element={ <Contatos/>} path='/contatos'/>
         </Routes>
       </BrowserRouter>
-    </body>
+    </div>
   );
 }
 
