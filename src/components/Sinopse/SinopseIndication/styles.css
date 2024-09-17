@@ -1,26 +1,35 @@
 .link-card{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 
-    background-color: rgb(43, 27, 47);
+    background: var(--gradient-purple-blue);
     width: 1060px;
     height: 153px;
 
     color: #ffff;
     border-radius: 30px;
     margin-top: 125px;
-    margin-left: 120px;
-    gap: 226px;
+    margin-left: 171px;
+    margin-bottom: 250px;
 }
 
 p{
-    font-size: 100%;
-    gap: 4px;
+    font-size: 24%;
+    font: var(--app-text);
 }
 
 .icon-play{
-    font-size: 100%;
+    font-size: 56px;
+    color: black;
+    border-radius: 100px;
+}
+
+.text-icon{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 65px;
 }
 
 .imgApp{

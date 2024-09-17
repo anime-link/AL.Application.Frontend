@@ -1,9 +1,10 @@
-.sinopse-area {
+.sinopse-commit {
     box-sizing: border-box;
     text-decoration: none;
     border: none;
 
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: 1100px;
+    height: 937px;
 }

@@ -1,0 +1,44 @@
+.sinopse-commit{
+    display: flex;
+    
+    align-items: center;
+    flex-direction: column;
+
+    background: var(--gradient-black);
+    color: #ffff;
+    border-radius: 30px;
+    margin-left: 171px;
+    margin-bottom: 374px;
+   
+}
+
+.tittle-commit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+
+}
+
+.imgPerfil{
+    width: 83px;
+    height: 84px;
+}
+
+.text-commit{
+    background-color: aliceblue;
+    width: 689px;
+    height: 78px;
+    border-radius: 20px;
+}
+
+.mensseger-commit{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    gap: 10px;
+    padding-top: 70px;
+    border-bottom:  1px solid var(--bright-sun);
+    padding-bottom: 84px;
+
+}

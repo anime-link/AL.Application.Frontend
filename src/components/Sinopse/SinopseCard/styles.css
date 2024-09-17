@@ -4,6 +4,7 @@
     align-items: center;
 
     margin-top: 109px;
+    
 }
 
 
@@ -27,7 +28,8 @@
 }
 
 .anime-attribute p{
-    font-size: 100%;
+    font-size: 24%;
+    font: var(--app-text);
     padding-left: 5px;
     padding-right: 20px;
     margin-right: 59px;
@@ -38,10 +40,11 @@
 }
 
 .text-plot{
-    font-size: 90%;
+   
+    font: var(--app-text);
     justify-content: center;
 
-    margin: 200px 200px;
+    margin: 100px 100px;
     padding-left: 10px;
     padding: 0;
     box-sizing: border-box;

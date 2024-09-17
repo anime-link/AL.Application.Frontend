@@ -6,7 +6,7 @@ export default function SinopseCard({ImgSin}) {
   return (
     <div className="space-card">
        <div className="sinopse-card">
-          <img className="imgSin" src={ImgSin} />
+          <img className="imgSin" src={ImgSin}/>
           <div className="container-content">
             <div className="anime-attribute">
               <p className="tittle">Classroom of The Elite</p>

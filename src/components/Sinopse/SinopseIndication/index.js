@@ -6,8 +6,10 @@ import { RiVideoFill } from "react-icons/ri";
 export default function SinopseIndication({prop}) {
   return (
       <div className="link-card">
-        
-        <p> <RiVideoFill className="icon-play"/> Onde assistir?</p>
+        <div className="text-icon">
+          <RiVideoFill className="icon-play"/>
+          <p>Onde assistir?</p>
+        </div>
         <img className="imgApp" src={prop} />
       </div>
   );
