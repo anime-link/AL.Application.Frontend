@@ -15,15 +15,20 @@
     align-items: center;
 
     width: 100%;
+
+    transition: 0.5s ease-in-out;
+}
+
+.comunidade-img-nome:hover {
+    transform: scale(1.05);
 }
 
 .comunidade-slide-img {
     cursor: pointer;
     width: 650px;
     height: 303px;
-    box-shadow: 5px 73px 10px rgba(0, 0, 0, 0.5);
 
-    border: solid 2px var(--bright-sun);
+    box-shadow: 5px 73px 10px rgba(0, 0, 0, 0.5);
 }
 
 .comunidade-slide-nome {
@@ -53,6 +58,14 @@
     transition: 0.5s ease-in-out;
 }
 
+.comunidade-slider-area .swiper-pagination-bullet:hover {
+    transform: scale(1.1);
+    background-color: var(--bright-sun);
+}
+
 .comunidade-slider-area .swiper-pagination-bullet-active {
+    background-image: url("../../../assets/Images/Communities/slider-span.webp");
+    background-position: center;
+    background-size: cover;
     background-color: var(--bright-sun);
 }

@@ -100,6 +100,7 @@
     .login-area {
         width: 295px;
         height: 480px;
+        margin-top: -50px;
     }
 
     .login-area-titulo {

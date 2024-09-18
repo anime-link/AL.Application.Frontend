@@ -23,7 +23,7 @@ export default function Header() {
                         Contatos
                     </NavLink>
                 </div>
-                <img className="header-usuario" src={user} alt="Usuário" />
+                <img className="header-usuario" width={57} height={57} src={user} alt="Usuário" />
             </div>
         </header>
     );

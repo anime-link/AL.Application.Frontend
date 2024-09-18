@@ -84,3 +84,39 @@
     background-blend-mode: soft-light;
     background-color: var(--deep-koamaru);
 }
+
+@media (max-width: 426px) {
+    .comunidade-inicio {
+        align-items: center;
+        padding-left: 10px;
+        padding-bottom: 40px;
+        box-shadow: inset 0px 150px 60px rgba(0, 0, 0, 85%);
+
+        background-size: cover;
+        background-position: center;
+    }
+
+    .comunidade-inicio-titulo {
+        text-align: center;
+        font: var(--app-text);
+        margin-top: 40px;
+    }
+
+    .comunidade-inicio-p-area {
+        gap: 10px;
+    }
+
+    .comunidade-inicio-p {
+        font: var(--text-16);
+    }
+
+    .comunidade-inicio-icon {
+        font-size: 45px;
+    }
+
+    .comunidades-opcoes-fundo {
+        padding-bottom: 130px;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}

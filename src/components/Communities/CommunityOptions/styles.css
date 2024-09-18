@@ -23,6 +23,14 @@
 
 .comunidade-opcoes-img {
     cursor: pointer;
+    border: solid 2px var(--night-rider);
+
+    transition: 0.5s ease-in-out;
+}
+
+.comunidade-opcoes-img:hover {
+    transform: scale(1.1);
+    border-color: var(--bright-sun);
 }
 
 .pagination {
