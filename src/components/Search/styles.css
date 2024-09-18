@@ -46,3 +46,25 @@
 .pesquisa-barra::-webkit-search-cancel-button {
     display: none;
 }
+
+@media (max-width: 426px) {
+    .pesquisa-area {
+        width: 310px;
+        height: 55px;
+    }
+
+    .pesquisa-icon {
+        font-size: 28px;
+    }
+
+    .pesquisa-barra {
+        width: 230px;
+        height: 33px;
+        font: var(--text-15);
+    }
+
+    .pesquisa-limpar {
+        right: 20px;
+        font-size: 28px;
+    }
+}

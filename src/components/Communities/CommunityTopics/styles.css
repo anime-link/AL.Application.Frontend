@@ -155,7 +155,7 @@
     .comunidade-topicos-pop,
     .comunidade-topicos-novo {
         flex-direction: column;
-        gap: 60px;
+        gap: 30px;
     }   
 
     .comunidade-topicos-novo {

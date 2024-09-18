@@ -115,8 +115,12 @@
     }
 
     .comunidades-opcoes-fundo {
-        padding-bottom: 130px;
-        padding-left: 100px;
-        padding-right: 100px;
+        padding-bottom: 110px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .comunidade-search {
+        margin-top: 60px;
     }
 }

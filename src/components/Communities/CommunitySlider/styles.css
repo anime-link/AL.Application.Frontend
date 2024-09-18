@@ -69,3 +69,32 @@
     background-size: cover;
     background-color: var(--bright-sun);
 }
+
+@media (max-width: 426px) {
+    .comunidade-slider-area {
+        width: 280px;
+    }
+
+    .comunidade-slide-img {
+        width: 280px;
+        height: 141px;
+        box-shadow: 5px 50px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .comunidade-slide-nome {
+        width: 280px;
+        padding: 6px 80px;
+
+        font: var(--text-16);
+    }
+
+    .comunidade-slider-area .swiper-pagination {
+        margin-top: 40px;
+        gap: 35px;
+    }
+
+    .comunidade-slider-area .swiper-pagination-bullet {
+        width: 30px;
+        height: 30px;
+    }
+}
