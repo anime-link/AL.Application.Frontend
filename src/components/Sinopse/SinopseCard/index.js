@@ -2,9 +2,12 @@ import React from "react";
 import './styles.css';
 
 
-export default function SinopseCard({ImgSin}) {
+export default function SinopseCard({ImgSin, ImgBack}) {
   return (
     <div className="space-card">
+       <div className="sinopse-img" 
+        style={{ backgroundImage: `url(${ImgBack})` }}
+       />
        <div className="sinopse-card">
           <img className="imgSin" src={ImgSin}/>
           <div className="container-content">

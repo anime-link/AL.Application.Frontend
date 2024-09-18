@@ -2,23 +2,39 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
     margin-top: 109px;
-    
 }
-
 
 .sinopse-card {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    width: 1191px;
+    width: 1366px;
     height: 546px;
 
-    background-color: black;
+    background: var(--gradient-black);
     color: #ffff;
     border-radius: 30px;
+    margin-top: -300px;
+    z-index: 100;
+}
+
+.sinopse-img{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 1366px;
+    height: 446px;
+
+    background-color: rgb(194, 188, 188);
+    color: #ffff;
+    border-radius: 30px;
+    margin-top: -109px;
+    z-index: 10;
 }
 
 .container-content{
