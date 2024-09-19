@@ -9,6 +9,7 @@ import {
   RiArrowRightSLine,
 } from "react-icons/ri";
 import { Link, useNavigate } from "react-router-dom";
+import { RiEyeOffFill, RiEyeFill } from "react-icons/ri";
 
 import api from "../../../services/api";
 
@@ -61,6 +62,12 @@ export function AreaCadastro({ areaLateral }) {
     }
   };
 
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+
+  const mostrarSenha = () => {
+      setIsPasswordVisible(!isPasswordVisible);
+  };
+
   return (
     <div className="cadastro-area">
       <div className="cadastro-area-main">
@@ -92,16 +99,22 @@ export function AreaCadastro({ areaLateral }) {
               className="cadastro-input senha-input"
               id="cadastro-label"
               placeholder="Criar senha"
-              type="text"
+              type={isPasswordVisible ? "text" : "password"}
             />
+            <button type="button" className="cadastro-senha-botao" onClick={mostrarSenha}>
+            {isPasswordVisible ? <RiEyeOffFill /> : <RiEyeFill />}
+            </button>
           </div>
           <div className="cadastro-campos">
             <input
               className="cadastro-input confirmar-senha-input"
               id="cadastro-label"
               placeholder="Confirmar senha"
-              type="text"
+              type={isPasswordVisible ? "text" : "password"}
             />
+            <button type="button" className="cadastro-senha-botao">
+            {isPasswordVisible ? <RiEyeOffFill /> : <RiEyeFill />}
+            </button>
           </div>
         </div>
 

@@ -177,6 +177,16 @@
   margin-top: 50px;
 }
 
+.cadastro-senha-botao {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 24px;
+}
+
 @media (max-width: 426px) {
   .cadastro-botao-area {
     margin-top: 50px;
