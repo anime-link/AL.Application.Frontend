@@ -97,9 +97,12 @@
         height: 100%;
         gap: 10px;
         padding-top: 50px;
-        padding-bottom: 100px;
+        padding-bottom: 50px;
         
+        background: url("../../assets/Images/SignUp/sign-up-background.webp"), var(--gradient-black);
         background-size: cover;
+        background-position: center;
+        background-blend-mode: multiply;
     }
 
     .cadastro-texto {
