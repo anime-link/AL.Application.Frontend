@@ -8,7 +8,12 @@
     color: #ffff;
     border-radius: 30px;
     width: 1366px;
-   
+    background: url("../../../assets/Images/Sinopse/akame.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+    background-blend-mode: multiply;
+    
 }
 
 .tittle-commit{
@@ -41,3 +46,4 @@
     padding-bottom: 84px;
 
 }
+

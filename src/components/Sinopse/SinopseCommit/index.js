@@ -3,7 +3,7 @@ import './styles.css';
 
 
 
-export default function SinopseCommit({ImgPerfil, placeholder, type}) {
+export default function SinopseCommit({ImgPerfil, placeholder, type, ImgPerfil2}) {
   return (
     <div className="sinopse-commit">
      <p className="tittle-commit">Comentarios</p>
