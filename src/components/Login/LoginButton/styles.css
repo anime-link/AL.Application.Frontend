@@ -29,7 +29,7 @@
     opacity: 70%;
 }
 
-@media (max-width: 426px) {
+@media (max-width: 430px) {
     .avancar-botao-area {
         margin-top: 30px;
     }

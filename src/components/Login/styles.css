@@ -96,7 +96,7 @@
     background-color: var(--chetwode-blue);
 }
 
-@media (max-width: 426px) {
+@media (max-width: 430px) {
     .login-area {
         width: 295px;
         height: 480px;

@@ -85,7 +85,7 @@
     background-color: var(--deep-koamaru);
 }
 
-@media (max-width: 426px) {
+@media (max-width: 430px) {
     .comunidade-inicio {
         align-items: center;
         padding-left: 10px;

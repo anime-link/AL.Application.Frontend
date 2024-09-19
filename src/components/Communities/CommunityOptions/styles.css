@@ -80,7 +80,7 @@
     transform: scale(1.1);
 }
 
-@media (max-width: 426px) {
+@media (max-width: 430px) {
     .comunidade-opcoes-area {
         margin-top: 70px;
         padding: 20px 60px;

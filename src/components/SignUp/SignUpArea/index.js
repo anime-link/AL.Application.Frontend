@@ -56,7 +56,7 @@ export function AreaCadastro({ areaLateral }) {
       document.querySelector(".senha-input").value = '';
       document.querySelector(".confirmar-senha-input").value = '';
 
-      navigate("/animes");
+      navigate("/login");
     } catch (error) {
       console.error("Erro ao criar usuário:", error);
     }
