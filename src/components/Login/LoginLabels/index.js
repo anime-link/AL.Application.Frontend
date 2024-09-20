@@ -6,7 +6,6 @@ export function CamposLogin({ placeholder, type }) {
         <div className="login-campos">
             <input 
                 className="login-input"
-                id="login-label"
                 placeholder={placeholder}
                 type={type}
             />
