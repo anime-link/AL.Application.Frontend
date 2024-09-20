@@ -31,7 +31,7 @@ export default function LoginArea(){
           navigate("/comunidades");
         } catch (error) {
           console.error("Usuario não encontrado ", error);
-          alert("Usuário não encontrado");
+          alert("Usuário ou senha inválidos");
         }
       };
     
