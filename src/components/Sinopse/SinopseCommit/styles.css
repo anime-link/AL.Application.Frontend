@@ -8,20 +8,21 @@
     color: #ffff;
     border-radius: 30px;
     width: 1366px;
-    background: url("../../../assets/Images/Sinopse/akame.png");
+    background: url("../../../assets/Images/Sinopse/akameGaKill.png"),
+        var(--gradient-black);
     background-repeat: no-repeat;
     background-size: cover;
     background-clip: border-box;
     background-blend-mode: multiply;
-    
 }
 
 .tittle-commit{
+    font: var(--header-40);
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 20px;
-
+    text-shadow: 2px 2px 8px black;
 }
 
 .imgPerfil{
@@ -42,8 +43,7 @@
     align-items: center;
     gap: 10px;
     padding-top: 70px;
-    border-bottom:  1px solid var(--bright-sun);
+    border-bottom:  3px solid var(--bright-sun);
     padding-bottom: 84px;
-
 }
 

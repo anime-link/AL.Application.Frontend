@@ -10,7 +10,9 @@ import image72 from "../../assets/Images/Sinopse/image 72.png";
 import animeImg from "../../assets/Images/Sinopse/animeImg.png";
 import image75 from '../../assets/Images/AnimeLaunch/image 75.png';
 
+
 import user from '../../assets/Images/Sinopse/user.png'
+
 
 
 export default function SinopseArea() {

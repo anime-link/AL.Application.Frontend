@@ -12,7 +12,7 @@ export default function SinopseCard({ImgSin, ImgBack}) {
           <img className="imgSin" src={ImgSin}/>
           <div className="container-content">
             <div className="anime-attribute">
-              <p className="tittle">Classroom of The Elite</p>
+              <h3 className="tittle">Classroom of The Elite</h3>
               <p className="ano">2024</p>
               <p className="episodes">13</p>
               <p className="classification">Drama Escolar</p>
