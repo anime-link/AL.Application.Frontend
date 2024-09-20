@@ -17,7 +17,6 @@
 
     background: var(--gradient-black);
     color: #ffff;
-    border-radius: 30px;
     margin-top: -300px;
     z-index: 100;
 }
@@ -32,7 +31,6 @@
 
     background-color: rgb(194, 188, 188);
     color: #ffff;
-    border-radius: 30px;
     margin-top: -109px;
     z-index: 10;
 }
