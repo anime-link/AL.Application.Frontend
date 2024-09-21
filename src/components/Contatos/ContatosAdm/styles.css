@@ -1,5 +1,4 @@
 
-
 .adm-card{
     position: relative;
     width: 1292px;
@@ -21,6 +20,31 @@
     background-clip: border-box;
     background-blend-mode: multiply;
     background: var(--deep-koamaru);
+    transition:  0.3s ease; /* Adicionando transição para a opacidade */
+}
+
+.adm-card:hover {
+    background-color: transparent;
+    filter: brightness(1.1);
+    transform: scale(1.05);
+
+    opacity: 0.9; /* Opacidade ao passar o mouse */
+}
+
+.adm-card:active {
+    opacity: 0.7; /* Opacidade ao pressionar */
+}
+
+@media (max-width: 426px) {
+    .adm-card {
+        margin-top: 10px;
+    }
+    
+    .adm-card {
+        width: 13px;
+        height: 52px;
+        font: var(--text-16);
+    }
 }
 
 p{
@@ -45,10 +69,16 @@ p{
 
 .admPerfil{
     margin-right: 120px;
+    font: var(--app-section);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
 
+.admPerfil p{
+    font: var(--app-section);
+    font-size: 70%;
+    text-shadow: 2px 2px 8px black;
 }
 

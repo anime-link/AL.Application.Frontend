@@ -1,0 +1,88 @@
+.space-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: 109px;
+}
+
+.sinopse-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 1366px;
+    height: 546px;
+
+    background: var(--gradient-black);
+    color: #ffff;
+    margin-top: -300px;
+    z-index: 100;
+}
+
+.sinopse-img{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 1366px;
+    height: 446px;
+
+    background-color: rgb(194, 188, 188);
+    color: #ffff;
+    margin-top: -109px;
+    z-index: 10;
+}
+
+.container-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font: var(--text-24);
+    margin-right: 102px;
+    margin-left: 54px;
+}
+
+.tittle{
+    font: var(--header-40);
+    
+}
+
+.ano{
+    font: var(--text-24);
+    padding-bottom: 29px;
+}
+
+
+
+.anime-attribute p{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-right: 10px;
+    font: var(--text-24);
+}
+
+.text-plot{
+   
+    font: var(--text-15);
+    justify-content: center;
+    text-align: justify;
+
+    width: 492px;
+    padding-left: 10px;
+    padding: 0;
+    box-sizing: border-box;
+    margin-left: 70px;
+}
+
+.imgSin{
+    width: 250px;
+    height: 349px;
+    margin-left: 75px;
+    object-fit: cover;
+    border: 2px;
+    border-radius: 8px; /* Adiciona bordas arredondadas */
+}
+

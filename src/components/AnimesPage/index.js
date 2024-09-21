@@ -18,20 +18,13 @@ export default function AnimesArea() {
     // Lista de animes e seus números de ranking
     const ranking1 = [
         { anime: 'Naruto', number: '1' },
-        { anime: 'Naruto', number: '2' },
-        { anime: 'Naruto', number: '3' },
-        { anime: 'Naruto', number: '4' },
-        { anime: 'Naruto', number: '5' },
-    ];
-
-    const ranking2 = [
-        { anime: 'Naruto', number: '1' },
         { anime: 'Noragami', number: '2' },
-        { anime: 'Naruto', number: '3' },
-        { anime: 'Naruto', number: '4' },
-        { anime: 'Naruto', number: '5' },
+        { anime: 'Blue Lock', number: '3' },
+        { anime: 'Horimyia', number: '4' },
+        { anime: 'Boku no Hero', number: '5' },
     ];
 
+    
     return (
         <div className="animes-area">
             <Header />
@@ -41,9 +34,6 @@ export default function AnimesArea() {
                 <div className="ranking-container">
                     <div className="list1">
                         <AnimesRanking rankingList={ranking1} />
-                    </div>
-                    <div className="list2">
-                        <AnimesRanking rankingList={ranking2} />
                     </div>
                 </div>
                 <hr className="ranking-divisao" />

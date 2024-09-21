@@ -7,7 +7,7 @@
     padding: 0;
     width: 100%;
 
-    background-color: var(--daisy-bush)
+    background-color: var(--daisy-bush);
 }
 
 .animes-body {
@@ -15,6 +15,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-top: 125px;
+   
 }
 
 .ranking-container{

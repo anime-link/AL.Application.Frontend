@@ -7,6 +7,7 @@ import Comunidades from './pages/Communities';
 import Animes from './pages/AnimesPage'
 import ComunidadeChat from './pages/CommunityChat';
 import Contatos from "./pages/Contatos";
+import Sinopse from './pages/Sinopse';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route element={<Comunidades />} path='/comunidades' />  
           <Route element={<ComunidadeChat />} path='/chat' />  
           <Route element={ <Contatos/>} path='/contatos'/>
+          <Route element={ <Sinopse/>} path='/sinopse'/>
         </Routes>
       </BrowserRouter>
     </div>
