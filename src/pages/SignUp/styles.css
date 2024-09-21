@@ -3,7 +3,8 @@
     justify-content: center;
     align-items: center;
     gap: 99px;
-
+    margin: 0;
+    padding: 0;
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -17,7 +18,7 @@
     width: 100%;
     height: 100%;
 
-    background: url("../../assets/Images/SignUp/sign-up-background.png"), var(--gradient-black);
+    background: url("../../assets/Images/SignUp/sign-up-background.webp"), var(--gradient-black);
     background-size: cover;
     background-repeat: no-repeat;
     background-clip: border-box;
@@ -40,7 +41,7 @@
     width: 100%;
     height: 100%;
 
-    background: url("../../assets/Images/SignUp/choose-profile-background.png"), var(--gradient-black);
+    background: url("../../assets/Images/SignUp/choose-profile-background.webp"), var(--gradient-black);
     background-size: cover;
     background-repeat: no-repeat;
     background-clip: border-box;
@@ -80,7 +81,7 @@
     align-items: center;
 }
 
-.cadastro-texto-sub {
+.cadastro-texto-sub p {
     font: var(--text-32);
 }
 
@@ -89,23 +90,26 @@
     color: var(--bright-sun);
 }
 
-@media (max-width: 426px) {
+@media (max-width: 430px) {
     .cadastro-pagina {
         display: flex;
         flex-direction: column;
         height: 100%;
         gap: 10px;
         padding-top: 50px;
-        padding-bottom: 100px;
+        padding-bottom: 50px;
         
+        background: url("../../assets/Images/SignUp/sign-up-background.webp"), var(--gradient-black);
         background-size: cover;
+        background-position: center;
+        background-blend-mode: multiply;
     }
 
     .cadastro-texto {
         display: flex;
         justify-content: center;
         text-align: center;
-        width: 340px;
+        width: 100%;
     }
 
     .cadastro-texto-titulo {
@@ -115,10 +119,10 @@
     .cadastro-sub-icon {
         display: flex;
         flex-direction: column;
-        margin-top: 40px;
+        gap: 15px;
     }
 
-    .cadastro-texto-sub {
+    .cadastro-texto-sub p {
         font: var(--text-16);
     }
 

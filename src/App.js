@@ -11,7 +11,7 @@ import Sinopse from './pages/Sinopse';
 
 function App() {
   return (
-    <body>
+    <div>
       <BrowserRouter>
         <Routes>
           <Route element={<Home />} path='/' />
@@ -25,7 +25,7 @@ function App() {
           <Route element={ <Sinopse/>} path='/sinopse'/>
         </Routes>
       </BrowserRouter>
-    </body>
+    </div>
   );
 }
 

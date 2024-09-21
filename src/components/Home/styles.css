@@ -15,7 +15,7 @@
     align-items: center;
     position: relative;
 
-    background: url("../../assets/Images/Home/home-background.png");
+    background: url("../../assets/Images/Home/home-background.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-clip: border-box;
@@ -135,7 +135,7 @@
     padding-bottom: 90px;
     gap: 131px;
 
-    background-image: url("../../assets/Images/Home/background-1.png");
+    background-image: url("../../assets/Images/Home/background-1.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -149,7 +149,7 @@
     padding-bottom: 123px;
     gap: 223px;
 
-    background-image: url("../../assets/Images/Home/background-2.png");
+    background-image: url("../../assets/Images/Home/background-2.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -164,7 +164,7 @@
     padding-bottom: 152px;
     gap: 15px;
     
-    background-image: url("../../assets/Images/Home/background-3.png");
+    background-image: url("../../assets/Images/Home/background-3.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -280,7 +280,11 @@
     background-color: var(--bright-sun);
 }
 
-@media (max-width: 426px) {
+.home-footer-area {
+    margin-top: 164px;
+}
+
+@media (max-width: 430px) {
     .home-header-logo {
         width: 450px;
         left: 170px;

@@ -6,10 +6,10 @@ import Footer from "../Footer";
 import { RiEmotionLaughFill, RiSearchEyeFill } from "react-icons/ri";
 import ComunidadeTopicos from "./CommunityTopics";
 import ComunidadeOpcoes from "./CommunityOptions";
-import community1 from "../../assets/Images/Communities/community1.png";
+import community1 from "../../assets/Images/Communities/community1.webp";
 import community2 from "../../assets/Images/Communities/community2.png";
 import community3 from "../../assets/Images/Communities/community3.png";
-import community4 from "../../assets/Images/Communities/community4.png";
+import community4 from "../../assets/Images/Communities/community4.webp";
 import community5 from "../../assets/Images/Communities/community5.png";
 import community6 from "../../assets/Images/Communities/community6.png";
 

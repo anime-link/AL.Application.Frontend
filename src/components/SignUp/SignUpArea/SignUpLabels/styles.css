@@ -3,6 +3,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .cadastro-input {
@@ -37,7 +38,7 @@
     border: solid 2px var(--bright-sun);
 }
 
-@media (max-width: 426px) {
+@media (max-width: 430px) {
     .cadastro-input {
         width: 230px;
         height: 40px;

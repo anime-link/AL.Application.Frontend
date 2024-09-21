@@ -1,6 +1,6 @@
 .comunidade-slider-area {
     position: relative;
-    width: 750px;
+    width: 650px;
 }
 
 .comunidade-slider-area .swiper-container {
@@ -15,7 +15,12 @@
     align-items: center;
 
     width: 100%;
-    box-shadow: 5px 20px 10px rgba(0, 0, 0, 0.5) !important;
+
+    transition: 0.5s ease-in-out;
+}
+
+.comunidade-img-nome:hover {
+    transform: scale(1.05);
 }
 
 .comunidade-slide-img {
@@ -23,7 +28,7 @@
     width: 650px;
     height: 303px;
 
-    border: solid 2px var(--bright-sun);
+    box-shadow: 5px 73px 10px rgba(0, 0, 0, 0.5);
 }
 
 .comunidade-slide-nome {
@@ -32,23 +37,64 @@
     width: 650px;
     padding: 9px 288px;
     
-    background-color: var(--night-rider);
+    background-color: rgba(51, 51, 51, 0.8);
     font: var(--text-24);
     color: var(--white);
 }
 
-.comunidade-img-nome .swiper-pagination {
+.comunidade-slider-area .swiper-pagination {
+    position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding-top: 40px;
+    margin-top: 41px;
+    gap: 80px;
 }
 
-.comunidade-img-nome .swiper-pagination-bullet {
+.comunidade-slider-area .swiper-pagination-bullet {  
     width: 50px;
     height: 50px;
-    margin: 0 20px;
+    background-color: var(--fog);
 
-    border: solid 1px var(--bright-sun);
-    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+}
+
+.comunidade-slider-area .swiper-pagination-bullet:hover {
+    transform: scale(1.1);
+    background-color: var(--bright-sun);
+}
+
+.comunidade-slider-area .swiper-pagination-bullet-active {
+    background-image: url("../../../assets/Images/Communities/slider-span.webp");
+    background-position: center;
+    background-size: cover;
+    background-color: var(--bright-sun);
+}
+
+@media (max-width: 430px) {
+    .comunidade-slider-area {
+        width: 280px;
+    }
+
+    .comunidade-slide-img {
+        width: 280px;
+        height: 141px;
+        box-shadow: 5px 50px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .comunidade-slide-nome {
+        width: 280px;
+        padding: 6px 80px;
+
+        font: var(--text-16);
+    }
+
+    .comunidade-slider-area .swiper-pagination {
+        margin-top: 40px;
+        gap: 35px;
+    }
+
+    .comunidade-slider-area .swiper-pagination-bullet {
+        width: 30px;
+        height: 30px;
+    }
 }
