@@ -1,13 +1,12 @@
 import React from "react";
 import './styles.css';
-import { RiSendPlane2Fill } from "react-icons/ri";
 
 
 export default function SinopseTalk({ImgPerfil2, UserName}) {
   return (
     <div className="sinopse-manssager">
        <div className="manssager-img">
-       <img className="Perfil2" src={ImgPerfil2}/>
+       <img className="Perfil2" src={ImgPerfil2} alt="Imagem de perfil" />
          <p>{UserName}</p>
        </div>
        <div className="manssager-user">

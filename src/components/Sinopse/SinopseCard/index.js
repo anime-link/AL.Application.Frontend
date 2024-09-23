@@ -9,7 +9,7 @@ export default function SinopseCard({ImgSin, ImgBack}) {
         style={{ backgroundImage: `url(${ImgBack})` }}
        />
        <div className="sinopse-card">
-          <img className="imgSin" src={ImgSin}/>
+          <img className="imgSin" src={ImgSin} alt="Imagem da Sinopse" />
           <div className="container-content">
             <div className="anime-attribute">
               <h3 className="tittle">Death Note</h3>
