@@ -16,13 +16,13 @@ import Footer from "../Footer";
 
 export default function AnimesArea() {
     // Lista de animes e seus números de ranking
-    const ranking1 = [
-        { anime: 'Naruto', number: '1' },
-        { anime: 'Noragami', number: '2' },
-        { anime: 'Blue Lock', number: '3' },
-        { anime: 'Horimyia', number: '4' },
-        { anime: 'Boku no Hero', number: '5' },
-    ];
+    // const ranking1 = [
+    //     { anime: 'Naruto', number: '1' },
+    //     { anime: 'Noragami', number: '2' },
+    //     { anime: 'Blue Lock', number: '3' },
+    //     { anime: 'Horimyia', number: '4' },
+    //     { anime: 'Boku no Hero', number: '5' },
+    // ];
 
     
     return (
@@ -32,9 +32,14 @@ export default function AnimesArea() {
                 <Pesquisa className="animes-search" placeholder="Pesquisar Animes" />
                 <AnimesesLancamentos />
                 <div className="ranking-container">
-                    <div className="list1">
-                        <AnimesRanking rankingList={ranking1} />
-                    </div>
+
+                    <p className="titulo-card">Top 5</p>
+                    <AnimesRanking colocacao={"1"}  rankingNome={"Blue Lock"} />
+                    <AnimesRanking colocacao={"1"}  rankingNome={"Blue Lock"} />
+                    <AnimesRanking colocacao={"1"}  rankingNome={"Blue Lock"} />
+                    <AnimesRanking colocacao={"1"}  rankingNome={"Blue Lock"} />
+                    <AnimesRanking colocacao={"1"}  rankingNome={"Blue Lock"} />
+                    
                 </div>
                 <hr className="ranking-divisao" />
                 <>
