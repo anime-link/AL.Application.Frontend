@@ -26,8 +26,8 @@
     margin-top: 157px;
     background-color: black;
 
-    width: 596px;
-    height: 426px;
+    width: 696px;
+    height: 526px;
     border-radius: 50px;
     flex-direction: column;
 }
@@ -36,6 +36,7 @@
     color: #fff;
     padding-top: 5px;
     padding-bottom: 10px;
+    font: var(--header-40);
 }
 
 .list1{
