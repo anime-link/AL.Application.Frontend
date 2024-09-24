@@ -1,5 +1,12 @@
 .comunidade-chat {
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
+
+    background-image: url("../../assets/Images/Communities/community1.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: var(--deep-koamaru);
 }
