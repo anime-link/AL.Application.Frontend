@@ -21,10 +21,22 @@
 
 .ranking-container{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    gap: 92px;
     margin-top: 157px;
+    background-color: black;
+
+    width: 696px;
+    height: 526px;
+    border-radius: 50px;
+    flex-direction: column;
+}
+
+.titulo-card{
+    color: #fff;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    font: var(--header-40);
 }
 
 .list1{

@@ -28,10 +28,10 @@ export default function AnimesesLancamentos({ animes }) {
             <h2 className="titulo-lancamentos">Lançamentos</h2>
 
             <Swiper
-                slidesPerView={3} // Corrigido aqui
+                slidesPerView={2} // Corrigido aqui
                 pagination={{ clickable: true }}
                 navigation
-                spaceBetween={-400}
+                spaceBetween={-300}
                 loop={true}
             >
                 {imgAnimes.map((item, index) => (
