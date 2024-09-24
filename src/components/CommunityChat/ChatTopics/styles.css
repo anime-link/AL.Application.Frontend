@@ -1,0 +1,54 @@
+.chat-topicos {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+    padding-left: 186px;
+    padding-right: 86px;
+
+    background-color: rgba(51, 51, 51, 0.8);
+}
+
+.chat-topicos-titulo {
+    margin-top: 65px;
+    font: var(--commu-title);
+    color: var(--white);
+    text-shadow: 
+        -2px -2px 0 black,
+        2px -2px 0 black,
+        2px 2px 0 black,
+        -2px 2px 0 black
+    ;
+}
+
+.chat-topicos-canais {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 49px;
+    box-sizing: border-box;
+}
+
+.chat-topicos-canal {
+    position: relative;
+    cursor: pointer;
+    font: var(--text-16);
+    color: var(--fog);
+
+    transition: 0.5s ease-in-out;
+}
+
+.chat-topicos-canal:hover {
+    padding: 5px 20px;
+    background-color: rgba(237, 185, 34, 0.5);
+    border-radius: 10px;
+}
+
+.chat-topicos-canal.active {
+    padding: 5px 20px;
+    background-color: rgba(237, 185, 34, 0.8);
+    border-radius: 10px;
+    color: var(--white);
+}
