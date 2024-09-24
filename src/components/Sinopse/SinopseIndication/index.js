@@ -11,7 +11,7 @@ export default function SinopseIndication({prop}) {
           <RiVideoFill className="icon-play"/>
           <p>Onde assistir?</p>
         </div>
-        <img className="imgApp" src={prop} />
+        <img className="imgApp" src={prop} alt="Imagem do App" />
       </div>
     </div>
       

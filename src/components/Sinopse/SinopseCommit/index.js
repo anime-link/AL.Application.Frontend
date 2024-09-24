@@ -1,6 +1,5 @@
 import React from "react";
 import './styles.css';
-import { RiSendPlane2Fill } from "react-icons/ri";
 
 import SinopseTalk from "../SinopseTalk";
 import user2 from '../../../assets/Images/Sinopse/user2.png'
@@ -10,7 +9,7 @@ export default function SinopseCommit({ImgPerfil, placeholder, type}) {
     <div className="sinopse-commit">
      <p className="tittle-commit">Comentarios</p>
       <div className="mensseger-commit">
-        <img className="imgPerfil" src={ImgPerfil}/>
+        <img className="imgPerfil" src={ImgPerfil} alt="Imagem de Perfil" />
         <input
             className="text-commit"
             id="commit-label"
