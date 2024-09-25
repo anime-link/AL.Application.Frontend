@@ -5,13 +5,13 @@ import ChatTopicos from "./ChatTopics";
 import ChatMensagem from "./ChatMessage";
 
 export default function ChatComunidade() {
-    const [activeChannel, setActiveChannel] = useState("chat-geral");
+    const [canalAtivo, setCanalAtivo] = useState("canal");
 
     return (
         <div className="comunidade-chat">
             <ChatHeader />
-            <ChatTopicos />
-            <ChatMensagem />
+            <ChatTopicos setCanalAtivo={setCanalAtivo} />
+            <ChatMensagem  canalAtivo={canalAtivo} />
         </div>
     );
 }

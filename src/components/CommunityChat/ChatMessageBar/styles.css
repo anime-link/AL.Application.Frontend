@@ -15,6 +15,11 @@
     border: solid 2px var(--night-rider);
     border-radius: 10px;
     background-color: var(--deep-koamaru);
+    transition: 0.5s ease-in-out;
+}
+
+.chat-msg-barra:focus-within {
+    border-color: var(--chetwode-blue);
 }
 
 .chat-msg-input {
