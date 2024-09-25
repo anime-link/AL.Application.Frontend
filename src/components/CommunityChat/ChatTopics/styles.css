@@ -3,9 +3,9 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
-    height: 100%;
     padding-left: 186px;
     padding-right: 86px;
+    height: 100%;
 
     background-color: rgba(51, 51, 51, 0.8);
 }
