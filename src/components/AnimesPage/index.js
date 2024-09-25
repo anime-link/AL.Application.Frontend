@@ -13,6 +13,7 @@ import comedia from '../../assets/Images/AnimesCard/comedia.png';
 import misterio from '../../assets/Images/AnimesCard/misterio.png';
 import esporte from '../../assets/Images/AnimesCard/esporte.png';
 import Footer from "../Footer";
+import { Link } from 'react-router-dom';
 
 export default function AnimesArea() {
     
@@ -36,16 +37,28 @@ export default function AnimesArea() {
                 <>
                 <ul>
                     <li>
-                    <AnimeCards nome="Ação" imgAnime={acao} />
-                    <AnimeCards nome="Terror" imgAnime={terror} />
+                        <Link to={"/animes/acao"}>
+                            <AnimeCards nome="Ação" imgAnime={acao} />
+                        </Link>
+                        <Link to={"/animes/terror"}>
+                            <AnimeCards nome="Terror" imgAnime={terror} />
+                        </Link>
                     </li>
                     <li>
-                    <AnimeCards nome="Comédia" imgAnime={comedia} />
-                    <AnimeCards nome="Romance" imgAnime={romance} />
+                        <Link to={"/animes/comedia"}>
+                            <AnimeCards nome="Comédia" imgAnime={comedia} />
+                        </Link>
+                        <Link to={"/animes/romance"}>
+                            <AnimeCards nome="Romance" imgAnime={romance} />
+                        </Link>
                     </li>
                     <li>
-                    <AnimeCards nome="Esporte" imgAnime={esporte} />
-                    <AnimeCards nome="Mistério" imgAnime={misterio} />
+                        <Link to={"/animes/esporte"}>
+                            <AnimeCards nome="Esporte" imgAnime={esporte} />
+                        </Link>
+                        <Link to={"/animes/misterio"}>
+                            <AnimeCards nome="Mistério" imgAnime={misterio} />
+                        </Link>
                     </li>
                 </ul>
                 </> 

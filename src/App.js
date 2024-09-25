@@ -17,8 +17,13 @@ function App() {
           <Route element={<Home />} path='/' />
           <Route element={<Cadastro />} path='/cadastro' />
           <Route element={<Login />} path='/login' />
-          <Route element={<Comunidades />} path='/comunidades' />
           <Route element={<Animes/>} path='/animes' />
+          <Route element={""} path='/animes/acao' />
+          <Route element={""} path='/animes/terror' />
+          <Route element={""} path='/animes/comedia' />
+          <Route element={""} path='/animes/romance' />
+          <Route element={""} path='/animes/esporte' />
+          <Route element={""} path='/animes/misterio' />
           <Route element={<Comunidades />} path='/comunidades' />  
           <Route element={<ComunidadeChat />} path='/chat' />  
           <Route element={ <Contatos/>} path='/contatos'/>
