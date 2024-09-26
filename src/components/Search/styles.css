@@ -7,23 +7,23 @@
     width: 600px;
     height: 66px;
     border-radius: 10px;
-
+    
     background-color: var(--deep-koamaru);
-
+    
     transition: 0.5s ease-in-out;
 }
 
 .pesquisa-icon {
     position: absolute;
     left: 15px;
-
+    
     font-size: 42px;
 }
 
 .pesquisa-barra {
     text-align: center;
     outline: none;
-
+    
     width: 300px;
     height: 33px;
     
@@ -38,7 +38,7 @@
 .pesquisa-limpar {
     position: absolute;
     cursor: pointer;
-
+    
     right: 60px;
     font-size: 30px;
 }
@@ -47,22 +47,65 @@
     display: none;
 }
 
+.pesquisa-sugestoes {
+    position: absolute;
+    display: block;
+    overflow-y: auto;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    max-height: 497px;
+    padding: 32px 50px;
+    background-color: var(--deep-koamaru);
+    border-radius: 10px;
+}
+
+.pesquisa-item {
+    cursor: pointer;
+    background-color: var(--night-rider);
+    border-radius: 10px;
+}
+
+.pesquisa-msg-default {
+    color: var(--white);
+}
+
+.pesquisa-msg {
+    font: var(--text-24);
+}
+
+.pesquisa-sem-sugestoes {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.pesquisa-sem-img {
+    width: 120px;
+    height: 120px;
+}
+
+.pesquisa-sem-msg {
+    font: var(--text-24);
+    color: var(--white);
+}
+
 @media (max-width: 430px) {
     .pesquisa-area {
         width: 310px;
         height: 55px;
     }
-
+    
     .pesquisa-icon {
         font-size: 28px;
     }
-
+    
     .pesquisa-barra {
         width: 230px;
         height: 33px;
         font: var(--text-15);
     }
-
+    
     .pesquisa-limpar {
         right: 20px;
         font-size: 28px;
