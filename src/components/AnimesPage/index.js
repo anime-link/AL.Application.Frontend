@@ -3,7 +3,6 @@ import React from 'react';
 import "./styles.css";
 import Header from '../Header';
 import Pesquisa from "../Search";
-import AnimesesLancamentos from './AnimesLaunch';
 import AnimesRanking from './AnimesRanking';
 import AnimeCards from './AnimesCards';
 import acao from '../../assets/Images/AnimesCard/acao.png';
@@ -13,6 +12,7 @@ import comedia from '../../assets/Images/AnimesCard/comedia.png';
 import misterio from '../../assets/Images/AnimesCard/misterio.png';
 import esporte from '../../assets/Images/AnimesCard/esporte.png';
 import Footer from "../Footer";
+import AnimesLaunch from './AnimesLaunch';
 
 export default function AnimesArea() {
     
@@ -21,7 +21,7 @@ export default function AnimesArea() {
             <Header />
             <main className="animes-body">
                 <Pesquisa className="animes-search" placeholder="Pesquisar Animes" />
-                <AnimesesLancamentos />
+                <AnimesLaunch />
                 <div className="ranking-container">
 
                     <p className="titulo-card">Top 5</p>
