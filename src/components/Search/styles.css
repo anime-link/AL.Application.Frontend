@@ -47,23 +47,51 @@
     display: none;
 }
 
+.pesquisa-titulo {
+    font: var(--text-24);
+    color: var(--white);
+}
+
 .pesquisa-sugestoes {
     position: absolute;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     overflow-y: auto;
     top: 72px;
     left: 0;
     width: 100%;
     max-height: 497px;
     padding: 32px 50px;
+
     background-color: var(--deep-koamaru);
     border-radius: 10px;
 }
 
 .pesquisa-item {
     cursor: pointer;
+    display: flex;
+    align-items: start;
+    gap: 30px;
+    padding: 13px 30px;
+
     background-color: var(--night-rider);
     border-radius: 10px;
+    transition: 0.5s ease-in-out;
+}
+
+.pesquisa-item:hover {
+    transform: scale(1.1);
+}
+
+.pesquisa-imagem {
+    width: 190px;
+    height: 99px;
+}
+
+.pesquisa-nome {
+    font: var(--text-16);
+    color: var(--white);
 }
 
 .pesquisa-msg-default {

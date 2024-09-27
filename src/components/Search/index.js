@@ -17,7 +17,7 @@ export default function Pesquisa({ placeholder, sugestoes = [] }) {
         if (input.length > 0) {
             // Inclui palavras minúsculas
             const filtrado = sugestoes.filter(sugestao =>
-                sugestao.toLowerCase().includes(input.toLowerCase())
+                sugestao.nome.toLowerCase().includes(input.toLowerCase())
                 
             );
             setFiltrarSugestoes(filtrado);
@@ -64,9 +64,13 @@ export default function Pesquisa({ placeholder, sugestoes = [] }) {
                             <p className="pesquisa-sem-msg">Não encontrei nada...</p>
                         </div>
                     )}
+                    {filtrarSugestoes.length > 0 && (
+                        <h1 className="pesquisa-titulo">{filtrarSugestoes.length} resultados</h1>
+                    )}
                     {filtrarSugestoes.map((sugestao, index) => (
                         <div key={index} className="pesquisa-item">
-                            {sugestao}
+                            <img className="pesquisa-imagem" src={sugestao.imagem} alt={sugestao.nome} />
+                            <p className="pesquisa-nome">{sugestao.nome}</p>
                         </div>
                     ))}
                 </div>
