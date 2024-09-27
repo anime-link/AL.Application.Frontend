@@ -14,6 +14,15 @@ import community5 from "../../assets/Images/Communities/community5.png";
 import community6 from "../../assets/Images/Communities/community6.png";
 
 export default function ComunidadesArea() {
+    const sugComunidades = [
+        "Comunidade 1",
+        "Comunidade 2",
+        "Comunidade 3",
+        "Comunidade 4",
+        "Comunidade 5",
+        "Comunidade 6",
+    ]
+
     const comunidades = [
         community1,
         community2,
@@ -43,7 +52,7 @@ export default function ComunidadesArea() {
                 <ComunidadeTopicos />
                 <div className="comunidades-opcoes-fundo">
                     <div className="comunidade-search">
-                        <Pesquisa placeholder={"Pesquisar comunidades"} />
+                        <Pesquisa placeholder={"Pesquisar comunidades"} sugestoes={sugComunidades} />
                     </div>
                     <ComunidadeOpcoes comunidades={comunidades} />
                 </div>
