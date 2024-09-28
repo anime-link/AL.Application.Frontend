@@ -26,7 +26,7 @@ export default function SinopseCard({ ImgSin, ImgBack, title, synopsis, year, ep
         </div>          
       </div>
        
-       </div>
+    </div>
                     
   );
 }

@@ -1,5 +1,6 @@
 .indication-area{
     display: flex;
+    justify-content: center;
     width: 100%;
     height: 525px;
 

@@ -1,0 +1,28 @@
+.ranking-top {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 157px;
+    padding: 20px 59px;
+
+    border-radius: 50px;
+    background: var(--gradient-black);
+}
+
+.ranking-titulo {
+    font: var(--header-40);
+    color: var(--white);
+}
+
+.ranking-top-area {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 45px;
+    gap: 56px;
+}
+
+.ranking-lista {
+    display: flex;
+    align-items: center;
+}
