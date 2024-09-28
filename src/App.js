@@ -8,6 +8,7 @@ import Animes from './pages/AnimesPage'
 import ComunidadeChat from './pages/CommunityChat';
 import Contatos from "./pages/Contatos";
 import Sinopse from './pages/Sinopse';
+import AnimesAcao from './components/AnimesPage/AnimesSpaceGenere/AnimesAcao';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           <Route element={<Cadastro />} path='/cadastro' />
           <Route element={<Login />} path='/login' />
           <Route element={<Animes/>} path='/animes' />
-          <Route element={""} path='/animes/acao' />
+          <Route element={<AnimesAcao/>} path='/animes/acao'/>
           <Route element={""} path='/animes/terror' />
           <Route element={""} path='/animes/comedia' />
           <Route element={""} path='/animes/romance' />

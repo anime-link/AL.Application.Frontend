@@ -1,0 +1,74 @@
+.esporte-area{
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    background: url("../../../../assets/Images/GenreBackground/Misterio.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+    background-position: bottom;
+    background-blend-mode: multiply;
+    overflow: hidden;
+
+    background-color: var(--deep-koamaru);
+
+}
+
+.esporte-body{
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.esporte-back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 190px;
+    margin-left: 50px;
+    margin-right: 552px;
+}
+
+.icon-return{
+    font-size: 100px;
+    color:  var(--gradient-black);
+
+    transition: 0.5s ease-in-out;
+}
+
+.icon-return:hover {
+    color: var(--bright-sun);
+    transform: scale(1.2);
+}
+
+.icon-return:active {
+    color: var(--bright-sun);
+    opacity: 50%;
+}
+
+.esporte-icon-voltar{
+    display: flex;
+    justify-content: center;
+    margin-right: 413px;
+    margin-left: 50px;
+}
+
+.esporte-tittle{
+    font: var(--app-section);
+    font-size: 70px;
+    text-shadow: 2px 2px 8px black;
+}

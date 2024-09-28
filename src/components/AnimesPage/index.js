@@ -38,7 +38,7 @@ export default function AnimesArea() {
                 <ul>
                     <li>
                         <Link to={"/animes/acao"}>
-                            <AnimeCards nome="Ação" imgAnime={acao} />
+                            <AnimeCards nome="Ação" imgAnime={acao} />                         
                         </Link>
                         <Link to={"/animes/terror"}>
                             <AnimeCards nome="Terror" imgAnime={terror} />
