@@ -9,24 +9,27 @@ import Header from '../../../Header';
 
 
 
-export default function AnimesEsporte() {
+export default function AnimesMisterio() {
     return (
-        <div className="acao-area">
+        <div className="misterio-area">
             <Header/>
             <main className= "misterio-body">
                 <diV className = "misterio-back">
                     <diV className="misterio-icon-voltar">
-                        <Link className="icon-return">
-                            <RiArrowLeftCircleFill/>
+                        <Link className="icon-return" to={"/animes"}>
+                            <RiArrowLeftCircleFill alt="Fechar"/>
                         </Link>
                     </diV>
-                    <p className="acao-tittle">Romance</p>
+                    <p className="misterio-tittle">Misterio</p>
                 </diV>
-                <div></div>
-
                 <div>
                 <CardMisterio/>
-                
+                <CardMisterio/>
+                <CardMisterio/>
+                <CardMisterio/>
+                <CardMisterio/>
+                <CardMisterio/>
+                <CardMisterio/>
                 </div>
                 
             </main>

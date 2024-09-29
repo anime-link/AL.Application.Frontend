@@ -16,14 +16,12 @@ export default function AnimesEsporte() {
             <main className= "esporte-body">
                 <diV className = "esporte-back">
                     <diV className="esporte-icon-voltar">
-                        <Link className="icon-return">
-                            <RiArrowLeftCircleFill/>
+                        <Link className="icon-return" to={"/animes"}>
+                            <RiArrowLeftCircleFill alt= "Fechar"/>
                         </Link>
                     </diV>
                     <p className="acao-tittle">Esporte</p>
                 </diV>
-                <div></div>
-
                 <div>
                 <CardEsporte/>
                 <CardEsporte/>

@@ -1,4 +1,4 @@
-.acao-area{
+.misterio-area{
     box-sizing: border-box;
     text-decoration: none;
     border: none;
@@ -19,7 +19,7 @@
 
 }
 
-.acao-body{
+.misterio-body{
     box-sizing: border-box;
     text-decoration: none;
     border: none;
@@ -34,7 +34,7 @@
     flex-direction: column;
 }
 
-.acao-back{
+.misterio-back{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,14 +60,14 @@
     opacity: 50%;
 }
 
-.acao-icon-voltar{
+.misterio-icon-voltar{
     display: flex;
     justify-content: center;
     margin-right: 413px;
     margin-left: 50px;
 }
 
-.acao-tittle{
+.misterio-tittle{
     font: var(--app-section);
     font-size: 70px;
     text-shadow: 2px 2px 8px black;

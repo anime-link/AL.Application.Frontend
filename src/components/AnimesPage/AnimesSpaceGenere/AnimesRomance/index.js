@@ -3,35 +3,33 @@ import './styles.css';
 import { Link } from 'react-router-dom'; 
 import { RiArrowLeftCircleFill } from "react-icons/ri";
 
-import CardAcao from "./CardRomance";
+import CardRomance from "./CardRomance";
 import Footer from "../../../Footer";
 import Header from '../../../Header';
 
 
 
-export default function AnimesAcao() {
+export default function AnimesRomance() {
     return (
-        <div className="acao-area">
+        <div className="romance-area">
             <Header/>
-            <main className= "acao-body">
-                <diV className = "acao-back">
-                    <diV className="acao-icon-voltar">
-                        <Link className="icon-return">
-                            <RiArrowLeftCircleFill/>
+            <main className= "romance-body">
+                <diV className = "romance-back">
+                    <diV className="romance-icon-voltar">
+                        <Link className="icon-return" to={"/animes"}>
+                            <RiArrowLeftCircleFill alt="Fechar"/>
                         </Link>
                     </diV>
-                    <p className="acao-tittle">Romance</p>
+                    <p className="romance-tittle">Romance</p>
                 </diV>
-                <div></div>
-
                 <div>
-                <CardAcao/>
-                <CardAcao/>
-                <CardAcao/>
-                <CardAcao/>
-                <CardAcao/>
-                <CardAcao/>
-                <CardAcao/>
+                <CardRomance/>
+                <CardRomance/>
+                <CardRomance/>
+                <CardRomance/>
+                <CardRomance/>
+                <CardRomance/>
+                <CardRomance/>
                 </div>
                 
             </main>

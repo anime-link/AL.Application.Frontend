@@ -30,7 +30,7 @@ export default function AnimesArea() {
                     <AnimesRanking colocacao={"2"}  rankingNome={"One Piece"} />
                     <AnimesRanking colocacao={"3"}  rankingNome={"Noragami"} />
                     <AnimesRanking colocacao={"4"}  rankingNome={"Classroom of The Elite"} />
-                    <AnimesRanking colocacao={"5"}  rankingNome={"Goblins Layer"} />
+                    <AnimesRanking colocacao={"5"}  rankingNome={"Goblin Slayer"} />
                     
                 </div>
                 <hr className="ranking-divisao" />

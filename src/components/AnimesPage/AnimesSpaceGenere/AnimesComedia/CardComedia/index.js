@@ -1,11 +1,11 @@
 import React from 'react';
 import './styles.css';
 
-export default function CardComedia({ cardImgAcao, }) {
+export default function CardComedia({ cardImgComedia}) {
     return (
         <div className="container-card">
             <div className="card-anime-comedia"
-                style={{ backgroundImage: `url(${cardImgAcao})` }}
+                style={{ backgroundImage: `url(${cardImgComedia})` }}
             >
             </div>
 

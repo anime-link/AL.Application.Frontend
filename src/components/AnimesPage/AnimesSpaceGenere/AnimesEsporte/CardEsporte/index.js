@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
 
-export default function CardEsporte({ cardImgEsporte, }) {
+export default function CardEsporte({ cardImgEsporte}) {
     return (
         <div className="container-card">
             <div className="card-anime-acao"

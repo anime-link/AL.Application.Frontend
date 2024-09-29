@@ -1,19 +1,19 @@
 import React from 'react';
 import './styles.css';
 
-export default function CardAcao({ cardImgAcao, }) {
+export default function CardRomance({ cardImgRomance, }) {
     return (
         <div className="container-card">
-            <div className="card-anime-acao"
-                style={{ backgroundImage: `url(${cardImgAcao})` }}
+            <div className="card-anime-romance"
+                style={{ backgroundImage: `url(${cardImgRomance})` }}
             >
             </div>
 
             <div className="card-space-content">
-                <p className="card-acao-tittle">
+                <p className="card-romance-tittle">
                     Horimya
                 </p>
-                <p className="card-acao-text">
+                <p className="card-romance-text">
                     gfdtujygijffryhdcutjdfyrhdfvikjfikjfkumjfumjtgbik
                     6ufgikgholhoukgbolhnohnolholpjçgukhpolyholhkghnoljpçjpç
                     hgikgoholhnolihiykghokg,hikgbikgbikgholhik,jhuk,uhok,ho

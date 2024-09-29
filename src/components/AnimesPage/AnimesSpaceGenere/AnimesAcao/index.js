@@ -16,14 +16,12 @@ export default function AnimesAcao() {
             <main className= "acao-body">
                 <diV className = "acao-back">
                     <diV className="acao-icon-voltar">
-                        <Link className="icon-return">
-                            <RiArrowLeftCircleFill/>
+                        <Link className="icon-return" to={"/animes"}>
+                            <RiArrowLeftCircleFill  alt= "Fechar"/>
                         </Link>
                     </diV>
-                    <p className="acao-tittle">Romance</p>
+                    <p className="acao-tittle">Ação</p>
                 </diV>
-                <div></div>
-
                 <div>
                 <CardAcao/>
                 <CardAcao/>

@@ -16,8 +16,8 @@ export default function AnimesComedia() {
             <main className= "comedia-body">
                 <diV className = "comedia-back">
                     <diV className="comedia-icon-voltar">
-                        <Link className="icon-return">
-                            <RiArrowLeftCircleFill/>
+                        <Link className="icon-return" to={"/animes"}>
+                            <RiArrowLeftCircleFill  alt= "Fechar"/>
                         </Link>
                     </diV>
                     <p className="comedia-tittle">Comedia</p>

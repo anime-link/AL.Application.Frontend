@@ -1,4 +1,4 @@
-.acao-area{
+.terror-area{
     box-sizing: border-box;
     text-decoration: none;
     border: none;
@@ -7,7 +7,7 @@
     padding: 0;
     width: 100%;
 
-    background: url("../../../../assets/Images/GenreBackground/Misterio.png");
+    background: url("../../../../assets/Images/GenreBackground/Terror.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-clip: border-box;
@@ -19,7 +19,7 @@
 
 }
 
-.acao-body{
+.terror-body{
     box-sizing: border-box;
     text-decoration: none;
     border: none;
@@ -34,7 +34,7 @@
     flex-direction: column;
 }
 
-.acao-back{
+.terror-back{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,14 +60,14 @@
     opacity: 50%;
 }
 
-.acao-icon-voltar{
+.terror-icon-voltar{
     display: flex;
     justify-content: center;
     margin-right: 413px;
     margin-left: 50px;
 }
 
-.acao-tittle{
+.terror-tittle{
     font: var(--app-section);
     font-size: 70px;
     text-shadow: 2px 2px 8px black;

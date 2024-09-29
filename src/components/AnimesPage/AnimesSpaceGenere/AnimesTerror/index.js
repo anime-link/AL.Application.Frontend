@@ -3,35 +3,33 @@ import './styles.css';
 import { Link } from 'react-router-dom'; 
 import { RiArrowLeftCircleFill } from "react-icons/ri";
 
-import CardAcao from "./CardAcao";
+import CardTerror from "./CardTerror";
 import Footer from "../../../Footer";
 import Header from '../../../Header';
 
 
 
-export default function AnimesAcao() {
+export default function AnimesTerror() {
     return (
-        <div className="acao-area">
+        <div className="terror-area">
             <Header/>
-            <main className= "acao-body">
-                <diV className = "acao-back">
-                    <diV className="acao-icon-voltar">
-                        <Link className="icon-return">
-                            <RiArrowLeftCircleFill/>
+            <main className= "terror-body">
+                <diV className = "terror-back">
+                    <diV className="terror-icon-voltar">
+                        <Link className="icon-return" to={"/animes"}>
+                            <RiArrowLeftCircleFill alt="Fechar"/>
                         </Link>
                     </diV>
-                    <p className="acao-tittle">Romance</p>
+                    <p className="acao-tittle">Terror</p>
                 </diV>
-                <div></div>
-
                 <div>
-                <CardAcao/>
-                <CardAcao/>
-                <CardAcao/>
-                <CardAcao/>
-                <CardAcao/>
-                <CardAcao/>
-                <CardAcao/>
+                <CardTerror/>
+                <CardTerror/>
+                <CardTerror/>
+                <CardTerror/>
+                <CardTerror/>
+                <CardTerror/>
+                <CardTerror/>
                 </div>
                 
             </main>
