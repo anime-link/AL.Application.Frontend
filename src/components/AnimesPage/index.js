@@ -1,10 +1,7 @@
 // AnimesArea.js
-import React from 'react';
 import "./styles.css";
 import Header from '../Header';
 import Pesquisa from "../Search";
-import AnimesesLancamentos from './AnimesLaunch';
-import AnimesRanking from './AnimesRanking';
 import AnimeCards from './AnimesCards';
 import acao from '../../assets/Images/AnimesCard/acao.png';
 import romance from '../../assets/Images/AnimesCard/romance.png';
@@ -13,10 +10,13 @@ import comedia from '../../assets/Images/AnimesCard/comedia.png';
 import misterio from '../../assets/Images/AnimesCard/misterio.png';
 import esporte from '../../assets/Images/AnimesCard/esporte.png';
 import Footer from "../Footer";
+import AnimesLaunch from './AnimesLaunch';
 import { Link } from 'react-router-dom';
+import { AnimesTop } from "./AnimesTop";
 
 export default function AnimesArea() {
     
+
     return (
         <div className="animes-area">
             <Header />
@@ -33,6 +33,12 @@ export default function AnimesArea() {
                     <AnimesRanking colocacao={"5"}  rankingNome={"Goblin Slayer"} />
                     
                 </div>
+                <Pesquisa  
+                    placeholder="Pesquisar Animes" 
+                    tipo={'anime'}
+                />
+                <AnimesLaunch />
+                <AnimesTop filter={"favorite"} />
                 <hr className="ranking-divisao" />
                 <>
                 <ul>

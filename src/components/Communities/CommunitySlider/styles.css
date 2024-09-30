@@ -64,7 +64,7 @@
 }
 
 .comunidade-slider-area .swiper-pagination-bullet-active {
-    background-image: url("../../../assets/Images/Communities/slider-span.webp");
+    background-image: url("../../../assets/Images/Communities/slider-span.png");
     background-position: center;
     background-size: cover;
     background-color: var(--bright-sun);

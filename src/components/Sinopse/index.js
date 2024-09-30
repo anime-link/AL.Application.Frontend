@@ -6,20 +6,25 @@ import SinopseIndication from "./SinopseIndication";
 import SinopseCommit from "./SinopseCommit";
 import Footer from "../Footer";
 import { getJikanAnimeDetails } from "../../services/AnimeAPI/AnimeApi";
+import { useParams } from "react-router-dom";
 
 import user from '../../assets/Images/Sinopse/user.png'
 
 export default function SinopseArea() {
+  // Pegar o parâmetro de ID no endereço URL
+  const { id } = useParams(); 
   const [animeData, setAnimeData] = useState(null);
 
   useEffect(() => {
     const fetchAnimeData = async () => {
-      const data = await getJikanAnimeDetails(1); // ID do anime que você quer buscar (por exemplo, 1 para "Cowboy Bebop")
-      setAnimeData(data);
+      // Obter ID do anime
+      if (id) {
+        const data = await getJikanAnimeDetails(id); // ID do anime que você quer buscar (por exemplo, 1 para "Cowboy Bebop")
+        setAnimeData(data);
+      }
     };
-
     fetchAnimeData();
-  }, []);
+  }, [id]);
 
   if (!animeData) return <p>Carregando...</p>;
 

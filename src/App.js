@@ -33,8 +33,8 @@ function App() {
           <Route element={<AnimesMisterio/>} path='/animes/misterio' />
           <Route element={<Comunidades />} path='/comunidades' />  
           <Route element={<ComunidadeChat />} path='/chat' />  
-          <Route element={ <Contatos/>} path='/contatos'/>
-          <Route element={ <Sinopse/>} path='/sinopse'/>
+          <Route element={<Contatos/>} path='/contatos'/>
+          <Route element={<Sinopse/>} path='/anime/:id'/>
         </Routes>
       </BrowserRouter>
     </div>
