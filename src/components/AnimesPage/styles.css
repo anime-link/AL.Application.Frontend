@@ -17,6 +17,13 @@
     align-items: center;
     flex-direction: column;
     padding-top: 125px;
+    background: url("../../assets/Images/AnimeLaunch/AnimebackLalouch.png"),
+    var(--gradient-black);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+    background-blend-mode: multiply;
+    background-color:  var();
    
 }
 
