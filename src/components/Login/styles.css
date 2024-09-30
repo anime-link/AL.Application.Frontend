@@ -96,6 +96,36 @@
     background-color: var(--chetwode-blue);
 }
 
+
+.login-input {
+    width: 299px;
+    height: 45px;
+    border-radius: 10px;
+    padding-left: 20px;
+
+    outline: none;
+    border: solid 2px var(--night-rider);
+    background-color: var(--white);
+    font: var(--text-16);
+
+    transition: 0.5s ease-in-out;
+}
+
+.login-botao {
+    margin-top: 48px;
+    width: 150px;
+    height: 45px;
+    
+    cursor: pointer;
+    border-radius: 10px;
+
+    background: var(--gradient-yellow);
+    color: var(--white);
+    font: var(--text-20);
+
+    transition: 0.5s ease-in-out;   
+}
+
 @media (max-width: 430px) {
     .login-area {
         width: 295px;

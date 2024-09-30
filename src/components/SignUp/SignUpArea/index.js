@@ -59,6 +59,7 @@ export function AreaCadastro({ areaLateral }) {
       navigate("/login");
     } catch (error) {
       console.error("Erro ao criar usuário:", error);
+      alert("Esse email já está em uso");
     }
   };
 
