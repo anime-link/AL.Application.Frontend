@@ -21,6 +21,18 @@ export default function AnimesArea() {
         <div className="animes-area">
             <Header />
             <main className="animes-body">
+                <Pesquisa className="animes-search" placeholder="Pesquisar Animes" />
+                <AnimesesLancamentos />
+                <div className="ranking-container">
+
+                    <p className="titulo-card">Top 5</p>
+                    <AnimesRanking colocacao={"1"}  rankingNome={"Naruto"} />
+                    <AnimesRanking colocacao={"2"}  rankingNome={"One Piece"} />
+                    <AnimesRanking colocacao={"3"}  rankingNome={"Noragami"} />
+                    <AnimesRanking colocacao={"4"}  rankingNome={"Classroom of The Elite"} />
+                    <AnimesRanking colocacao={"5"}  rankingNome={"Goblin Slayer"} />
+                    
+                </div>
                 <Pesquisa  
                     placeholder="Pesquisar Animes" 
                     tipo={'anime'}
@@ -32,7 +44,7 @@ export default function AnimesArea() {
                 <ul>
                     <li>
                         <Link to={"/animes/acao"}>
-                            <AnimeCards nome="Ação" imgAnime={acao} />
+                            <AnimeCards nome="Ação" imgAnime={acao} />                         
                         </Link>
                         <Link to={"/animes/terror"}>
                             <AnimeCards nome="Terror" imgAnime={terror} />
