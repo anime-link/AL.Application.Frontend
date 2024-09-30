@@ -1,0 +1,32 @@
+.container-card{
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 299px;
+    margin-top: 123px;
+    margin-bottom: 73px;
+    gap: 27px;
+}
+
+.card-anime-comedia{
+    width: 263px;
+    height: 307px;
+    background-color: rgb(92, 92, 95);
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.card-comedia-tittle{
+    padding-top: 2px;
+    font: var(--text-32);
+}
+
+.card-space-content{
+    text-align: justify;
+    font: var(--text-20);
+}

@@ -1,8 +1,9 @@
-import React from 'react';
 import "./styles.css";
+import React from 'react';
 import { RiTrophyFill } from "react-icons/ri";
 
-export default function AnimesRanking({ colocacao, rankingNome }) {
+export default function AnimesRanking({ colocacao, rankingNome, filter }) {
+
     return (
         <div className="ranking-area">
             <p className="ranking-colocacao">{colocacao}</p>

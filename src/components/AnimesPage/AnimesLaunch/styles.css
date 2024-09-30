@@ -39,11 +39,11 @@
     transition: 0.5s ease-in-out;
 }
 
-.lancamentos-img-area .swiper-pagination-bullet {
+.lancamentos-slider .swiper-pagination-bullet {
     display: none;
 }
 
-.lancamentos-img-area .swiper-pagination-bullet-active {
+.lancamentos-slider .swiper-pagination-bullet-active {
     display: none;
 }
 
@@ -55,6 +55,7 @@
     z-index: 1;
 
     color: var(--bright-sun);
+    transition: 0.5s ease-in-out;
 }
 
 .lancamentos-slider-antes {
@@ -63,4 +64,9 @@
 
 .lancamentos-slider-depois {
     right: 0;
+}
+
+.lancamentos-slider-antes:hover,
+.lancamentos-slider-depois:hover {
+    transform: scale(1.1);
 }

@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+    
     margin-top: 109px;
 }
 
@@ -29,8 +29,10 @@
     width: 1366px;
     height: 446px;
 
-    background-color: rgb(194, 188, 188);
-    color: #ffff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-clip: border-box;
     margin-top: -109px;
     z-index: 10;
 }

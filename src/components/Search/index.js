@@ -2,29 +2,68 @@ import React, { useState } from "react";
 import "./styles.css";
 import { RiCloseLine, RiSearchLine } from "react-icons/ri";
 import pochita from "../../assets/Images/Communities/pochita-img.png";
+import { useNavigate } from "react-router-dom";
 
-export default function Pesquisa({ placeholder, sugestoes = [] }) {
+export default function Pesquisa({ placeholder, sugestoes = [], tipo }) {
     const [valor, setValor] = useState("");
     const [filtrarSugestoes, setFiltrarSugestoes] = useState([]);
     const [emFoco, setEmFoco] = useState(false); // Verificar se está em selecionado a barra
+    const navigate = useNavigate();
 
-    // Mudar o valor da pesquisa
-    const handleChange = (event) => {
+    // Busca animes
+    const fetchAnimes = async (input) => {
+        try {
+            const response = await fetch(`https://api.jikan.moe/v4/anime?q=${input}&limit=5`);
+            const data = await response.json();
+
+            // Atualização de sugestões baseada na API
+            const animes = data.data.map(anime => ({
+                nome: anime.title,
+                imagem: anime.images.jpg.image_url,
+                id: anime.mal_id,
+                tipo: 'anime'
+            }))
+
+            return animes;
+        } catch (error) {
+            console.error('Erro ao buscar anime: ', error);
+            return [];
+        }
+    }
+
+    // Mudar o valor da pesquisa e buscar de acordo com o tipo
+    const handleChange = async (event) => {
         const input = event.target.value 
         setValor(input);
 
         // Filtração de sugestões
-        if (input.length > 0) {
-            // Inclui palavras minúsculas
-            const filtrado = sugestoes.filter(sugestao =>
-                sugestao.nome.toLowerCase().includes(input.toLowerCase())
-                
-            );
-            setFiltrarSugestoes(filtrado);
+        if (input.length > 2) {
+            let todasSugestoes = [];
+
+            // Filtração de dados
+            if (tipo === 'anime') {
+                // Caso seja anime, busca animes da API
+                todasSugestoes = await fetchAnimes(input);
+
+            } else if (tipo === 'comunidade') {
+                // Se for comunidade, filtra as comunidades
+                // Inclui palavras minúsculas
+                todasSugestoes = sugestoes.filter(sugestao =>
+                    sugestao.nome.toLowerCase().includes(input.toLowerCase())
+                );
+            }
+
+            setFiltrarSugestoes(todasSugestoes);
         } else {
             setFiltrarSugestoes([]);
         }
     };
+
+    const handleSuggestionClick = (id, tipo) => {
+        if (tipo === 'anime') {
+            navigate(`/anime/${id}`);
+        }
+    }
 
     // Limpar a pesquisa
     const handleClear = () => {
@@ -68,7 +107,11 @@ export default function Pesquisa({ placeholder, sugestoes = [] }) {
                         <h1 className="pesquisa-titulo">{filtrarSugestoes.length} resultados</h1>
                     )}
                     {filtrarSugestoes.map((sugestao, index) => (
-                        <div key={index} className="pesquisa-item">
+                        <div 
+                            key={index} 
+                            className="pesquisa-item" 
+                            onClick={() => handleSuggestionClick(sugestao.id, tipo)}
+                        >
                             <img className="pesquisa-imagem" src={sugestao.imagem} alt={sugestao.nome} />
                             <p className="pesquisa-nome">{sugestao.nome}</p>
                         </div>

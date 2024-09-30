@@ -3,6 +3,7 @@ import "./styles.css";
 import { RiArrowLeftCircleFill } from "react-icons/ri";
 // import { CamposLogin } from "./LoginLabels";
 import { BotaoAvancar} from "./LoginButton";
+// import { BotaoAvancar} from "./LoginButton";
 import { CampoCheck } from './LoginCheck';
 import { Link, useNavigate } from "react-router-dom";
 
@@ -14,6 +15,9 @@ export default function LoginArea(){
     const navigate = useNavigate();
     const { setUser } = useUser();
 
+export default function LoginArea(){
+    const navigate = useNavigate();
+
     const createUsers = async (event) => {
         event.preventDefault();
     
@@ -22,6 +26,7 @@ export default function LoginArea(){
         
         try {
           const response = await api.post("/usuario/login", {
+          await api.post("/usuario/login", {
             email: emailInput,
             senha: senhaInput,
           });
@@ -29,17 +34,19 @@ export default function LoginArea(){
           const userData = { id: response.data.id, name: response.data.nome, email: emailInput }
           setUser(userData);
           console.log("User: ", userData);
+          console.log("User: ", emailInput, senhaInput);
     
           document.querySelector(".email-input").value = '';
           document.querySelector(".senha-input").value = '';
     
         //   navigate("/comunidades");
+          navigate("/comunidades");
         } catch (error) {
           console.error("Usuario não encontrado ", error);
           alert("Usuário ou senha inválidos");
         }
       };
-
+    
     return(
         <div className="login-area">
             <div className="login-icone-voltar">
@@ -57,6 +64,12 @@ export default function LoginArea(){
             <p className="login-esquecer-senha">Esqueci minha senha</p>
             <CampoCheck />
             <BotaoAvancar onClick={createUsers}/>
+                <input className='login-input senha-input' placeholder='Senha' type='text' />
+            </div>
+            <p className="login-esquecer-senha">Esqueci minha senha</p>
+            <CampoCheck />
+            {/* <BotaoAvancar /> */}
+            <button className='login-botao' onClick={createUsers}>Confirmar</button>
             <hr className="login-divisor" />
             <p className="login-pergunta">Não tem conta?</p>
             <Link className="login-cadastro-link" to={"/cadastro"}>

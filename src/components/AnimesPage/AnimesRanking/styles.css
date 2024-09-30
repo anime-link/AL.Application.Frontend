@@ -2,8 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 200px 1fr;
     color: #fff;
-    gap: 128px;
-    padding-bottom: 29px;
+    gap: 78px;
 }
 
 .ranking-nome{
@@ -11,12 +10,14 @@
     font: var(--text-24);
 }
 
+.ranking-colocacao {
+    color: var(--white);
+    font: var(--text-24);
+}
 
 .trofeu{
     color: var(--bright-sun);
-    width: 50px;
-    height: 50px;
-
+    font-size: 50px;
 }
 
 
