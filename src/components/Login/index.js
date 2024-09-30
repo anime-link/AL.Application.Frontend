@@ -2,11 +2,18 @@ import React from 'react';
 import "./styles.css";
 import { RiArrowLeftCircleFill } from "react-icons/ri";
 // import { CamposLogin } from "./LoginLabels";
+import { BotaoAvancar} from "./LoginButton";
 // import { BotaoAvancar} from "./LoginButton";
 import { CampoCheck } from './LoginCheck';
 import { Link, useNavigate } from "react-router-dom";
 
 import api from "../../services/api";
+import { useUser } from "../../services/UserContext";
+
+export default function LoginArea(){
+
+    const navigate = useNavigate();
+    const { setUser } = useUser();
 
 export default function LoginArea(){
     const navigate = useNavigate();
@@ -18,16 +25,21 @@ export default function LoginArea(){
         const senhaInput = document.querySelector(".senha-input").value;
         
         try {
+          const response = await api.post("/usuario/login", {
           await api.post("/usuario/login", {
             email: emailInput,
             senha: senhaInput,
           });
     
+          const userData = { id: response.data.id, name: response.data.nome, email: emailInput }
+          setUser(userData);
+          console.log("User: ", userData);
           console.log("User: ", emailInput, senhaInput);
     
           document.querySelector(".email-input").value = '';
           document.querySelector(".senha-input").value = '';
     
+        //   navigate("/comunidades");
           navigate("/comunidades");
         } catch (error) {
           console.error("Usuario não encontrado ", error);
@@ -47,6 +59,11 @@ export default function LoginArea(){
                 {/* <CamposLogin placeholder={"Email"} type={"text"} />
                 <CamposLogin placeholder={"Senha"} type={"password"} /> */}
                 <input className='login-input email-input' placeholder='Email' type='text' />
+                <input className='login-input senha-input' placeholder='Senha' type='text' /> 
+            </div>
+            <p className="login-esquecer-senha">Esqueci minha senha</p>
+            <CampoCheck />
+            <BotaoAvancar onClick={createUsers}/>
                 <input className='login-input senha-input' placeholder='Senha' type='text' />
             </div>
             <p className="login-esquecer-senha">Esqueci minha senha</p>
@@ -61,3 +78,5 @@ export default function LoginArea(){
         </div>
     );
 }
+
+
