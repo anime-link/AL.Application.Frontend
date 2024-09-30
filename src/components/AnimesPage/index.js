@@ -15,8 +15,6 @@ import { Link } from 'react-router-dom';
 import { AnimesTop } from "./AnimesTop";
 
 export default function AnimesArea() {
-    
-
     return (
         <div className="animes-area">
             <Header />

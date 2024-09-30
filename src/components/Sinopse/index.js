@@ -19,7 +19,7 @@ export default function SinopseArea() {
     const fetchAnimeData = async () => {
       // Obter ID do anime
       if (id) {
-        const data = await getJikanAnimeDetails(id); // ID do anime que você quer buscar (por exemplo, 1 para "Cowboy Bebop")
+        const data = await getJikanAnimeDetails(id);
         setAnimeData(data);
       }
     };
