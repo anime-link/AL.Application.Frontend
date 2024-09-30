@@ -1,49 +1,62 @@
-.chat-header {
+.chat-header-area {
+    position: fixed;
     display: flex;
-    justify-content: center;
-
-    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    height: 100vh;
+    top: 0;
+    left: 0;
 
     background: var(--gradient-black);
+    border-right: solid 1px var(--bright-sun);
 }
 
-.chat-header-area {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-
-    gap: 1093px;
-    padding: 12px 50px;
-}
-
-.chat-header-voltar {
-    display: flex;
-    align-items: center;
-
-    gap: 21px;
-}
-
-.chat-header-icon {
-    font-size: 40px;
-
-    color: var(--bright-sun);
+.chat-header-usuario {
+    cursor: pointer;
+    margin-top: 45px;
+    border: solid 2px var(--night-rider);
+    border-radius: 50%;
 
     transition: 0.5s ease-in-out;
 }
 
-.chat-header-icon:hover {
-    transform: scale(1.1);
-    filter: brightness(1.2);
+.chat-header-usuario:hover {
+    border-color: var(--bright-sun);
+}
 
+.chat-header-divisor {
+    width: calc(100% - 44px);
+    height: 0.5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: var(--bright-sun);
+}
+
+.chat-header-funcoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.chat-header-voltar,
+.chat-header-esconder {
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.chat-header-voltar:hover,
+.chat-header-esconder:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+.chat-header-voltar {
     color: var(--bright-sun);
 }
 
-.chat-header-texto {
-    font: var(--text-20);
-    color: var(--white);
-}
-
-.chat-header-usuario {
-    width: 50px;
-    height: 50px;
+.chat-header-esconder {
+    background-color: var(--bright-sun);
+    border-radius: 50%;
 }

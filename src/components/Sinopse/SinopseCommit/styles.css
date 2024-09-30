@@ -1,0 +1,48 @@
+.sinopse-commit{
+    display: flex;
+    
+    align-items: center;
+    flex-direction: column;
+
+    background: var(--gradient-black);
+    color: #ffff;
+    width: 1366px;
+    background: url("../../../assets/Images/Sinopse/akameGaKill.png"),
+        var(--gradient-black);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+    background-blend-mode: multiply;
+}
+
+.tittle-commit{
+    font: var(--header-40);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    text-shadow: 2px 2px 8px black;
+}
+
+.imgPerfil{
+    width: 83px;
+    height: 84px;
+}
+
+.text-commit{
+    background-color: aliceblue;
+    width: 689px;
+    height: 78px;
+    border-radius: 20px;
+}
+
+.mensseger-commit{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    gap: 10px;
+    padding-top: 70px;
+    border-bottom:  3px solid var(--bright-sun);
+    padding-bottom: 84px;
+}
+

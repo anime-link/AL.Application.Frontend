@@ -6,14 +6,13 @@
     width: 100%;
     padding-top: 100px;
 
-    background:
-        url("../../../assets/Images/Communities/community-background-2.webp"),
-        var(--gradient-black);
+    background: url("../../../assets/Images/Communities/community-background-2.png");
+    background-color: var(--night-rider);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-clip: border-box;
-    background-blend-mode: soft-light;
+    background-blend-mode: multiply;
 }
 
 .comunidade-topicos-titulo {

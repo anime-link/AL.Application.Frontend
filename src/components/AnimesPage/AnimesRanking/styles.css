@@ -1,38 +1,24 @@
 .ranking-area{
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-    
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    color: #fff;
+    gap: 78px;
 }
 
-.ranking-box{
-    width: 469px;
-    height: 326px;
-    
-}
-
-.ranking-titulo{
-    color: var(--fog);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 50px;
-    padding-bottom: 10px;
-
-}
-
-
-.ranking-cont{
-    display: flex;
-    justify-content:center;
-    align-items: center;
+.ranking-nome{
     text-align: center;
-    gap: 80px;
-    color: aliceblue;
+    font: var(--text-24);
 }
 
-.icon-blue{
-    color: var(--bright-sun);
+.ranking-colocacao {
+    color: var(--white);
+    font: var(--text-24);
 }
+
+.trofeu{
+    color: var(--bright-sun);
+    font-size: 50px;
+}
+
+
+

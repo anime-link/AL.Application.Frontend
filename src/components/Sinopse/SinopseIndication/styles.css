@@ -1,0 +1,54 @@
+.indication-area{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 525px;
+
+    background: url("../../../assets/Images/Sinopse/backIndication.png"),
+    var(--gradient-black);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+    background-blend-mode: multiply;
+}
+
+.link-card{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background: var(--gradient-purple-blue);
+    width: 1060px;
+    height: 153px;
+
+    color: #ffff;
+    border-radius: 30px;
+    margin-top: 125px;
+    margin-left: 171px;
+    margin-bottom: 250px;
+}
+
+p{
+    font-size: 24%;
+    font: var(--app-text);
+}
+
+.icon-play{
+    font-size: 56px;
+    color: black;
+    border-radius: 100px;
+}
+
+.text-icon{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 65px;
+}
+
+.imgApp{
+    width: 56px;
+    height: 56px;
+}
+
+

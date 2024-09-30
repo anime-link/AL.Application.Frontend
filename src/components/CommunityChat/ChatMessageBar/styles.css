@@ -1,0 +1,52 @@
+.chat-msg-barra-area {
+    position: absolute;
+    bottom: 34px;
+    width: calc(100% - 90px);
+}
+
+.chat-msg-barra {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 12px 20px;
+    gap: 514px;
+
+    border: solid 2px var(--night-rider);
+    border-radius: 10px;
+    background-color: var(--deep-koamaru);
+    transition: 0.5s ease-in-out;
+}
+
+.chat-msg-barra:focus-within {
+    border-color: var(--chetwode-blue);
+}
+
+.chat-msg-input {
+    outline: none;
+    font: var(--text-16);
+    color: var(--white);
+    width: 80%;
+}
+
+.chat-msg-input::placeholder {
+    font: var(--text-16);
+    color: var(--chetwode-blue);
+}
+
+.chat-msg-icone-area {
+    position: absolute;
+    right: 0;
+}
+
+.chat-msg-icone {
+    cursor: pointer;
+    margin: 0 15px;
+
+    transition: 0.5s ease-in-out;
+}
+
+.chat-msg-icone:hover {
+    color: var(--bright-sun);
+    transform: scale(1.1);
+}

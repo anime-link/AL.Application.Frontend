@@ -1,49 +1,68 @@
-import "./styles.css";
-import { register } from 'swiper/element/bundle';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import image77 from "../../../assets/Images/AnimeLaunch/image 77.png";
-import image76 from "../../../assets/Images/AnimeLaunch/image 76.png";
-import image80 from "../../../assets/Images/AnimeLaunch/image 80.png";
-import image75 from "../../../assets/Images/AnimeLaunch/image 75.png";
-import image81 from "../../../assets/Images/AnimeLaunch/image 81.png";
-
+import './styles.css';
 import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+import React, { useEffect, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules'
+import { useNavigate } from 'react-router-dom';
+import { RiArrowLeftSLine, RiArrowRightSLine } from 'react-icons/ri';
 
-register();
+const AnimesLaunch = () => {
+  const [recentAnimes, setRecentAnimes] = useState([]);
+  const navigate = useNavigate();
 
-export default function AnimesesLancamentos({ animes }) {
-    const imgAnimes = [
-        image77,
-        image76,
-        image80,
-        image75,
-        image81
-    ];
+  useEffect(() => {
+    // Fetch recent anime releases from Jikan API
+    fetch('https://api.jikan.moe/v4/seasons/now')
+      .then(response => response.json())
+      .then(data => {
+        console.log('Animes fetched:', data.data); // Debug: verificar dados recebidos
+        setRecentAnimes(data.data.slice(0, 10)); // Limitar para 6 lançamentos
+      })
+      .catch(error => console.error('Error fetching recent animes:', error));
+  }, []);
 
-    return (
-        <div className="area-lancamentos">
-            <h2 className="titulo-lancamentos">Lançamentos</h2>
+  const handleClick = (animeId) => {
+    navigate(`/anime/${animeId}`);
+  };
 
-            <Swiper
-                slidesPerView={3} // Corrigido aqui
-                pagination={{ clickable: true }}
-                navigation
-                spaceBetween={-400}
-                loop={true}
-            >
-                {imgAnimes.map((item, index) => (
-                    <SwiperSlide key={index}>
-                        <img
-                            src={item} // Corrigido aqui
-                            alt="Slider"
-                            className="slide-item"
-                        />
-                    </SwiperSlide>
-                ))}
-            </Swiper>
-        </div>
-    );
-}
+  return (
+    <div className='animes-lancamentos'>
+      <h1 className='lancamentos-titulo'>Lançamentos</h1>
+      <div className='lancamentos-slider'>
+        <Swiper
+          spaceBetween={-50}
+          slidesPerView={5}
+          centeredSlides={true}
+          navigation={{
+            prevEl: '.lancamentos-slider-antes',
+            nextEl: '.lancamentos-slider-depois'
+          }}
+          pagination={{ clickable: true }}
+          modules={[Navigation, Pagination]}
+          loop={true}
+        >
+          {recentAnimes.map(anime => (
+            <SwiperSlide key={anime.mal_id}>
+              <div className="lancamentos-img-area" onClick={() => handleClick(anime.mal_id)}>
+                {/* Verifique se a imagem está presente */}
+                {anime.images && anime.images.jpg && (
+                  <img 
+                    className='lancamentos-img' 
+                    src={anime.images.jpg.image_url} 
+                    width={175}
+                    height={244}
+                    alt={anime.title} 
+                  />
+                )}
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <RiArrowLeftSLine fontSize={65} className='lancamentos-slider-antes' />
+        <RiArrowRightSLine fontSize={65} className='lancamentos-slider-depois' />
+      </div>
+    </div>
+  );
+};
+
+export default AnimesLaunch;
