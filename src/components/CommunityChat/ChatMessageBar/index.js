@@ -12,7 +12,6 @@ export default function ChatBarraMensagem() {
     const [socket, setSocket] = useState(null);
     const messagesEndRef = useRef(null);
 
-
     const chatId = 1;
 
     const scrollToBottom = () => {
@@ -26,7 +25,7 @@ export default function ChatBarraMensagem() {
             console.log("User not found"); // Mensagem para indicar que o `user` está `null` ou `undefined`
         }
 
-        axios.get(`http://localhost:8080/mensagem?chatId=${chatId}`)
+        axios.get(`http://localhost:8080/mensagens?chatId=${chatId}`)
           .then((response) => {
             setMessages(response.data);  // Carrega as mensagens do banco
             scrollToBottom();  // Rola para o fim
@@ -66,13 +65,17 @@ export default function ChatBarraMensagem() {
     const handleSendMessage = (e) => {
         e.preventDefault();
         if (message.trim() && socket && socket.readyState === WebSocket.OPEN) {
-          const newMessage = { sender: user.id, text: message, chatId };
+          const newMessage = { usuario: user.id, conteudo: message, chatId };
     
+          alert(newMessage);
+
           // Enviar a mensagem via WebSocket (sem adicionar localmente)
           socket.send(JSON.stringify(newMessage));
     
           // Limpar a mensagem
           setMessage('');
+
+          
         } else {
           console.error('WebSocket não está pronto para envio de mensagens.');
         }
