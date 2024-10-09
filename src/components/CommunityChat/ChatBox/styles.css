@@ -1,0 +1,11 @@
+.cointainer-menssager{
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+    width: 150px;
+    height: 150px;
+}
+
+p{
+    color: black;
+}
