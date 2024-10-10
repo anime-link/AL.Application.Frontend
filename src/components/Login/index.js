@@ -4,6 +4,9 @@ import { Link, useNavigate } from "react-router-dom";
 import api from "../../services/api";
 import { useUser } from "../../services/UserContext";
 import "./styles.css";
+import { CamposLogin } from './LoginLabels';
+import { CampoCheck } from './LoginCheck';
+import { BotaoAvancar } from './LoginButton';
 
 export default function LoginArea() {
   const navigate = useNavigate();
@@ -60,25 +63,21 @@ export default function LoginArea() {
       <h1 className="login-area-titulo">Login</h1>
 
       <form className='login-input-area' onSubmit={createUsers}>
-        <input 
-          className='login-input email-input'
-          placeholder='Email'
-          type='text'
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input 
-          className='login-input senha-input'
-          placeholder='Senha'
-          type='password'
-          value={senha}
-          onChange={(e) => setSenha(e.target.value)}
-        />
+        <div className='login-inputs'>
+          <CamposLogin 
+            placeholder={'E-mail'}
+            type={'text'}
+          />
+          <CamposLogin
+            placeholder={'Senha'}
+            type={'password'} 
+          />
+        </div>
 
         <CampoCheck manterConectado={manterConectado} handleCheckboxChange={handleCheckboxChange} />
 
         <p className="login-esquecer-senha">Esqueci minha senha</p>
-        <button type='submit' className='login-botao'>Confirmar</button>
+        <BotaoAvancar />
       </form>
 
       <hr className="login-divisor" />
@@ -86,22 +85,6 @@ export default function LoginArea() {
       <Link className="login-cadastro-link" to={"/cadastro"}>
         <p className="login-cadastro">Cadastre-se</p>
       </Link>
-    </div>
-  );
-}
-
-function CampoCheck({ manterConectado, handleCheckboxChange }) {
-  return (
-    <div className="login-checklist">
-      <label className="login-check">
-        <input
-          type="checkbox"
-          checked={manterConectado}
-          onChange={handleCheckboxChange}
-        />
-        <span className="login-checkbox"></span>
-        <span>Manter conectado</span>
-      </label>
     </div>
   );
 }

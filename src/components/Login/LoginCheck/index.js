@@ -1,7 +1,7 @@
 import "./styles.css";
 import React, { useState } from 'react';
 
-export function CampoCheck() {
+export function CampoCheck({ manterConectado }) {
     const [isChecked, setIsChecked] = useState(false);
 
     const handleCheckboxChange = (event) => {

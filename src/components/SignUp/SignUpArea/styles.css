@@ -100,6 +100,14 @@
   transform: translateX(-100%);
 }
 
+.cadastro-botao-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 98px;
+}
+
 @media (max-width: 426px) {
     .cadastro-area-main {
       width: 305px;
@@ -138,63 +146,8 @@
     .cadastro-lateral.visivel {
       transform: translateY(-100%);
     }
-}
 
-/* Import ffrom SignupButton APAGAR SANTISTA */
-.cadastro-botao-area {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  margin-top: 98px;
-}
-
-.cadastro-botao {
-  width: 150px;
-  height: 45px;
-  border-radius: 10px;
-
-  cursor: pointer;
-  border: none;
-
-  background: var(--gradient-yellow);
-  color: var(--white);
-  font: var(--text-20);
-
-  transition: 0.5s ease-in-out;
-}
-
-.cadastro-botao:hover {
-  transform: scale(1.1);
-  filter: brightness(1.1);
-}
-
-.cadastro-botao:active {
-  opacity: 70%;
-}
-
-.cadastro-botao-area {
-  margin-top: 50px;
-}
-
-.cadastro-senha-botao {
-  background: none;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  font-size: 24px;
-}
-
-@media (max-width: 430px) {
-  .cadastro-botao-area {
-    margin-top: 50px;
-  }
-
-  .cadastro-botao {
-    width: 100px;
-    height: 40px;
-    font: var(--text-16);
-  }
+    .cadastro-botao-area {
+      margin-top: 50px;
+    }
 }

@@ -12,6 +12,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { RiEyeOffFill, RiEyeFill } from "react-icons/ri";
 
 import api from "../../../services/api";
+import { BotaoCadastro } from "./SignUpButton";
 
 export function AreaCadastro({ areaLateral }) {
   // Estado do sidebar estar visível ou não
@@ -63,12 +64,6 @@ export function AreaCadastro({ areaLateral }) {
     }
   };
 
-  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
-
-  const mostrarSenha = () => {
-      setIsPasswordVisible(!isPasswordVisible);
-  };
-
   return (
     <div className="cadastro-area">
       <div className="cadastro-area-main">
@@ -79,50 +74,30 @@ export function AreaCadastro({ areaLateral }) {
         </div>
         <h1 className="cadastro-area-titulo">Cadastro</h1>
         <div className="cadastro-input-area">
-          <div className="cadastro-campos">
-            <input
-              className="cadastro-input nome-input"
-              id="cadastro-label"
-              placeholder="Seu nome"
-              type="text"
-            />
-          </div>
-          <div className="cadastro-campos ">
-            <input
-              className="cadastro-input email-input"
-              id="cadastro-label"
-              placeholder="Seu email"
-              type="text"
-            />
-          </div>
-          <div className="cadastro-campos ">
-            <input
-              className="cadastro-input senha-input"
-              id="cadastro-label"
-              placeholder="Criar senha"
-              type={isPasswordVisible ? "text" : "password"}
-            />
-            <button type="button" className="cadastro-senha-botao" onClick={mostrarSenha}>
-            {isPasswordVisible ? <RiEyeOffFill /> : <RiEyeFill />}
-            </button>
-          </div>
-          <div className="cadastro-campos">
-            <input
-              className="cadastro-input confirmar-senha-input"
-              id="cadastro-label"
-              placeholder="Confirmar senha"
-              type={isPasswordVisible ? "text" : "password"}
-            />
-            <button type="button" className="cadastro-senha-botao">
-            {isPasswordVisible ? <RiEyeOffFill /> : <RiEyeFill />}
-            </button>
-          </div>
+          <CamposCadastro
+            placeholder={'Seu nome'}
+            type={'text'}
+            className={'nome-input'}
+          />
+          <CamposCadastro
+            placeholder={'Seu email'}
+            type={'text'}
+            className={'email-input'}
+          />
+          <CamposCadastro
+            placeholder={'Criar senha'}
+            type={'password'}
+            className={'senha-input'}
+          />
+          <CamposCadastro
+            placeholder={'Confirmar senha'}
+            type={'password'}
+            className={'confirmar-senha-input'}
+          />
         </div>
 
         <div className="cadastro-botao-area">
-          <button className="cadastro-botao" onClick={createUsers}>
-            Confirme
-          </button>
+          <BotaoCadastro />
         </div>
 
         <div onClick={ativarSideBar} className="cadastro-mudar-img">

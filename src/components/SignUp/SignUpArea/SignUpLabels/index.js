@@ -13,7 +13,6 @@ export function CamposCadastro({ placeholder, type }) {
         <div className="cadastro-campos">
             <input 
                 className="cadastro-input"
-                id="cadastro-label"
                 placeholder={placeholder}
                 type={isPasswordVisible ? "text" : type}
             />
