@@ -1,0 +1,22 @@
+.container-menssager {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.mensagem-esquerda {
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.mensagem-direita {
+    text-align: right;
+    background-color: rgba(0, 255, 0, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px 0;
+}
