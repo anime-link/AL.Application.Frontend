@@ -9,7 +9,6 @@ export default function ChatBarraMensagem() {
     const [message, setMessage] = useState(''); 
     const [socket, setSocket] = useState(null);
     const messagesEndRef = useRef(null);
-
     const chatId = 1;
 
     const scrollToBottom = () => {
@@ -60,15 +59,24 @@ export default function ChatBarraMensagem() {
         };
     }, [chatId]);
 
-
     const handleSendMessage = (e) => {
         e.preventDefault();
         if (message.trim() && socket && socket.readyState === WebSocket.OPEN) {
             const newMessage = { usuario: user.id, conteudo: message, chatId };
+
+            // Enviar a mensagem pelo WebSocket
             socket.send(JSON.stringify(newMessage));
+
+            // Armazenar a mensagem no MongoDB
+            axios.post(`http://localhost:8080/mensagens`, newMessage)
+                .then(response => {
+                    console.log('Mensagem salva com sucesso', response.data);
+                })
+                .catch(error => {
+                    console.error('Erro ao salvar a mensagem:', error);
+                });
+
             setMessage('');
-            console.log(message, 'oioi')
-            setMessages(message)
         } else {
             alert('Não foi possível enviar a mensagem. Tente novamente mais tarde.');
         }

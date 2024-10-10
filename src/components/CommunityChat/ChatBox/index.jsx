@@ -2,19 +2,19 @@ import React from "react";
 import "./styles.css";
 import { useUser } from "../../../services/UserContext";
 
-
-export default function ChartBoxFill({userSms}) {
+export default function ChatBox({ userSms }) {
     const { messages } = useUser();
-    console.log(messages, 'messages')
-    return(
-        <div className="cointainer-menssager">
-            <p>{userSms}</p>
-          { messages && messages.map((msg, index) => {
-                <div key={index}>
-                    {msg}
-                </div>
+
+    return (
+        <div className="container-menssager">
+            {messages && messages.map((msg, index) => {
+                return (
+                    <div key={index} className={msg.usuario === userSms ? 'mensagem-direita' : 'mensagem-esquerda'}>
+                        <p>{msg.conteudo}</p>
+                        <span>{msg.usuario}</span>
+                    </div>
+                );
             })}
         </div>
     );
-
 }
