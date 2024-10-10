@@ -27,3 +27,16 @@
     align-self: center;
     top: 45%;
 }
+
+.chat-msg-container {
+    flex: 1;
+    overflow-y: auto;
+    width: calc(100vw - 540px);
+    max-height: calc(100vh - 250px);
+    padding: 10px;
+    margin: 10px 0;
+    flex-direction: column;
+
+    scrollbar-width: thin;
+    scrollbar-color: var(--bright-sun) var(--deep-koamaru);
+}

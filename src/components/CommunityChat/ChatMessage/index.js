@@ -10,8 +10,9 @@ export default function ChatMensagem({ canalAtivo }) {
         <div className="chat-mensagem-area">
             <h1 className="chat-mensagem-titulo">{canalAtivo}</h1>
             <img className="chat-mensagem-img" src={logoMono} width={91} alt="Logo Monocromático" />
-            <ChatBox userSms={user?.name}/>
-
+            <div className="chat-msg-container">
+                <ChatBox userSms={user?.name}/>
+            </div>
             <ChatBarraMensagem />
         </div>
     );
