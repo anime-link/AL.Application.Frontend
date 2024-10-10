@@ -10,8 +10,8 @@ export default function ChatBox({ userSms }) {
             {messages && messages.map((msg, index) => {
                 return (
                     <div key={index} className={msg.usuario === userSms ? 'mensagem-direita' : 'mensagem-esquerda'}>
-                        <p>{msg.conteudo}</p>
                         <span>{msg.usuario}</span>
+                        <p>{msg.conteudo}</p>
                     </div>
                 );
             })}

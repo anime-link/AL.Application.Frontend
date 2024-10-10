@@ -62,7 +62,7 @@ export default function ChatBarraMensagem() {
     const handleSendMessage = (e) => {
         e.preventDefault();
         if (message.trim() && socket && socket.readyState === WebSocket.OPEN) {
-            const newMessage = { usuario: user.id, conteudo: message, chatId };
+            const newMessage = { usuario: user.name, conteudo: message, chatId };
 
             // Enviar a mensagem pelo WebSocket
             socket.send(JSON.stringify(newMessage));
