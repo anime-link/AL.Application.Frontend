@@ -2,9 +2,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    
-    margin-top: 109px;
+    background-color: aqua;
+    width: 2306px;
+    height: 704px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-clip: border-box;
+    margin-top: -109px;
 }
 
 .sinopse-card {
@@ -12,29 +18,17 @@
     justify-content: space-between;
     align-items: center;
 
-    width: 1366px;
-    height: 546px;
+    width: 1306px;
+    height: 704px;
 
-    background: var(--gradient-black);
+    /* background: var(--gradient-black); */
     color: #ffff;
-    margin-top: -300px;
-    z-index: 100;
 }
 
-.sinopse-img{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    width: 1366px;
-    height: 446px;
-
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-clip: border-box;
-    margin-top: -109px;
-    z-index: 10;
+.space-content{
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 63px;
 }
 
 .container-content{
@@ -80,8 +74,8 @@
 }
 
 .imgSin{
-    width: 250px;
-    height: 349px;
+    width: 461px;
+    height: 314px;
     margin-left: 75px;
     object-fit: cover;
     border: 2px;
