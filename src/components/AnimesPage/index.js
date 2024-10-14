@@ -12,50 +12,70 @@ import esporte from '../../assets/Images/AnimesCard/esporte.png';
 import Footer from "../Footer";
 import AnimesLaunch from './AnimesLaunch';
 import { Link } from 'react-router-dom';
-import { AnimesTop } from "./AnimesTop";
+import { RiInformation2Fill, RiTvFill } from "react-icons/ri";
+import { AnimesTemporada } from "./AnimesTopTemporada";
 
 export default function AnimesArea() {
     return (
         <div className="animes-area">
             <Header />
-            <main className="animes-body">
-                <Pesquisa  
-                    placeholder="Pesquisar Animes" 
-                    tipo={'anime'}
-                />
-                <AnimesLaunch />
-                <AnimesTop filter={"favorite"} />
+            <div className="animes-body">
+                <div className="animes-inicio">
+                    <h1 className="animes-inicio-titulo">Bem vindo a página de animes</h1>
+                    <div className="animes-inicio-p-area">
+                        <div className="animes-inicio-p-icon">
+                            <RiInformation2Fill className="animes-inicio-icon" />
+                            <p className="animes-inicio-p">Veja as informações do seu anime preferido</p>
+                        </div>
+                        <div className="animes-inicio-p-icon">
+                            <RiTvFill className="animes-inicio-icon" />
+                            <p className="animes-inicio-p">Dê sugestões de onde assisti-los </p>
+                        </div>
+                    </div>
+                </div>
+                <div className="animes-rank-area">
+                    <div className="animes-search">
+                        <Pesquisa
+                            placeholder="Pesquisar Animes"
+                            tipo={'anime'}
+                        />
+                    </div>
+                    <div className="animes-lanca-rank">
+                        <AnimesLaunch />
+                        <AnimesTemporada filter={'bypopularity'} />
+                    </div>
+                </div>
                 <hr className="ranking-divisao" />
                 <>
-                <ul>
-                    <li>
-                        <Link to={"/animes/acao"}>
-                            <AnimeCards nome="Ação" imgAnime={acao} />                         
-                        </Link>
-                        <Link to={"/animes/terror"}>
-                            <AnimeCards nome="Terror" imgAnime={terror} />
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to={"/animes/comedia"}>
-                            <AnimeCards nome="Comédia" imgAnime={comedia} />
-                        </Link>
-                        <Link to={"/animes/romance"}>
-                            <AnimeCards nome="Romance" imgAnime={romance} />
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to={"/animes/esporte"}>
-                            <AnimeCards nome="Esporte" imgAnime={esporte} />
-                        </Link>
-                        <Link to={"/animes/misterio"}>
-                            <AnimeCards nome="Mistério" imgAnime={misterio} />
-                        </Link>
-                    </li>
-                </ul>
-                </> 
-            </main>
-            <Footer/>
+                    <ul>
+                        <li>
+                            <Link to={"/animes/acao"}>
+                                <AnimeCards nome="Ação" imgAnime={acao} />
+                            </Link>
+                            <Link to={"/animes/terror"}>
+                                <AnimeCards nome="Terror" imgAnime={terror} />
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to={"/animes/comedia"}>
+                                <AnimeCards nome="Comédia" imgAnime={comedia} />
+                            </Link>
+                            <Link to={"/animes/romance"}>
+                                <AnimeCards nome="Romance" imgAnime={romance} />
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to={"/animes/esporte"}>
+                                <AnimeCards nome="Esporte" imgAnime={esporte} />
+                            </Link>
+                            <Link to={"/animes/misterio"}>
+                                <AnimeCards nome="Mistério" imgAnime={misterio} />
+                            </Link>
+                        </li>
+                    </ul>
+                </>
+            </div>
+            <Footer />
         </div>
     );
 }

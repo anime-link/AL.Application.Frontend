@@ -2,15 +2,15 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 157px;
-    padding: 20px 59px;
+    width: calc(100vw - 855px);
 
-    border-radius: 50px;
-    background: var(--gradient-black);
+    border-radius: 20px;
+    background: linear-gradient(rgba(51, 51, 51, 0.85), rgba(0, 0, 0, 0.85));
 }
 
 .ranking-titulo {
-    font: var(--header-40);
+    margin-top: 20px;
+    font: var(--ranking-title);
     color: var(--white);
 }
 
@@ -18,8 +18,9 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 45px;
-    gap: 56px;
+    margin-top: 50px;
+    margin-bottom: 44px;
+    gap: 50px;
 }
 
 .ranking-lista {

@@ -30,8 +30,8 @@ const AnimesLaunch = () => {
       <h1 className='lancamentos-titulo'>Lançamentos</h1>
       <div className='lancamentos-slider'>
         <Swiper
-          spaceBetween={-50}
-          slidesPerView={5}
+          spaceBetween={25}
+          slidesPerView={3}
           centeredSlides={true}
           navigation={{
             prevEl: '.lancamentos-slider-antes',
@@ -46,20 +46,22 @@ const AnimesLaunch = () => {
               <div className="lancamentos-img-area" onClick={() => handleClick(anime.mal_id)}>
                 {/* Verifique se a imagem está presente */}
                 {anime.images && anime.images.jpg && (
-                  <img 
-                    className='lancamentos-img' 
-                    src={anime.images.jpg.image_url} 
+                  <img
+                    className='lancamentos-img'
+                    src={anime.images.jpg.image_url}
                     width={175}
                     height={244}
-                    alt={anime.title} 
+                    alt={anime.title}
                   />
                 )}
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
-        <RiArrowLeftSLine fontSize={65} className='lancamentos-slider-antes' />
-        <RiArrowRightSLine fontSize={65} className='lancamentos-slider-depois' />
+        <div className='lancamentos-botoes'>
+          <RiArrowLeftSLine fontSize={70} className='lancamentos-slider-antes' />
+          <RiArrowRightSLine fontSize={70} className='lancamentos-slider-depois' />
+        </div>
       </div>
     </div>
   );

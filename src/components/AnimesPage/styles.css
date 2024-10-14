@@ -2,9 +2,6 @@
     box-sizing: border-box;
     text-decoration: none;
     border: none;
-
-    margin: 0;
-    padding: 0;
     width: 100%;
 
     background-color: var(--daisy-bush);
@@ -16,28 +13,80 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-top: 125px;
-    background: url("../../assets/Images/AnimeLaunch/AnimebackLalouch.png"),
-    var(--gradient-black);
+}
+
+.animes-inicio {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 106px;
+    padding-bottom: 95px;
+
+    box-shadow: inset 850px 0 60px rgba(0, 0, 0, 50%);
+    background-image: url("../../assets/Images/Animes/anime-background-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+    background-blend-mode: soft-light;
+    background-color: var(--deep-koamaru);
+}
+
+.animes-inicio-titulo {
+    width: 676px;
+    margin-top: 80px;
+
+    text-shadow: 5px 10px 4px rgba(0, 0, 0, 75%);
+    font: var(--app-section);
+    color: var(--bright-sun);
+}
+
+.animes-inicio-p-area {
+    display: flex;
+    flex-direction: column;
+    margin-top: 45px;
+    gap: 20px;
+}
+
+.animes-inicio-p-icon {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+}
+
+.animes-inicio-icon {
+    font-size: 75px;
+    color: var(--bright-sun);
+}
+
+.animes-inicio-p {
+    font: var(--text-24);
+    color: var(--white);
+}
+
+.animes-search {
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+.animes-rank-area {
+    display: flex;
+    flex-direction: column;
+    background-image: url('../../assets/Images/Animes/anime-background-2.png');
+    background-color: var(--deep-koamaru);
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-clip: border-box;
     background-blend-mode: multiply;
-    background-color:  var();
-   
+    padding-bottom: 118px;
 }
 
-.ranking-container{
+.animes-lanca-rank {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 157px;
-    background-color: black;
-
-    width: 696px;
-    height: 526px;
-    border-radius: 50px;
-    flex-direction: column;
+    align-items: start;
+    margin-top: 207px;
+    gap: 44px;
 }
 
 .titulo-card{

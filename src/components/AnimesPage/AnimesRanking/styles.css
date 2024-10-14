@@ -1,8 +1,8 @@
 .ranking-area{
     display: grid;
-    grid-template-columns: 1fr 200px 1fr;
-    color: #fff;
-    gap: 78px;
+    grid-template-columns: 1fr 240px 1fr;
+    color: var(--white);
+    gap: 80px;
 }
 
 .ranking-nome{
@@ -11,12 +11,15 @@
 }
 
 .ranking-colocacao {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding-top: 7px;
     color: var(--white);
-    font: var(--text-24);
+    font: var(--header-24);
 }
 
-.trofeu{
-    color: var(--bright-sun);
+.trofeu {
     font-size: 50px;
 }
 

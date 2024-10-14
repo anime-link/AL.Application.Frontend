@@ -2,23 +2,23 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: calc(100vw - 396px);
-    margin-top: 30px;
-    padding-bottom: 64px;
+    width: calc(100vw - 641px);
+    padding: 20px 35px;
 
     border-radius: 20px;
-    background: linear-gradient(rgba(51, 51, 51, 0.9), rgba(0, 0, 0, 0.9));
+    box-shadow: 10px 15px 15px rgba(0, 0, 0, 0.45);
+    background: linear-gradient(rgba(51, 51, 51, 0.85), rgba(0, 0, 0, 0.85));
 }
 
 .lancamentos-titulo {
     margin-top: 20px;
-    font: var(--header-40);
-    color: var(--white);
+    font: var(--commu-title);
+    color: var(--bright-sun);
 }
 
 .lancamentos-slider {
     position: relative;
-    width: 100%;
+    width: 90%;
 }
 
 .lancamentos-slider .swiper-container {
@@ -29,14 +29,17 @@
 .lancamentos-img-area {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-top: 29px;
+    margin-top: 50px;
     width: 100%;
 }
 
 .lancamentos-img {
     cursor: pointer;
     transition: 0.5s ease-in-out;
+}
+
+.lancamentos-img:hover {
+    transform: scale(1.1);
 }
 
 .lancamentos-slider .swiper-pagination-bullet {
@@ -47,9 +50,15 @@
     display: none;
 }
 
+.lancamentos-botoes {
+    display: flex;
+    justify-content: center;
+    margin-top: 43px;
+    gap: 100px;
+}
+
 .lancamentos-slider-antes,
 .lancamentos-slider-depois {
-    position: absolute;
     cursor: pointer;
     top: 120px;
     z-index: 1;

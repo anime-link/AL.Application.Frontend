@@ -2,7 +2,7 @@
 export const getKitsuAnimeDetails = async (animeId) => {
   const response = await fetch(`https://kitsu.io/api/edge/anime/${animeId}`);
   const data = await response.json();
-  
+
   return {
     title: data.data.attributes.titles.en_jp || data.data.attributes.titles.ja_jp,
     posterImage: data.data.attributes.posterImage?.medium,
@@ -13,11 +13,23 @@ export const getKitsuAnimeDetails = async (animeId) => {
   };
 };
 
+export const getKitsuRecentAnime = async () => {
+  const response = await fetch('https://kitsu.io/api/edge/anime?filter[status]=current&page[limit]=12');
+  const data = await response.json();
+
+  return data.data.map(anime => ({
+    id: anime.id,
+    title: anime.attributes.titles.en_jp || anime.attributes.titles.ja_jp,
+    posterImage: anime.attributes.posterImage?.medium,
+    coverImage: anime.attributes.coverImage?.original,
+  }));
+}
+
 // API para Jikan
 export const getJikanAnimeDetails = async (animeId) => {
   const response = await fetch(`https://api.jikan.moe/v4/anime/${animeId}`);
   const data = await response.json();
-  
+
   return {
     title: data.data.title,
     posterImage: data.data.images.jpg.image_url,
@@ -31,7 +43,7 @@ export const getJikanAnimeDetails = async (animeId) => {
 export const getAnimeRaking = async (filter) => {
   try {
     const response = await fetch(`https://api.jikan.moe/v4/top/anime?type=tv&filter=${filter}`);
-    
+
     /* Verifica se a API está funcionando */
     if (!response.ok) {
       throw new Error(`API response not ok: ${response.status}`);
