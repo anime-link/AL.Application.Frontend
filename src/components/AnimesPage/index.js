@@ -14,6 +14,8 @@ import AnimesLaunch from './AnimesLaunch';
 import { Link } from 'react-router-dom';
 import { RiInformation2Fill, RiTvFill } from "react-icons/ri";
 import { AnimesTemporada } from "./AnimesTopTemporada";
+import AnimesPopulares from "./AnimesAllTime";
+import luckyStar from "../../assets/Images/Animes/luckystar.png";
 
 export default function AnimesArea() {
     return (
@@ -44,10 +46,11 @@ export default function AnimesArea() {
                         <AnimesLaunch />
                         <AnimesTemporada filter={'bypopularity'} />
                     </div>
+                    <AnimesPopulares filter={'bypopularity'} />
                 </div>
-                <hr className="ranking-divisao" />
-                <>
-                    <ul>
+                <div className="animes-genero-area">
+                    <h1 className="animes-genero-titulo">Gêneros</h1>
+                    <ul className="animes-genero-lista">
                         <li>
                             <Link to={"/animes/acao"}>
                                 <AnimeCards nome="Ação" imgAnime={acao} />
@@ -55,16 +58,12 @@ export default function AnimesArea() {
                             <Link to={"/animes/terror"}>
                                 <AnimeCards nome="Terror" imgAnime={terror} />
                             </Link>
-                        </li>
-                        <li>
                             <Link to={"/animes/comedia"}>
                                 <AnimeCards nome="Comédia" imgAnime={comedia} />
                             </Link>
                             <Link to={"/animes/romance"}>
                                 <AnimeCards nome="Romance" imgAnime={romance} />
                             </Link>
-                        </li>
-                        <li>
                             <Link to={"/animes/esporte"}>
                                 <AnimeCards nome="Esporte" imgAnime={esporte} />
                             </Link>
@@ -73,7 +72,14 @@ export default function AnimesArea() {
                             </Link>
                         </li>
                     </ul>
-                </>
+                </div>
+                <div className="anime-voltar-inicio">
+                    <div className="anime-voltar-inicio-text">
+                        <p className="anime-voltar-fim-pag">Fim de página!</p>
+                        <p className="anime-voltar-voltar-pag">Voltar ao início?</p>
+                    </div>
+                    <img src={luckyStar} alt="Lucky Star" width={500} height={500} />
+                </div>
             </div>
             <Footer />
         </div>

@@ -16,9 +16,7 @@ const AnimeCards = ({ nome, imgAnime }) => {
       style={{ backgroundImage: `url(${imgAnime})` }}
       onClick={handleGenreClick}
     >
-      <div className="anime-content">
-        <h2 className="anime-title">{nome}</h2>
-      </div>
+      <h2 className="anime-title">{nome}</h2>
     </div>
   );
 };
