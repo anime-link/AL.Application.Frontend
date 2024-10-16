@@ -21,15 +21,23 @@
 }
 
 .animes-pop-area .swiper-container {
-    width: 100%;
+    max-width: 1000px;
     height: 100%;
+}
+
+.animes-pop-area .swiper-pagination-bullet {
+    display: none;
+}
+
+.animes-pop-area .swiper-pagination-bullet-active {
+    display: none;
 }
 
 .animes-pop-img-area {
     display: flex;
     align-items: center;
     margin-top: 40px;
-    width: 100%;
+    padding-left: 153px;
 }
 
 .animes-pop-img {

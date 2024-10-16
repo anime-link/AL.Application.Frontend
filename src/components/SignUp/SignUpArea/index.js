@@ -97,7 +97,7 @@ export function AreaCadastro({ areaLateral }) {
         </div>
 
         <div className="cadastro-botao-area">
-          <BotaoCadastro />
+          <BotaoCadastro onClick={createUsers} />
         </div>
 
         <div onClick={ativarSideBar} className="cadastro-mudar-img">

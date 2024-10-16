@@ -51,23 +51,22 @@ export default function AnimesPopulares({ filter }) {
             <h1 className='animes-populares-titulo'>Os mais populares</h1>
             <div className='animes-pop-area'>
                 <Swiper
-                    spaceBetween={30}
+                    spaceBetween={-426}
                     slidesPerView={4}
-                    centeredSlides={true}
                     navigation={{
-                        prevEl: '.lancamentos-slider-antes',
-                        nextEl: '.lancamentos-slider-depois'
+                        prevEl: '.animes-pop-antes',
+                        nextEl: '.animes-pop-depois'
                     }}
                     pagination={{ clickable: true }}
                     modules={[Navigation, Pagination]}
                     loop={true}
                 >
-                    {popularAnimes.map(anime => {
+                    {popularAnimes.map(anime => (
                         <SwiperSlide key={anime.mal_id}>
                             <div className='animes-pop-img-area' onClick={() => handleClick(anime.mal_id)}>
                                 {anime.images && anime.images.jpg && (
-                                    <img 
-                                        className='animes-pop-img' 
+                                    <img
+                                        className='animes-pop-img'
                                         src={anime.images.jpg.image_url}
                                         width={220}
                                         height={330}
@@ -76,7 +75,7 @@ export default function AnimesPopulares({ filter }) {
                                 )}
                             </div>
                         </SwiperSlide>
-                    })}
+                    ))}
                 </Swiper>
                 <RiArrowLeftSLine fontSize={80} className='animes-pop-antes' />
                 <RiArrowRightSLine fontSize={80} className='animes-pop-depois' />
