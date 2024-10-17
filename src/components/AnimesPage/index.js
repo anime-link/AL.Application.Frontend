@@ -18,6 +18,15 @@ import AnimesPopulares from "./AnimesAllTime";
 import luckyStar from "../../assets/Images/Animes/luckystar.png";
 
 export default function AnimesArea() {
+    // Função para retornar ao início da página
+    const handleScrollInicio = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+
+    };
+
     return (
         <div className="animes-area">
             <Header />
@@ -76,7 +85,9 @@ export default function AnimesArea() {
                 <div className="anime-voltar-inicio">
                     <div className="anime-voltar-inicio-text">
                         <p className="anime-voltar-fim-pag">Fim de página!</p>
-                        <p className="anime-voltar-voltar-pag">Voltar ao início?</p>
+                        <button className="anime-voltar-voltar-pag" onClick={handleScrollInicio}>
+                            Voltar ao início?
+                        </button>
                     </div>
                     <img src={luckyStar} alt="Lucky Star" width={500} height={500} />
                 </div>
