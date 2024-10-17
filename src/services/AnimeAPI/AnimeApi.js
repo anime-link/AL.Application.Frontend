@@ -40,9 +40,9 @@ export const getJikanAnimeDetails = async (animeId) => {
   };
 };
 
-export const getAnimeRaking = async (filter) => {
+export const getAnimeRaking = async () => {
   try {
-    const response = await fetch(`https://api.jikan.moe/v4/top/anime?type=tv&filter=${filter}`);
+    const response = await fetch(`https://api.jikan.moe/v4/season/now`);
 
     /* Verifica se a API está funcionando */
     if (!response.ok) {
@@ -50,6 +50,21 @@ export const getAnimeRaking = async (filter) => {
     }
 
     const data = await response.json();
+    return data.data;
+
+  } catch (error) {
+    console.error('Erro ao procurar ranking: ', error);
+    return [];
+  }
+}
+
+export const getKitsuAnimeRanking = async (year) => {
+  const url = `https://kitsu.io/api/edge/anime?filter[seasonYear]=${year}&filter[type]=anime&sort=-popularityRank`;
+
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+
     return data.data;
 
   } catch (error) {

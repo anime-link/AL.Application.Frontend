@@ -24,7 +24,6 @@ export default function AnimesArea() {
             top: 0,
             behavior: 'smooth',
         });
-
     };
 
     return (
@@ -53,7 +52,7 @@ export default function AnimesArea() {
                     </div>
                     <div className="animes-lanca-rank">
                         <AnimesLaunch />
-                        <AnimesTemporada filter={'bypopularity'} />
+                        <AnimesTemporada />
                     </div>
                     <AnimesPopulares filter={'bypopularity'} />
                 </div>

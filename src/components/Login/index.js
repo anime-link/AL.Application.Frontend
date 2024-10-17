@@ -67,10 +67,14 @@ export default function LoginArea() {
           <CamposLogin 
             placeholder={'E-mail'}
             type={'text'}
+            valor={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <CamposLogin
             placeholder={'Senha'}
             type={'password'} 
+            valor={senha}
+            onChange={(e) => setSenha(e.target.value)}
           />
         </div>
 

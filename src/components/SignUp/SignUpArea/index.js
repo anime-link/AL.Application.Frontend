@@ -30,12 +30,12 @@ export function AreaCadastro({ areaLateral }) {
     event.preventDefault();
 
 
-    const nomeInput = document.querySelector(".nome-input").value;
-    const emailInput = document.querySelector(".email-input").value;
-    const senhaInput = document.querySelector(".senha-input").value;
+    const nomeInput = document.querySelector("#nome-input").value;
+    const emailInput = document.querySelector("#email-input").value;
+    const senhaInput = document.querySelector("#senha-input").value;
     const idImageInput = 1;
     const confirmarSenha = document.querySelector(
-      ".confirmar-senha-input"
+      "#confirmar-senha-input"
     ).value;
 
     if (senhaInput !== confirmarSenha) {
@@ -52,10 +52,10 @@ export function AreaCadastro({ areaLateral }) {
 
       console.log("User: ", nomeInput, emailInput, senhaInput, idImageInput);
 
-      document.querySelector(".nome-input").value = '';
-      document.querySelector(".email-input").value = '';
-      document.querySelector(".senha-input").value = '';
-      document.querySelector(".confirmar-senha-input").value = '';
+      document.querySelector("#nome-input").value = '';
+      document.querySelector("#email-input").value = '';
+      document.querySelector("#senha-input").value = '';
+      document.querySelector("#confirmar-senha-input").value = '';
 
       navigate("/login");
     } catch (error) {
@@ -77,22 +77,22 @@ export function AreaCadastro({ areaLateral }) {
           <CamposCadastro
             placeholder={'Seu nome'}
             type={'text'}
-            className={'nome-input'}
+            id={'nome-input'}
           />
           <CamposCadastro
             placeholder={'Seu email'}
             type={'text'}
-            className={'email-input'}
+            id={'email-input'}
           />
           <CamposCadastro
             placeholder={'Criar senha'}
             type={'password'}
-            className={'senha-input'}
+            id={'senha-input'}
           />
           <CamposCadastro
             placeholder={'Confirmar senha'}
             type={'password'}
-            className={'confirmar-senha-input'}
+            id={'confirmar-senha-input'}
           />
         </div>
 

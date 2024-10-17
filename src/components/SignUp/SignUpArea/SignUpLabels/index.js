@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./styles.css";
 import { RiEyeCloseFill, RiEyeFill } from "react-icons/ri";
 
-export function CamposCadastro({ placeholder, type }) {
+export function CamposCadastro({ placeholder, type, id }) {
     const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
     const mostrarSenha = () => {
@@ -14,6 +14,7 @@ export function CamposCadastro({ placeholder, type }) {
             <input 
                 className="cadastro-input"
                 placeholder={placeholder}
+                id={id}
                 type={isPasswordVisible ? "text" : type}
             />
             {type === "password" && (

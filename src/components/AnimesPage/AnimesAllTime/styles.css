@@ -61,6 +61,13 @@
     z-index: 2;
 
     color: var(--bright-sun);
+    transition: 0.5s ease-in-out;
+}
+
+.animes-pop-antes:hover,
+.animes-pop-depois:hover {
+    transform: scale(1.2);
+    filter: brightness(1.1);
 }
 
 .animes-pop-antes {
