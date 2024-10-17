@@ -1,5 +1,6 @@
 import React from "react";
 import './styles.css';
+import { RiStarFill } from "react-icons/ri";
 
 export default function SinopseCard({ ImgSin, ImgBack, title, synopsis, year, episodes, rating, status, genres }) {
   return (
@@ -7,19 +8,23 @@ export default function SinopseCard({ ImgSin, ImgBack, title, synopsis, year, ep
       <div className="sinopse-card">
         <div className="container-content">
           <div className="anime-plot">
+            <h3 className="tittle">{title}</h3>
+            <p className="ano">{year}</p>
             <p className="text-plot">
               {synopsis}
             </p>
           </div>
           <div className="space-content">
           <img className="imgSin" src={ImgSin} alt={`${title} Poster`} />
-          <div className="anime-attribute">
-            <h3 className="tittle">{title}</h3>
-            <p className="ano">{year}</p>
+          <div className="anime-atribute-box">
+            <div className="teste">
             <p className="episodes">Episodios: {episodes}</p>
             <p className="classification">Gêneros: {genres}</p>
             <p className="status">Status: {status}</p>
-            <p className="nota">Nota: {rating}</p>
+            </div>
+            <div className="anime-point">
+              <p className="nota"> <RiStarFill className="star"/> {rating}</p>
+            </div>
           </div>
           </div>
         </div>          
