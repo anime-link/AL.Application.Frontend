@@ -30,7 +30,7 @@ export function AnimesTemporada() {
 
             try {
                 await new Promise(resolve => setTimeout(resolve, 2000)); // Espera um segundo antes de mostrar os animes
-                const data = await getKitsuAnimeRanking('2024');
+                const data = await getKitsuAnimeRanking(2024);
                 console.log('Resposta da API: ', data);
 
                 /* Verifica se o dado é um Array */

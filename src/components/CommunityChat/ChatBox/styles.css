@@ -3,20 +3,34 @@
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
+    z-index: 5;
+}
+
+.mensagem-direita,
+.mensagem-esquerda {
+    border-radius: 10px;
+    padding: 15px;
+    margin: 5px 0;
 }
 
 .mensagem-esquerda {
     text-align: left;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 5px 0;
+    background-color: rgba(51, 51, 51, 0.6);
+    margin-right: 40%;
 }
 
 .mensagem-direita {
     text-align: right;
-    background-color: rgba(0, 255, 0, 0.1);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 5px 0;
+    background-color: rgba(104, 105, 185, 0.6);
+    margin-left: 40%;
+}
+
+.container-menssager > div > span {
+    color: var(--bright-sun);
+    font: var(--text-15);
+}
+
+.container-menssager > div > p {
+    color: var(--white);
+    font: var(--text-20);
 }
