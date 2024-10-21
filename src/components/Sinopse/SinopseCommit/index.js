@@ -18,9 +18,12 @@ export default function SinopseCommit({ImgPerfil, placeholder, type}) {
         />
         
       </div>
+      <div className="local-talk">
       <SinopseTalk ImgPerfil2={user2} UserName={"Millin"}/>
       <SinopseTalk ImgPerfil2={user2} UserName={"CamilaPool"}/>
       <SinopseTalk ImgPerfil2={user2} UserName={"Wilmuru"}/>
+      </div>
+     
     </div>
   );
 

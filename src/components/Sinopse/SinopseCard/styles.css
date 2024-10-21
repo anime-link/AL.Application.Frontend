@@ -10,6 +10,8 @@
     background-size: cover;
     background-position: center;
     background-clip: border-box;
+    background-blend-mode: soft-light;
+    background-color: var(--deep-koamaru);
     margin-top: -109px;
 }
 
@@ -20,8 +22,8 @@
 
     width: 1306px;
     height: 704px;
-    padding-bottom: 67px;
-    padding-top: 63px;
+    margin-bottom: 79px;
+    margin-top: 200px;
 
     color: #ffff;
 }
@@ -37,13 +39,14 @@
     justify-content: space-between;
     align-items: center;
     font: var(--text-24);
+
     margin-right: 102px;
     margin-left: 54px;
 }
 
 .tittle{
     font: var(--header-64);
-    
+    display: flex;
 }
 
 .ano{
@@ -52,25 +55,30 @@
 }
 
 .anime-atribute-box{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     gap: 24px;
-    margin-right: 106px;
     font: var(--text-24);
+    margin-right: 37px;
+    margin-bottom: 68px;
+}
+
+.anime-atribute{
+   
 }
 
 .anime-point{
     display: flex;
     align-items: center;
     padding-top: 27px;
-    margin-left: 24px;
-
+    margin-bottom: 56px;
 }
 
 .nota{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 36px;
 }
 
 .anime-plot{
@@ -81,12 +89,7 @@
     font: var(--text-15);
     justify-content: center;
     text-align: justify;
-
     width: 492px;
-    padding-left: 10px;
-    padding: 0;
-    box-sizing: border-box;
-    margin-left: 70px;
 }
 
 .imgSin{
@@ -101,5 +104,17 @@
 
 .star{
     color: var(--bright-sun);
+    font-size: 47px;
+}
+
+.sinopse-icone-voltar {
+    top: 28px;
+    left: 28px;
+    margin-top: 10px;
+}
+
+.sinopse-icone-fechar{
+    color: yellow;
+    font-size: 90px;
 }
 
