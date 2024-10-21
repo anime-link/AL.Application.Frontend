@@ -39,7 +39,7 @@ export default function AnimesPopulares({ filter }) {
             return () => {
                 isMounted = false;
             }
-        }
+        };
 
         const timer = setTimeout(() => {
             fetchData();

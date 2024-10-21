@@ -1,0 +1,16 @@
+.mudar-senha-pagina {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    background: 
+        url('../../assets/Images/Forgot/forgot-background.png'),
+        var(--gradient-black);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-blend-mode: multiply;
+}

@@ -1,0 +1,82 @@
+.mudar-area {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 465px;
+    height: 448px;
+    margin-top: 20px;
+
+    border-radius: 15px;
+    background-color: rgba(89, 66, 167, 0.8);
+}
+
+.mudar-titulo {
+    margin-top: 31px;
+    font: var(--text-24);
+    color: var(--white);
+}
+
+.mudar-form-area {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mudar-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.mudar-input {
+    outline: none;
+    width: 298px;
+    height: 45px;
+    padding: 10px 20px;
+    margin-top: 20px;
+
+    background-color: var(--white);
+    color: black;
+    font: var(--text-16);
+    border: solid 2px var(--night-rider);
+    border-radius: 10px;
+
+    transition: 0.5s ease-in-out;
+}
+
+.mudar-input:focus {
+    border-color: var(--bright-sun);
+}
+
+.mudar-input::placeholder {
+    font: var(--text-16);
+    color: var(--fog);
+
+    transition: 0.5s ease-in-out;
+}
+
+.mudar-input:focus::placeholder {
+    color: var(--bright-sun);
+    border-color: var(--bright-sun);
+}
+
+.mudar-botao {
+    cursor: pointer;
+    text-align: center;
+    width: 150px;
+    height: 45px;
+    margin-top: 38px;
+
+    border-radius: 10px;
+    font: var(--text-20);
+    color: var(--white);
+    background: var(--gradient-yellow);
+
+    transition: 0.5s ease-in-out;
+}
+
+.mudar-botao:hover {
+    filter: brightness(1.1);
+    transform: scale(1.1);
+}

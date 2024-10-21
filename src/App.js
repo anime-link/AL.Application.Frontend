@@ -15,6 +15,8 @@ import AnimesComedia from './components/AnimesPage/AnimesSpaceGenere/AnimesComed
 import AnimesRomance from './components/AnimesPage/AnimesSpaceGenere/AnimesRomance';
 import AnimesEsporte from './components/AnimesPage/AnimesSpaceGenere/AnimesEsporte';
 import AnimesMisterio from './components/AnimesPage/AnimesSpaceGenere/AnimesMisterio';
+import EsquecerSenha from './pages/ForgotPassword';
+import MudarSenha from './pages/ChangePassword';
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
           <Route element={<Home />} path='/' />
           <Route element={<Cadastro />} path='/cadastro' />
           <Route element={<Login />} path='/login' />
+          <Route element={<EsquecerSenha />} path='/esquecer' />
+          <Route element={<MudarSenha />} path='/recuperar' />
           <Route element={<Animes/>} path='/animes' />
           <Route element={<AnimesAcao/>} path='/animes/acao'/>
           <Route element={<AnimesTerror/>} path='/animes/terror' />
