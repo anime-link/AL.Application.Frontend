@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: calc(100vw - 90px);
+    width: calc(100vw - 180px);
     margin-top: 190px;
     padding-bottom: 60px;
 
@@ -57,7 +57,7 @@
 .animes-pop-depois {
     position: absolute;
     cursor: pointer;
-    top: 148px;
+    top: 150px;
     z-index: 2;
 
     color: var(--bright-sun);

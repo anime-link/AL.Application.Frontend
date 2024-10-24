@@ -66,7 +66,7 @@ export default function AnimesPopulares({ filter }) {
             <h1 className='animes-populares-titulo'>Os mais populares</h1>
             <div className='animes-pop-area'>
                 <Swiper
-                    spaceBetween={120}
+                    spaceBetween={25}
                     slidesPerView={4}
                     centeredSlides={true}
                     navigation={{

@@ -59,7 +59,7 @@ export const getAnimeRaking = async () => {
 }
 
 export const getKitsuAnimeRanking = async (year) => {
-  const url = `https://kitsu.io/api/edge/anime?filter[seasonYear]=${year}&sort=-popularityRank`;
+  const url = `https://kitsu.io/api/edge/anime?filter[seasonYear]=${year}&sort=popularityRank`;
 
   try {
     const response = await fetch(url);

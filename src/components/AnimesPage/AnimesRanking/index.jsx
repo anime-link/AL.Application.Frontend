@@ -2,7 +2,7 @@ import "./styles.css";
 import React from 'react';
 import { RiTrophyFill } from "react-icons/ri";
 
-export default function AnimesRanking({ colocacao, rankingNome, cor }) {
+export default function AnimesRanking({ colocacao, rankingNome, cor, rating }) {
     const trofeuCor = {
         color: `${cor}`
     };

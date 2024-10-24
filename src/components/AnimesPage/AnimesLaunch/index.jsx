@@ -1,8 +1,8 @@
 import './styles.css';
 import 'swiper/css';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules'
+import { Navigation, Pagination, Autoplay } from 'swiper/modules'
 import { useNavigate } from 'react-router-dom';
 import { RiArrowLeftSLine, RiArrowRightSLine } from 'react-icons/ri';
 
@@ -10,6 +10,7 @@ const AnimesLaunch = () => {
   const [recentAnimes, setRecentAnimes] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
+  const swiperRef = useRef(null);
 
   useEffect(() => {
     let isMounted = true;
@@ -40,15 +41,6 @@ const AnimesLaunch = () => {
       return () => {
         isMounted = false;
       }
-
-      // // Fetch recent anime releases from Jikan API
-      // fetch('https://api.jikan.moe/v4/seasons/now')
-      //   .then(response => response.json())
-      //   .then(data => {
-      //     console.log('Animes fetched:', data.data); // Debug: verificar dados recebidos
-      //     setRecentAnimes(data.data.slice(0, 10)); // Limitar para 6 lançamentos
-      //   })
-      //   .catch(error => console.error('Error fetching recent animes:', error));
     }
 
     const timer = setTimeout(() => {
@@ -76,7 +68,7 @@ const AnimesLaunch = () => {
             nextEl: '.lancamentos-slider-depois'
           }}
           pagination={{ clickable: true }}
-          modules={[Navigation, Pagination]}
+          modules={[ Navigation, Pagination ]}
           loop={true}
         >
           {recentAnimes.map(anime => (
@@ -96,10 +88,8 @@ const AnimesLaunch = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className='lancamentos-botoes'>
-          <RiArrowLeftSLine fontSize={70} className='lancamentos-slider-antes' />
-          <RiArrowRightSLine fontSize={70} className='lancamentos-slider-depois' />
-        </div>
+        <RiArrowLeftSLine fontSize={70} className='lancamentos-slider-antes' />
+        <RiArrowRightSLine fontSize={70} className='lancamentos-slider-depois' />
       </div>
     </div>
   );

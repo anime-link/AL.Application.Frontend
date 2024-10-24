@@ -13,7 +13,7 @@ export default function Pesquisa({ placeholder, sugestoes = [], tipo }) {
     // Busca animes
     const fetchAnimes = async (input) => {
         try {
-            const response = await fetch(`https://api.jikan.moe/v4/anime?q=${input}&limit=5`);
+            const response = await fetch(`https://api.jikan.moe/v4/anime?q=${input}`);
             const data = await response.json();
 
             // Atualização de sugestões baseada na API

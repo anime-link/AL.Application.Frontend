@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: calc(100vw - 641px);
+    width: calc(100vw - 780px);
     padding: 20px 35px;
 
     border-radius: 20px;
@@ -31,6 +31,7 @@
     align-items: center;
     margin-top: 50px;
     width: 100%;
+    padding-bottom: 20px;
 }
 
 .lancamentos-img {
@@ -50,29 +51,23 @@
     display: none;
 }
 
-.lancamentos-botoes {
-    display: flex;
-    justify-content: center;
-    margin-top: 43px;
-    gap: 100px;
-}
-
 .lancamentos-slider-antes,
 .lancamentos-slider-depois {
+    position: absolute;
     cursor: pointer;
-    top: 120px;
-    z-index: 1;
+    top: 138px;
+    z-index: 10;
 
     color: var(--bright-sun);
     transition: 0.5s ease-in-out;
 }
 
 .lancamentos-slider-antes {
-    left: 0;
+    left: -70px;
 }
 
 .lancamentos-slider-depois {
-    right: 0;
+    right: -70px;
 }
 
 .lancamentos-slider-antes:hover,
