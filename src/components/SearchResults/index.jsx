@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './styles.css';
 import Header from '../Header';
 import { RiArrowLeftCircleFill } from 'react-icons/ri';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import community1 from '../../assets/Images/Communities/community1.png';
 import community2 from '../../assets/Images/Communities/community2.png';
 import community3 from '../../assets/Images/Communities/community3.png';
@@ -15,6 +15,7 @@ export default function ResultadosPesquisa() {
     const [loading, setLoading] = useState(true);
     const [tipo, setTipo] = useState("");
     const location = useLocation();
+    const navigate = useNavigate();
 
     // Função de buscar animes
     const fetchAnimes = async (query) => {
@@ -90,6 +91,14 @@ export default function ResultadosPesquisa() {
         carregarResultados();
     }, [location.search]);
 
+    const handleClick = (animeId) => {
+        if (tipo === 'anime') {
+            navigate(`/anime/${animeId}`);
+        } else if (tipo === 'comunidade') {
+            navigate('/chat');
+        }
+    }
+
     return (
         <div className='resultados-pagina'>
             <Header />
@@ -106,7 +115,7 @@ export default function ResultadosPesquisa() {
                             <p>Nenhum resultado encontrado</p>
                         ) : (
                             resultados.map((item) => (
-                                <div key={item.id} className='resultado-item'>
+                                <div key={item.id} className='resultado-item' onClick={() => handleClick(item.id)}>
                                     <img
                                         src={item.imagem}
                                         width={350}
