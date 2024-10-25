@@ -26,7 +26,7 @@ export default function SinopseCard({ ImgSin, ImgBack, title, synopsis, year, ep
           <div className="anime-atribute-box">
             <div className="anime-atribute">
               <p className="episodes">Episodios: {episodes}</p>
-              <p className="classification">Gêneros: {genres}</p>
+              <p className="classification">Gêneros: {`${genres}`}</p>
               <p className="status">Status: {status}</p>
             </div>
             <div className="anime-point">

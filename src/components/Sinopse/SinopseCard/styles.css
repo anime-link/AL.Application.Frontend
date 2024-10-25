@@ -45,7 +45,7 @@
 }
 
 .tittle{
-    font: var(--header-64);
+    font: var(--header-36);
     display: flex;
 }
 
@@ -63,8 +63,8 @@
     margin-bottom: 68px;
 }
 
-.anime-atribute{
-   
+.anime-atribute p{
+    font: var(--text-24);
 }
 
 .anime-point{
@@ -114,7 +114,17 @@
 }
 
 .sinopse-icone-fechar{
-    color: yellow;
+    color: var(--bright-sun);
     font-size: 90px;
+}
+
+.sinopse-icone-fechar:hover {
+    color: var(--bright-sun);
+    transform: scale(1.2);
+}
+
+.sinopse-icone-fechar:active {
+    color: var(--bright-sun);
+    opacity: 50%;
 }
 
