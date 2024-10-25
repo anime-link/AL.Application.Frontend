@@ -10,7 +10,6 @@ const AnimesLaunch = () => {
   const [recentAnimes, setRecentAnimes] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
-  const swiperRef = useRef(null);
 
   useEffect(() => {
     let isMounted = true;
@@ -20,6 +19,11 @@ const AnimesLaunch = () => {
 
       try {
         const response = await fetch('https://api.jikan.moe/v4/seasons/now');
+
+        if (response.status === 429) {
+          console.error('Muitas requisições. Tente novamente mais tarde');
+          return [];
+        }
 
         if (!response.ok) {
           throw new Error(`API response not ok ${response.status}`);
@@ -68,7 +72,7 @@ const AnimesLaunch = () => {
             nextEl: '.lancamentos-slider-depois'
           }}
           pagination={{ clickable: true }}
-          modules={[ Navigation, Pagination ]}
+          modules={[Navigation, Pagination]}
           loop={true}
         >
           {recentAnimes.map(anime => (

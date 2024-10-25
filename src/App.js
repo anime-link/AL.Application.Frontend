@@ -17,6 +17,7 @@ import AnimesEsporte from './components/AnimesPage/AnimesSpaceGenere/AnimesEspor
 import AnimesMisterio from './components/AnimesPage/AnimesSpaceGenere/AnimesMisterio';
 import EsquecerSenha from './pages/ForgotPassword';
 import MudarSenha from './pages/ChangePassword';
+import ResultadosPesquisa from './components/SearchResults';
 
 function App() {
   return (
@@ -28,6 +29,8 @@ function App() {
           <Route element={<Login />} path='/login' />
           <Route element={<EsquecerSenha />} path='/esquecer' />
           <Route element={<MudarSenha />} path='/recuperar' />
+          <Route element={<Comunidades />} path='/comunidades' />  
+          <Route element={<ComunidadeChat />} path='/chat' />  
           <Route element={<Animes/>} path='/animes' />
           <Route element={<AnimesAcao/>} path='/animes/acao'/>
           <Route element={<AnimesTerror/>} path='/animes/terror' />
@@ -35,10 +38,9 @@ function App() {
           <Route element={<AnimesRomance/>} path='/animes/romance' />
           <Route element={<AnimesEsporte/>} path='/animes/esporte' />
           <Route element={<AnimesMisterio/>} path='/animes/misterio' />
-          <Route element={<Comunidades />} path='/comunidades' />  
-          <Route element={<ComunidadeChat />} path='/chat' />  
-          <Route element={<Contatos/>} path='/contatos'/>
+          <Route element={<ResultadosPesquisa/>} path='/resultados' />
           <Route element={<Sinopse/>} path='/anime/:id'/>
+          <Route element={<Contatos/>} path='/contatos'/>
         </Routes>
       </BrowserRouter>
     </div>

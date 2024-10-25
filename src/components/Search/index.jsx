@@ -3,18 +3,39 @@ import "./styles.css";
 import { RiCloseLine, RiSearchLine } from "react-icons/ri";
 import pochita from "../../assets/Images/Communities/pochita-img.png";
 import { useNavigate } from "react-router-dom";
+import debounce from "lodash.debounce";
 
 export default function Pesquisa({ placeholder, sugestoes = [], tipo }) {
     const [valor, setValor] = useState("");
     const [filtrarSugestoes, setFiltrarSugestoes] = useState([]);
     const [emFoco, setEmFoco] = useState(false); // Verificar se está em selecionado a barra
     const navigate = useNavigate();
+    const cache = {};
 
     // Busca animes
     const fetchAnimes = async (input) => {
+        const cachedResult = cache[input];
+        if (cachedResult) {
+            return cachedResult;
+        }
+
         try {
             const response = await fetch(`https://api.jikan.moe/v4/anime?q=${input}`);
+
+            if (response.status === 429) {
+                console.error('Muitas requisições. Tente novamente mais tarde');
+                return [];
+            }
+
             const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error("Erro ao buscar animes");
+            }
+
+            if (!data || !data.data) {
+                throw new Error("Dados incompletos da API");
+            }
 
             // Atualização de sugestões baseada na API
             const animes = data.data.map(anime => ({
@@ -24,16 +45,18 @@ export default function Pesquisa({ placeholder, sugestoes = [], tipo }) {
                 tipo: 'anime'
             }))
 
+            cache[input] = animes;
+            
             return animes;
         } catch (error) {
             console.error('Erro ao buscar anime: ', error);
             return [];
         }
-    }
+    };
 
     // Mudar o valor da pesquisa e buscar de acordo com o tipo
     const handleChange = async (event) => {
-        const input = event.target.value 
+        const input = event.target.value
         setValor(input);
 
         // Filtração de sugestões
@@ -59,6 +82,7 @@ export default function Pesquisa({ placeholder, sugestoes = [], tipo }) {
         }
     };
 
+    // Função que faz navegar até o conteúdo pesquisado
     const handleSuggestionClick = (id, tipo) => {
         if (tipo === 'anime') {
             navigate(`/anime/${id}`);
@@ -71,20 +95,29 @@ export default function Pesquisa({ placeholder, sugestoes = [], tipo }) {
         setFiltrarSugestoes([]);
     }
 
+    // Navega à página de resultados ao dar submit
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if (valor) {
+            navigate(`/resultados?tipo=${tipo}&q=${valor}`);
+        }
+    }
+
     const handleFocus = () => setEmFoco(true);
     const handleBlur = () => setTimeout(() => setEmFoco(false), 200);
 
     return (
-        <div className="pesquisa-area">
+        <form className="pesquisa-area" onSubmit={handleSubmit}>
             <RiSearchLine className="pesquisa-icon" />
-            <input 
-                className="pesquisa-barra" 
-                placeholder={placeholder} 
+            <input
+                className="pesquisa-barra"
+                placeholder={placeholder}
                 type="search"
                 value={valor}
                 onChange={handleChange}
                 onFocus={handleFocus}
-                onBlur={handleBlur} 
+                onBlur={handleBlur}
             />
             {valor && (
                 <RiCloseLine className="pesquisa-limpar" onClick={handleClear} />
@@ -92,7 +125,7 @@ export default function Pesquisa({ placeholder, sugestoes = [], tipo }) {
             {/* Área de pesquisa */}
             {(emFoco || valor) && (
                 <div className="pesquisa-sugestoes">
-                    {!valor && 
+                    {!valor &&
                         <div className="pesquisa-msg-default">
                             <p className="pesquisa-msg">O que desejas procurar?</p>
                         </div>
@@ -107,9 +140,9 @@ export default function Pesquisa({ placeholder, sugestoes = [], tipo }) {
                         <h1 className="pesquisa-titulo">{filtrarSugestoes.length} resultados</h1>
                     )}
                     {filtrarSugestoes.map((sugestao, index) => (
-                        <div 
-                            key={index} 
-                            className="pesquisa-item" 
+                        <div
+                            key={index}
+                            className="pesquisa-item"
                             onClick={() => handleSuggestionClick(sugestao.id, tipo)}
                         >
                             <img className="pesquisa-imagem" src={sugestao.imagem} alt={sugestao.nome} />
@@ -118,6 +151,6 @@ export default function Pesquisa({ placeholder, sugestoes = [], tipo }) {
                     ))}
                 </div>
             )}
-        </div>
+        </form>
     );
 }

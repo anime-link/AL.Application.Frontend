@@ -1,0 +1,96 @@
+.resultados-pagina {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+
+    position: fixed;
+    background-image: url('../../assets/Images/Communities/communities-result-background.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-color: var(--deep-koamaru);
+}
+
+.resultados-icon-voltar {
+    position: absolute;
+    top: 125px;
+    left: 142px;
+    color: var(--bright-sun);
+
+    transition: 0.5s ease-in-out;
+}
+
+.resultados-icon-voltar:hover {
+    filter: brightness(1.1);
+    transform: scale(1.1);
+}
+
+.resultados-resul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: calc(100vw - 344px);
+    margin-top: 130px;
+    margin-bottom: 185px;
+
+    border-radius: 20px;
+    background-color: rgba(51, 51, 51, 0.8);
+}
+
+.resultados-titulo {
+    font: var(--header-48);
+    color: var(--white);
+    margin-top: 30px;
+}
+
+.resultados-lista {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 40px;
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    max-height: 480px;
+
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--chetwode-blue) var(--deep-koamaru);
+}
+
+.resultado-item {
+    cursor: pointer;
+    display: flex;
+    align-items: start;
+    gap: 50px;
+    width: 95%;
+    background-color: transparent;
+    padding: 30px;
+    border-radius: 10px;
+
+    transition: 0.5s ease-in-out;
+}
+
+.resultado-item:hover {
+    background-color: var(--deep-koamaru);
+}
+
+.resultado-texto {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.resultado-nome {
+    font: var(--header-36);
+    color: var(--white);
+}
+
+.resultado-membros {
+    font: var(--text-24);
+    color: var(--bright-sun);
+}
