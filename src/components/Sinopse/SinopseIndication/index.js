@@ -8,7 +8,7 @@ import ModalImage from "../modalImage/index";
 
 
 export default function SinopseIndication({ props }) {
-  const [isOpen, setIsOpen] = useState(true)
+  const [isOpen, setIsOpen] = useState(false)
   return (
     <div className="indication-area">
       {

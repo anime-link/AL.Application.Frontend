@@ -58,4 +58,15 @@ export const getAnimeRaking = async (filter) => {
   }
 }
 
+export const getJikanGenres = async (id) => {
+  const response = await fetch(`https://api.jikan.moe/v4/anime?genres=${id}`);
+  const data = await response.json();
 
+  return data.data.map(anime => ({
+    id: anime.mal_id,
+    title: anime.title,
+    image: anime.images.jpg.image_url,
+    description: anime.synopsis
+  }));
+
+}

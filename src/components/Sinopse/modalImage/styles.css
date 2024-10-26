@@ -9,8 +9,6 @@
 }
 
 .modal{
-    color: rgb(138, 131, 131);  
-    background-color: blue;
     display: flex;
     width: 921px;
     height: 436px;
@@ -18,7 +16,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
 }
 
 .tittle-link{
@@ -26,14 +23,26 @@
     justify-content: center;
     margin-top: 83px;
     font: var(--header-40);
+    color: var(--white);
+    text-shadow: 
+        1px 1px 0 var(--bright-sun), 
+        -1px -1px 0 var(--bright-sun),
+        1px -1px 0 var(--bright-sun),
+        -1px 1px 0 var(--bright-sun); /* Cor do contorno */
+    
 }
 
 .modal-space-link{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
     margin-top: 140px;
+    color: var(--white);
+    text-shadow: 
+        1px 1px 0 var(--bright-sun), 
+        -1px -1px 0 var(--bright-sun),
+        1px -1px 0 var(--bright-sun),
+        -1px 1px 0 var(--bright-sun); /* Cor do contorno */
 }
 
 .modal-label{
@@ -44,6 +53,7 @@
 .modal-input{
     border-bottom: 100px var(--bright-sun);
     width: 754px;
+    color: aqua;
     margin-left: 19px;
     border-bottom: 5px solid var(--bright-sun);
     font: var(--text-24);
