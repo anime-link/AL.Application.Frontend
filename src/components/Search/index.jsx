@@ -86,6 +86,8 @@ export default function Pesquisa({ placeholder, sugestoes = [], tipo }) {
     const handleSuggestionClick = (id, tipo) => {
         if (tipo === 'anime') {
             navigate(`/anime/${id}`);
+        } else if (tipo === 'comunidade') {
+            navigate('/chat');
         }
     }
 

@@ -1,0 +1,117 @@
+.usuario-area {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+
+    background-image: url('../../assets/Images/User/user-background.png');
+    background-color: var(--deep-koamaru);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.usuario-infos {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: calc(100vw - 354px);
+    height: calc(100vh - 148px);
+    margin-top: 45px;
+
+    background-color: rgba(51, 51, 51, 0.8);
+    border-radius: 15px;
+}
+
+.usuario-titulo {
+    font: var(--header-32);
+    color: var(--white);
+    margin-top: 20px;
+}
+
+.usuario-infos-area {
+    display: flex;
+    align-items: center;
+    gap: 200px;   
+    margin-top: 36px;
+}
+
+.usuario-foto-fav {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.usuario-foto {
+    border: solid 2px var(--night-rider);
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+}
+
+.usuario-foto:hover {
+    border-color: var(--bright-sun);
+}
+
+.usuario-botao-mudar {
+    cursor: pointer;
+    padding: 9px 28px;
+    border-radius: 10px;
+    background-color: var(--bright-sun);
+    font: var(--text-15);
+    color: var(--white);
+    transition: 0.5s ease-in-out;
+}
+
+.usuario-botao-mudar:hover {
+    filter: brightness(1.1);
+    transform: scale(1.1);
+}
+
+.usuario-fav {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.usuario-fav-texto {
+    font: var(--text-20);
+    color: var(--white);
+}   
+
+.usuario-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.usuario-input-infos {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.usuario-mudar-info {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.usuario-mudar-info-btn {
+    cursor: pointer;
+    padding: 9px 28px;
+    border-radius: 10px;
+    background-color: var(--bright-sun);
+    font: var(--text-15);
+    color: var(--white);
+    transition: 0.5s ease-in-out;
+}
+
+.usuario-mudar-info-btn:hover {
+    filter: brightness(1.1);
+    transform: scale(1.1);
+}

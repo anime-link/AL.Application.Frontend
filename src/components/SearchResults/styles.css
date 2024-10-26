@@ -58,7 +58,7 @@
 
     overflow-y: auto;
     scrollbar-width: thin;
-    scrollbar-color: var(--chetwode-blue) var(--deep-koamaru);
+    scrollbar-color: var(--bright-sun) transparent;
 }
 
 .resultado-item {

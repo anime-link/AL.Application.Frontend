@@ -102,8 +102,8 @@ export default function ResultadosPesquisa() {
     return (
         <div className='resultados-pagina'>
             <Header />
-            <Link className='resultados-icon-voltar' to={'/comunidades'}>
-                <RiArrowLeftCircleFill fontSize={60} />
+            <Link className='resultados-icon-voltar'>
+                <RiArrowLeftCircleFill fontSize={60}/>
             </Link>
             <div className='resultados-resul'>
                 <h1 className='resultados-titulo'>Resultados para "{getQueryParams().query}"</h1>
