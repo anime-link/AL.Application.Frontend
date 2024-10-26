@@ -19,6 +19,11 @@ export default function AnimesPopulares({ filter }) {
             try {
                 const response = await fetch(`https://api.jikan.moe/v4/top/anime?type=tv&filter=${filter}`);
 
+                if (response.status === 429) {
+                    console.error('Muitas requisições. Tente novamente mais tarde');
+                    return [];
+                }
+
                 if (!response.ok) {
                     throw new Error(`API response not ok ${response.status}`);
                 }
@@ -39,7 +44,7 @@ export default function AnimesPopulares({ filter }) {
             return () => {
                 isMounted = false;
             }
-        }
+        };
 
         const timer = setTimeout(() => {
             fetchData();
@@ -66,7 +71,7 @@ export default function AnimesPopulares({ filter }) {
             <h1 className='animes-populares-titulo'>Os mais populares</h1>
             <div className='animes-pop-area'>
                 <Swiper
-                    spaceBetween={120}
+                    spaceBetween={25}
                     slidesPerView={4}
                     centeredSlides={true}
                     navigation={{

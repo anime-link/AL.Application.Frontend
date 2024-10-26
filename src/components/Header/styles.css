@@ -77,8 +77,8 @@
 
 .header-usuario {
     cursor: pointer;
+    display: flex;
     width: 57px;
-    margin-left: 304px;
 
     border: solid 2px var(--night-rider);
     border-radius: 50%;
@@ -86,8 +86,16 @@
     transition: 0.5s ease-in-out;
 }
 
+.header-usuario-img {
+    margin-left: 304px;
+}
+
 .header-usuario:hover {
     border-color: var(--bright-sun);
+}
+
+.header-usuario.active {
+    border: solid 2px var(--bright-sun);
 }
 
 @media (max-width: 430px) {

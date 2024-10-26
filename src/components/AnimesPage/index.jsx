@@ -1,4 +1,3 @@
-// AnimesArea.js
 import "./styles.css";
 import Header from '../Header';
 import Pesquisa from "../Search";
@@ -11,20 +10,23 @@ import misterio from '../../assets/Images/AnimesCard/misterio.png';
 import esporte from '../../assets/Images/AnimesCard/esporte.png';
 import Footer from "../Footer";
 import AnimesLaunch from './AnimesLaunch';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { RiInformation2Fill, RiTvFill } from "react-icons/ri";
 import { AnimesTemporada } from "./AnimesTopTemporada";
 import AnimesPopulares from "./AnimesAllTime";
 import luckyStar from "../../assets/Images/Animes/luckystar.png";
+import { useEffect, useRef } from "react";
+
 
 export default function AnimesArea() {
-    // Função para retornar ao início da página
     const handleScrollInicio = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        });
-    };
+        const target = document.querySelector('.animes-area');
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    }
 
     return (
         <div className="animes-area">

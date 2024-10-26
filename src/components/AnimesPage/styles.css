@@ -2,10 +2,11 @@
     box-sizing: border-box;
     text-decoration: none;
     border: none;
-    width: 100%;
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
 
     background-color: var(--deep-koamaru);
-    
 }
 
 .animes-body {
@@ -13,6 +14,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: visible;
 }
 
 .animes-inicio {
@@ -73,6 +75,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 100%;
 
     border-bottom: solid 1px var(--bright-sun);
     background-image: url('../../assets/Images/Animes/anime-background-2.png');
@@ -112,8 +115,12 @@
 .anime-voltar-inicio {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 25px;
-    margin-top: 50px;
+    padding-top: 150px;
+    width: 100vw;
+
+    background-color: var(--deep-koamaru);
 }
 
 .anime-voltar-inicio-text {
@@ -130,7 +137,6 @@
 
 .anime-voltar-voltar-pag {
     cursor: pointer;
-    background: none;
     font: var(--header-64);
     color: var(--bright-sun);
 
@@ -154,10 +160,12 @@
 }
 
 .animes-genero-area {
+    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 100px;
+    padding-top: 100px;
+    background-color: var(--deep-koamaru);
 }
 
 .animes-genero-titulo {

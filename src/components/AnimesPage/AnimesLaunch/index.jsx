@@ -1,24 +1,58 @@
 import './styles.css';
 import 'swiper/css';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules'
+import { Navigation, Pagination, Autoplay } from 'swiper/modules'
 import { useNavigate } from 'react-router-dom';
 import { RiArrowLeftSLine, RiArrowRightSLine } from 'react-icons/ri';
 
 const AnimesLaunch = () => {
   const [recentAnimes, setRecentAnimes] = useState([]);
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Fetch recent anime releases from Jikan API
-    fetch('https://api.jikan.moe/v4/seasons/now')
-      .then(response => response.json())
-      .then(data => {
-        console.log('Animes fetched:', data.data); // Debug: verificar dados recebidos
-        setRecentAnimes(data.data.slice(0, 10)); // Limitar para 6 lançamentos
-      })
-      .catch(error => console.error('Error fetching recent animes:', error));
+    let isMounted = true;
+
+    const fetchLauches = async () => {
+      setLoading(true);
+
+      try {
+        const response = await fetch('https://api.jikan.moe/v4/seasons/now');
+
+        if (response.status === 429) {
+          console.error('Muitas requisições. Tente novamente mais tarde');
+          return [];
+        }
+
+        if (!response.ok) {
+          throw new Error(`API response not ok ${response.status}`);
+        }
+
+        const data = await response.json();
+        setRecentAnimes(data.data.slice(0, 12));
+
+      } catch (error) {
+        console.error('Error fetch launches animes: ', error);
+      } finally {
+        if (isMounted) {
+          setLoading(false);
+        }
+      }
+
+      fetchLauches();
+
+      return () => {
+        isMounted = false;
+      }
+    }
+
+    const timer = setTimeout(() => {
+      fetchLauches();
+    }, 2000);
+
+    return () => clearTimeout(timer);
+
   }, []);
 
   const handleClick = (animeId) => {
@@ -58,10 +92,8 @@ const AnimesLaunch = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className='lancamentos-botoes'>
-          <RiArrowLeftSLine fontSize={70} className='lancamentos-slider-antes' />
-          <RiArrowRightSLine fontSize={70} className='lancamentos-slider-depois' />
-        </div>
+        <RiArrowLeftSLine fontSize={70} className='lancamentos-slider-antes' />
+        <RiArrowRightSLine fontSize={70} className='lancamentos-slider-depois' />
       </div>
     </div>
   );

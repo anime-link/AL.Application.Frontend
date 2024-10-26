@@ -64,7 +64,7 @@ export default function LoginArea() {
 
       <form className='login-input-area' onSubmit={createUsers}>
         <div className='login-inputs'>
-          <CamposLogin 
+          <CamposLogin
             placeholder={'E-mail'}
             type={'text'}
             valor={email}
@@ -72,7 +72,7 @@ export default function LoginArea() {
           />
           <CamposLogin
             placeholder={'Senha'}
-            type={'password'} 
+            type={'password'}
             valor={senha}
             onChange={(e) => setSenha(e.target.value)}
           />
@@ -80,7 +80,10 @@ export default function LoginArea() {
 
         <CampoCheck manterConectado={manterConectado} handleCheckboxChange={handleCheckboxChange} />
 
-        <p className="login-esquecer-senha">Esqueci minha senha</p>
+        <Link to={'/esquecer'}>
+          <p className="login-esquecer-senha">Esqueci minha senha</p>
+        </Link>
+
         <BotaoAvancar />
       </form>
 

@@ -29,9 +29,10 @@ export function AnimesTemporada() {
             setLoading(true);
 
             try {
-                await new Promise(resolve => setTimeout(resolve, 2000)); // Espera um segundo antes de mostrar os animes
+                await new Promise(resolve => setTimeout(resolve, 2000)); // Espera segundos antes de mostrar os animes
+
                 const data = await getKitsuAnimeRanking(2024);
-                console.log('Resposta da API: ', data);
+                console.log('Animes mais populares: ', data);
 
                 /* Verifica se o dado é um Array */
                 if (data && Array.isArray(data)) {
@@ -72,7 +73,7 @@ export function AnimesTemporada() {
                             <li className='ranking-lista' key={anime.id}>
                                 <AnimesRanking
                                     colocacao={index + 1}
-                                    rankingNome={anime.attributes.canonicalTitle}
+                                    rankingNome={anime.attributes.titles.en || anime.attributes.titles.en_jp}
                                     cor={getColorForRank(index + 1)}
                                 />
                             </li>
