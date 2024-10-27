@@ -7,12 +7,22 @@ import { Navigation, Pagination } from 'swiper/modules';
 
 export default function AnimesPopulares({ filter }) {
     const [popularAnimes, setPopularAnimes] = useState([]);
+    const [loading, setLoading] = useState(true); // Estado de carregamento
     const navigate = useNavigate();
 
     useEffect(() => {
+        let isMounted = true;
+
         const fetchData = async () => {
+            setLoading(true);
+
             try {
                 const response = await fetch(`https://api.jikan.moe/v4/top/anime?type=tv&filter=${filter}`);
+
+                if (response.status === 429) {
+                    console.error('Muitas requisições. Tente novamente mais tarde');
+                    return [];
+                }
 
                 if (!response.ok) {
                     throw new Error(`API response not ok ${response.status}`);
@@ -23,8 +33,18 @@ export default function AnimesPopulares({ filter }) {
 
             } catch (error) {
                 console.error('Error fetch popular animes: ', error);
+            } finally {
+                if (isMounted) {
+                    setLoading(false);
+                }
             }
-        }
+
+            fetchData();
+
+            return () => {
+                isMounted = false;
+            }
+        };
 
         const timer = setTimeout(() => {
             fetchData();
@@ -51,8 +71,9 @@ export default function AnimesPopulares({ filter }) {
             <h1 className='animes-populares-titulo'>Os mais populares</h1>
             <div className='animes-pop-area'>
                 <Swiper
-                    spaceBetween={-426}
+                    spaceBetween={25}
                     slidesPerView={4}
+                    centeredSlides={true}
                     navigation={{
                         prevEl: '.animes-pop-antes',
                         nextEl: '.animes-pop-depois'

@@ -1,9 +1,9 @@
 import './styles.css';
 import { useEffect, useState } from 'react';
-import { getAnimeRaking } from '../../../services/AnimeAPI/AnimeApi';
+import { getAnimeRaking, getKitsuAnimeRanking } from '../../../services/AnimeAPI/AnimeApi';
 import AnimesRanking from '../AnimesRanking';
 
-export function AnimesTemporada({ filter }) {
+export function AnimesTemporada() {
     const [ranking, setRanking] = useState([]);
     const [loading, setLoading] = useState(true); // Estado de carregamento
 
@@ -29,13 +29,15 @@ export function AnimesTemporada({ filter }) {
             setLoading(true);
 
             try {
-                await new Promise(resolve => setTimeout(resolve, 1500)); // Espera um segundo antes de mostrar os animes
-                const data = await getAnimeRaking(filter);
-                console.log('Dados: ', data);
+                await new Promise(resolve => setTimeout(resolve, 2000)); // Espera segundos antes de mostrar os animes
+
+                const data = await getKitsuAnimeRanking(2024);
+                console.log('Animes mais populares: ', data);
 
                 /* Verifica se o dado é um Array */
                 if (data && Array.isArray(data)) {
-                    setRanking(data.slice(0, 5)); // Limitar para 5 animes por vez 
+                    const filteredAnimes = data.filter(anime => anime.type === 'anime'); // Filtra apenas animes
+                    setRanking(filteredAnimes.slice(0, 5)); // Limitar para 5 animes por vez 
                 } else {
                     console.log("Ranking data is undefined or not an array");
                 }
@@ -56,7 +58,7 @@ export function AnimesTemporada({ filter }) {
             isMounted = false;
         };
 
-    }, [filter]);
+    }, []);
 
 
     return (
@@ -68,10 +70,10 @@ export function AnimesTemporada({ filter }) {
                 <ul className='ranking-top-area'>
                     {ranking.length > 0 ? ( // Se existir algum anime, dispõe o ranking
                         ranking.map((anime, index) => (
-                            <li className='ranking-lista' key={anime.mal_id}>
+                            <li className='ranking-lista' key={anime.id}>
                                 <AnimesRanking
                                     colocacao={index + 1}
-                                    rankingNome={anime.title}
+                                    rankingNome={anime.attributes.titles.en || anime.attributes.titles.en_jp}
                                     cor={getColorForRank(index + 1)}
                                 />
                             </li>

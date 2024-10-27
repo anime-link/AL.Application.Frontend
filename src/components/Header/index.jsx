@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.css";
 import logo from "../../assets/logo-animelink.svg";
 import user from "../../assets/Images/SignUp/profile-pic-choosen.webp";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Header() {
     return (
@@ -23,7 +23,9 @@ export default function Header() {
                         Contatos
                     </NavLink>
                 </div>
-                <img className="header-usuario" width={57} height={57} src={user} alt="Usuário" />
+                <Link className={({ isActive }) => isActive ? "header-usuario active" : "header-usuario"} to={'/usuario'}>
+                    <img className="header-usuario-img" width={57} height={57} src={user} alt="Usuário" />
+                </Link>
             </div>
         </header>
     );

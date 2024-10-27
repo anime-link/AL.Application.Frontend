@@ -1,0 +1,75 @@
+.esquecer-area {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 465px;
+    height: 249px;
+    margin-top: 20px;
+
+    border-radius: 15px;
+    background-color: rgba(89, 66, 167, 0.8);
+}
+
+.esquecer-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.esquecer-label {
+    font: var(--text-20);
+    color: var(--white);
+    margin-top: 43px;
+}
+
+.esquecer-input {
+    outline: none;
+    width: 298px;
+    height: 45px;
+    padding: 10px 20px;
+    margin-top: 20px;
+
+    background-color: var(--white);
+    color: black;
+    font: var(--text-16);
+    border: solid 2px var(--night-rider);
+    border-radius: 10px;
+
+    transition: 0.5s ease-in-out;
+}
+
+.esquecer-input:focus {
+    border-color: var(--bright-sun);
+}
+
+.esquecer-input::placeholder {
+    font: var(--text-16);
+    color: var(--fog);
+
+    transition: 0.5s ease-in-out;
+}
+
+.esquecer-input:focus::placeholder {
+    color: var(--bright-sun);
+    border-color: var(--bright-sun);
+}
+
+.esquecer-botao {
+    cursor: pointer;
+    text-align: center;
+    width: 150px;
+    height: 45px;
+    margin-top: 38px;
+
+    border-radius: 10px;
+    font: var(--text-20);
+    color: var(--white);
+    background: var(--gradient-yellow);
+
+    transition: 0.5s ease-in-out;
+}
+
+.esquecer-botao:hover {
+    filter: brightness(1.1);
+    transform: scale(1.1);
+}

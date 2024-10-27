@@ -1,8 +1,8 @@
 import React from 'react';
 import "./styles.css";
 import Header from '../Header';
-import ContatosBemVindo from './ConatosPresentation';
-import ContatosAdms from './ContatosAdm';
+import ContatosBemVindo from './ContactPresentation';
+import ContatosAdms from './ContactsAdm';
 import Footer from '../Footer';
 
 import perfilCarlos from '../../assets/Images/Contatos/perfilCarlos.png';
