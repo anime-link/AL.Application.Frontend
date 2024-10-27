@@ -58,6 +58,20 @@ export const getAnimeRaking = async () => {
   }
 }
 
+
+export const getJikanGenres = async (id) => {
+  const response = await fetch(`https://api.jikan.moe/v4/anime?genres=${id}`);
+  const data = await response.json();
+
+  return data.data.map(anime => ({
+    id: anime.mal_id,
+    title: anime.title,
+    image: anime.images.jpg.image_url,
+    description: anime.synopsis
+  }));
+
+}
+
 export const getKitsuAnimeRanking = async (year) => {
   const url = `https://kitsu.io/api/edge/anime?filter[seasonYear]=${year}&sort=popularityRank`;
 
@@ -72,3 +86,4 @@ export const getKitsuAnimeRanking = async (year) => {
     return [];
   }
 }
+

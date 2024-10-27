@@ -3,13 +3,15 @@
     justify-content: center;
     align-items: center;
     background-color: aqua;
-    width: 2306px;
+    width: 1366px;
     height: 704px;
 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-clip: border-box;
+    background-blend-mode: soft-light;
+    background-color: var(--deep-koamaru);
     margin-top: -109px;
 }
 
@@ -20,8 +22,9 @@
 
     width: 1306px;
     height: 704px;
+    margin-bottom: 79px;
+    margin-top: 200px;
 
-    /* background: var(--gradient-black); */
     color: #ffff;
 }
 
@@ -36,13 +39,14 @@
     justify-content: space-between;
     align-items: center;
     font: var(--text-24);
+
     margin-right: 102px;
     margin-left: 54px;
 }
 
 .tittle{
-    font: var(--header-40);
-    
+    font: var(--header-36);
+    display: flex;
 }
 
 .ano{
@@ -50,35 +54,77 @@
     padding-bottom: 29px;
 }
 
+.anime-atribute-box{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+    font: var(--text-24);
+    margin-right: 37px;
+    margin-bottom: 68px;
+}
 
-
-.anime-attribute p{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-right: 10px;
+.anime-atribute p{
     font: var(--text-24);
 }
 
+.anime-point{
+    display: flex;
+    align-items: center;
+    padding-top: 27px;
+    margin-bottom: 56px;
+}
+
+.nota{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+}
+
+.anime-plot{
+    margin-right: 210px;
+}
+
 .text-plot{
-   
     font: var(--text-15);
     justify-content: center;
     text-align: justify;
-
     width: 492px;
-    padding-left: 10px;
-    padding: 0;
-    box-sizing: border-box;
-    margin-left: 70px;
 }
 
 .imgSin{
-    width: 461px;
-    height: 314px;
+    width: 314px;
+    height: 461px;
     margin-left: 75px;
+    padding-top: 63px;
     object-fit: cover;
     border: 2px;
     border-radius: 8px; /* Adiciona bordas arredondadas */
+}
+
+.star{
+    color: var(--bright-sun);
+    font-size: 47px;
+}
+
+.sinopse-icone-voltar {
+    top: 28px;
+    left: 28px;
+    margin-top: 10px;
+}
+
+.sinopse-icone-fechar{
+    color: var(--bright-sun);
+    font-size: 90px;
+}
+
+.sinopse-icone-fechar:hover {
+    color: var(--bright-sun);
+    transform: scale(1.2);
+}
+
+.sinopse-icone-fechar:active {
+    color: var(--bright-sun);
+    opacity: 50%;
 }
 

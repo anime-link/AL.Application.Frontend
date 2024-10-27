@@ -4,7 +4,6 @@
     border: none;
     width: 100%;
     height: 566px;
-    margin-top: 10px;
     
     background: url("../../../assets/Images/Contatos/bemVindoBackground.png");
     background-repeat: no-repeat;
@@ -15,7 +14,6 @@
 .boasVindas-titulo p{
     color:var(--bright-sun);
     font-size: 40px;
-    margin-top: 10px;
     margin-left: 107px;
     font: var(--app-section);
     padding-top: 10px;
