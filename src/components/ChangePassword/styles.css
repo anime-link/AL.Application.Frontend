@@ -1,0 +1,16 @@
+.mudar-senha {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 147px;
+    margin-left: 653px;
+}
+
+.mudar-texto-titulo {
+    font: var(--header-64);
+    color: var(--white);
+}
+
+.mudar-texto-subtitulo {
+    font: var(--text-24);
+}

@@ -46,8 +46,15 @@
 
 .login-input-area {
     display: flex;
+    align-items: center;
     flex-direction: column;
     margin-top: 94px;
+}
+
+.login-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 40px;
 }
 
@@ -96,10 +103,11 @@
     background-color: var(--chetwode-blue);
 }
 
-@media (max-width: 426px) {
+@media (max-width: 430px) {
     .login-area {
         width: 295px;
         height: 480px;
+        margin-top: -50px;
     }
 
     .login-area-titulo {

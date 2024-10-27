@@ -1,0 +1,49 @@
+.bemVindos-area{
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    width: 100%;
+    height: 566px;
+    
+    background: url("../../../assets/Images/Contatos/bemVindoBackground.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.boasVindas-titulo p{
+    color:var(--bright-sun);
+    font-size: 40px;
+    margin-left: 107px;
+    font: var(--app-section);
+    padding-top: 10px;
+}
+
+.boasVindas-cont {
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 45px;
+    margin-left: 107px;
+    padding-bottom: 95px;
+    
+}
+
+.contate-nos{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.admins{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.boasVindas-icon{
+    font-Size: 85px; 
+    color: var(--bright-sun);
+}
+

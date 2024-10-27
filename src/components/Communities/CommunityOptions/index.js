@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./styles.css";
 import ReactPaginate from "react-paginate";
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 export default function ComunidadeOpcoes({ comunidades }) {
     const [paginaAtual, setPaginaAtual] = useState(0);
@@ -22,7 +23,9 @@ export default function ComunidadeOpcoes({ comunidades }) {
             <div className="comunidade-opcoes-img-area">
                 {comunidadesPagina.map((img, i) => (
                     <div className="comunidade-opcoes-img" key={i}>
-                        <img src={img} width={270} height={141} alt={`Comunidade ${i}`} />
+                        <Link to={"/chat"}>
+                            <img src={img} width={270} height={141} alt={`Comunidade ${i}`} />
+                        </Link>
                     </div>
                 ))}
             </div>

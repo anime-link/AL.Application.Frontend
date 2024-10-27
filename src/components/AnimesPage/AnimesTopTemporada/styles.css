@@ -1,0 +1,29 @@
+.ranking-top {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: calc(100vw - 880px);
+
+    border-radius: 20px;
+    background: linear-gradient(rgba(51, 51, 51, 0.85), rgba(0, 0, 0, 0.85));
+}
+
+.ranking-titulo {
+    margin-top: 20px;
+    font: var(--ranking-title);
+    color: var(--white);
+}
+
+.ranking-top-area {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 44px;
+    gap: 50px;
+}
+
+.ranking-lista {
+    display: flex;
+    align-items: center;
+}
