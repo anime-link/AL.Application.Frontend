@@ -1,9 +1,8 @@
 
 .adm-card{
     position: relative;
-    width: 1292px;
-    height: 550px;
-    margin: 100px;
+    width: calc(100vw - 200px);
+    height: 520px;
     
     overflow: hidden;
     background-size: cover;
@@ -19,7 +18,7 @@
 
     background-clip: border-box;
     background-blend-mode: multiply;
-    background: var(--deep-koamaru);
+    background: var(--night-rider);
     transition:  0.3s ease; /* Adicionando transição para a opacidade */
 }
 

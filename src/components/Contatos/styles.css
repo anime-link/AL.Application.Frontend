@@ -23,8 +23,15 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 137px;
+    gap: 60px;
 }
 
 .icon-blue{
     font-size: 110px;
+}
+
+.contatos-totoro {
+    display: flex;
+    justify-content: center;
 }

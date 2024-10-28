@@ -65,7 +65,7 @@ export function AnimesTemporada() {
         <div className='ranking-top'>
             <h2 className='ranking-titulo'>Animes da temporada</h2>
             {loading ? ( // Carrega enquanto busca os dados
-                <p>Carregando...</p>
+                <p className='ranking-carregando'>Carregando...</p>
             ) : (
                 <ul className='ranking-top-area'>
                     {ranking.length > 0 ? ( // Se existir algum anime, dispõe o ranking
@@ -79,7 +79,7 @@ export function AnimesTemporada() {
                             </li>
                         ))
                     ) : (
-                        <p>Nenhum anime encontrado.</p> // Se não encontrar nada, exibe esta mensagem
+                        <p className='ranking-carregando'>Nenhum anime encontrado.</p> // Se não encontrar nada, exibe esta mensagem
                     )}
                 </ul>
             )}
