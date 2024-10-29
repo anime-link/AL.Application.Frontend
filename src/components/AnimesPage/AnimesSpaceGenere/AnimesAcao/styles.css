@@ -48,12 +48,12 @@
     transition: 0.5s ease-in-out;
 }
 
-.icon-return:hover {
+.button-return:hover {
     color: var(--bright-sun);
     transform: scale(1.2);
 }
 
-.icon-return:active {
+.button-return:active {
     color: var(--bright-sun);
     opacity: 50%;
 }
@@ -69,4 +69,20 @@
     font: var(--app-section);
     font-size: 90px;
     text-shadow: 2px 2px 8px black;
+}
+
+.button-return{
+    color: rgb(221, 222, 223);
+}
+
+.translate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-translate{
+    color: white;
+    width: 90px;
+    height: 90px;
 }
