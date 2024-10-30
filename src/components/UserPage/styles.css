@@ -2,7 +2,8 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
+    padding-bottom: 20px;
 
     background-image: url('../../assets/Images/User/user-background.png');
     background-color: var(--deep-koamaru);
@@ -17,7 +18,7 @@
     align-items: center;
     flex-direction: column;
     width: calc(100vw - 354px);
-    height: calc(100vh - 148px);
+    height: 609px;
     margin-top: 45px;
 
     background-color: rgba(51, 51, 51, 0.8);
@@ -114,4 +115,29 @@
 .usuario-mudar-info-btn:hover {
     filter: brightness(1.1);
     transform: scale(1.1);
+}
+
+@media (max-width: 426px) {
+    .usuario-infos {
+        width: calc(100vw - 30px);
+        height: 100%;
+    }
+
+    .usuario-titulo {
+        font: var(--header-24);
+    }
+    
+    .usuario-infos-area {
+        flex-direction: column;
+        gap: 90px;
+    }
+
+    .usuario-foto {
+        width: 90px;
+        height: 90px;
+    }
+
+    .usuario-form {
+        margin-top: -50px;
+    }
 }
