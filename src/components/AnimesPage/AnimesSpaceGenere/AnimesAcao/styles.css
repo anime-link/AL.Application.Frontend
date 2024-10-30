@@ -86,3 +86,8 @@
     width: 90px;
     height: 90px;
 }
+
+.pagination{
+    color: blueviolet;
+    font: var(--header-40);
+}
