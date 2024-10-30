@@ -99,20 +99,28 @@ export default function ResultadosPesquisa() {
         }
     }
 
+    const handleBackPage = () => {
+        if (tipo === 'anime') {
+            navigate('/animes');
+        } else if (tipo === 'comunidade') {
+            navigate('/comunidades');
+        }
+    }
+
     return (
         <div className='resultados-pagina'>
             <Header />
-            <Link className='resultados-icon-voltar'>
-                <RiArrowLeftCircleFill fontSize={60}/>
-            </Link>
+            <button className='resultados-icon-voltar' onClick={handleBackPage} >
+                <RiArrowLeftCircleFill fontSize={60} />
+            </button>
             <div className='resultados-resul'>
                 <h1 className='resultados-titulo'>Resultados para "{getQueryParams().query}"</h1>
                 {loading ? (
-                    <p>Carregando...</p>
+                    <p className='resultados-msg'>Carregando...</p>
                 ) : (
                     <div className='resultados-lista'>
                         {resultados.length === 0 ? (
-                            <p>Nenhum resultado encontrado</p>
+                            <p className='resultados-msg'>Nenhum resultado encontrado</p>
                         ) : (
                             resultados.map((item) => (
                                 <div key={item.id} className='resultado-item' onClick={() => handleClick(item.id)}>
@@ -124,7 +132,6 @@ export default function ResultadosPesquisa() {
                                     />
                                     <div className='resultado-texto'>
                                         <p className='resultado-nome'>{item.nome}</p>
-                                        <p className='resultado-membros'>X membros</p>
                                     </div>
                                 </div>
                             ))

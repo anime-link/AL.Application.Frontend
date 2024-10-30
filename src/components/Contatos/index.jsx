@@ -20,13 +20,8 @@ import backgroundNathan from '../../assets/Images/Contatos/backgroundNathan.png'
 import backgroundPablo from '../../assets/Images/Contatos/backgroundPablo.png';
 import backgroundWilliam from '../../assets/Images/Contatos/backgroundWilliam.png';
 import backgroundWilson from '../../assets/Images/Contatos/backgroundWilson.png';
-
-
-
-
 import { RiGithubFill } from "react-icons/ri";
-
-
+import totoro from '../../assets/Images/Contatos/totoro.png';
 
 export default function ContatosAdm() {
     return (
@@ -34,17 +29,20 @@ export default function ContatosAdm() {
             <Header />
             <main className="contatos-body">
                 <ContatosBemVindo />
-                <div className= "spaceAdm"> 
-                <ContatosAdms  imgAnime={backgroundCarlos} ImgAdm={perfilCarlos} name={"Carlos André"} linksGit="https://github.com/4nc13ntS0ul" Icons={<RiGithubFill className="icon-blue"/>} />
-                <ContatosAdms imgAnime={backgroundFelipe} ImgAdm={perfilFelipe} name={"Felipe Ferreira"} linksGit="https://github.com/felipeFerreiraffl" Icons={<RiGithubFill  className="icon-blue"/>} />
-                <ContatosAdms imgAnime={backgroundJoao} ImgAdm={perfilJoao} name={"João Vitor"} linksGit="https://github.com/JoaoVGomees" Icons={<RiGithubFill  className="icon-blue" />} />
-                <ContatosAdms imgAnime={backgroundNathan} ImgAdm={perfilNathan} name={"Nathan Rodrigues" } linksGit="https://github.com/nathanrodriguees" Icons={<RiGithubFill  className="icon-blue"/>} />
-                <ContatosAdms imgAnime={backgroundPablo} ImgAdm={perfilPablo} name={"Pablo Candido" } linksGit="https://github.com/Pablocdeoliveira" Icons={<RiGithubFill  className="icon-blue"/>} />
-                <ContatosAdms imgAnime={backgroundWilliam} ImgAdm={perfilWilliam} name={"William Patricio" } linksGit="https://github.com/williampss" Icons={<RiGithubFill  className="icon-blue"/>} />
-                <ContatosAdms imgAnime={backgroundWilson} ImgAdm={perfilWilson} name={"Wilson Benacchio" } linksGit="https://github.com/WilsonBenacchio" Icons={<RiGithubFill  className="icon-blue"/>} />
+                <div className="spaceAdm">
+                    <ContatosAdms imgAnime={backgroundCarlos} ImgAdm={perfilCarlos} name={"Carlos André"} linksGit="https://github.com/4nc13ntS0ul" Icons={<RiGithubFill className="icon-blue" />} />
+                    <ContatosAdms imgAnime={backgroundFelipe} ImgAdm={perfilFelipe} name={"Felipe Ferreira"} linksGit="https://github.com/felipeFerreiraffl" Icons={<RiGithubFill className="icon-blue" />} />
+                    <ContatosAdms imgAnime={backgroundJoao} ImgAdm={perfilJoao} name={"João Vitor"} linksGit="https://github.com/JoaoVGomees" Icons={<RiGithubFill className="icon-blue" />} />
+                    <ContatosAdms imgAnime={backgroundNathan} ImgAdm={perfilNathan} name={"Nathan Rodrigues"} linksGit="https://github.com/nathanrodriguees" Icons={<RiGithubFill className="icon-blue" />} />
+                    <ContatosAdms imgAnime={backgroundPablo} ImgAdm={perfilPablo} name={"Pablo Candido"} linksGit="https://github.com/Pablocdeoliveira" Icons={<RiGithubFill className="icon-blue" />} />
+                    <ContatosAdms imgAnime={backgroundWilliam} ImgAdm={perfilWilliam} name={"William Patricio"} linksGit="https://github.com/williampss" Icons={<RiGithubFill className="icon-blue" />} />
+                    <ContatosAdms imgAnime={backgroundWilson} ImgAdm={perfilWilson} name={"Wilson Benacchio"} linksGit="https://github.com/WilsonBenacchio" Icons={<RiGithubFill className="icon-blue" />} />
+                </div>
+                <div className='contatos-totoro'>
+                    <img src={totoro} alt="Totoro" />
                 </div>
             </main>
-            <Footer/>
+            <Footer />
         </div>
     );
 }

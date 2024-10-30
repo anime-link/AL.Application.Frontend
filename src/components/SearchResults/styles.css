@@ -15,6 +15,7 @@
 }
 
 .resultados-icon-voltar {
+    cursor: pointer;
     position: absolute;
     top: 125px;
     left: 142px;
@@ -93,4 +94,13 @@
 .resultado-membros {
     font: var(--text-24);
     color: var(--bright-sun);
+}
+
+.resultado-membros.none {
+    display: none;
+}
+
+.resultados-msg {
+    font: var(--text-24);
+    color: var(--white);
 }
