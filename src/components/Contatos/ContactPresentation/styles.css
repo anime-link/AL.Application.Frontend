@@ -1,4 +1,4 @@
-.bemVindos-area{
+.bemVindos-area {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -12,10 +12,10 @@
     background-clip: border-box;
     background-blend-mode: soft-light;
     background-color: var(--deep-koamaru);
-    
+
 }
 
-.boasVindas-titulo p{
+.boasVindas-titulo p {
     width: 676px;
     margin-top: 80px;
 
@@ -38,13 +38,43 @@
     gap: 21px;
 }
 
-.contate-nos > p,
-.admins > p {
+.contate-nos>p,
+.admins>p {
     font: var(--text-24);
     color: var(--white);
 }
 
-.boasVindas-icon{
+.boasVindas-icon {
     color: var(--bright-sun);
 }
 
+@media (max-width: 426px) {
+    .bemVindos-area {
+        align-items: center;
+        padding-left: 10px;
+        padding-bottom: 40px;
+        box-shadow: inset 0px 150px 60px rgba(0, 0, 0, 85%);
+
+        background-size: cover;
+        background-position: center;
+    }
+
+    .boasVindas-titulo p {
+        text-align: center;
+        font: var(--app-text);
+        margin-top: 40px;
+    }
+
+    .boasVindas-cont {
+        gap: 10px;
+    }
+
+    .contate-nos > p,
+    .admins > p {
+        font: var(--text-16);
+    }
+
+    .boasVindas-icon {
+        font-size: 45px;
+    }
+}

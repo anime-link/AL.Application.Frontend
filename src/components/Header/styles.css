@@ -3,7 +3,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    position: relative;
 
     z-index: 2;
     width: 100%;
@@ -18,13 +17,13 @@
     flex-direction: row;
 
     padding: 14px 52px;
+    gap: 218px;
 }
 
 .header-logo-area {
     display: flex;
     align-items: center;
     cursor: pointer;
-    margin-right: 195px;
     gap: 8px;
 
     transition: 0.5s ease-in-out;
@@ -77,18 +76,11 @@
 
 .header-usuario {
     cursor: pointer;
-    display: flex;
-    width: 57px;
-
     border: solid 2px var(--night-rider);
     border-radius: 50%;
 
     transition: 0.5s ease-in-out;
-}
-
-.header-usuario-img {
-    margin-left: 304px;
-}
+}   
 
 .header-usuario:hover {
     border-color: var(--bright-sun);
@@ -110,6 +102,7 @@
         flex-direction: column;
         justify-content: center;
         padding: 20px 20px;
+        gap: 20px;
     }
 
     .header-logo-area {
@@ -136,9 +129,6 @@
     }
 
     .header-usuario {
-        position: absolute;
-        top: 25px;
         width: 40px;
-        height: 40px;
     }
 }

@@ -1,6 +1,7 @@
 .ranking-area{
     display: grid;
     grid-template-columns: 1fr 240px 1fr;
+    align-items: center;
     color: var(--white);
     gap: 80px;
 }
@@ -11,16 +12,38 @@
 }
 
 .ranking-colocacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50px;
     height: 50px;
-    text-align: center;
-    padding-top: 7px;
     color: var(--white);
     font: var(--header-24);
 }
 
 .trofeu {
     font-size: 50px;
+}
+
+@media (max-width: 426px) {
+    .ranking-area {
+        gap: 20px;
+        grid-template-columns: 1fr 200px 1fr;
+    }
+
+    .ranking-nome {
+        font: var(--text-16);
+    }
+
+    .ranking-colocacao {
+        width: 30px;
+        height: 30px;
+        font: var(--text-16);
+    }
+
+    .trofeu {
+        font-size: 30px;
+    }
 }
 
 

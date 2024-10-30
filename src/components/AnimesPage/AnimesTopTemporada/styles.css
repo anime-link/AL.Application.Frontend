@@ -32,3 +32,22 @@
     font: var(--text-24);
     color: var(--white);
 }
+
+@media (max-width: 426px) {
+    .ranking-top {
+        width: calc(100vw - 30px);
+    }
+
+    .ranking-titulo {
+        font: var(--app-text);
+    }
+
+    .ranking-top-area {
+        margin-top: 20px;
+        gap: 40px;
+    }
+
+    .ranking-carregando {
+        font: var(--text-20);
+    }
+}

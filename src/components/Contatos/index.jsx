@@ -39,7 +39,7 @@ export default function ContatosAdm() {
                     <ContatosAdms imgAnime={backgroundWilson} ImgAdm={perfilWilson} name={"Wilson Benacchio"} linksGit="https://github.com/WilsonBenacchio" Icons={<RiGithubFill className="icon-blue" />} />
                 </div>
                 <div className='contatos-totoro'>
-                    <img src={totoro} alt="Totoro" />
+                    <img className='contatos-totoro-img' src={totoro} alt="Totoro" />
                 </div>
             </main>
             <Footer />

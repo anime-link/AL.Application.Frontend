@@ -77,3 +77,32 @@
 .animes-pop-depois {
     right: -153px;
 }
+
+@media (max-width: 426px) {
+    .animes-populares {
+        width: calc(100vw - 30px);
+        margin-top: 90px;
+    }
+
+    .animes-populares-titulo {
+        font: var(--app-text);
+    }
+
+    .animes-pop-area {
+        width: 90%;
+    }
+
+    .animes-pop-img-area {
+        margin-top: 20px;
+    }
+
+    .animes-pop-img {
+        width: 90px;
+        height: 134px;
+    }
+
+    .animes-pop-antes,
+    .animes-pop-depois {
+        display: none;
+    }
+}

@@ -1,15 +1,13 @@
-
-.adm-card{
-    position: relative;
+.adm-card {
     width: calc(100vw - 200px);
     height: 520px;
-    
+
     overflow: hidden;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
-    cursor: pointer; 
+
+    cursor: pointer;
     border-radius: 20px;
 
     display: flex;
@@ -19,7 +17,8 @@
     background-clip: border-box;
     background-blend-mode: multiply;
     background: var(--night-rider);
-    transition:  0.3s ease; /* Adicionando transição para a opacidade */
+    transition: 0.3s ease;
+    /* Adicionando transição para a opacidade */
 }
 
 .adm-card:hover {
@@ -27,57 +26,61 @@
     filter: brightness(1.1);
     transform: scale(1.05);
 
-    opacity: 0.9; /* Opacidade ao passar o mouse */
+    opacity: 0.9;
+    /* Opacidade ao passar o mouse */
 }
 
 .adm-card:active {
-    opacity: 0.7; /* Opacidade ao pressionar */
+    opacity: 0.7;
+    /* Opacidade ao pressionar */
 }
 
-@media (max-width: 426px) {
-    .adm-card {
-        margin-top: 10px;
-    }
-    
-    .adm-card {
-        width: 13px;
-        height: 52px;
-        font: var(--text-16);
-    }
-}
-
-p{
+p {
     color: aliceblue;
-    font-size: 70px;
     font: var(--app-section);
 }
 
-.imgAdm{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 130px;
-    margin-top: 135px;
-    width: 280px;
-    height: 280px;
-    margin-right: 187px;
-    margin-bottom: 137px;
-    margin-top: 137px;
-
-}
-
-.admPerfil{
-    margin-right: 120px;
-    font: var(--app-section);
+.admPerfil {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.admPerfil p{
+.admPerfil p {
     font: var(--app-section);
-    font-size: 70%;
     text-shadow: 2px 2px 8px black;
 }
 
+.admPerfil > a {
+    color: var(--bright-sun);
+}
+
+@media (max-width: 426px) {
+    .adm-card {
+        align-items: center;
+        flex-direction: column;
+        width: calc(100vw - 70px);
+        height: 320px;
+    }
+
+    .imgAdm {
+        width: 80px;
+        height: 80px;
+    }
+
+    .admPerfil {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;  
+    }
+
+    .admPerfil > p {
+        font: var(--app-text);
+    }
+
+    .admPerfil > a {
+        color: var(--bright-sun);
+    }
+}

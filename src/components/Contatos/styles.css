@@ -1,4 +1,4 @@
-.contatos-area{
+.contatos-area {
     box-sizing: border-box;
     text-decoration: none;
     border: none;
@@ -7,18 +7,18 @@
     padding: 0;
     width: 100%;
 
-    background-color: var(--daisy-bush);
+    background-color: var(--deep-koamaru);
+
 }
-.contatos-body{
+
+.contatos-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-top: 0px;
 }
 
-.icon-blue{
-    font-size: 5px;
-    color: var(--bright-sun);
-}
-
-.spaceAdm{
+.spaceAdm {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,11 +27,27 @@
     gap: 60px;
 }
 
-.icon-blue{
+.icon-blue {
     font-size: 110px;
 }
 
 .contatos-totoro {
     display: flex;
     justify-content: center;
+}
+
+@media (max-width: 426px) {
+    .contatos-totoro {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+    }
+
+    .contatos-totoro-img {
+        width: 590px;
+    }
+
+    .icon-blue {
+      font-size: 80px;
+    }
 }
