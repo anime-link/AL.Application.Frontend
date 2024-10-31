@@ -80,3 +80,34 @@
     filter: brightness(1.1);
     transform: scale(1.1);
 }
+
+@media (max-width: 430px) {
+    .mudar-area {
+        width: 340px;
+        height: 390px;
+    }
+
+    .mudar-titulo {
+        font: var(--text-20);
+    }
+
+    .mudar-form {
+        gap: 15px;
+    }
+
+    .mudar-input {
+        width: 240px;
+        height: 40px;
+        font: var(--text-15);
+    }
+
+    .mudar-input::placeholder {
+        font: var(--text-15);
+    }
+
+    .mudar-botao {
+        width: 120px;
+        height: 40px;
+        font: var(--text-16);
+    }
+}

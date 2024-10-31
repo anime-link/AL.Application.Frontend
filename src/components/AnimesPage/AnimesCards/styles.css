@@ -31,7 +31,7 @@
   font: var(--header-64);
 }
 
-@media (max-width: 426px) {
+@media (max-width: 430px) {
   .anime-card {
     width: calc(100vw - 60px);
     height: 160px;

@@ -75,7 +75,7 @@
     transform: scale(1.1);
 }
 
-@media (max-width: 426px) {
+@media (max-width: 430px) {
     .animes-lancamentos {
         width: calc(100vw - 40px);
     }

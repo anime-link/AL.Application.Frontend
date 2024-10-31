@@ -7,15 +7,16 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 export default function Header() {
     const navigate = useNavigate();
 
+    const handleHomePage = () => navigate("/");
     const handleUserPage = () => navigate("/usuario");
 
     return (
         <header className="header">
             <div className="header-area">
-                <div className="header-logo-area">
+                <button className="header-logo-area" onClick={handleHomePage}>
                     <img className="header-logo" src={logo} alt="AnimeLink" />
                     <p className="header-logo-texto">AnimeLink</p>
-                </div>
+                </button>
                 <div className="header-paginas">
                     <NavLink to={"/comunidades"} className={({ isActive }) => isActive ? "header-pagina active" : "header-pagina"}>
                         Comunidades
