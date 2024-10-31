@@ -75,19 +75,44 @@
     color: rgb(221, 222, 223);
 }
 
-.translate{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.button-translate{
-    color: white;
-    width: 90px;
-    height: 90px;
+.text_pagination{
+    font: var(--text-16);
+    color: var(--bright-sun);
+    margin-bottom: 14px;
 }
 
 .pagination{
     color: blueviolet;
     font: var(--header-40);
+   
 }
+
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .page-item {
+    margin: 0 5px;
+  }
+  
+  .page-link {
+    padding: 8px 12px;
+    border: 2px solid var(--bright-sun);
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    
+  }
+  
+  .page-link:hover {
+    background-color: #e9ecef;
+  }
+  
+  .active .page-link {
+    background-color: var(--bright-sun);
+    color: white;
+    border-color: var(--chetwode-blue);
+  }
+  
