@@ -139,4 +139,43 @@
         right: 20px;
         font-size: 28px;
     }
+
+    .pesquisa-msg {
+        font: var(--text-15);
+    }
+
+    .pesquisa-sugestoes {
+        margin-top: -10px;
+        padding: 20px 25px;
+    }
+
+    .pesquisa-sem-sugestoes {
+        gap: 15px;
+    }
+
+    .pesquisa-sem-img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .pesquisa-sem-msg {
+        font: var(--text-15);
+    }
+
+    .pesquisa-titulo {
+        font: var(--text-20);
+    }
+
+    .pesquisa-item {
+        padding: 12px 20px;
+    }
+
+    .pesquisa-imagem {
+        width: 100px;
+        height: 52px;
+    }
+
+    .pesquisa-nome {
+        font: var(--text-15);
+    }
 }

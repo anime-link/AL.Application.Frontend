@@ -125,6 +125,7 @@ export default function ResultadosPesquisa() {
                             resultados.map((item) => (
                                 <div key={item.id} className='resultado-item' onClick={() => handleClick(item.id)}>
                                     <img
+                                        className='resultado-img'
                                         src={item.imagem}
                                         width={350}
                                         height={182}
