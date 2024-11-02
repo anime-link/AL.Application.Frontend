@@ -1,25 +1,20 @@
 import React from 'react';
 import './styles.css';
 
-export default function CardComedia({ cardImgComedia}) {
+export default function CardAcao({ cardImgComedia, title, sinopse }) {
     return (
         <div className="container-card">
-            <div className="card-anime-comedia"
+            <div className="card-anime-acao"
                 style={{ backgroundImage: `url(${cardImgComedia})` }}
             >
             </div>
 
             <div className="card-space-content">
-                <p className="card-comedia-tittle">
-                    Horimya
+                <p className="card-acao-tittle">
+                    {title}
                 </p>
-                <p className="card-comedia-text">
-                    gfdtujygijffryhdcutjdfyrhdfvikjfikjfkumjfumjtgbik
-                    6ufgikgholhoukgbolhnohnolholpjçgukhpolyholhkghnoljpçjpç
-                    hgikgoholhnolihiykghokg,hikgbikgbikgholhik,jhuk,uhok,ho
-                    ikgbnoljmoukgbiljpçuhgyikughtujgbukgukhikyhiughoyttuhghpoftujftgu
-                    7ikhj8olj0ogbiluj0iknoghlouniykghmyikghouyiukujiujkhujkjukjikjk
-                    iklikiykhjkoiyuhuhujm8yuhjyutjujutklukyutiujnbuuiijuyiuiutuyuityuyk
+                <p className="card-acao-text">
+                    {sinopse}
                 </p>
             </div>
 

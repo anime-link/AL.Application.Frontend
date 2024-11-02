@@ -6,7 +6,7 @@ import Footer from "../../../Footer";
 import Header from '../../../Header';
 import { getJikanGenres } from '../../../../services/AnimeAPI/AnimeApi';
 import ReactPaginate from 'react-paginate';
-import { RiArrowLeftCircleFill, RiArrowRightCircleFill } from "react-icons/ri";
+import { RiArrowLeftCircleFill} from "react-icons/ri";
 
 export default function AnimesAcao() {
     const [animes, setAnimes] = useState([]);
