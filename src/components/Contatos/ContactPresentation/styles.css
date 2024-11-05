@@ -1,4 +1,6 @@
+
 .bemVindos-area {
+.bemVindos-area{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -24,6 +26,15 @@
     color: var(--bright-sun);
     
 .boasVindas-titulo p {
+    width: 676px;
+    margin-top: 80px;
+
+    text-shadow: 5px 10px 4px rgba(0, 0, 0, 75%);
+    font: var(--app-section);
+    
+}
+
+.boasVindas-titulo p{
     width: 676px;
     margin-top: 80px;
 
@@ -63,6 +74,16 @@
 }
 
 .boasVindas-icon {
+    gap: 21px;
+}
+
+.contate-nos > p,
+.admins > p {
+    font: var(--text-24);
+    color: var(--white);
+}
+
+.boasVindas-icon{
     color: var(--bright-sun);
 }
 
