@@ -8,12 +8,9 @@ export default function ChatHeader() {
         <div className="chat-header-area">
             <img className="chat-header-usuario" src={imgPerfil} width={50} height={50} alt="Usuário" />
             <hr className="chat-header-divisor" />
-            <div className="chat-header-funcoes">
-                <Link to={"/comunidades"}>
-                    <RiArrowLeftCircleFill className="chat-header-voltar" fontSize={40} />
-                </Link>
-                <RiArrowLeftSLine className="chat-header-esconder" fontSize={35} />
-            </div>
+            <Link to={"/comunidades"}>
+                <RiArrowLeftCircleFill className="chat-header-voltar" fontSize={40} />
+            </Link>
         </div>
     );
 }

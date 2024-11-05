@@ -1,3 +1,5 @@
+
+.bemVindos-area {
 .bemVindos-area{
     display: flex;
     flex-direction: column;
@@ -12,6 +14,23 @@
     background-clip: border-box;
     background-blend-mode: soft-light;
     background-color: var(--deep-koamaru);
+
+}
+
+.boasVindas-titulo p{
+    margin-left: 107px;
+    font: var(--app-section);
+    padding-top: 10px;
+    text-shadow: 5px 10px 4px rgba(0, 0, 0, 75%);
+    font: var(--app-section);
+    color: var(--bright-sun);
+    
+.boasVindas-titulo p {
+    width: 676px;
+    margin-top: 80px;
+
+    text-shadow: 5px 10px 4px rgba(0, 0, 0, 75%);
+    font: var(--app-section);
     
 }
 
@@ -35,6 +54,26 @@
 .admins {
     display: flex;
     align-items: center;
+    gap: 30px;
+    
+}
+
+.contate-nos p{
+    font: var(--text-24);
+}
+
+.admins p{
+    font: var(--text-24);
+    gap: 21px;
+}
+
+.contate-nos>p,
+.admins>p {
+    font: var(--text-24);
+    color: var(--white);
+}
+
+.boasVindas-icon {
     gap: 21px;
 }
 
@@ -48,3 +87,33 @@
     color: var(--bright-sun);
 }
 
+@media (max-width: 430px) {
+    .bemVindos-area {
+        align-items: center;
+        padding-left: 10px;
+        padding-bottom: 40px;
+        box-shadow: inset 0px 150px 60px rgba(0, 0, 0, 85%);
+
+        background-size: cover;
+        background-position: center;
+    }
+
+    .boasVindas-titulo p {
+        text-align: center;
+        font: var(--app-text);
+        margin-top: 40px;
+    }
+
+    .boasVindas-cont {
+        gap: 10px;
+    }
+
+    .contate-nos > p,
+    .admins > p {
+        font: var(--text-16);
+    }
+
+    .boasVindas-icon {
+        font-size: 45px;
+    }
+}

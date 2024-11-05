@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
 
-export default function CardComedia({ cardImgComedia}) {
+export default function CardAComedia({ cardImgComedia, title, sinopse }) {
     return (
         <div className="container-card">
             <div className="card-anime-comedia"
@@ -11,15 +11,10 @@ export default function CardComedia({ cardImgComedia}) {
 
             <div className="card-space-content">
                 <p className="card-comedia-tittle">
-                    Horimya
+                    {title}
                 </p>
                 <p className="card-comedia-text">
-                    gfdtujygijffryhdcutjdfyrhdfvikjfikjfkumjfumjtgbik
-                    6ufgikgholhoukgbolhnohnolholpjçgukhpolyholhkghnoljpçjpç
-                    hgikgoholhnolihiykghokg,hikgbikgbikgholhik,jhuk,uhok,ho
-                    ikgbnoljmoukgbiljpçuhgyikughtujgbukgukhikyhiughoyttuhghpoftujftgu
-                    7ikhj8olj0ogbiluj0iknoghlouniykghmyikghouyiukujiujkhujkjukjikjk
-                    iklikiykhjkoiyuhuhujm8yuhjyutjujutklukyutiujnbuuiijuyiuiutuyuityuyk
+                    {sinopse}
                 </p>
             </div>
 

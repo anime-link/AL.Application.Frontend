@@ -18,9 +18,22 @@
     border: solid 2px var(--night-rider);
     border-radius: 10px;
     background-color: var(--white);
+    font: var(--text-20);
     transition: 0.5s ease-in-out;
 }
 
 .usuario-input:focus {
     border-color: var(--bright-sun);
+}
+
+@media (max-width: 426px) {
+    .usuario-label {
+        font: var(--text-16);
+    }
+
+    .usuario-input {
+      width: 240px;
+      height: 35px;
+      font: var(--text-16);
+    }
 }

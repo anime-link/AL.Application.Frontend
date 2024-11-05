@@ -21,9 +21,14 @@
     cursor: pointer;
 }
 
+.card-acao-text{
+    font: var(--text-20);
+}
+
 .card-acao-tittle{
     padding-top: 2px;
     font: var(--text-32);
+    color: var(--bright-sun);
 }
 
 .card-space-content{

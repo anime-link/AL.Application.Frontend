@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 147px;
+    margin-top: 100px;
     margin-left: 653px;
 }
 
@@ -13,4 +13,20 @@
 
 .mudar-texto-subtitulo {
     font: var(--text-24);
+}
+
+@media (max-width: 430px) {
+    .mudar-senha {
+        display: flex;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .mudar-texto-titulo {
+        font: var(--header-40);
+    }
+
+    .mudar-texto-subtitulo {
+        font: var(--text-16);
+    }
 }

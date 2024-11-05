@@ -1,51 +1,60 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
 import { Link } from 'react-router-dom'; 
-import { RiArrowLeftCircleFill } from "react-icons/ri";
-
 import CardAcao from "./CardAcao";
 import Footer from "../../../Footer";
 import Header from '../../../Header';
 import { getJikanGenres } from '../../../../services/AnimeAPI/AnimeApi';
-
-
+import ReactPaginate from 'react-paginate';
+import { RiArrowLeftCircleFill} from "react-icons/ri";
 
 export default function AnimesAcao() {
     const [animes, setAnimes] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [currentPage, setCurrentPage] = useState(0);
+    const itemsPerPage = 5;
 
     useEffect(() => {
         const fetchAnimes = async () => {
             try {
-                const animeGenre = await getJikanGenres(4);
+                const animeGenre = await getJikanGenres(1);
+                console.log(Object.keys(animeGenre).length)
                 setAnimes(animeGenre);
             } catch (error) {
                 console.error('Erro ao buscar os animes de tal gênero: ', error);
             } finally {
                 setLoading(false);
             }
-        }
+        };
 
         fetchAnimes();
-
     }, []);
 
     if (loading) return <div>Carregando...</div>;
 
+    // Cálculo de animes a serem exibidos na página atual
+    const offset = currentPage * itemsPerPage;
+    const currentAnimes = animes.slice(offset, offset + itemsPerPage);
+    const pageCount = Math.ceil(animes.length / itemsPerPage);
+
+    const handlePageClick = (data) => {
+        setCurrentPage(data.selected);
+    };
+
     return (
         <div className="acao-area">
-            <Header/>
-            <main className= "acao-body">
-                <diV className = "acao-back">
-                    <diV className="acao-icon-voltar">
+            <Header />
+            <main className="acao-body">
+                <div className="acao-back">
+                    <div className="acao-icon-voltar">
                         <Link className="icon-return" to={"/animes"}>
-                            <RiArrowLeftCircleFill  alt= "Fechar"/>
+                            <RiArrowLeftCircleFill className="button-return" alt="Fechar" />
                         </Link>
-                    </diV>
+                    </div>
                     <p className="acao-tittle">Ação</p>
-                </diV>
+                </div>
                 <div>
-                    {animes.map(anime => (
+                    {currentAnimes.map(anime => (
                         <CardAcao 
                             key={anime.id}
                             cardImgAcao={anime.image}
@@ -54,9 +63,29 @@ export default function AnimesAcao() {
                         />
                     ))}
                 </div>
-                
+                {/* Componente de Paginação */}
+                <ReactPaginate
+                    className="text_pagination"
+                    previousLabel={"Anterior"}
+                    nextLabel={"Próximo"}
+                    breakLabel={"..."}
+                    pageCount={pageCount}
+                    marginPagesDisplayed={2}
+                    pageRangeDisplayed={5}
+                    onPageChange={handlePageClick}
+                    containerClassName={"pagination"}
+                    pageClassName={"page-item"}
+                    pageLinkClassName={"page-link"}
+                    previousClassName={"page-item"}
+                    previousLinkClassName={"page-link"}
+                    nextClassName={"page-item"}
+                    nextLinkClassName={"page-link"}
+                    breakClassName={"page-item"}
+                    breakLinkClassName={"page-link"}
+                    activeClassName={"active"}
+                />
             </main>
-            <Footer/>
+            <Footer />
         </div>
     );
 }

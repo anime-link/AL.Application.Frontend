@@ -40,3 +40,26 @@
     scrollbar-width: thin;
     scrollbar-color: var(--bright-sun) var(--deep-koamaru);
 }
+
+@media (max-width: 430px) {
+    .chat-mensagem-area {
+        width: 96vw;
+        height: 80vh;
+        padding: 10px 15px;
+        margin: 65px 15px;
+    }
+
+    .chat-mensagem-titulo {
+        padding: 2px 50px;
+    }
+
+    .chat-mensagem-img {
+        width: 55px;
+    }
+
+    .chat-msg-container {
+        width: calc(100vw - 30px);
+        max-height: calc(100vh - 270px);
+        padding: 18px;
+    }
+}
