@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
 
-export default function CardRomance({ cardImgRomance, }) {
+export default function CardRomance({ cardImgRomance, title, sinopse }) {
     return (
         <div className="container-card">
             <div className="card-anime-romance"
@@ -11,15 +11,10 @@ export default function CardRomance({ cardImgRomance, }) {
 
             <div className="card-space-content">
                 <p className="card-romance-tittle">
-                    Horimya
+                    {title}
                 </p>
                 <p className="card-romance-text">
-                    gfdtujygijffryhdcutjdfyrhdfvikjfikjfkumjfumjtgbik
-                    6ufgikgholhoukgbolhnohnolholpjçgukhpolyholhkghnoljpçjpç
-                    hgikgoholhnolihiykghokg,hikgbikgbikgholhik,jhuk,uhok,ho
-                    ikgbnoljmoukgbiljpçuhgyikughtujgbukgukhikyhiughoyttuhghpoftujftgu
-                    7ikhj8olj0ogbiluj0iknoghlouniykghmyikghouyiukujiujkhujkjukjikjk
-                    iklikiykhjkoiyuhuhujm8yuhjyutjujutklukyutiujnbuuiijuyiuiutuyuityuyk
+                    {sinopse}
                 </p>
             </div>
 

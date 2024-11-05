@@ -15,6 +15,14 @@
 
 }
 
+.boasVindas-titulo p{
+    margin-left: 107px;
+    font: var(--app-section);
+    padding-top: 10px;
+    text-shadow: 5px 10px 4px rgba(0, 0, 0, 75%);
+    font: var(--app-section);
+    color: var(--bright-sun);
+    
 .boasVindas-titulo p {
     width: 676px;
     margin-top: 80px;
@@ -35,6 +43,16 @@
 .admins {
     display: flex;
     align-items: center;
+    gap: 30px;
+    
+}
+
+.contate-nos p{
+    font: var(--text-24);
+}
+
+.admins p{
+    font: var(--text-24);
     gap: 21px;
 }
 

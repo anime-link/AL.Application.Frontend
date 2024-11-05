@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
 
-export default function CardTerror({ cardImgTerror}) {
+export default function CardTerror({ cardImgTerror, title, sinopse }) {
     return (
         <div className="container-card">
             <div className="card-anime-terror"
@@ -11,15 +11,10 @@ export default function CardTerror({ cardImgTerror}) {
 
             <div className="card-space-content">
                 <p className="card-terror-tittle">
-                    Horimya
+                    {title}
                 </p>
                 <p className="card-terror-text">
-                    gfdtujygijffryhdcutjdfyrhdfvikjfikjfkumjfumjtgbik
-                    6ufgikgholhoukgbolhnohnolholpjçgukhpolyholhkghnoljpçjpç
-                    hgikgoholhnolihiykghokg,hikgbikgbikgholhik,jhuk,uhok,ho
-                    ikgbnoljmoukgbiljpçuhgyikughtujgbukgukhikyhiughoyttuhghpoftujftgu
-                    7ikhj8olj0ogbiluj0iknoghlouniykghmyikghouyiukujiujkhujkjukjikjk
-                    iklikiykhjkoiyuhuhujm8yuhjyutjujutklukyutiujnbuuiijuyiuiutuyuityuyk
+                    {sinopse}
                 </p>
             </div>
 

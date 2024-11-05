@@ -16,7 +16,6 @@
     overflow: hidden;
 
     background-color: var(--deep-koamaru);
-
 }
 
 .romance-body{
@@ -45,17 +44,16 @@
 
 .icon-return{
     font-size: 100px;
-    color:  var(--gradient-black);
-
+    
     transition: 0.5s ease-in-out;
 }
 
-.icon-return:hover {
+.button-return:hover {
     color: var(--bright-sun);
     transform: scale(1.2);
 }
 
-.icon-return:active {
+.button-return:active {
     color: var(--bright-sun);
     opacity: 50%;
 }
@@ -64,11 +62,57 @@
     display: flex;
     justify-content: center;
     margin-right: 413px;
-    margin-left: 50px;
+    margin-left: 110px;
 }
 
 .romance-tittle{
     font: var(--app-section);
-    font-size: 70px;
+    font-size: 90px;
     text-shadow: 2px 2px 8px black;
 }
+
+.button-return{
+    color: rgb(221, 222, 223);
+}
+
+.text_pagination{
+    font: var(--text-16);
+    color: var(--bright-sun);
+    margin-bottom: 293px;
+}
+
+.pagination{
+    color: blueviolet;
+    font: var(--header-40);
+   
+}
+
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .page-item {
+    margin: 0 5px;
+  }
+  
+  .page-link {
+    padding: 8px 12px;
+    border: 2px solid var(--bright-sun);
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    
+  }
+  
+  .page-link:hover {
+    background-color: #e9ecef;
+  }
+  
+  .active .page-link {
+    background-color: var(--bright-sun);
+    color: white;
+    border-color: var(--chetwode-blue);
+  }
+  

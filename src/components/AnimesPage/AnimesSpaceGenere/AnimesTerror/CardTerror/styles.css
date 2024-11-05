@@ -13,7 +13,7 @@
     gap: 27px;
 }
 
-.card-anime-acao{
+.card-anime-terror{
     width: 263px;
     height: 307px;
     background-color: rgb(92, 92, 95);
@@ -21,9 +21,14 @@
     cursor: pointer;
 }
 
-.card-acao-tittle{
+.card-terror-text{
+    font: var(--text-20);
+}
+
+.card-terror-tittle{
     padding-top: 2px;
     font: var(--text-32);
+    color: var(--bright-sun);
 }
 
 .card-space-content{
