@@ -1,25 +1,20 @@
 import React from 'react';
 import './styles.css';
 
-export default function CardEsporte({ cardImgEsporte}) {
+export default function CardEsporte({ cardImgEsporte, title, sinopse }) {
     return (
         <div className="container-card">
-            <div className="card-anime-acao"
+            <div className="card-anime-esporte"
                 style={{ backgroundImage: `url(${cardImgEsporte})` }}
             >
             </div>
 
             <div className="card-space-content">
                 <p className="card-esporte-tittle">
-                    Horimya
+                    {title}
                 </p>
                 <p className="card-esporte-text">
-                    gfdtujygijffryhdcutjdfyrhdfvikjfikjfkumjfumjtgbik
-                    6ufgikgholhoukgbolhnohnolholpjçgukhpolyholhkghnoljpçjpç
-                    hgikgoholhnolihiykghokg,hikgbikgbikgholhik,jhuk,uhok,ho
-                    ikgbnoljmoukgbiljpçuhgyikughtujgbukgukhikyhiughoyttuhghpoftujftgu
-                    7ikhj8olj0ogbiluj0iknoghlouniykghmyikghouyiukujiujkhujkjukjikjk
-                    iklikiykhjkoiyuhuhujm8yuhjyutjujutklukyutiujnbuuiijuyiuiutuyuityuyk
+                    {sinopse}
                 </p>
             </div>
 
