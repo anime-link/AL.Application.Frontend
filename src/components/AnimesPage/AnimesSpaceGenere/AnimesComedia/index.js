@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
 import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
+import { RiArrowLeftCircleFill } from "react-icons/ri";
 import CardComedia from "./CardComedia";
 import Footer from "../../../Footer";
 import Header from '../../../Header';
@@ -84,6 +86,23 @@ export default function AnimesComedia() {
                     breakLinkClassName={"page-link"}
                     activeClassName={"active"}
                 />
+                    <diV className="comedia-icon-voltar">
+                        <Link className="icon-return" to={"/animes"}>
+                            <RiArrowLeftCircleFill alt="Fechar" />
+                        </Link>
+                    </diV>
+                    <p className="comedia-tittle">Comedia</p>
+                </div>
+
+                <div>
+                    <CardComedia />
+                    <CardComedia />
+                    <CardComedia />
+                    <CardComedia />
+                    <CardComedia />
+                    <CardComedia />
+                    <CardComedia />
+                </div>
             </main>
             <Footer />
         </div>

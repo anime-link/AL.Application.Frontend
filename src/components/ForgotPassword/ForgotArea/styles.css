@@ -73,3 +73,29 @@
     filter: brightness(1.1);
     transform: scale(1.1);
 }
+
+@media (max-width: 430px) {
+    .esquecer-area {
+        width: 320px;
+    }
+
+    .esquecer-label {
+        font: var(--text-16);
+    }
+
+    .esquecer-input {
+        width: 240px;
+        height: 40px;
+        font: var(--text-15);
+    }
+
+    .esquecer-input:focus::placeholder {
+        font: var(--text-15);
+    }
+
+    .esquecer-botao {
+        width: 120px;
+        height: 40px;
+        font: var(--text-16);
+    }
+}

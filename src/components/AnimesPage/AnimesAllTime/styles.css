@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: calc(100vw - 180px);
+    width: calc(100vw - 200px);
     margin-top: 190px;
     padding-bottom: 60px;
 
@@ -22,7 +22,6 @@
     display: flex;
     align-items: center;
     width: 70%;
-    margin: 0 auto;
 }
 
 .animes-pop-area .swiper-container {
@@ -76,4 +75,33 @@
 
 .animes-pop-depois {
     right: -153px;
+}
+
+@media (max-width: 430px) {
+    .animes-populares {
+        width: calc(100vw - 30px);
+        margin-top: 90px;
+    }
+
+    .animes-populares-titulo {
+        font: var(--app-text);
+    }
+
+    .animes-pop-area {
+        width: 90%;
+    }
+
+    .animes-pop-img-area {
+        margin-top: 20px;
+    }
+
+    .animes-pop-img {
+        width: 90px;
+        height: 134px;
+    }
+
+    .animes-pop-antes,
+    .animes-pop-depois {
+        display: none;
+    }
 }

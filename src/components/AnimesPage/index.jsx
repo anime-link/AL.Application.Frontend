@@ -90,7 +90,7 @@ export default function AnimesArea() {
                             Voltar ao início?
                         </button>
                     </div>
-                    <img src={luckyStar} alt="Lucky Star" width={500} height={500} />
+                    <img className="anime-voltar-inicio-img" src={luckyStar} alt="Lucky Star" width={500} height={500} />
                 </div>
             </div>
             <Footer />

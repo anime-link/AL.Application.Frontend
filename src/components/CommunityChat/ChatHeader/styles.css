@@ -33,21 +33,12 @@
     background-color: var(--bright-sun);
 }
 
-.chat-header-funcoes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.chat-header-voltar,
-.chat-header-esconder {
+.chat-header-voltar {
     cursor: pointer;
     transition: 0.5s ease-in-out;
 }
 
-.chat-header-voltar:hover,
-.chat-header-esconder:hover {
+.chat-header-voltar:hover {
     transform: scale(1.1);
     filter: brightness(1.1);
 }
@@ -56,7 +47,23 @@
     color: var(--bright-sun);
 }
 
-.chat-header-esconder {
-    background-color: var(--bright-sun);
-    border-radius: 50%;
+@media (max-width: 430px) {
+    .chat-header-area {
+        flex-direction: row;
+        width: 100vw;
+        height: 50px;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .chat-header-usuario {
+        margin-top: 0;
+        width: 35px;
+        height: auto;
+    }
+    
+    .chat-header-divisor {
+        display: none;
+        margin-top: 0;
+    }
 }

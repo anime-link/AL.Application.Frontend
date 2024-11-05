@@ -10,15 +10,15 @@
   background-repeat: no-repeat;
   background-blend-mode: multiply;
   background-color: var(--deep-koamaru);
-  cursor: pointer; 
-  
+  cursor: pointer;
+
   transition: 0.5s ease-in-out;
- 
+
 }
 
 .anime-card:hover {
   filter: brightness(1.1);
-  transform: scale(1.03);
+  transform: scale(1.1);
   opacity: 0.9;
 }
 
@@ -31,11 +31,13 @@
   font: var(--header-64);
 }
 
+@media (max-width: 430px) {
+  .anime-card {
+    width: calc(100vw - 60px);
+    height: 160px;
+  }
 
-
-
-
-
-
-
-
+  .anime-title {
+    font: var(--header-36);
+  }
+}

@@ -12,21 +12,21 @@ export default function SinopseIndication({ props }) {
   return (
     <div className="indication-area">
       {
-              isOpen && <ModalImage />
+        isOpen && <ModalImage />
       }
       <div className="indication-container">
         <div className="content-information">
-          <img src={imageBrothers}  className="explanation-img" alt="Descrição da imagem" />
+          <img src={imageBrothers} className="explanation-img" alt="Descrição da imagem" />
           <div className="container-content-text">
             <p className="content-text">Hey Bestofrendo, vocês podem ajudar nossa comunidade adicionando ao lado, onde pode ser assistido esse anime!</p>
           </div>
-        </div>         
+        </div>
         <div className="indication-link">
-          <RiFilmLine className="icon-film"/>
+          <RiFilmLine className="icon-film" />
           <ul>
-          <button onClick={() => setIsOpen(!isOpen)}>
-              <RiAddBoxFill className="icon-add"/>
-          </button>
+            <button onClick={() => setIsOpen(!isOpen)}>
+              <RiAddBoxFill className="icon-add" />
+            </button>
           </ul>
         </div>
       </div>
