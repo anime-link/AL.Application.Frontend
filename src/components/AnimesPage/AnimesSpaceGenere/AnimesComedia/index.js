@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
 import { Link } from 'react-router-dom'; 
-import { Link } from 'react-router-dom';
-import { RiArrowLeftCircleFill } from "react-icons/ri";
 import CardComedia from "./CardComedia";
 import Footer from "../../../Footer";
 import Header from '../../../Header';
 import { getJikanGenres } from '../../../../services/AnimeAPI/AnimeApi';
 import ReactPaginate from 'react-paginate';
-import { RiArrowLeftCircleFill } from "react-icons/ri";
+import { RiArrowLeftCircleFill} from "react-icons/ri";
+
+import { BACKEND_URL } from '../../../config';
 
 export default function AnimesComedia() {
+
+    // console.log( "Backend:" + BACKEND_URL);
+
+
     const [animes, setAnimes] = useState([]);
     const [loading, setLoading] = useState(true);
     const [currentPage, setCurrentPage] = useState(0);
@@ -19,7 +23,7 @@ export default function AnimesComedia() {
     useEffect(() => {
         const fetchAnimes = async () => {
             try {
-                const animeGenre = await getJikanGenres(4);
+                const animeGenre = await getJikanGenres(31);
                 console.log(Object.keys(animeGenre).length)
                 setAnimes(animeGenre);
             } catch (error) {
@@ -53,7 +57,7 @@ export default function AnimesComedia() {
                             <RiArrowLeftCircleFill className="button-return" alt="Fechar" />
                         </Link>
                     </div>
-                    <p className="-tittle">Comédia</p>
+                    <p className="comedia-tittle">Comedia</p>
                 </div>
                 <div>
                     {currentAnimes.map(anime => (
@@ -86,23 +90,6 @@ export default function AnimesComedia() {
                     breakLinkClassName={"page-link"}
                     activeClassName={"active"}
                 />
-                    <diV className="comedia-icon-voltar">
-                        <Link className="icon-return" to={"/animes"}>
-                            <RiArrowLeftCircleFill alt="Fechar" />
-                        </Link>
-                    </diV>
-                    <p className="comedia-tittle">Comedia</p>
-                </div>
-
-                <div>
-                    <CardComedia />
-                    <CardComedia />
-                    <CardComedia />
-                    <CardComedia />
-                    <CardComedia />
-                    <CardComedia />
-                    <CardComedia />
-                </div>
             </main>
             <Footer />
         </div>

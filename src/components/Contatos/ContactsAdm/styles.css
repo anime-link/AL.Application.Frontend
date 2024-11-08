@@ -1,6 +1,7 @@
 .adm-card {
     width: calc(100vw - 200px);
     height: 520px;
+}
 
 .adm-card{
     position: relative;

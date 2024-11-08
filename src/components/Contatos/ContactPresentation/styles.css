@@ -1,5 +1,4 @@
 
-.bemVindos-area {
 .bemVindos-area{
     display: flex;
     flex-direction: column;
@@ -24,6 +23,7 @@
     text-shadow: 5px 10px 4px rgba(0, 0, 0, 75%);
     font: var(--app-section);
     color: var(--bright-sun);
+}
     
 .boasVindas-titulo p {
     width: 676px;
