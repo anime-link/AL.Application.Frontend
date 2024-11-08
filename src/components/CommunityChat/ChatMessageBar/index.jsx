@@ -22,7 +22,7 @@ export default function ChatBarraMensagem() {
             console.log("User not found");
         }
 
-        axios.get(`http://localhost:8080/mensagens?chatId=${chatId}`)
+        axios.get(`http://animeapi.us-east-1.elasticbeanstalk.com/mensagens?chatId=${chatId}`)
           .then((response) => {
             setMessages(response.data);
             scrollToBottom();
@@ -33,7 +33,7 @@ export default function ChatBarraMensagem() {
     }, [chatId]);
 
     useEffect(() => {
-        const webSocket = new WebSocket(`ws://localhost:8080/chat/${chatId}`);
+        const webSocket = new WebSocket(`ws://animeapi.us-east-1.elasticbeanstalk.com/chat/${chatId}`);
         setSocket(webSocket);
     
         webSocket.onopen = () => {
@@ -43,7 +43,7 @@ export default function ChatBarraMensagem() {
         webSocket.onmessage = (event) => {
           const newMessage = JSON.parse(event.data);
           setMessages((prevMessages) => [...prevMessages, newMessage]);
-          scrollToBottom();
+          setTimeout(scrollToBottom, 100);
         };
     
         webSocket.onclose = () => {
@@ -68,7 +68,7 @@ export default function ChatBarraMensagem() {
             socket.send(JSON.stringify(newMessage));
 
             // Armazenar a mensagem no MongoDB
-            axios.post(`http://localhost:8080/mensagens`, newMessage)
+            axios.post(`http://animeapi.us-east-1.elasticbeanstalk.com/mensagens`, newMessage)
                 .then(response => {
                     console.log('Mensagem salva com sucesso', response.data);
                 })
@@ -77,10 +77,17 @@ export default function ChatBarraMensagem() {
                 });
 
             setMessage('');
+
+            scrollToBottom();
+
         } else {
             alert('Não foi possível enviar a mensagem. Tente novamente mais tarde.');
         }
     };
+
+    useEffect(() => {
+        scrollToBottom();
+    }, [message]);
 
     return (
         <div className="chat-msg-barra-area">

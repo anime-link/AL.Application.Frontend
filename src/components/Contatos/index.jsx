@@ -40,7 +40,6 @@ export default function ContatosAdm() {
                 </div>
                 <div className='contatos-totoro'>
                     <img className='contatos-totoro-img' src={totoro} alt="Totoro" />
-                    <img src={totoro} alt="Totoro" />
                 </div>
             </main>
             <Footer />

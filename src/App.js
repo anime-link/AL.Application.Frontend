@@ -21,6 +21,12 @@ import ResultadosPesquisa from './components/SearchResults';
 import Usuario from './components/UserPage';
 
 function App() {
+  const apiUrl = process.env.REACT_APP_BACKEND_URL;
+  const environment = process.env.REACT_APP_ENVIRONMENT;
+
+  console.log('API_URL', apiUrl);
+  console.log('ENVIRONMENT', environment);
+
   return (
     <div>
       <BrowserRouter>

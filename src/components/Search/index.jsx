@@ -3,7 +3,6 @@ import "./styles.css";
 import { RiCloseLine, RiSearchLine } from "react-icons/ri";
 import pochita from "../../assets/Images/Communities/pochita-img.png";
 import { useNavigate } from "react-router-dom";
-import debounce from "lodash.debounce";
 
 export default function Pesquisa({ placeholder, sugestoes = [], tipo }) {
     const [valor, setValor] = useState("");

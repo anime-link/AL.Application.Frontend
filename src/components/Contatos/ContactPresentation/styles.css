@@ -2,12 +2,12 @@
 .bemVindos-area{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 100vw;
     padding-left: 106px;
     padding-bottom: 95px;
 
     box-shadow: inset 850px 0 60px rgba(0, 0, 0, 50%);
-    background: url("../../../assets/Images/Contatos/bemVindoBackground.png");
+    background-image: url('../../../assets/Images/Contatos/bemVindoBackground.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-clip: border-box;
@@ -16,25 +16,7 @@
 
 }
 
-.boasVindas-titulo p{
-    margin-left: 107px;
-    font: var(--app-section);
-    padding-top: 10px;
-    text-shadow: 5px 10px 4px rgba(0, 0, 0, 75%);
-    font: var(--app-section);
-    color: var(--bright-sun);
-}
-    
-.boasVindas-titulo p {
-    width: 676px;
-    margin-top: 80px;
-
-    text-shadow: 5px 10px 4px rgba(0, 0, 0, 75%);
-    font: var(--app-section);
-    
-}
-
-.boasVindas-titulo p{
+.boasVindas-titulo {
     width: 676px;
     margin-top: 80px;
 

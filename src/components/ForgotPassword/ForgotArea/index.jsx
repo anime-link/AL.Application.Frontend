@@ -10,7 +10,7 @@ export default function EsqueciSenhaArea() {
         e.preventDefault();
 
         try {
-            const response = await fetch(`http://localhost:8080/usuario/esqueci-senha?email=${email}`, {
+            const response = await fetch(`http://animeapi.us-east-1.elasticbeanstalk.com//usuario/esqueci-senha?email=${email}`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email })

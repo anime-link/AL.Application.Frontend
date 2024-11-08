@@ -31,7 +31,9 @@ export default function LoginArea() {
       // Armazenar no localStorage se "manter conectado" estiver ativado
       if (manterConectado) {
         localStorage.setItem('user', JSON.stringify(userData));
+        console.log("Usuário existente: ", userData);
       }
+
 
       setEmail('');
       setSenha('');

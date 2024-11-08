@@ -6,9 +6,9 @@ import { RiUserVoiceFill } from "react-icons/ri";
 export default function ContatosBemVindo() {
     return (
         <div className="bemVindos-area">
-            <div className="boasVindas-titulo">
-                <p>Bem Vindo a pagína de contatos</p>
-            </div>
+            <h1 className="boasVindas-titulo">
+                Bem Vindo a pagína de contatos
+            </h1>
 
             <div className="boasVindas-cont">
                 <div className="contate-nos" >
