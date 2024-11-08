@@ -6,7 +6,7 @@
 
     background: var(--gradient-black);
     color: #ffff;
-    width: 1366px;
+    width: 100vw;
     background: url("../../../assets/Images/Sinopse/akameGaKill.png"),
         var(--gradient-black);
     background-repeat: no-repeat;

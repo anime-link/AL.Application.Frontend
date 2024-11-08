@@ -64,7 +64,7 @@ const AnimesLaunch = () => {
       <h1 className='lancamentos-titulo'>Lançamentos</h1>
       <div className='lancamentos-slider'>
         <Swiper
-          spaceBetween={25}
+          spaceBetween={-10}
           slidesPerView={3}
           centeredSlides={true}
           navigation={{
