@@ -1,23 +1,30 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
-import { Link } from 'react-router-dom'; 
-import CardAcao from "./CardAcao";
+import { Link, useNavigate } from 'react-router-dom'; 
+import CardComedia from "./CardComedia";
 import Footer from "../../../Footer";
 import Header from '../../../Header';
 import { getJikanGenres } from '../../../../services/AnimeAPI/AnimeApi';
 import ReactPaginate from 'react-paginate';
 import { RiArrowLeftCircleFill} from "react-icons/ri";
 
-export default function AnimesAcao() {
+import { BACKEND_URL } from '../../../config';
+
+export default function AnimesComedia() {
+
+    // console.log( "Backend:" + BACKEND_URL);
+
+
     const [animes, setAnimes] = useState([]);
     const [loading, setLoading] = useState(true);
     const [currentPage, setCurrentPage] = useState(0);
     const itemsPerPage = 5;
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchAnimes = async () => {
             try {
-                const animeGenre = await getJikanGenres(1);
+                const animeGenre = await getJikanGenres(31);
                 console.log(Object.keys(animeGenre).length)
                 setAnimes(animeGenre);
             } catch (error) {
@@ -41,25 +48,30 @@ export default function AnimesAcao() {
         setCurrentPage(data.selected);
     };
 
+    const handleAnimePage = (animeId) => {
+        navigate(`/anime/${animeId}`);
+    }
+
     return (
-        <div className="acao-area">
+        <div className="comedia-area">
             <Header />
-            <main className="acao-body">
-                <div className="acao-back">
-                    <div className="acao-icon-voltar">
+            <main className="comedia-body">
+                <div className="comedia-back">
+                    <div className="comedia-icon-voltar">
                         <Link className="icon-return" to={"/animes"}>
                             <RiArrowLeftCircleFill className="button-return" alt="Fechar" />
                         </Link>
                     </div>
-                    <p className="acao-tittle">Ação</p>
+                    <p className="comedia-tittle">Comedia</p>
                 </div>
                 <div>
                     {currentAnimes.map(anime => (
-                        <CardAcao 
+                        <CardComedia
                             key={anime.id}
-                            cardImgAcao={anime.image}
+                            cardImgComedia={anime.image}
                             title={anime.title}
                             sinopse={anime.description}
+                            handleAnimePage={() => handleAnimePage(anime.id)}
                         />
                     ))}
                 </div>

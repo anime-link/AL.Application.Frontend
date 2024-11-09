@@ -1,11 +1,13 @@
 import React from 'react';
 import './styles.css';
+import { useNavigate } from 'react-router-dom';
 
-export default function CardEsporte({ cardImgEsporte, title, sinopse }) {
+export default function CardEsporte({ cardImgEsporte, title, sinopse, handleAnimePage }) {
     return (
         <div className="container-card">
             <div className="card-anime-esporte"
                 style={{ backgroundImage: `url(${cardImgEsporte})` }}
+                onClick={handleAnimePage}
             >
             </div>
 

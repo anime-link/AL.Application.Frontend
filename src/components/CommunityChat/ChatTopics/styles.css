@@ -5,7 +5,8 @@
     text-align: center;
     padding-left: 186px;
     padding-right: 86px;
-    height: 100%;
+    height: 100vh;
+    overflow-x: hidden;
 
     background-color: rgba(51, 51, 51, 0.8);
 }
@@ -51,6 +52,22 @@
     background-color: rgba(237, 185, 34, 0.8);
     border-radius: 10px;
     color: var(--white);
+}
+
+.chat-topicos-img {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chat-topicos-img > img {
+    border-radius: 50%;
+}  
+
+.chat-topicos-img > p {
+    font: var(--header-24);
+    color: var(--bright-sun);
 }
 
 @media (max-width: 430px) {

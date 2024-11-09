@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
-import { Link } from 'react-router-dom'; 
+import { Link, useNavigate } from 'react-router-dom'; 
 import CardMisterio from "./CardMisterio";
 import Footer from "../../../Footer";
 import Header from '../../../Header';
@@ -13,6 +13,8 @@ export default function AnimesMisterio() {
     const [loading, setLoading] = useState(true);
     const [currentPage, setCurrentPage] = useState(0);
     const itemsPerPage = 5;
+    const navigate = useNavigate();
+
 
     useEffect(() => {
         const fetchAnimes = async () => {
@@ -41,6 +43,10 @@ export default function AnimesMisterio() {
         setCurrentPage(data.selected);
     };
 
+    const handleAnimePage = (animeId) => {
+        navigate(`/anime/${animeId}`);
+    }
+
     return (
         <div className="misterio-area">
             <Header />
@@ -60,6 +66,7 @@ export default function AnimesMisterio() {
                             cardImgMisterio={anime.image}
                             title={anime.title}
                             sinopse={anime.description}
+                            handleAnimePage={() => handleAnimePage(anime.id)}
                         />
                     ))}
                 </div>

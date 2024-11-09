@@ -1,23 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
-import { Link } from 'react-router-dom'; 
-import CardRomance from "./CardRomance";
+import { Link, useNavigate } from 'react-router-dom'; 
+import CardTerror from "./CardTerror";
 import Footer from "../../../Footer";
 import Header from '../../../Header';
 import { getJikanGenres } from '../../../../services/AnimeAPI/AnimeApi';
 import ReactPaginate from 'react-paginate';
 import { RiArrowLeftCircleFill} from "react-icons/ri";
 
-export default function AnimesRomance() {
+export default function AnimesTerror() {
     const [animes, setAnimes] = useState([]);
     const [loading, setLoading] = useState(true);
     const [currentPage, setCurrentPage] = useState(0);
     const itemsPerPage = 5;
+    const navigate = useNavigate();
+
 
     useEffect(() => {
         const fetchAnimes = async () => {
             try {
-                const animeGenre = await getJikanGenres(8);
+                const animeGenre = await getJikanGenres(10);
                 console.log(Object.keys(animeGenre).length)
                 setAnimes(animeGenre);
             } catch (error) {
@@ -41,25 +43,30 @@ export default function AnimesRomance() {
         setCurrentPage(data.selected);
     };
 
+    const handleAnimePage = (animeId) => {
+        navigate(`/anime/${animeId}`);
+    }
+
     return (
-        <div className="romance-area">
+        <div className="terror-area">
             <Header />
-            <main className="romance-body">
-                <div className="romance-back">
-                    <div className="romance-icon-voltar">
+            <main className="terror-body">
+                <div className="terror-back">
+                    <div className="terror-icon-voltar">
                         <Link className="icon-return" to={"/animes"}>
                             <RiArrowLeftCircleFill className="button-return" alt="Fechar" />
                         </Link>
                     </div>
-                    <p className="romance-tittle">Romance</p>
+                    <p className="acao-tittle">Terror</p>
                 </div>
                 <div>
                     {currentAnimes.map(anime => (
-                        <CardRomance 
+                        <CardTerror 
                             key={anime.id}
-                            cardImgRomance={anime.image}
+                            cardImgTerror={anime.image}
                             title={anime.title}
                             sinopse={anime.description}
+                            handleAnimePage={() => handleAnimePage(anime.id)}
                         />
                     ))}
                 </div>

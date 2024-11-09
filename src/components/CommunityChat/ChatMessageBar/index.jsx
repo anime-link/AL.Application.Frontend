@@ -101,7 +101,6 @@ export default function ChatBarraMensagem() {
                     required
                 />
                 <div className="chat-msg-icone-area">
-                    <RiEmotionHappyFill className="chat-msg-icone" fontSize={35} />
                     <RiSendPlane2Fill className="chat-msg-icone" fontSize={35} onClick={handleSendMessage} />
                 </div>
             </div>
