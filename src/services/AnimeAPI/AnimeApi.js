@@ -34,6 +34,8 @@ export const getJikanAnimeDetails = async (animeId) => {
     title: data.data.title,
     posterImage: data.data.images.jpg.image_url,
     coverImage: data.data.images.jpg.large_image_url,
+    episodes: data.data.episodes,
+    status: data.data.status,
     synopsis: data.data.synopsis,
     rating: data.data.score,
     genres: data.data.genres.map(genre => genre.name)
