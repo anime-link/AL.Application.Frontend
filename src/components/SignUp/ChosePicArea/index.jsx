@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import "./styles.css";
 import imgPadrao from "../../../assets/Images/SignUp/profile-pic-choosen.webp";
 import { AreaEscolhaImagem } from "./ChoosePic";
+import { useProfileImage } from "../../../services/PicContext";
 
 export function AreaImagemPerfil() {
+    const { setProfileImage } = useProfileImage();
 
     // Mudança de imagens
     const [imgSelecionada, setImgSelecionada] = useState(imgPadrao);
@@ -15,6 +17,7 @@ export function AreaImagemPerfil() {
 
         setTimeout(() => {
             setImgSelecionada(novaImg); // Atualização da imagem
+            setProfileImage(novaImg); // Definição de imagem no context
             setAnimation("fade-in") // Inica a animação de opacidade 1
         }, 300);
     };

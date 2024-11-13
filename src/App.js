@@ -19,6 +19,7 @@ import EsquecerSenha from './pages/ForgotPassword';
 import MudarSenha from './pages/ChangePassword';
 import ResultadosPesquisa from './components/SearchResults';
 import Usuario from './components/UserPage';
+import { ProfileImageProvider } from './services/PicContext';
 
 function App() {
   const apiUrl = process.env.REACT_APP_BACKEND_URL;
@@ -28,7 +29,7 @@ function App() {
   console.log('ENVIRONMENT', environment);
 
   return (
-    <div>
+    <ProfileImageProvider>
       <BrowserRouter>
         <Routes>
           <Route element={<Home />} path='/' />
@@ -51,7 +52,7 @@ function App() {
           <Route element={<Usuario />} path='/usuario' />
         </Routes>
       </BrowserRouter>
-    </div>
+    </ProfileImageProvider>
   );
 }
 

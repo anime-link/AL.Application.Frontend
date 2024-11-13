@@ -3,8 +3,10 @@ import "./styles.css";
 import logo from "../../assets/logo-animelink.svg";
 import user from "../../assets/Images/SignUp/profile-pic-choosen.webp";
 import { Link, NavLink, useNavigate } from "react-router-dom";
+import { useProfileImage } from "../../services/PicContext";
 
 export default function Header() {
+    const { profileImage } = useProfileImage();
     const navigate = useNavigate();
 
     const handleHomePage = () => navigate("/");
@@ -29,7 +31,12 @@ export default function Header() {
                     </NavLink>
                 </div>
                 <button className={({ isActive }) => isActive ? "header-usuario active" : "header-usuario"} onClick={handleUserPage}>
-                    <img className="header-usuario-img" width={57} height={57} src={user} alt="Usuário" />
+                    <img
+                        className="header-usuario-img"
+                        width={57}
+                        height={57}
+                        src={profileImage || user}
+                        alt="Usuário" />
                 </button>
             </div>
         </header>
