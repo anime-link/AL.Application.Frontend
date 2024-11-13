@@ -17,7 +17,7 @@ export default function Header() {
             <div className="header-area">
                 <button className="header-logo-area" onClick={handleHomePage}>
                     <img className="header-logo" src={logo} alt="AnimeLink" />
-                    <p className="header-logo-texto">AnimeLink</p>
+                    <p className="header-logo-texto">AnimesLink</p>
                 </button>
                 <div className="header-paginas">
                     <NavLink to={"/comunidades"} className={({ isActive }) => isActive ? "header-pagina active" : "header-pagina"}>
