@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.css";
 import logo from "../../assets/logo-animelink.svg";
-import user from "../../assets/Images/SignUp/profile-pic-choosen.webp";
+import user from "../../assets/Images/SignUp/profile-pic-choosen.jpeg";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useProfileImage } from "../../services/PicContext";
 

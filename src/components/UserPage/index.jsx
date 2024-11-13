@@ -4,7 +4,7 @@ import Header from '../Header/index.jsx';
 import { RiPencilFill, RiStarFill } from 'react-icons/ri';
 import { Link } from "react-router-dom";
 import UsuarioInput from "./UserInput/index.jsx";
-import userImg from '../../assets/Images/SignUp/profile-pic-choosen.webp';
+import userImg from '../../assets/Images/SignUp/profile-pic-choosen.jpeg';
 
 export default function Usuario() {
     return (

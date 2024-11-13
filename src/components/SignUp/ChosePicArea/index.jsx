@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./styles.css";
-import imgPadrao from "../../../assets/Images/SignUp/profile-pic-choosen.webp";
+import imgPadrao from "../../../assets/Images/SignUp/profile-pic-choosen.jpeg";
 import { AreaEscolhaImagem } from "./ChoosePic";
 import { useProfileImage } from "../../../services/PicContext";
 
