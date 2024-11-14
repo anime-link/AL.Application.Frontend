@@ -1,12 +1,13 @@
 import React from "react";
 import './styles.css';
 import Header from '../Header/index.jsx';
-import { RiPencilFill, RiStarFill } from 'react-icons/ri';
-import { Link } from "react-router-dom";
+import { RiPencilFill } from 'react-icons/ri';
 import UsuarioInput from "./UserInput/index.jsx";
-import userImg from '../../assets/Images/SignUp/profile-pic-choosen.jpeg';
+import { useProfileImage } from "../../services/PicContext/index.js";
 
 export default function Usuario() {
+    const { profileImage } = useProfileImage();
+
     return (
         <div className="usuario-area">
             <Header />
@@ -16,7 +17,7 @@ export default function Usuario() {
                     <div className="usuario-foto-fav">
                         <img
                             className="usuario-foto"
-                            src={userImg}
+                            src={profileImage}
                             width={220}
                             height={220}
                             alt="Perfil"
