@@ -24,7 +24,7 @@ export default function AnimesComedia() {
     useEffect(() => {
         const fetchAnimes = async () => {
             try {
-                const animeGenre = await getJikanGenres(31);
+                const animeGenre = await getJikanGenres(4);
                 console.log(Object.keys(animeGenre).length)
                 setAnimes(animeGenre);
             } catch (error) {

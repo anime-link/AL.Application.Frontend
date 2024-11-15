@@ -19,7 +19,7 @@ export default function AnimesMisterio() {
     useEffect(() => {
         const fetchAnimes = async () => {
             try {
-                const animeGenre = await getJikanGenres(14);
+                const animeGenre = await getJikanGenres(7);
                 console.log(Object.keys(animeGenre).length)
                 setAnimes(animeGenre);
             } catch (error) {

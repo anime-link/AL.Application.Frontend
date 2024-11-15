@@ -19,7 +19,7 @@ export default function AnimesEsporte() {
     useEffect(() => {
         const fetchAnimes = async () => {
             try {
-                const animeGenre = await getJikanGenres(31);
+                const animeGenre = await getJikanGenres(30);
                 console.log(Object.keys(animeGenre).length)
                 setAnimes(animeGenre);
             } catch (error) {

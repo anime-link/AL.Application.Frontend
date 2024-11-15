@@ -19,7 +19,7 @@ export default function AnimesTerror() {
     useEffect(() => {
         const fetchAnimes = async () => {
             try {
-                const animeGenre = await getJikanGenres(10);
+                const animeGenre = await getJikanGenres(14);
                 console.log(Object.keys(animeGenre).length)
                 setAnimes(animeGenre);
             } catch (error) {

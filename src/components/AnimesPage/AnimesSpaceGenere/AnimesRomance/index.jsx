@@ -19,7 +19,7 @@ export default function AnimesRomance() {
     useEffect(() => {
         const fetchAnimes = async () => {
             try {
-                const animeGenre = await getJikanGenres(8);
+                const animeGenre = await getJikanGenres(22);
                 console.log(Object.keys(animeGenre).length)
                 setAnimes(animeGenre);
             } catch (error) {
