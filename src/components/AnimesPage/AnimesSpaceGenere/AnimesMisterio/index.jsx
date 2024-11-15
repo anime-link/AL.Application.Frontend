@@ -5,8 +5,9 @@ import CardMisterio from "./CardMisterio";
 import Footer from "../../../Footer";
 import Header from '../../../Header';
 import { getJikanGenres } from '../../../../services/AnimeAPI/AnimeApi';
+import { translateText } from '../../../../services/translateService'; 
 import ReactPaginate from 'react-paginate';
-import { RiArrowLeftCircleFill} from "react-icons/ri";
+import { RiArrowLeftCircleFill } from "react-icons/ri";
 
 export default function AnimesMisterio() {
     const [animes, setAnimes] = useState([]);
@@ -15,21 +16,31 @@ export default function AnimesMisterio() {
     const itemsPerPage = 5;
     const navigate = useNavigate();
 
-
     useEffect(() => {
-        const fetchAnimes = async () => {
+        const fetchAndTranslateAnimes = async () => {
             try {
                 const animeGenre = await getJikanGenres(7);
                 console.log(Object.keys(animeGenre).length)
                 setAnimes(animeGenre);
+
+                // Traduz os títulos e descrições
+                const translatedAnimes = await Promise.all(
+                    animeGenre.map(async (anime) => ({
+                        ...anime,
+                        title: await translateText(anime.title, 'pt'),
+                        description: await translateText(anime.description || 'Sem descrição disponível.', 'pt')
+                    }))
+                );
+
+                setAnimes(translatedAnimes);
             } catch (error) {
-                console.error('Erro ao buscar os animes de tal gênero: ', error);
+                console.error('Erro ao buscar ou traduzir os animes de mistério:', error);
             } finally {
                 setLoading(false);
             }
         };
 
-        fetchAnimes();
+        fetchAndTranslateAnimes();
     }, []);
 
     if (loading) return <div>Carregando...</div>;
@@ -45,7 +56,7 @@ export default function AnimesMisterio() {
 
     const handleAnimePage = (animeId) => {
         navigate(`/anime/${animeId}`);
-    }
+    };
 
     return (
         <div className="misterio-area">
@@ -57,15 +68,15 @@ export default function AnimesMisterio() {
                             <RiArrowLeftCircleFill className="button-return" alt="Fechar" />
                         </Link>
                     </div>
-                    <p className="misterio-tittle">Misterio</p>
+                    <p className="misterio-tittle">Mistério</p>
                 </div>
                 <div>
                     {currentAnimes.map(anime => (
                         <CardMisterio 
                             key={anime.id}
                             cardImgMisterio={anime.image}
-                            title={anime.title}
-                            sinopse={anime.description}
+                            title={anime.title} // Título traduzido
+                            sinopse={anime.description} // Descrição traduzida
                             handleAnimePage={() => handleAnimePage(anime.id)}
                         />
                     ))}
