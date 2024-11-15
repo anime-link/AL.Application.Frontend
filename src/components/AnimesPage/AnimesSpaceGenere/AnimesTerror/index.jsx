@@ -19,7 +19,9 @@ export default function AnimesTerror() {
     useEffect(() => {
         const fetchAndTranslateAnimes = async () => {
             try {
-                const animeGenre = await getJikanGenres(14); // Substitua por ID correto de "Terror"
+                const animeGenre = await getJikanGenres(14);
+                console.log(Object.keys(animeGenre).length)
+                setAnimes(animeGenre);
                 const translatedAnimes = await Promise.all(
                     animeGenre.map(async (anime) => ({
                         ...anime,

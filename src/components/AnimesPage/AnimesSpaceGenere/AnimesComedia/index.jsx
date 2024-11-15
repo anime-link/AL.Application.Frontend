@@ -19,8 +19,9 @@ export default function AnimesComedia() {
     useEffect(() => {
         const fetchAndTranslateAnimes = async () => {
             try {
-                // Busca os animes do gênero "Comédia"
-                const animeGenre = await getJikanGenres(4); // Substitua pelo ID correto do gênero "Comédia"
+                const animeGenre = await getJikanGenres(4);
+                console.log(Object.keys(animeGenre).length)
+                setAnimes(animeGenre); // Substitua pelo ID correto do gênero "Comédia"
 
                 // Aplica a tradução nos títulos e descrições
                 const translatedAnimes = await Promise.all(

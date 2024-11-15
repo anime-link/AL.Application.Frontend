@@ -3,6 +3,7 @@ import './styles.css';
 import Header from '../Header/index.jsx';
 import { RiPencilFill } from 'react-icons/ri';
 import UsuarioInput from "./UserInput/index.jsx";
+import defaultImg from '../../assets/Images/SignUp/profile-pic-choosen.jpeg';
 import { useProfileImage } from "../../services/PicContext/index.js";
 
 export default function Usuario() {
@@ -17,7 +18,7 @@ export default function Usuario() {
                     <div className="usuario-foto-fav">
                         <img
                             className="usuario-foto"
-                            src={profileImage}
+                            src={profileImage || defaultImg}
                             width={220}
                             height={220}
                             alt="Perfil"

@@ -19,7 +19,9 @@ export default function AnimesEsporte() {
     useEffect(() => {
         const fetchAndTranslateAnimes = async () => {
             try {
-                const animeGenre = await getJikanGenres(30); // Substitua por ID correto de "Esporte"
+                const animeGenre = await getJikanGenres(30);
+                console.log(Object.keys(animeGenre).length)
+                setAnimes(animeGenre);
                 const translatedAnimes = await Promise.all(
                     animeGenre.map(async (anime) => ({
                         ...anime,

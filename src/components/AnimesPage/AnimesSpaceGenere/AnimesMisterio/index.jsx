@@ -19,8 +19,9 @@ export default function AnimesMisterio() {
     useEffect(() => {
         const fetchAndTranslateAnimes = async () => {
             try {
-                // Substitua pelo ID correto do gênero "Mistério"
                 const animeGenre = await getJikanGenres(7);
+                console.log(Object.keys(animeGenre).length)
+                setAnimes(animeGenre);
 
                 // Traduz os títulos e descrições
                 const translatedAnimes = await Promise.all(

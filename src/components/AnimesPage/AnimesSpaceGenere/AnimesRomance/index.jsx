@@ -19,8 +19,9 @@ export default function AnimesRomance() {
     useEffect(() => {
         const fetchAndTranslateAnimes = async () => {
             try {
-                // Substitua pelo ID correto do gênero "Romance"
                 const animeGenre = await getJikanGenres(22);
+                console.log(Object.keys(animeGenre).length)
+                setAnimes(animeGenre);
 
                 // Traduz os títulos e descrições
                 const translatedAnimes = await Promise.all(
