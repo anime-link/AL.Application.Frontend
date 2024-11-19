@@ -5,16 +5,11 @@ import CardComedia from "./CardComedia";
 import Footer from "../../../Footer";
 import Header from '../../../Header';
 import { getJikanGenres } from '../../../../services/AnimeAPI/AnimeApi';
+import { translateText } from '../../../../services/translateService'; // Importação do serviço de tradução
 import ReactPaginate from 'react-paginate';
-import { RiArrowLeftCircleFill} from "react-icons/ri";
-
-import { BACKEND_URL } from '../../../config';
+import { RiArrowLeftCircleFill } from "react-icons/ri";
 
 export default function AnimesComedia() {
-
-    // console.log( "Backend:" + BACKEND_URL);
-
-
     const [animes, setAnimes] = useState([]);
     const [loading, setLoading] = useState(true);
     const [currentPage, setCurrentPage] = useState(0);
@@ -22,19 +17,30 @@ export default function AnimesComedia() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        const fetchAnimes = async () => {
+        const fetchAndTranslateAnimes = async () => {
             try {
-                const animeGenre = await getJikanGenres(31);
+                const animeGenre = await getJikanGenres(4);
                 console.log(Object.keys(animeGenre).length)
-                setAnimes(animeGenre);
+                setAnimes(animeGenre); // Substitua pelo ID correto do gênero "Comédia"
+
+                // Aplica a tradução nos títulos e descrições
+                const translatedAnimes = await Promise.all(
+                    animeGenre.map(async (anime) => ({
+                        ...anime,
+                        title: await translateText(anime.title, 'pt'),
+                        description: await translateText(anime.description || 'Sem descrição disponível.', 'pt')
+                    }))
+                );
+
+                setAnimes(translatedAnimes);
             } catch (error) {
-                console.error('Erro ao buscar os animes de tal gênero: ', error);
+                console.error('Erro ao buscar ou traduzir os animes de comédia:', error);
             } finally {
                 setLoading(false);
             }
         };
 
-        fetchAnimes();
+        fetchAndTranslateAnimes();
     }, []);
 
     if (loading) return <div>Carregando...</div>;
@@ -50,7 +56,7 @@ export default function AnimesComedia() {
 
     const handleAnimePage = (animeId) => {
         navigate(`/anime/${animeId}`);
-    }
+    };
 
     return (
         <div className="comedia-area">
@@ -62,15 +68,15 @@ export default function AnimesComedia() {
                             <RiArrowLeftCircleFill className="button-return" alt="Fechar" />
                         </Link>
                     </div>
-                    <p className="comedia-tittle">Comedia</p>
+                    <p className="comedia-tittle">Comédia</p>
                 </div>
                 <div>
                     {currentAnimes.map(anime => (
-                        <CardComedia
+                        <CardComedia 
                             key={anime.id}
                             cardImgComedia={anime.image}
-                            title={anime.title}
-                            sinopse={anime.description}
+                            title={anime.title} // Título traduzido
+                            sinopse={anime.description} // Descrição traduzida
                             handleAnimePage={() => handleAnimePage(anime.id)}
                         />
                     ))}

@@ -5,8 +5,9 @@ import CardTerror from "./CardTerror";
 import Footer from "../../../Footer";
 import Header from '../../../Header';
 import { getJikanGenres } from '../../../../services/AnimeAPI/AnimeApi';
+import { translateText } from '../../../../services/translateService'; 
 import ReactPaginate from 'react-paginate';
-import { RiArrowLeftCircleFill} from "react-icons/ri";
+import { RiArrowLeftCircleFill } from "react-icons/ri";
 
 export default function AnimesTerror() {
     const [animes, setAnimes] = useState([]);
@@ -15,26 +16,32 @@ export default function AnimesTerror() {
     const itemsPerPage = 5;
     const navigate = useNavigate();
 
-
     useEffect(() => {
-        const fetchAnimes = async () => {
+        const fetchAndTranslateAnimes = async () => {
             try {
-                const animeGenre = await getJikanGenres(10);
+                const animeGenre = await getJikanGenres(14);
                 console.log(Object.keys(animeGenre).length)
                 setAnimes(animeGenre);
+                const translatedAnimes = await Promise.all(
+                    animeGenre.map(async (anime) => ({
+                        ...anime,
+                        title: await translateText(anime.title, 'pt'),
+                        description: await translateText(anime.description || 'Sem descrição disponível.', 'pt')
+                    }))
+                );
+                setAnimes(translatedAnimes);
             } catch (error) {
-                console.error('Erro ao buscar os animes de tal gênero: ', error);
+                console.error('Erro ao buscar ou traduzir os animes de terror:', error);
             } finally {
                 setLoading(false);
             }
         };
 
-        fetchAnimes();
+        fetchAndTranslateAnimes();
     }, []);
 
     if (loading) return <div>Carregando...</div>;
 
-    // Cálculo de animes a serem exibidos na página atual
     const offset = currentPage * itemsPerPage;
     const currentAnimes = animes.slice(offset, offset + itemsPerPage);
     const pageCount = Math.ceil(animes.length / itemsPerPage);
@@ -45,7 +52,7 @@ export default function AnimesTerror() {
 
     const handleAnimePage = (animeId) => {
         navigate(`/anime/${animeId}`);
-    }
+    };
 
     return (
         <div className="terror-area">
@@ -57,7 +64,7 @@ export default function AnimesTerror() {
                             <RiArrowLeftCircleFill className="button-return" alt="Fechar" />
                         </Link>
                     </div>
-                    <p className="acao-tittle">Terror</p>
+                    <p className="terror-tittle">Terror</p>
                 </div>
                 <div>
                     {currentAnimes.map(anime => (
@@ -70,7 +77,6 @@ export default function AnimesTerror() {
                         />
                     ))}
                 </div>
-                {/* Componente de Paginação */}
                 <ReactPaginate
                     className="text_pagination"
                     previousLabel={"Anterior"}

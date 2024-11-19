@@ -22,7 +22,7 @@ export default function ChatBarraMensagem() {
             console.log("User not found");
         }
 
-        axios.get(`http://animeapi.us-east-1.elasticbeanstalk.com/mensagens?chatId=${chatId}`)
+        axios.get(`https://api.animeslink.com.br/mensagens?chatId=${chatId}`)
           .then((response) => {
             setMessages(response.data);
             scrollToBottom();
@@ -33,7 +33,7 @@ export default function ChatBarraMensagem() {
     }, [chatId]);
 
     useEffect(() => {
-        const webSocket = new WebSocket(`ws://animeapi.us-east-1.elasticbeanstalk.com/chat/${chatId}`);
+        const webSocket = new WebSocket(`ws://api.animeslink.com.br/chat/${chatId}`);
         setSocket(webSocket);
     
         webSocket.onopen = () => {
@@ -68,7 +68,7 @@ export default function ChatBarraMensagem() {
             socket.send(JSON.stringify(newMessage));
 
             // Armazenar a mensagem no MongoDB
-            axios.post(`http://animeapi.us-east-1.elasticbeanstalk.com/mensagens`, newMessage)
+            axios.post(`https://api.animeslink.com.br/mensagens`, newMessage)
                 .then(response => {
                     console.log('Mensagem salva com sucesso', response.data);
                 })

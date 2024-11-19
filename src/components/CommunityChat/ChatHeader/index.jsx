@@ -1,5 +1,5 @@
 import "./styles.css";
-import imgPerfil from "../../../assets/Images/SignUp/profile-pic-choosen.webp";
+import imgPerfil from "../../../assets/Images/SignUp/profile-pic-choosen.jpeg";
 import { RiArrowLeftCircleFill, RiArrowLeftSLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 

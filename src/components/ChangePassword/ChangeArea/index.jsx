@@ -16,7 +16,7 @@ export default function MudarSenhaArea() {
         }
 
         try {
-            const response = await fetch(`http://animeapi.us-east-1.elasticbeanstalk.com//usuario/redefinir-senha?token=${token}&novaSenha=${novaSenha}`, {
+            const response = await fetch(`https://api.animeslink.com.br/usuario/redefinir-senha?token=${token}&novaSenha=${novaSenha}`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' }
             });

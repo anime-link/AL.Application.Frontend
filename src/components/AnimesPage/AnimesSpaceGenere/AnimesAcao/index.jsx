@@ -5,8 +5,9 @@ import CardAcao from "./CardAcao";
 import Footer from "../../../Footer";
 import Header from '../../../Header';
 import { getJikanGenres } from '../../../../services/AnimeAPI/AnimeApi';
+import { translateText } from '../../../../services/translateService'; // Importação do serviço de tradução
 import ReactPaginate from 'react-paginate';
-import { RiArrowLeftCircleFill} from "react-icons/ri";
+import { RiArrowLeftCircleFill } from "react-icons/ri";
 
 export default function AnimesAcao() {
     const [animes, setAnimes] = useState([]);
@@ -16,19 +17,29 @@ export default function AnimesAcao() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        const fetchAnimes = async () => {
+        const fetchAndTranslateAnimes = async () => {
             try {
+                // Busca os animes do gênero "Ação"
                 const animeGenre = await getJikanGenres(1);
-                console.log(Object.keys(animeGenre).length)
-                setAnimes(animeGenre);
+
+                // Aplica a tradução nos títulos e descrições
+                const translatedAnimes = await Promise.all(
+                    animeGenre.map(async (anime) => ({
+                        ...anime,
+                        title: await translateText(anime.title, 'pt'),
+                        description: await translateText(anime.description || 'Sem descrição disponível.', 'pt')
+                    }))
+                );
+
+                setAnimes(translatedAnimes);
             } catch (error) {
-                console.error('Erro ao buscar os animes de tal gênero: ', error);
+                console.error('Erro ao buscar ou traduzir os animes de ação:', error);
             } finally {
                 setLoading(false);
             }
         };
 
-        fetchAnimes();
+        fetchAndTranslateAnimes();
     }, []);
 
     if (loading) return <div>Carregando...</div>;
@@ -44,7 +55,7 @@ export default function AnimesAcao() {
 
     const handleAnimePage = (animeId) => {
         navigate(`/anime/${animeId}`);
-    }
+    };
 
     return (
         <div className="acao-area">
@@ -63,8 +74,8 @@ export default function AnimesAcao() {
                         <CardAcao 
                             key={anime.id}
                             cardImgAcao={anime.image}
-                            title={anime.title}
-                            sinopse={anime.description}
+                            title={anime.title} // Título traduzido
+                            sinopse={anime.description} // Descrição traduzida
                             handleAnimePage={() => handleAnimePage(anime.id)}
                         />
                     ))}

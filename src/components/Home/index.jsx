@@ -3,8 +3,8 @@ import "./styles.css";
 import logo from "../../assets/logo-animelink.svg";
 import BotoesHome from "./HomeButtons";
 import { RiArrowDownFill, RiGithubFill, RiGroupFill, RiHeart3Fill, RiInstagramFill, RiLinkedinFill, RiMailFill, RiQuestionMark } from "react-icons/ri";
-import img1 from "../../assets/Images/Home/intro-illustration-1.webp";
-import img2 from "../../assets/Images/Home/intro-illustration-2.webp";
+import img1 from "../../assets/Images/Home/intro-illustration-1.png";
+import img2 from "../../assets/Images/Home/intro-illustration-2.png";
 import Footer from "../Footer";
 
 export default function HomeArea() {
@@ -12,7 +12,7 @@ export default function HomeArea() {
         <div className="home-page">
             <header className="home-header">
                 <div className="home-header-text">
-                    <h1 className="home-header-titulo-1">Anime</h1>
+                    <h1 className="home-header-titulo-1">Animes</h1>
                     <h1 className="home-header-titulo-2">Link</h1>
                     <h2 className="home-header-intro">Entre ou cadastre-se para diversão em primeira mão</h2>
                     <BotoesHome />

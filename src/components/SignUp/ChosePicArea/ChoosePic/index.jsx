@@ -5,9 +5,11 @@ import "swiper/css/effect-coverflow";
 import { RiArrowRightSLine, RiArrowLeftSLine } from "react-icons/ri";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, EffectCoverflow } from "swiper/modules";
-import { profilePics } from '../../../../assets/Images/ProfilePics/profilePics'
+import { profilePics } from '../../../../assets/Images/ProfilePics/profilePics';
+import { useProfileImage } from './../../../../services/PicContext/index';
 
 export function AreaEscolhaImagem({ setImgSelecionada }) {
+    const { setProfileImage } = useProfileImage();
 
     return (
         <div className="imagem-escolha-area">
@@ -36,11 +38,14 @@ export function AreaEscolhaImagem({ setImgSelecionada }) {
                             <div className="imagem-escolha-img-area">
                                 <img
                                     className="imagem-escolha-slider-img"
-                                    src={pics}
+                                    src={pics.url}
                                     width={75}
                                     height={75}
-                                    alt={`Imagem de perfil ${i}`}
-                                    onClick={() => setImgSelecionada(pics)}
+                                    alt={`Imagem de perfil ${pics.id[i]}`}
+                                    onClick={() => {
+                                        setImgSelecionada(pics.url);
+                                        setProfileImage(pics.url);
+                                    }}
                                 />
                             </div>
                         </SwiperSlide>

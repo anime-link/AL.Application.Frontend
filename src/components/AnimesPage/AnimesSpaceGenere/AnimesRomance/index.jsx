@@ -5,8 +5,9 @@ import CardRomance from "./CardRomance";
 import Footer from "../../../Footer";
 import Header from '../../../Header';
 import { getJikanGenres } from '../../../../services/AnimeAPI/AnimeApi';
+import { translateText } from '../../../../services/translateService'; 
 import ReactPaginate from 'react-paginate';
-import { RiArrowLeftCircleFill} from "react-icons/ri";
+import { RiArrowLeftCircleFill } from "react-icons/ri";
 
 export default function AnimesRomance() {
     const [animes, setAnimes] = useState([]);
@@ -15,21 +16,31 @@ export default function AnimesRomance() {
     const itemsPerPage = 5;
     const navigate = useNavigate();
 
-
     useEffect(() => {
-        const fetchAnimes = async () => {
+        const fetchAndTranslateAnimes = async () => {
             try {
-                const animeGenre = await getJikanGenres(8);
+                const animeGenre = await getJikanGenres(22);
                 console.log(Object.keys(animeGenre).length)
                 setAnimes(animeGenre);
+
+                // Traduz os títulos e descrições
+                const translatedAnimes = await Promise.all(
+                    animeGenre.map(async (anime) => ({
+                        ...anime,
+                        title: await translateText(anime.title, 'pt'),
+                        description: await translateText(anime.description || 'Sem descrição disponível.', 'pt')
+                    }))
+                );
+
+                setAnimes(translatedAnimes);
             } catch (error) {
-                console.error('Erro ao buscar os animes de tal gênero: ', error);
+                console.error('Erro ao buscar ou traduzir os animes de romance:', error);
             } finally {
                 setLoading(false);
             }
         };
 
-        fetchAnimes();
+        fetchAndTranslateAnimes();
     }, []);
 
     if (loading) return <div>Carregando...</div>;
@@ -45,7 +56,7 @@ export default function AnimesRomance() {
 
     const handleAnimePage = (animeId) => {
         navigate(`/anime/${animeId}`);
-    }
+    };
 
     return (
         <div className="romance-area">
@@ -64,8 +75,8 @@ export default function AnimesRomance() {
                         <CardRomance 
                             key={anime.id}
                             cardImgRomance={anime.image}
-                            title={anime.title}
-                            sinopse={anime.description}
+                            title={anime.title} // Título traduzido
+                            sinopse={anime.description} // Descrição traduzida
                             handleAnimePage={() => handleAnimePage(anime.id)}
                         />
                     ))}
