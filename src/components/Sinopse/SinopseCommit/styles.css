@@ -48,5 +48,12 @@
 
 .local-talk{
     margin-bottom: 496px;
+    margin-top: 500px;
+}
+
+.sinopse-volte{
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Ajuste conforme necessário */
 }
 

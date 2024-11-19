@@ -18,7 +18,7 @@ export default function CardAcao({ cardImgAcao, title, sinopse, handleAnimePage 
                 </p>
                 <p className="card-acao-text">
                     {sinopse}
-                </p>
+                </p> 
             </div>
 
         </div>

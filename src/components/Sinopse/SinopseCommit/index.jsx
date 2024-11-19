@@ -1,27 +1,18 @@
 import React from "react";
 import './styles.css';
+import image208 from "../../../assets/Images/Sinopse/image 208.png";
 
-import SinopseTalk from "../SinopseTalk";
-import user2 from '../../../assets/Images/Sinopse/user2.png'
-
-export default function SinopseCommit({ImgPerfil, placeholder, type}) {
+export default function SinopseCommit() {
   return (
-    <div className="sinopse-commit">
-     <p className="tittle-commit">Comentarios</p>
-      <div className="mensseger-commit">
-        <img className="imgPerfil" src={ImgPerfil} alt="Imagem de Perfil" />
-        <input
-            className="text-commit"
-            id="commit-label"
-            placeholder={placeholder}
-            type={type}
-        />
-        
-      </div>
-      <div className="local-talk">
-      <SinopseTalk ImgPerfil2={user2} UserName={"Millin"}/>
-      <SinopseTalk ImgPerfil2={user2} UserName={"CamilaPool"}/>
-      <SinopseTalk ImgPerfil2={user2} UserName={"Wilmuru"}/>
+    <div className="sinopse-volte"
+        style={{ backgroundImage: `url(${image208})` }}
+    >
+      <div className="content-volte">
+        <p className="tittle-volte">AVALIE AQUI</p>
+        <div className="volte">
+          <button></button>
+          <button></button>
+        </div>
       </div>
      
     </div>

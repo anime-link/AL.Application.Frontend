@@ -35,3 +35,28 @@
     text-align: justify;
     font: var(--text-20);
 }
+
+@media (max-width: 428px) {
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-card{
+        flex-direction: column;
+        box-sizing: border-box;
+        text-decoration: none;
+        background-color: blue;
+    }
+
+    .card-space-content{
+        flex-direction: column;
+
+    }
+
+    
+
+
+
+}

@@ -48,7 +48,6 @@ export default function SinopseArea() {
         status={animeData.status}
         genres={animeData.genres}
       />
-      <SinopseIndication prop={animeData.posterImage} />
       <SinopseCommit ImgPerfil={user} placeholder={"Digite seu comentário"} type={"text"}/>
       <Footer/>
     </div>
