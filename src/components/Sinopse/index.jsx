@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import './styles.css';
 import Header from '../Header';
 import SinopseCard from './SinopseCard';
-import SinopseIndication from "./SinopseIndication";
 import SinopseCommit from "./SinopseCommit";
 import Footer from "../Footer";
 import { getJikanAnimeDetails } from "../../services/AnimeAPI/AnimeApi";
@@ -48,7 +47,7 @@ export default function SinopseArea() {
         status={animeData.status}
         genres={animeData.genres}
       />
-      <SinopseCommit ImgPerfil={user} placeholder={"Digite seu comentário"} type={"text"}/>
+      <SinopseCommit/>
       <Footer/>
     </div>
   );

@@ -7,7 +7,6 @@ import { RiArrowLeftCircleFill } from "react-icons/ri";
 export default function SinopseCard({ ImgSin, ImgBack, title, synopsis, year, episodes, rating, status, genres }) {
   return (
     <div style={{ backgroundImage: `url(${ImgBack})` }} className="space-card" >
-      <div className="sinopse-card">
         <div className="container-content">
           <div className="anime-plot">
             <div className="sinopse-icone-voltar">
@@ -21,6 +20,7 @@ export default function SinopseCard({ ImgSin, ImgBack, title, synopsis, year, ep
               {synopsis}
             </p>
           </div>
+          
           <div className="space-content">
             <img className="imgSin" src={ImgSin} alt={`${title} Poster`} />
             <div className="anime-atribute-box">
@@ -35,7 +35,6 @@ export default function SinopseCard({ ImgSin, ImgBack, title, synopsis, year, ep
             </div>
           </div>
         </div>
-      </div>
 
     </div>
 

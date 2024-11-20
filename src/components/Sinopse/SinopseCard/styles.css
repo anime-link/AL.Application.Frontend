@@ -1,9 +1,9 @@
 .space-card{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: aqua;
-    width: 100vw;
+    align-items: start;
+    height: 100vh;
+
+    width: 1306px;
     height: 704px;
 
     background-repeat: no-repeat;
@@ -12,27 +12,11 @@
     background-clip: border-box;
     background-blend-mode: soft-light;
     background-color: var(--deep-koamaru);
-    margin-top: -109px;
-}
-
-.sinopse-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    width: 1306px;
-    height: 704px;
-    margin-bottom: 79px;
-    margin-top: 200px;
-
-    color: #ffff;
 }
 
 .space-content{
     flex-direction: column;
     margin-left: 20px;
-    margin-top: 63px;
-    margin-bottom: 42px;
 }
 
 .container-content{
@@ -40,9 +24,11 @@
     justify-content: space-between;
     align-items: center;
     font: var(--text-24);
-
     margin-right: 102px;
     margin-left: 54px;
+    color: #ffff;
+    padding-top: 35px;
+    padding-bottom: 35px;
 }
 
 .tittle{
@@ -61,7 +47,6 @@
     gap: 24px;
     font: var(--text-24);
     margin-right: 37px;
-    margin-bottom: 68px;
 }
 
 .anime-atribute p{
@@ -72,7 +57,6 @@
     display: flex;
     align-items: center;
     padding-top: 27px;
-    margin-bottom: 56px;
 }
 
 .nota{
@@ -97,7 +81,6 @@
     width: 314px;
     height: 461px;
     margin-left: 75px;
-    padding-top: 63px;
     object-fit: cover;
     border: 2px;
     border-radius: 8px; /* Adiciona bordas arredondadas */
@@ -109,9 +92,7 @@
 }
 
 .sinopse-icone-voltar {
-    top: 28px;
     left: 28px;
-    margin-top: 10px;
 }
 
 .sinopse-icone-fechar{
@@ -129,4 +110,6 @@
     color: var(--bright-sun);
     opacity: 50%;
 }
+
+
 
