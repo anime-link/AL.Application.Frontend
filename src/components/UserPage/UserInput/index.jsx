@@ -1,7 +1,7 @@
 import React from "react";
 import './styles.css';
 
-export default function UsuarioInput({ label, placeholder }) {
+export default function UsuarioInput({ label }) {
     return (
         <div className="usuario-label-input">
             <label className="usuario-label">{label}</label>  

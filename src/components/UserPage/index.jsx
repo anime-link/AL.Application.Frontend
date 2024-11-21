@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import './styles.css';
 import Header from '../Header/index.jsx';
 import { RiPencilFill } from 'react-icons/ri';
 import UsuarioInput from "./UserInput/index.jsx";
 import defaultImg from '../../assets/Images/SignUp/profile-pic-choosen.jpeg';
 import { useProfileImage } from "../../services/PicContext/index.js";
+import { profilePics } from './../../assets/Images/ProfilePics/profilePics';
 
 export default function Usuario() {
-    const { profileImage } = useProfileImage();
+    const { profileImage, setProfileImage } = useProfileImage();
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const handleOnChangeImg = (newImg) => {
+        setProfileImage(newImg);
+        setIsModalOpen(false);
+        
+    }
 
     return (
         <div className="usuario-area">
@@ -23,7 +31,7 @@ export default function Usuario() {
                             height={220}
                             alt="Perfil"
                         />
-                        <button className="usuario-botao-mudar">Mudar ícone</button>
+                        <button className="usuario-botao-mudar" onClick={() => setIsModalOpen(true)}>Mudar ícone</button>
                     </div>
                     <form className="usuario-form">
                         <div className="usuario-input-infos">
@@ -39,6 +47,25 @@ export default function Usuario() {
                     </form>
                 </div>
             </div>
+            {isModalOpen && (
+                <div className="usuario-modal">
+                    <h2 className="usuario-modal-titulo">Escolha sua nova imagem</h2>
+                    <div className="usuario-img-grid">
+                        {profilePics.map(pic => (
+                            <img 
+                                className="usuario-img-modal"
+                                key={pic.id}
+                                src={pic.url}
+                                alt={`Opção ${pic.id}`}
+                                width={80}
+                                height={80}
+                                onClick={() => handleOnChangeImg(pic.url)}
+                            />
+                        ))}
+                    </div>
+                    <button className="usuario-modal-fechar" onClick={() => setIsModalOpen(false)}>Fechar</button>
+                </div>
+            )}
         </div>
     );
 }
