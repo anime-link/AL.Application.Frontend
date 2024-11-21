@@ -18,7 +18,7 @@
     border: solid 2px var(--night-rider);
     border-radius: 10px;
     background-color: var(--white);
-    font: var(--text-20);
+    font: var(--text-16);
     transition: 0.5s ease-in-out;
 }
 

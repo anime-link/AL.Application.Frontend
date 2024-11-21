@@ -10,14 +10,16 @@ import {
 } from "react-icons/ri";
 import { Link, useNavigate } from "react-router-dom";
 import { RiEyeOffFill, RiEyeFill } from "react-icons/ri";
-
 import api from "../../../services/api";
 import { BotaoCadastro } from "./SignUpButton";
+import { profilePics } from "../../../assets/Images/ProfilePics/profilePics";
+import { useProfileImage } from "../../../services/PicContext";
 
 export function AreaCadastro({ areaLateral }) {
   // Estado do sidebar estar visível ou não
   const [isSideBarVisible, setIsSideBarVisible] = useState(false);
   const navigate = useNavigate();
+  const { profileImage } = useProfileImage();
 
   // Função que ativa a área lateral
   const ativarSideBar = () => {
@@ -33,7 +35,7 @@ export function AreaCadastro({ areaLateral }) {
     const nomeInput = document.querySelector("#nome-input").value;
     const emailInput = document.querySelector("#email-input").value;
     const senhaInput = document.querySelector("#senha-input").value;
-    const idImageInput = 1;
+    const idImageInput = profileImage.id;
     const confirmarSenha = document.querySelector(
       "#confirmar-senha-input"
     ).value;
@@ -47,7 +49,7 @@ export function AreaCadastro({ areaLateral }) {
         nome: nomeInput,
         email: emailInput,
         senha: senhaInput,
-        idImage: idImageInput,
+        idImage: profileImage.id,
       });
 
       console.log("User: ", nomeInput, emailInput, senhaInput, idImageInput);
