@@ -1,11 +1,14 @@
-.sinopse-commit{
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    display: flex;
-    align-items: start;
+.sinopse-vote{
     height: 100vh;
 
     width: 1366px;
-    height: 364px;
+    height: 624px;
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,9 +17,38 @@
     background-blend-mode: soft-light;
     background-color: var(--deep-koamaru);
 }
-.sinopse-volte{
-    background-size: cover;
-    background-position: center;
-    height: 100vh; /* Ajuste conforme necessário */
+
+.content-vote{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 132px ;
+
+    flex-direction: column;
+    
 }
+
+.title-vote{
+    font: var(--header-40);
+    color: var(--bright-sun);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vote-like{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 269px;
+    margin-top: 140px;
+}
+
+.likeDown, .likeUp{
+    color: var(--bright-sun);
+    font: var(--header-64);
+
+}
+
 
