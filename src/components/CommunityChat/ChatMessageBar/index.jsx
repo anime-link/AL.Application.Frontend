@@ -33,7 +33,7 @@ export default function ChatBarraMensagem() {
     }, [chatId]);
 
     useEffect(() => {
-        const webSocket = new WebSocket(`ws://api.animeslink.com.br/chat/${chatId}`);
+        const webSocket = new WebSocket(`wss://api.animeslink.com.br/chat/${chatId}`);
         setSocket(webSocket);
     
         webSocket.onopen = () => {
