@@ -29,8 +29,13 @@
 }
 
 .title-vote{
-    font: var(--header-40);
-    color: var(--bright-sun);
+    background: -webkit-linear-gradient( left, rgba(251, 221, 136, 1), rgba(237, 185, 34, 1));
+    background: linear-gradient( to right, rgba(251, 221, 136, 1), rgba(237, 185, 34, 1));
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font: var(--app-title);
 
     display: flex;
     justify-content: center;
@@ -48,6 +53,7 @@
 .likeDown, .likeUp{
     color: var(--bright-sun);
     font: var(--header-64);
+    cursor: pointer;
 
 }
 
