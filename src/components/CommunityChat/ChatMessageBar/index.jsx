@@ -50,6 +50,12 @@ export default function ChatBarraMensagem() {
         webSocket.onerror = (error) => {
             console.error('Erro no WebSocket:', error);
         };
+
+        webSocket.onclose = (event) => {
+            console.log('WebSocket desconectado, tentando reconectar...');
+            // Tenta reconectar automaticamente após 5 segundos
+            setTimeout(connectWebSocket, 5000);
+        };
     };
 
     useEffect(() => {
