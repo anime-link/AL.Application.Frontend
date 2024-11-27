@@ -74,7 +74,6 @@ export default function ChatBarraMensagem() {
 
             // Limpar a mensagem
             setMessage('');
-
             scrollToBottom();
 
         } else {
