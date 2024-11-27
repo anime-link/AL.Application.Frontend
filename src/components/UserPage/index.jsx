@@ -2,11 +2,17 @@ import React, { useEffect, useState } from "react";
 import './styles.css';
 import Header from '../Header/index.jsx';
 import { RiPencilFill } from 'react-icons/ri';
+import { RiBrushLine } from "react-icons/ri";
 import UsuarioInput from "./UserInput/index.jsx";
 import defaultImg from '../../assets/Images/SignUp/profile-pic-choosen.jpeg';
+
+import { useUser } from '../../services/UserContext/index';
 import { useProfileImage } from "../../services/PicContext/index.js";
 import { profilePics } from './../../assets/Images/ProfilePics/profilePics';
 import { useUser } from './../../services/UserContext/index';
+
+
+import logoHxh from "../../assets/Images/User/logoHxh.png"
 
 export default function Usuario() {
     const { user } = useUser();
@@ -26,36 +32,41 @@ export default function Usuario() {
 
     useEffect(() => {
         setUserData({
-            nome: user?.nome,
+            nome: user?.name,
             email: user?.email,
-            senha: user?.senha
+            senha: user?.password
         })
+
+        console.log("Dados do usuário: ", userData);
     });
 
     return (
         <div className="usuario-area">
             <Header />
             <div className="usuario-infos">
-                <h1 className="usuario-titulo">Dados do usuário</h1>
                 <div className="usuario-infos-area">
                     <div className="usuario-foto-fav">
                         <img
                             className="usuario-foto"
                             src={profileImage || defaultImg}
-                            width={220}
-                            height={220}
+                            width={159}
+                            height={160}
                             alt="Perfil"
                         />
+                        <button className="usuario-botao-mudar"> <RiBrushLine className="perfil-brush"/> </button>
+                        <input className="user-name" 
+                        type="text" 
+                        value={userData.nome}
+                        onChange={(e) => setUserData({ ...userData, nome: e.target.value })}
+                        />
+                    </div>
+                    <form className="usuario-form">
+                        <div className="usuario-input-infos">
+                        
                         <button className="usuario-botao-mudar" onClick={() => setIsModalOpen(true)}>Mudar ícone</button>
                     </div>
                     <form className="usuario-form">
                         <div className="usuario-input-infos">
-                            <UsuarioInput
-                                label={"Nome"}
-                                type={'text'}
-                                value={userData.nome}
-                                onChange={(e) => setUserData({ ...userData, nome: e.target.value })}
-                            />
                             <UsuarioInput
                                 label={"E-mail"}
                                 type={'text'}
@@ -78,6 +89,11 @@ export default function Usuario() {
                             >
                                 Editar
                             </button>
+                        </div>
+                        <div className="logo">
+                            <img 
+                            src={logoHxh} 
+                            alt="logo-perfil" />
                         </div>
                     </form>
                 </div>

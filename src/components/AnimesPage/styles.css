@@ -167,7 +167,14 @@
 
 .animes-genero-titulo {
     font: var(--app-section);
-    color: var(--bright-sun);
+    /* color: var(--bright-sun); */
+
+    background: -webkit-linear-gradient( left, rgba(251, 221, 136, 1), rgba(237, 185, 34, 1));
+    background: linear-gradient( to right, rgba(251, 221, 136, 1), rgba(237, 185, 34, 1));
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
 }
 
 @media (max-width: 430px) {
