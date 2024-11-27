@@ -10,6 +10,7 @@ export default function ChatBarraMensagem() {
     const [socket, setSocket] = useState(null);
     const messagesEndRef = useRef(null);
     const chatId = 1;
+    const socketRef = useRef(null);  // Ref para garantir uma única instância do WebSocket
 
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -29,18 +30,17 @@ export default function ChatBarraMensagem() {
                 // Inverter a lista de mensagens para que as mais antigas fiquem no topo
                 const invertedMessages = response.data.reverse();
                 setMessages(invertedMessages);  
-                // Ajustar o scroll para o final quando as mensagens forem carregadas
-                scrollToBottom();
+                scrollToBottom();  // Ajustar o scroll para o final quando as mensagens forem carregadas
             })
             .catch((error) => {
                 console.error('Erro ao carregar mensagens:', error);
             });
-    }, [chatId]);
+    }, [chatId, user, setMessages]);
 
     // Função para estabelecer a conexão WebSocket
     const connectWebSocket = () => {
         const webSocket = new WebSocket(`wss://api.animeslink.com.br/chat/${chatId}`);
-        setSocket(webSocket);
+        socketRef.current = webSocket;  // Armazenar o WebSocket na ref
 
         webSocket.onopen = () => {
             console.log('WebSocket conectado');
@@ -48,8 +48,8 @@ export default function ChatBarraMensagem() {
 
         webSocket.onmessage = (event) => {
             const newMessage = JSON.parse(event.data);
-            // Adicionar nova mensagem ao final da lista
-            setMessages((prevMessages) => [...prevMessages, newMessage]);
+            // Adicionar nova mensagem ao início da lista (de baixo para cima)
+            setMessages((prevMessages) => [newMessage, ...prevMessages]);
             setTimeout(scrollToBottom, 100); // Garante que o scroll vá para baixo ao receber nova mensagem
         };
 
@@ -64,24 +64,25 @@ export default function ChatBarraMensagem() {
     };
 
     useEffect(() => {
-        // Conectar ao WebSocket assim que o componente for montado
-        connectWebSocket();
+        if (!socketRef.current) {
+            connectWebSocket();  // Conectar ao WebSocket apenas uma vez
+        }
 
         // Limpeza ao desmontar o componente
         return () => {
-            if (socket) {
-                socket.close();
+            if (socketRef.current) {
+                socketRef.current.close();
             }
         };
     }, [chatId]);
 
     const handleSendMessage = (e) => {
         e.preventDefault();
-        if (message.trim() && socket && socket.readyState === WebSocket.OPEN) {
+        if (message.trim() && socketRef.current && socketRef.current.readyState === WebSocket.OPEN) {
             const newMessage = { usuario: user.name, conteudo: message, chatId };
 
             // Enviar a mensagem pelo WebSocket
-            socket.send(JSON.stringify(newMessage));
+            socketRef.current.send(JSON.stringify(newMessage));
 
             // Limpar a mensagem e garantir que o scroll vá para baixo
             setMessage('');
@@ -97,6 +98,13 @@ export default function ChatBarraMensagem() {
 
     return (
         <div className="chat-msg-barra-area">
+            <div className="chat-msg-area">
+                {/* Exibir mensagens de baixo para cima */}
+                {messagesEndRef.current && messagesEndRef.current.scrollTop === 0 && (
+                    <div ref={messagesEndRef} />
+                )}
+                {/* Aqui renderizamos as mensagens */}
+            </div>
             <form className="chat-msg-barra" onSubmit={handleSendMessage}>
                 <input
                     className="chat-msg-input"
