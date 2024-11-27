@@ -47,23 +47,9 @@ export default function ChatBarraMensagem() {
             setTimeout(scrollToBottom, 100);
         };
 
-        webSocket.onclose = () => {
-            console.log('WebSocket desconectado');
-            // Tentar reconectar em 3 segundos
-            setTimeout(connectWebSocket, 3000);
-        };
-
         webSocket.onerror = (error) => {
             console.error('Erro no WebSocket:', error);
         };
-
-        // Enviar ping periodicamente para manter a conexão ativa
-        const pingInterval = setInterval(() => {
-            if (webSocket.readyState === WebSocket.OPEN) {
-                webSocket.send(JSON.stringify({ type: 'ping' }));
-                console.log('Enviado ping para o servidor');
-            }
-        }, 10000); // Enviar ping a cada 10 segundos
 
         return () => {
             clearInterval(pingInterval);
