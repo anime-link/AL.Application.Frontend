@@ -35,26 +35,36 @@ export default function ChatBarraMensagem() {
     useEffect(() => {
         const webSocket = new WebSocket(`wss://api.animeslink.com.br/chat/${chatId}`);
         setSocket(webSocket);
-
+    
         webSocket.onopen = () => {
             console.log('WebSocket conectado');
         };
-
+    
         webSocket.onmessage = (event) => {
             const newMessage = JSON.parse(event.data);
             setMessages((prevMessages) => [...prevMessages, newMessage]);
             setTimeout(scrollToBottom, 100);
         };
-
+    
         webSocket.onclose = () => {
             console.log('WebSocket desconectado');
         };
-
+    
         webSocket.onerror = (error) => {
             console.error('Erro no WebSocket:', error);
         };
-
+    
+        // Enviar ping periodicamente para manter a conexão ativa
+        const pingInterval = setInterval(() => {
+            if (webSocket.readyState === WebSocket.OPEN) {
+                webSocket.send(JSON.stringify({ type: 'ping' }));
+                console.log('Enviado ping para o servidor');
+            }
+        }, 10000); // Enviar ping a cada 10 segundos
+    
+        // Limpeza quando o componente for desmontado
         return () => {
+            clearInterval(pingInterval);
             webSocket.close();
         };
     }, [chatId]);
