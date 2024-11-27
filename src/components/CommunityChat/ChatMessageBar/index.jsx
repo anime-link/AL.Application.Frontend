@@ -22,12 +22,10 @@ export default function ChatBarraMensagem() {
             console.log("User not found");
         }
 
-        // Carregar as mensagens do banco de dados (invertendo a ordem)
+        // Carregar as mensagens do banco de dados (ordenando para as mais antigas ficarem no topo)
         axios.get(`https://api.animeslink.com.br/mensagens?chatId=${chatId}`)
             .then((response) => {
-                // Inverte a ordem para que a mais recente venha primeiro
-                const reversedMessages = response.data.reverse();
-                setMessages(reversedMessages);
+                setMessages(response.data);  // As mensagens já devem vir ordenadas corretamente
                 scrollToBottom(); // Garante que o scroll vai para o final ao carregar
             })
             .catch((error) => {
@@ -46,7 +44,7 @@ export default function ChatBarraMensagem() {
 
         webSocket.onmessage = (event) => {
             const newMessage = JSON.parse(event.data);
-            setMessages((prevMessages) => [newMessage, ...prevMessages]);  // Adiciona a nova mensagem no início
+            setMessages((prevMessages) => [...prevMessages, newMessage]);  // Adiciona a nova mensagem no final
             setTimeout(scrollToBottom, 100); // Garante que o scroll vá para baixo ao receber nova mensagem
         };
 
