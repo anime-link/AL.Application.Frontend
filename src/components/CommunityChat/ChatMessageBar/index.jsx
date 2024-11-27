@@ -33,7 +33,7 @@ export default function ChatBarraMensagem() {
     }, [chatId]);
 
     useEffect(() => {
-        const webSocket = new WebSocket(`ws://api.animeslink.com.br/chat/${chatId}`);
+        const webSocket = new WebSocket(`wss://api.animeslink.com.br/chat/${chatId}`);
         setSocket(webSocket);
     
         webSocket.onopen = () => {
@@ -91,7 +91,7 @@ export default function ChatBarraMensagem() {
 
     return (
         <div className="chat-msg-barra-area">
-            <div className="chat-msg-barra">
+            <form className="chat-msg-barra" onSubmit={handleSendMessage}>
                 <input
                     className="chat-msg-input"
                     type="text"
@@ -100,10 +100,10 @@ export default function ChatBarraMensagem() {
                     onChange={(e) => setMessage(e.target.value)}
                     required
                 />
-                <div className="chat-msg-icone-area">
+                <button className="chat-msg-icone-area" type="submit">
                     <RiSendPlane2Fill className="chat-msg-icone" fontSize={35} onClick={handleSendMessage} />
-                </div>
-            </div>
+                </button>
+            </form>
             <div ref={messagesEndRef} />
         </div>
     );
