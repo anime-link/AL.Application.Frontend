@@ -2,8 +2,8 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 100%;
-    padding-bottom: 20px;
+    min-height: 100vh;
+    padding-bottom: 22px;
 
     background-image: url('../../assets/Images/User/user-background.png');
     background-color: var(--deep-koamaru);
@@ -17,9 +17,12 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: calc(100vw - 354px);
-    height: 609px;
+    width: calc(100vw - 846px);
+    height: 616px;
     margin-top: 45px;
+    position: relative;
+    padding-bottom: 22px;
+
 
     background-color: rgba(51, 51, 51, 0.8);
     border-radius: 15px;
@@ -34,15 +37,16 @@
 .usuario-infos-area {
     display: flex;
     align-items: center;
-    gap: 200px;   
+    gap: 26px;
     margin-top: 36px;
+    flex-direction: column;
 }
 
 .usuario-foto-fav {
     display: flex;
     align-items: center;
+    position: relative;
     flex-direction: column;
-    gap: 20px;
 }
 
 .usuario-foto {
@@ -56,19 +60,42 @@
 }
 
 .usuario-botao-mudar {
+    position: absolute;
+    top: 60%;
+    left: 63%;
+    margin-left: -15px;
+    margin-top: -30px;
     cursor: pointer;
-    padding: 9px 28px;
-    border-radius: 10px;
+    padding: 9px 11px;
+    border-radius: 30px;
     background-color: var(--bright-sun);
     font: var(--text-15);
     color: var(--white);
     transition: 0.5s ease-in-out;
+    z-index: 1;
 }
 
 .usuario-botao-mudar:hover {
     filter: brightness(1.1);
     transform: scale(1.1);
 }
+
+.perfil-brush{
+    font-size: 30px;
+}
+
+.user-name {
+    width: 407px;
+    height: 45px;
+    outline: none;
+    text-align: center;
+    border-radius: 10px;
+    /* background-color: var(--white); */
+    font: var(--header-32);
+    color: var(--white);
+    transition: 0.5s ease-in-out;
+}
+
 
 .usuario-fav {
     cursor: pointer;
@@ -93,7 +120,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 15px;
+    gap: 28px;
 }
 
 .usuario-mudar-info {
@@ -115,6 +142,13 @@
 .usuario-mudar-info-btn:hover {
     filter: brightness(1.1);
     transform: scale(1.1);
+}
+
+.logo{
+    display: flex;
+    position: absolute;
+    top: 525px;
+    left: 5px;
 }
 
 @media (max-width: 430px) {
