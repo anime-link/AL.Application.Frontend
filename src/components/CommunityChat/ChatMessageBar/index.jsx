@@ -22,10 +22,12 @@ export default function ChatBarraMensagem() {
             console.log("User not found");
         }
 
-        // Carregar as mensagens do banco de dados (ordem crescente de tempo - mais antigas primeiro)
+        // Carregar as mensagens do banco de dados e inverter a ordem para exibir mais antigas primeiro
         axios.get(`https://api.animeslink.com.br/mensagens?chatId=${chatId}`)
             .then((response) => {
-                setMessages(response.data);  // As mensagens já devem vir na ordem correta
+                // Inverter a lista de mensagens para que as mais antigas fiquem no topo
+                const invertedMessages = response.data.reverse();
+                setMessages(invertedMessages);  
                 scrollToBottom(); // Garante que o scroll vai para o final ao carregar
             })
             .catch((error) => {
