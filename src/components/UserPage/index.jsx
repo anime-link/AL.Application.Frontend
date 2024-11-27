@@ -51,17 +51,18 @@ export default function Usuario() {
                             height={160}
                             alt="Perfil"
                         />
-                        <button className="usuario-botao-mudar"> <RiBrushLine className="perfil-brush"/> </button>
-                        <input className="user-name" 
-                        type="text" 
-                        value={userData.nome}
-                        onChange={(e) => setUserData({ ...userData, nome: e.target.value })}
+                        <button
+                            className="usuario-botao-mudar"
+                            type="button"
+                            onClick={() => setIsModalOpen(true)}
+                        >
+                            <RiBrushLine className="perfil-brush" />
+                        </button>
+                        <input className="user-name"
+                            type="text"
+                            value={userData.nome}
+                            onChange={(e) => setUserData({ ...userData, nome: e.target.value })}
                         />
-                    </div>
-                    <form className="usuario-form"/>
-                        <div className="usuario-input-infos">
-                        
-                        <button className="usuario-botao-mudar" onClick={() => setIsModalOpen(true)}>Mudar ícone</button>
                     </div>
                     <form className="usuario-form">
                         <div className="usuario-input-infos">
@@ -89,9 +90,9 @@ export default function Usuario() {
                             </button>
                         </div>
                         <div className="logo">
-                            <img 
-                            src={logoHxh} 
-                            alt="logo-perfil" />
+                            <img
+                                src={logoHxh}
+                                alt="logo-perfil" />
                         </div>
                     </form>
                 </div>
