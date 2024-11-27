@@ -9,8 +9,6 @@ import defaultImg from '../../assets/Images/SignUp/profile-pic-choosen.jpeg';
 import { useUser } from '../../services/UserContext/index';
 import { useProfileImage } from "../../services/PicContext/index.js";
 import { profilePics } from './../../assets/Images/ProfilePics/profilePics';
-import { useUser } from './../../services/UserContext/index';
-
 
 import logoHxh from "../../assets/Images/User/logoHxh.png"
 
@@ -60,7 +58,7 @@ export default function Usuario() {
                         onChange={(e) => setUserData({ ...userData, nome: e.target.value })}
                         />
                     </div>
-                    <form className="usuario-form">
+                    <form className="usuario-form"/>
                         <div className="usuario-input-infos">
                         
                         <button className="usuario-botao-mudar" onClick={() => setIsModalOpen(true)}>Mudar ícone</button>
