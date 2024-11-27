@@ -50,11 +50,6 @@ export default function ChatBarraMensagem() {
         webSocket.onerror = (error) => {
             console.error('Erro no WebSocket:', error);
         };
-
-        return () => {
-            clearInterval(pingInterval);
-            webSocket.close();
-        };
     };
 
     useEffect(() => {
