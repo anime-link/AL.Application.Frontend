@@ -15,6 +15,7 @@ export default function ChatBarraMensagem() {
         messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
     };
 
+    // Carregar as mensagens do banco
     useEffect(() => {
         if (user) {
             console.log("User Data: ", user?.name);
@@ -28,7 +29,8 @@ export default function ChatBarraMensagem() {
                 // Inverter a lista de mensagens para que as mais antigas fiquem no topo
                 const invertedMessages = response.data.reverse();
                 setMessages(invertedMessages);  
-                scrollToBottom(); // Garante que o scroll vai para o final ao carregar
+                // Ajustar o scroll para o final quando as mensagens forem carregadas
+                scrollToBottom();
             })
             .catch((error) => {
                 console.error('Erro ao carregar mensagens:', error);
@@ -46,7 +48,8 @@ export default function ChatBarraMensagem() {
 
         webSocket.onmessage = (event) => {
             const newMessage = JSON.parse(event.data);
-            setMessages((prevMessages) => [...prevMessages, newMessage]);  // Adiciona no final
+            // Adicionar nova mensagem ao final da lista
+            setMessages((prevMessages) => [...prevMessages, newMessage]);
             setTimeout(scrollToBottom, 100); // Garante que o scroll vá para baixo ao receber nova mensagem
         };
 
