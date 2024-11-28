@@ -4,7 +4,7 @@ import { useUser } from "../../../services/UserContext";
 
 export default function ChatBox({ userSms }) {
     const { messages } = useUser();
-
+    // console.log(messages)
     return (
         <div className="container-menssager">
             {messages && messages.map((msg, index) => {

@@ -13,7 +13,8 @@ export default function ChatBarraMensagem() {
     const socketRef = useRef(null);  // Ref para garantir uma única instância do WebSocket
 
     const scrollToBottom = () => {
-        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+        console.log(messagesEndRef.current)
+        messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
     };
 
     // Carregar as mensagens do banco
@@ -28,14 +29,15 @@ export default function ChatBarraMensagem() {
         axios.get(`https://api.animeslink.com.br/mensagens?chatId=${chatId}`)
             .then((response) => {
                 // Inverter a lista de mensagens para que as mais antigas fiquem no topo
-                const invertedMessages = response.data.reverse();
-                setMessages(invertedMessages);  
+                const invertedMessages = response.data;
+                setMessages(invertedMessages); 
+                
                 scrollToBottom();  // Ajustar o scroll para o final quando as mensagens forem carregadas
             })
             .catch((error) => {
                 console.error('Erro ao carregar mensagens:', error);
             });
-    }, [chatId, user, setMessages]);
+    }, [chatId, user, setMessages]);    
 
     // Função para estabelecer a conexão WebSocket
     const connectWebSocket = () => {
@@ -49,7 +51,8 @@ export default function ChatBarraMensagem() {
         webSocket.onmessage = (event) => {
             const newMessage = JSON.parse(event.data);
             // Adicionar nova mensagem ao início da lista (de baixo para cima)
-            setMessages((prevMessages) => [newMessage, ...prevMessages]);
+
+            setMessages((prevMessages) => [ ...prevMessages, newMessage]);
             setTimeout(scrollToBottom, 100); // Garante que o scroll vá para baixo ao receber nova mensagem
         };
 
@@ -118,6 +121,7 @@ export default function ChatBarraMensagem() {
                     <RiSendPlane2Fill className="chat-msg-icone" fontSize={35} />
                 </button>
             </form>
+            
             <div ref={messagesEndRef} />
         </div>
     );
