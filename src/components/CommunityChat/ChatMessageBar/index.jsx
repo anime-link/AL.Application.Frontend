@@ -7,22 +7,12 @@ import { useUser } from "../../../services/UserContext";
 export default function ChatBarraMensagem() {
     const { user, setMessages } = useUser();
     const [message, setMessage] = useState('');
-    const [socket, setSocket] = useState(null);
     const messagesEndRef = useRef(null);
     const chatId = 1;
-    const socketRef = useRef(null);  // Ref para garantir uma única instância do WebSocket
+    const socketRef = useRef(null); // Ref para garantir uma única instância do WebSocket
 
-    const handleScrollfinal = () => {
-        // Função para rolar até o final após o envio da mensagem
-        if (messagesEndRef.current) {
-            messagesEndRef.current.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-    }
-
+    // Função para rolar automaticamente até a última mensagem
     const scrollToBottom = () => {
-        // Garante que o scroll vá para baixo
         if (messagesEndRef.current) {
             messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
         }
@@ -36,25 +26,22 @@ export default function ChatBarraMensagem() {
             console.log("User not found");
         }
 
-        // Carregar as mensagens do banco de dados e inverter a ordem para exibir mais antigas primeiro
+        // Carregar mensagens do banco de dados
         axios.get(`https://api.animeslink.com.br/mensagens?chatId=${chatId}`)
             .then((response) => {
-                // Inverter a lista de mensagens para que as mais antigas fiquem no topo
                 const invertedMessages = response.data;
                 setMessages(invertedMessages);
-
-                // Aguarde a atualização do estado para rolar para baixo após o carregamento
-                setTimeout(scrollToBottom, 100);  // Ajusta o scroll para o final
+                setTimeout(scrollToBottom, 100); // Ajustar o scroll após carregar
             })
             .catch((error) => {
                 console.error('Erro ao carregar mensagens:', error);
             });
-    }, [chatId, user, setMessages]);    
+    }, [chatId, user, setMessages]);
 
-    // Função para estabelecer a conexão WebSocket
+    // Estabelecer conexão WebSocket
     const connectWebSocket = () => {
         const webSocket = new WebSocket(`wss://api.animeslink.com.br/chat/${chatId}`);
-        socketRef.current = webSocket;  // Armazenar o WebSocket na ref
+        socketRef.current = webSocket;
 
         webSocket.onopen = () => {
             console.log('WebSocket conectado');
@@ -62,28 +49,27 @@ export default function ChatBarraMensagem() {
 
         webSocket.onmessage = (event) => {
             const newMessage = JSON.parse(event.data);
-            // Adicionar nova mensagem ao início da lista (de baixo para cima)
 
-            setMessages((prevMessages) => [ ...prevMessages, newMessage]);
-            setTimeout(scrollToBottom, 100); // Garante que o scroll vá para baixo ao receber nova mensagem
+            // Adicionar nova mensagem e rolar para o final
+            setMessages((prevMessages) => [...prevMessages, newMessage]);
+            setTimeout(scrollToBottom, 100);
         };
 
         webSocket.onerror = (error) => {
             console.error('Erro no WebSocket:', error);
         };
 
-        webSocket.onclose = (event) => {
+        webSocket.onclose = () => {
             console.log('WebSocket desconectado, tentando reconectar...');
-            setTimeout(connectWebSocket, 5000);  // Tenta reconectar após 5 segundos
+            setTimeout(connectWebSocket, 5000);
         };
     };
 
     useEffect(() => {
         if (!socketRef.current) {
-            connectWebSocket();  // Conectar ao WebSocket apenas uma vez
+            connectWebSocket();
         }
 
-        // Limpeza ao desmontar o componente
         return () => {
             if (socketRef.current) {
                 socketRef.current.close();
@@ -91,39 +77,28 @@ export default function ChatBarraMensagem() {
         };
     }, [chatId]);
 
+    // Enviar uma nova mensagem
     const handleSendMessage = (e) => {
         e.preventDefault();
         if (message.trim() && socketRef.current && socketRef.current.readyState === WebSocket.OPEN) {
             const newMessage = { usuario: user.name, conteudo: message, chatId };
-    
-            // Enviar a mensagem pelo WebSocket
+
+            // Enviar mensagem pelo WebSocket
             socketRef.current.send(JSON.stringify(newMessage));
-    
-            // Limpar a mensagem e rolar para baixo
+
+            // Limpar input e rolar para o final
             setMessage('');
-            setTimeout(() => {
-                // Certifique-se de que o scroll role para o final após enviar a mensagem
-                if (messagesEndRef.current) {
-                    messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
-                }
-            }, 100); // Delay para garantir o scroll após o envio
+            setTimeout(scrollToBottom, 100);
         } else {
             alert('Não foi possível enviar a mensagem. Tente novamente mais tarde.');
         }
-    };    
-
-    useEffect(() => {
-        scrollToBottom();  // Garantir que o scroll vai para baixo quando o conteúdo da mensagem mudar
-    }, [message]); // Quando a mensagem for alterada (nova mensagem enviada)
+    };
 
     return (
         <div className="chat-msg-barra-area">
             <div className="chat-msg-area">
-                {/* Exibir mensagens de baixo para cima */}
-                {messagesEndRef.current && messagesEndRef.current.scrollTop === 0 && (
-                    <div ref={messagesEndRef} />
-                )}
-                {/* Aqui renderizamos as mensagens */}
+                {/* Div oculta usada para rolar ao final */}
+                <div ref={messagesEndRef} />
             </div>
             <form className="chat-msg-barra" onSubmit={handleSendMessage}>
                 <input
@@ -135,11 +110,9 @@ export default function ChatBarraMensagem() {
                     required
                 />
                 <button className="chat-msg-icone-area" type="submit">
-                    <RiSendPlane2Fill className="chat-msg-icone" onClick={handleScrollfinal} fontSize={35} />
+                    <RiSendPlane2Fill className="chat-msg-icone" fontSize={35} />
                 </button>
             </form>
-            
-            <div ref={messagesEndRef} />
         </div>
     );
 }

@@ -4,6 +4,13 @@
     width: calc(100% - 90px);
 }
 
+.chat-msg-area {
+    overflow-y: auto; /* Permite rolagem vertical */
+    scroll-behavior: smooth; /* Adiciona suavidade ao scroll */
+    max-height: calc(100vh - 200px); /* Ajuste conforme o design */
+    padding: 10px; /* Espaçamento interno */
+}
+
 .chat-msg-barra {
     position: relative;
     display: flex;
