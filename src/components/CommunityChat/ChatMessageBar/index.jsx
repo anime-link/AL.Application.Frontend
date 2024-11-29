@@ -12,19 +12,20 @@ export default function ChatBarraMensagem() {
     const chatId = 1;
     const socketRef = useRef(null);  // Ref para garantir uma única instância do WebSocket
 
-
     const handleScrollfinal = () => {
-        const target = document.querySelector('.chat-msg-input');
-        if (target) { 
-            target.scrollIntoView({
+        // Função para rolar até o final após o envio da mensagem
+        if (messagesEndRef.current) {
+            messagesEndRef.current.scrollIntoView({
                 behavior: 'smooth'
             });
         }
     }
 
     const scrollToBottom = () => {
-        console.log(messagesEndRef.current)
-        messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+        // Garante que o scroll vá para baixo
+        if (messagesEndRef.current) {
+            messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+        }
     };
 
     // Carregar as mensagens do banco
@@ -40,9 +41,10 @@ export default function ChatBarraMensagem() {
             .then((response) => {
                 // Inverter a lista de mensagens para que as mais antigas fiquem no topo
                 const invertedMessages = response.data;
-                setMessages(invertedMessages); 
-                
-                scrollToBottom();  // Ajustar o scroll para o final quando as mensagens forem carregadas
+                setMessages(invertedMessages);
+
+                // Aguarde a atualização do estado para rolar para baixo após o carregamento
+                setTimeout(scrollToBottom, 100);  // Ajusta o scroll para o final
             })
             .catch((error) => {
                 console.error('Erro ao carregar mensagens:', error);
@@ -93,21 +95,26 @@ export default function ChatBarraMensagem() {
         e.preventDefault();
         if (message.trim() && socketRef.current && socketRef.current.readyState === WebSocket.OPEN) {
             const newMessage = { usuario: user.name, conteudo: message, chatId };
-
+    
             // Enviar a mensagem pelo WebSocket
             socketRef.current.send(JSON.stringify(newMessage));
-
-            // Limpar a mensagem e garantir que o scroll vá para baixo
+    
+            // Limpar a mensagem e rolar para baixo
             setMessage('');
-            setTimeout(scrollToBottom, 100);
+            setTimeout(() => {
+                // Certifique-se de que o scroll role para o final após enviar a mensagem
+                if (messagesEndRef.current) {
+                    messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+                }
+            }, 100); // Delay para garantir o scroll após o envio
         } else {
             alert('Não foi possível enviar a mensagem. Tente novamente mais tarde.');
         }
-    };
+    };    
 
     useEffect(() => {
         scrollToBottom();  // Garantir que o scroll vai para baixo quando o conteúdo da mensagem mudar
-    }, [message]);
+    }, [message]); // Quando a mensagem for alterada (nova mensagem enviada)
 
     return (
         <div className="chat-msg-barra-area">
@@ -128,7 +135,7 @@ export default function ChatBarraMensagem() {
                     required
                 />
                 <button className="chat-msg-icone-area" type="submit">
-                    <RiSendPlane2Fill  className="chat-msg-icone" onClick={handleScrollfinal} fontSize={35} />
+                    <RiSendPlane2Fill className="chat-msg-icone" onClick={handleScrollfinal} fontSize={35} />
                 </button>
             </form>
             

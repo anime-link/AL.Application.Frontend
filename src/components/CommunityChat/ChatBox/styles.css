@@ -4,6 +4,8 @@
     justify-content: flex-start;
     width: 100%;
     z-index: 5;
+    overflow-y: auto; /* Para permitir o scroll vertical */
+    scroll-behavior: smooth; /* Suavidade ao rolar */
 }
 
 .mensagem-direita,
