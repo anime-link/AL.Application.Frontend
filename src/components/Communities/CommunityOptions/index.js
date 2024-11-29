@@ -23,7 +23,7 @@ export default function ComunidadeOpcoes({ comunidades }) {
             <div className="comunidade-opcoes-img-area">
                 {comunidadesPagina.map((img, i) => (
                     <div className="comunidade-opcoes-img" key={i}>
-                        <Link to={"/chat"}>
+                        <Link to={`/chat/${i + 1}`}>
                             <img src={img} width={270} height={141} alt={`Comunidade ${i}`} />
                         </Link>
                     </div>

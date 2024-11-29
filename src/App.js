@@ -40,7 +40,7 @@ function App() {
             <Route element={<EsquecerSenha />} path="/esquecer" />
             <Route element={<MudarSenha />} path="/recuperar" />
             <Route element={<Comunidades />} path="/comunidades" />
-            <Route element={<ComunidadeChat />} path="/chat" />
+            <Route element={<ComunidadeChat />} path="/chat/:chatId" />
             <Route element={<Animes />} path="/animes" />
             <Route element={<AnimesAcao />} path="/animes/acao" />
             <Route element={<AnimesTerror />} path="/animes/terror" />

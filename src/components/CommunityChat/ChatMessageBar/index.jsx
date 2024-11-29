@@ -4,12 +4,11 @@ import axios from "axios";
 import "./styles.css";
 import { useUser } from "../../../services/UserContext";
 
-export default function ChatBarraMensagem() {
+export default function ChatBarraMensagem({ chatId }) {
     const { user, setMessages } = useUser();
     const [message, setMessage] = useState('');
     const messagesEndRef = useRef(null);
     const socketRef = useRef(null); // Ref para garantir uma única instância do WebSocket
-    const chatId = 1; // Identificador do chat
 
     // Função para rolar automaticamente até a última mensagem
     const scrollToBottom = () => {
@@ -84,13 +83,13 @@ export default function ChatBarraMensagem() {
 
     // Carregar mensagens ao entrar no chat e conectar ao WebSocket
     useEffect(() => {
-        if (!user) return;
+        setMessages([]); // Limpa as mensagens ao mudar de chat
+        if (!user || !chatId) return;
 
         // Carregar mensagens do banco de dados
         axios.get(`https://api.animeslink.com.br/mensagens?chatId=${chatId}`)
             .then((response) => {
                 setMessages(response.data);
-                setTimeout(scrollToBottom, 100); // Ajustar o scroll após carregar
             })
             .catch((error) => {
                 console.error("Erro ao carregar mensagens:", error);

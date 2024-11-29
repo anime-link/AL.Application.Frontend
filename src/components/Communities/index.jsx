@@ -52,10 +52,10 @@ export default function ComunidadesArea() {
                 <ComunidadeTopicos />
                 <div className="comunidades-opcoes-fundo">
                     <div className="comunidade-search">
-                        <Pesquisa 
-                            placeholder={"Pesquisar comunidades"} 
+                        <Pesquisa
+                            placeholder={"Pesquisar comunidades"}
                             sugestoes={sugComunidades}
-                            tipo={'comunidade'} 
+                            tipo={'comunidade'}
                         />
                     </div>
                     <ComunidadeOpcoes comunidades={comunidades} />
