@@ -12,6 +12,16 @@ export default function ChatBarraMensagem() {
     const chatId = 1;
     const socketRef = useRef(null);  // Ref para garantir uma única instância do WebSocket
 
+
+    const handleScrollfinal = () => {
+        const target = document.querySelector('.chat-msg-input');
+        if (target) { 
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    }
+
     const scrollToBottom = () => {
         console.log(messagesEndRef.current)
         messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
@@ -118,7 +128,7 @@ export default function ChatBarraMensagem() {
                     required
                 />
                 <button className="chat-msg-icone-area" type="submit">
-                    <RiSendPlane2Fill className="chat-msg-icone" fontSize={35} />
+                    <RiSendPlane2Fill  className="chat-msg-icone" onClick={handleScrollfinal} fontSize={35} />
                 </button>
             </form>
             
