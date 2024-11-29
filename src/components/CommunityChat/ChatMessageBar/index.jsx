@@ -10,9 +10,6 @@ export default function ChatBarraMensagem() {
     const messagesEndRef = useRef(null);
     const socketRef = useRef(null); // Ref para garantir uma única instância do WebSocket
     const chatId = 1; // Identificador do chat
-    let reconnectAttempts = 0;
-    const maxReconnectAttempts = 5;
-    let reconnecting = false;
 
     // Função para rolar automaticamente até a última mensagem
     const scrollToBottom = () => {
@@ -23,15 +20,12 @@ export default function ChatBarraMensagem() {
 
     // Função para conectar ao WebSocket
     const connectWebSocket = () => {
-        if (reconnecting || socketRef.current?.readyState === WebSocket.OPEN) return; // Evita múltiplas conexões
 
         const webSocket = new WebSocket(`wss://api.animeslink.com.br/chat/${chatId}`);
         socketRef.current = webSocket;
 
         webSocket.onopen = () => {
             console.log('WebSocket conectado');
-            reconnectAttempts = 0; // Reseta o contador de tentativas
-            reconnecting = false;
         };
 
         webSocket.onmessage = (event) => {
@@ -53,7 +47,6 @@ export default function ChatBarraMensagem() {
                 setTimeout(scrollToBottom, 100);
             } else {
                 console.warn('Mensagem não é um JSON válido:', data);
-                // Você pode lidar com mensagens não JSON aqui, se necessário
             }
         };
 
@@ -63,15 +56,8 @@ export default function ChatBarraMensagem() {
 
         webSocket.onclose = () => {
             console.log('WebSocket desconectado');
-            reconnectAttempts++;
 
-            if (reconnectAttempts >= maxReconnectAttempts) {
-                console.error('Limite de tentativas de reconexão atingido');
-                return;
-            }
-
-            reconnecting = true;
-            setTimeout(() => connectWebSocket(), 10000); // Tenta reconectar após 10 segundos
+            setTimeout(() => connectWebSocket(), 500); // Tenta reconectar após 10 segundos
         };
     };
 
