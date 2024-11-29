@@ -11,9 +11,10 @@ import { useProfileImage } from "../../services/PicContext/index.js";
 import { profilePics } from './../../assets/Images/ProfilePics/profilePics';
 
 import logoHxh from "../../assets/Images/User/logoHxh.png"
+import api from './../../services/api';
 
 export default function Usuario() {
-    const { user } = useUser();
+    const { user, setUser } = useUser();
     const [userData, setUserData] = useState({
         nome: "",
         email: "",
@@ -28,15 +29,38 @@ export default function Usuario() {
 
     }
 
+    const handleSaveChanges = async () => {
+        try {
+            const updatedUser = {
+                name: userData.nome,
+                email: userData.email,
+                password: userData.senha,
+            }
+
+            const response = await api.put(`/usuario/${user.id}`, updatedUser);
+            if (response.status === 200) {
+                setUser({ ...user, ...updatedUser });
+                alert("Dados atualizados com sucesso!");
+            } else {
+                alert("Erro ao atualizar os dados");
+            }
+
+        } catch (error) {
+            console.error("Erro ao atualizar os dados: ", error);
+            alert(`Falha ao atualizar os dados: ${error.message}`);
+            
+        }
+    }
+
     useEffect(() => {
         setUserData({
-            nome: user?.name,
-            email: user?.email,
-            senha: user?.password
+            nome: user?.name || "",
+            email: user?.email || "",
+            senha: user?.password || "",
         })
 
         console.log("Dados do usuário: ", userData);
-    });
+    }, [user]);
 
     return (
         <div className="usuario-area">
@@ -84,9 +108,9 @@ export default function Usuario() {
                             <button
                                 className="usuario-mudar-info-btn"
                                 type="button"
-                                onClick={() => console.log("Dados: ", userData)}
+                                onClick={handleSaveChanges}
                             >
-                                Editar
+                                Salvar
                             </button>
                         </div>
                         <div className="logo">

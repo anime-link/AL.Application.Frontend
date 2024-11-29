@@ -18,6 +18,8 @@
   border-radius: 20px;
   margin-top: 49px;
   background-color: rgba(86, 66, 167, 0.8);
+
+  transition: 0.5s ease-in-out;
 }
 
 .cadastro-area-lateral {
@@ -73,7 +75,7 @@
 }
 
 .cadastro-mudar-icon {
-  font-size: 48px;
+  font-size: 60px;
   background-color: var(--bright-sun);
   border-radius: 50%;
 }

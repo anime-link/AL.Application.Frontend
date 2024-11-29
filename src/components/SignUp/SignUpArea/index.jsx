@@ -1,25 +1,32 @@
-import React, { useState, useEffect } from "react";
-import "./styles.css";
+import React, { useState } from "react";
 import { CamposCadastro } from "./SignUpLabels";
+import "./styles.css";
 // import { BotaoCadastro } from "./SignUpButton";
-import { AreaImagemPerfil } from "../ChosePicArea";
 import {
   RiArrowLeftCircleFill,
   RiArrowLeftSLine,
   RiArrowRightSLine,
 } from "react-icons/ri";
 import { Link, useNavigate } from "react-router-dom";
-import { RiEyeOffFill, RiEyeFill } from "react-icons/ri";
 import api from "../../../services/api";
-import { BotaoCadastro } from "./SignUpButton";
-import { profilePics } from "../../../assets/Images/ProfilePics/profilePics";
 import { useProfileImage } from "../../../services/PicContext";
+import { AreaImagemPerfil } from "../ChosePicArea";
+import { BotaoCadastro } from "./SignUpButton";
 
 export function AreaCadastro({ areaLateral }) {
   // Estado do sidebar estar visível ou não
   const [isSideBarVisible, setIsSideBarVisible] = useState(false);
+  const [isButtonVisible, setIsButtonVisible] = useState(false);
   const navigate = useNavigate();
   const { profileImage } = useProfileImage();
+
+  const handleMouseEnter = () => {
+    setIsButtonVisible(true);
+  }
+
+  const handleMouseLeave = () => {
+    setIsButtonVisible(false);
+  }
 
   // Função que ativa a área lateral
   const ativarSideBar = () => {
@@ -67,8 +74,14 @@ export function AreaCadastro({ areaLateral }) {
   };
 
   return (
-    <div className="cadastro-area">
-      <div className="cadastro-area-main">
+    <div
+      className="cadastro-area"
+    >
+      <div
+        className="cadastro-area-main"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         <div className="cadastro-icone-fechar-area">
           <Link className="cadastro-icone-link" to={"/"}>
             <RiArrowLeftCircleFill className="cadastro-icone-fechar" />
@@ -102,15 +115,23 @@ export function AreaCadastro({ areaLateral }) {
           <BotaoCadastro onClick={createUsers} />
         </div>
 
-        <div onClick={ativarSideBar} className="cadastro-mudar-img">
-          {isSideBarVisible ? (
-            <RiArrowRightSLine className="cadastro-mudar-icon" />
-          ) : (
-            <RiArrowLeftSLine className="cadastro-mudar-icon" />
-          )}
-        </div>
+        {isButtonVisible && (
+
+          <div onClick={ativarSideBar} className="cadastro-mudar-img visivel">
+            {isSideBarVisible ? (
+              <RiArrowRightSLine className="cadastro-mudar-icon" />
+            ) : (
+              <RiArrowLeftSLine className="cadastro-mudar-icon" />
+            )}
+          </div>
+        )}
+
       </div>
-      <div className="cadastro-area-lateral">
+      <div
+        className="cadastro-area-lateral"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         <div
           className={`cadastro-lateral ${isSideBarVisible ? "visivel" : ""}`}
         >
