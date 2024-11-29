@@ -21,7 +21,7 @@ import { useEffect, useRef } from "react";
 export default function AnimesArea() {
     const handleScrollInicio = () => {
         const target = document.querySelector('.animes-area');
-        if (target) {
+        if (target) { 
             target.scrollIntoView({
                 behavior: 'smooth'
             });
