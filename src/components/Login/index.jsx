@@ -7,10 +7,12 @@ import "./styles.css";
 import { CamposLogin } from './LoginLabels';
 import { CampoCheck } from './LoginCheck';
 import { BotaoAvancar } from './LoginButton';
+import { useAuth } from '../../services/Auth'
 
 export default function LoginArea() {
   const navigate = useNavigate();
   const { setUser } = useUser(); // Pega a função setUser do contexto
+  const { login } = useAuth(); // Muda o estado do login
 
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
@@ -37,6 +39,7 @@ export default function LoginArea() {
 
       setEmail('');
       setSenha('');
+      login();
 
       // Redirecionar para a página de comunidades
       navigate("/comunidades");
