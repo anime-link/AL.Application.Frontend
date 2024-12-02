@@ -6,11 +6,5 @@ contato-page {
 
     width: 100vw;
     height: 100vh;
-
-    background: url("../../assets/Images/SignUp/sign-up-background.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-clip: border-box;
-
     
 }
