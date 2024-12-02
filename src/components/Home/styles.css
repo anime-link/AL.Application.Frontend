@@ -9,12 +9,11 @@
     display: flex;
     align-items: start;
 
-    background: url("../../assets/Images/Home/home-background.jpeg");
+    background: url("../../assets/Images/Home/home-background.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-clip: border-box;
     background-blend-mode: multiply;
-    box-shadow: inset 750px 0px 100px rgba(12, 12, 12, 0.8);
 
     background-color: var(--deep-koamaru);
 }
@@ -73,7 +72,6 @@
 
     width: 100%;
 
-    /* background-color: var(--deep-koamaru); */
     background: linear-gradient(to right, #0f0c29, #302b63, #24243e); 
 }
 
@@ -128,7 +126,7 @@
     padding-bottom: 90px;
     gap: 131px;
 
-    background-image: url("../../assets/Images/Home/background-1.jpeg");
+    background-image: url("../../assets/Images/Home/background-1.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -142,7 +140,7 @@
     padding-bottom: 123px;
     gap: 223px;
 
-    background-image: url("../../assets/Images/Home/background-2.jpeg");
+    background-image: url("../../assets/Images/Home/background-2.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -157,7 +155,7 @@
     padding-bottom: 152px;
     gap: 15px;
     
-    background-image: url("../../assets/Images/Home/background-3.jpeg");
+    background-image: url("../../assets/Images/Home/background-3.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
