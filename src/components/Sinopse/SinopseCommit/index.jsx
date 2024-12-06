@@ -27,11 +27,11 @@ export default function SinopseCommit() {
         <div className="vote-like">
           <button onClick={handleLike}>
             <RiThumbUpFill className="likeUp"/>
-            <p>{likes}</p>  {/* Exibe o número de likes */}
+            <p className="like-text">{likes}</p>  {/* Exibe o número de likes */}
           </button>
           <button onClick={handleDislike}>
             <RiThumbDownFill className="likeDown"/>
-            <p>{dislikes}</p>  {/* Exibe o número de dislikes */}
+            <p className="like-text">{dislikes}</p>  {/* Exibe o número de dislikes */}
           </button>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Substitua pela chave de API do Google Cloud
-const API_KEY = 'AIzaSyDsT9ENt7JV_iPOtHpL7c7ny7U9eCw874s';
+const API_KEY = '';
 
 export const translateText = async (text, targetLanguage = 'pt') => {
   try {

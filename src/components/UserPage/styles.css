@@ -239,6 +239,10 @@
     gap: 90px;
   }
 
+  .user-name {
+    font: var(--header-24);
+  }
+
   .usuario-foto {
     width: 90px;
     height: 90px;
@@ -246,5 +250,23 @@
 
   .usuario-form {
     margin-top: -50px;
+  }
+
+  .logo {
+    top: 450px;
+  }
+
+  .logo-img {
+    width: 50px;
+  }
+
+  .usuario-botao-mudar {
+    margin-left: -41px;
+    margin-top: -30px;
+    padding: 6px 8px;
+  }
+
+  .perfil-brush {
+    font-size: 20px;
   }
 }

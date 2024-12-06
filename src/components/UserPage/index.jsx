@@ -115,6 +115,7 @@ export default function Usuario() {
                         </div>
                         <div className="logo">
                             <img
+                                className="logo-img"
                                 src={logoHxh}
                                 alt="logo-perfil" />
                         </div>

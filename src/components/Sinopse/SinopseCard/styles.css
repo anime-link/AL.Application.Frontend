@@ -1,115 +1,180 @@
-.space-card{
-    display: flex;
-    align-items: start;
-    height: 100vh;
+.space-card {
+  display: flex;
+  align-items: start;
+  /* height: 100vh; */
 
-    width: 100vw;
-    height: 704px;
+  width: 100vw;
+  /* height: 704px; */
 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-clip: border-box;
-    background-blend-mode: soft-light;
-    background-color: var(--deep-koamaru);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-clip: border-box;
+  background-blend-mode: soft-light;
+  background-color: var(--deep-koamaru);
 }
 
-.space-content{
-    flex-direction: column;
-    margin-left: 20px;
+.space-content {
+  flex-direction: column;
+  margin-left: 20px;
 }
 
-.container-content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font: var(--text-24);
-    margin-right: 102px;
-    margin-left: 54px;
-    color: #ffff;
-    padding-top: 35px;
-    padding-bottom: 35px;
+.container-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: var(--text-24);
+  margin-right: 102px;
+  margin-left: 54px;
+  color: #ffff;
+  padding-top: 35px;
+  padding-bottom: 35px;
 }
 
-.tittle{
-    font: var(--header-36);
-    display: flex;
+.tittle {
+  font: var(--header-36);
+  display: flex;
 }
 
-.ano{
-    font: var(--text-24);
-    padding-bottom: 29px;
+.ano {
+  font: var(--text-24);
+  padding-bottom: 29px;
 }
 
-.anime-atribute-box{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 24px;
-    font: var(--text-24);
-    margin-right: 37px;
+.anime-atribute-box {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  font: var(--text-24);
+  margin-right: 37px;
 }
 
-.anime-atribute p{
-    font: var(--text-24);
+.anime-atribute p {
+  font: var(--text-24);
 }
 
-.anime-point{
-    display: flex;
-    align-items: center;
-    padding-top: 27px;
+.anime-point {
+  display: flex;
+  align-items: center;
+  padding-top: 27px;
 }
 
-.nota{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 36px;
+.nota {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
 }
 
-.anime-plot{
-    margin-right: 210px;
+.anime-plot {
+  margin-right: 210px;
 }
 
-.text-plot{
-    font: var(--text-15);
-    justify-content: center;
-    text-align: justify;
-    width: 492px;
+.text-plot {
+  font: var(--text-15);
+  justify-content: center;
+  text-align: justify;
+  width: 492px;
 }
 
-.imgSin{
-    width: 314px;
-    height: 461px;
-    margin-left: 75px;
-    object-fit: cover;
-    border: 2px;
-    border-radius: 8px; /* Adiciona bordas arredondadas */
+.imgSin {
+  width: 314px;
+  height: 461px;
+  margin-left: 75px;
+  object-fit: cover;
+  border: 2px;
+  border-radius: 8px; /* Adiciona bordas arredondadas */
 }
 
-.star{
-    color: var(--bright-sun);
-    font-size: 47px;
+.star {
+  color: var(--bright-sun);
+  font-size: 47px;
 }
 
 .sinopse-icone-voltar {
-    left: 28px;
+  left: 28px;
 }
 
-.sinopse-icone-fechar{
-    color: var(--bright-sun);
-    font-size: 90px;
-    transition: 0.5s ease-in-out;
+.sinopse-icone-fechar {
+  color: var(--bright-sun);
+  font-size: 90px;
+  transition: 0.5s ease-in-out;
 }
 
 .sinopse-icone-fechar:hover {
-    color: var(--bright-sun);
-    transform: scale(1.2);
+  color: var(--bright-sun);
+  transform: scale(1.2);
 }
 
 .sinopse-icone-fechar:active {
-    color: var(--bright-sun);
-    opacity: 50%;
+  color: var(--bright-sun);
+  opacity: 50%;
 }
 
+@media (max-width: 430px) {
+  .container-content {
+    position: relative;
+    flex-direction: column-reverse;
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
 
+  .space-content {
+    display: flex;
+    align-items: center;
+    margin-left: 15%;
+    margin-right: 50%;
+  }
 
+  .sinopse-icone-voltar {
+    position: absolute;
+    top: 10px;
+  }
+
+  .sinopse-icone-fechar {
+    font-size: 50px;
+  }
+
+  .imgSin {
+    width: 230px;
+    height: 337px;
+  }
+
+  .tittle {
+    margin-top: 30px;
+    display: flex;
+    font: var(--header-24);
+    justify-content: center;
+  }
+
+  .ano {
+    font: var(--text-16);
+  }
+
+  .text-plot {
+    width: 350px;
+    margin-left: 10%;
+  }
+
+  .star {
+    font-size: 36px;
+  }
+
+  .anime-atribute-box {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+    margin-left: 15%;
+  }
+
+  .anime-point {
+    padding-top: 5px;
+    margin-left: 35%;
+  }
+
+  .nota {
+    font: var(--text-24);
+  }
+}

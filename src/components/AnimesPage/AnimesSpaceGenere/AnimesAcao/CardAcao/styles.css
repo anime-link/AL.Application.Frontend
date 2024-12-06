@@ -37,26 +37,25 @@
 }
 
 @media (max-width: 428px) {
-    .header {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
     .container-card{
+        display: flex;
         flex-direction: column;
         box-sizing: border-box;
         text-decoration: none;
-        background-color: blue;
+        gap: 10px;
+        margin-left: 20%;
+        margin-right: 0;
     }
 
     .card-space-content{
+        display: flex;
         flex-direction: column;
-
     }
 
-    
-
-
+    .card-acao-text {
+        font: var(--text-16);
+    }
 
 }
+
+
