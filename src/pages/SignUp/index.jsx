@@ -15,7 +15,7 @@ export default function Cadastro() {
     return(
         <div className={`cadastro-pagina ${isSideBarVisible ? "lateral-ativo" : ""}`}>
             <div className={`cadastro-texto ${isSideBarVisible ? "lateral-ativo" : ""}`}>
-                <p className="cadastro-texto-titulo">Cadastre-se no AnimeLink</p>
+                <p className="cadastro-texto-titulo">Cadastre-se no AnimesLink</p>
                 <div className="cadastro-sub-icon">
                     <RiStarFill className="cadastro-texto-icon" />
                     <div className="cadastro-texto-sub">

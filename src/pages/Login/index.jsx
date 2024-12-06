@@ -8,7 +8,7 @@ export default function Login() {
     <div className="login-page">
       <LoginArea/>
       <div className="login-texto">
-        <p className="login-texto-titulo">Faça login no AnimeLink</p>
+        <p className="login-texto-titulo">Faça login no AnimesLink</p>
         <div className="login-sub-icon">
           <p className="login-sub">E seja feliz fazendo o que você ama</p>
           <RiHeart3Fill className="login-texto-icon" />

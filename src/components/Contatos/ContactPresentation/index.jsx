@@ -1,5 +1,5 @@
-import React from 'react';
 import "./styles.css";
+import React from 'react';
 import { RiGlasses2Fill } from "react-icons/ri";
 import { RiUserVoiceFill } from "react-icons/ri";
 

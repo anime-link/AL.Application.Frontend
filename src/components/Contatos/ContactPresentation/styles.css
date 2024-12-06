@@ -80,7 +80,7 @@
         background-position: center;
     }
 
-    .boasVindas-titulo p {
+    .boasVindas-titulo {
         text-align: center;
         font: var(--app-text);
         margin-top: 40px;
