@@ -4,12 +4,20 @@ import logo from "../../assets/logo-animelink.svg";
 import user from "../../assets/Images/SignUp/profile-pic-choosen.jpeg";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useProfileImage } from "../../services/PicContext";
+import { useAuth } from "../../services/Auth";
 
 export default function Header() {
     const { profileImage } = useProfileImage();
     const navigate = useNavigate();
+    const { logout } = useAuth();
 
-    const handleHomePage = () => navigate("/");
+    const handleHomePage = () => {
+        const confirm = window.confirm("Você quer realmente sair? 😢");
+        if (confirm) {
+            logout();
+            navigate("/");
+        }
+    };
     const handleUserPage = () => navigate("/usuario");
 
     return (
@@ -17,7 +25,7 @@ export default function Header() {
             <div className="header-area">
                 <button className="header-logo-area" onClick={handleHomePage}>
                     <img className="header-logo" src={logo} alt="AnimeLink" />
-                    <p className="header-logo-texto">AnimesLink</p>
+                    <p className="header-logo-texto">Sair</p>
                 </button>
                 <div className="header-paginas">
                     <NavLink to={"/comunidades"} className={({ isActive }) => isActive ? "header-pagina active" : "header-pagina"}>
