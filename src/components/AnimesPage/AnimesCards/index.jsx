@@ -7,7 +7,7 @@ const AnimeCards = ({ nome, imgAnime }) => {
 
   // Redireciona para a página de gênero específico
   const handleGenreClick = () => {
-    navigate(`/genero/${nome.toLowerCase()}`);
+    navigate(`/animes/${nome.toLowerCase()}`);
   };
 
   return (
