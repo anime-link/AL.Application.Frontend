@@ -76,6 +76,8 @@
 }
 
 .text_pagination{
+    display: flex;
+    list-style: none;
     font: var(--text-16);
     color: var(--bright-sun);
     margin-bottom: 293px;
